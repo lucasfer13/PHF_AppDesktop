@@ -16,6 +16,7 @@
     End Sub
 
     Private Sub btnValoraciobck_Click(sender As Object, e As EventArgs) Handles btnValoraciobck.Click
-
+        Menú_Principal.Show()
+        Me.Hide()
     End Sub
 End Class
