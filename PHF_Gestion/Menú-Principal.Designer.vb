@@ -27,9 +27,9 @@ Partial Class Menú_Principal
         Me.pcbMenuPrinLogo = New System.Windows.Forms.PictureBox()
         Me.btnMenuPrinGestioServeis = New System.Windows.Forms.Button()
         Me.btnMenuPrinGestioAnimals = New System.Windows.Forms.Button()
-        Me.pcbMenuGestGuarderiesUsuari = New System.Windows.Forms.PictureBox()
+        Me.pcbMenuPrincipalUsuari = New System.Windows.Forms.PictureBox()
         CType(Me.pcbMenuPrinLogo, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pcbMenuGestGuarderiesUsuari, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pcbMenuPrincipalUsuari, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnMenuPrinGestioGuarderies
@@ -78,15 +78,15 @@ Partial Class Menú_Principal
         Me.btnMenuPrinGestioAnimals.Text = "Gestió d'animals"
         Me.btnMenuPrinGestioAnimals.UseVisualStyleBackColor = False
         '
-        'pcbMenuGestGuarderiesUsuari
+        'pcbMenuPrincipalUsuari
         '
-        Me.pcbMenuGestGuarderiesUsuari.Image = Global.PHF_Gestion.My.Resources.Resources.pngegg
-        Me.pcbMenuGestGuarderiesUsuari.Location = New System.Drawing.Point(700, 12)
-        Me.pcbMenuGestGuarderiesUsuari.Name = "pcbMenuGestGuarderiesUsuari"
-        Me.pcbMenuGestGuarderiesUsuari.Size = New System.Drawing.Size(71, 62)
-        Me.pcbMenuGestGuarderiesUsuari.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pcbMenuGestGuarderiesUsuari.TabIndex = 6
-        Me.pcbMenuGestGuarderiesUsuari.TabStop = False
+        Me.pcbMenuPrincipalUsuari.Image = Global.PHF_Gestion.My.Resources.Resources.pngegg
+        Me.pcbMenuPrincipalUsuari.Location = New System.Drawing.Point(700, 12)
+        Me.pcbMenuPrincipalUsuari.Name = "pcbMenuPrincipalUsuari"
+        Me.pcbMenuPrincipalUsuari.Size = New System.Drawing.Size(71, 62)
+        Me.pcbMenuPrincipalUsuari.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pcbMenuPrincipalUsuari.TabIndex = 6
+        Me.pcbMenuPrincipalUsuari.TabStop = False
         '
         'Menú_Principal
         '
@@ -94,7 +94,7 @@ Partial Class Menú_Principal
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightSteelBlue
         Me.ClientSize = New System.Drawing.Size(795, 419)
-        Me.Controls.Add(Me.pcbMenuGestGuarderiesUsuari)
+        Me.Controls.Add(Me.pcbMenuPrincipalUsuari)
         Me.Controls.Add(Me.btnMenuPrinGestioAnimals)
         Me.Controls.Add(Me.btnMenuPrinGestioServeis)
         Me.Controls.Add(Me.pcbMenuPrinLogo)
@@ -105,7 +105,7 @@ Partial Class Menú_Principal
         Me.Name = "Menú_Principal"
         Me.Text = "Pet Hotel Finder"
         CType(Me.pcbMenuPrinLogo, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pcbMenuGestGuarderiesUsuari, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pcbMenuPrincipalUsuari, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -113,5 +113,5 @@ Partial Class Menú_Principal
     Friend WithEvents pcbMenuPrinLogo As PictureBox
     Friend WithEvents btnMenuPrinGestioServeis As Button
     Friend WithEvents btnMenuPrinGestioAnimals As Button
-    Friend WithEvents pcbMenuGestGuarderiesUsuari As PictureBox
+    Friend WithEvents pcbMenuPrincipalUsuari As PictureBox
 End Class
