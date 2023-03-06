@@ -27,7 +27,6 @@ Partial Class MenúGestióGuarderies
         Me.pcbMenuGestGuarderiesUsuari = New System.Windows.Forms.PictureBox()
         Me.btnMenuGestGuarderiesAfegGuarderia = New System.Windows.Forms.Button()
         Me.btnMenuGestGuarderiesEliminarGuarderia = New System.Windows.Forms.Button()
-        Me.btnMenuGestGuarderiesGestioGuarderia = New System.Windows.Forms.Button()
         Me.btnMenuGestGuarderiesAtras = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         CType(Me.pcbMenuGestGuarderiesUsuari, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -59,7 +58,7 @@ Partial Class MenúGestióGuarderies
         Me.btnMenuGestGuarderiesAfegGuarderia.BackColor = System.Drawing.Color.Aquamarine
         Me.btnMenuGestGuarderiesAfegGuarderia.FlatAppearance.BorderColor = System.Drawing.Color.Aquamarine
         Me.btnMenuGestGuarderiesAfegGuarderia.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnMenuGestGuarderiesAfegGuarderia.Location = New System.Drawing.Point(590, 102)
+        Me.btnMenuGestGuarderiesAfegGuarderia.Location = New System.Drawing.Point(577, 156)
         Me.btnMenuGestGuarderiesAfegGuarderia.Name = "btnMenuGestGuarderiesAfegGuarderia"
         Me.btnMenuGestGuarderiesAfegGuarderia.Size = New System.Drawing.Size(123, 51)
         Me.btnMenuGestGuarderiesAfegGuarderia.TabIndex = 3
@@ -71,24 +70,12 @@ Partial Class MenúGestióGuarderies
         Me.btnMenuGestGuarderiesEliminarGuarderia.BackColor = System.Drawing.Color.Aquamarine
         Me.btnMenuGestGuarderiesEliminarGuarderia.FlatAppearance.BorderColor = System.Drawing.Color.Aquamarine
         Me.btnMenuGestGuarderiesEliminarGuarderia.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnMenuGestGuarderiesEliminarGuarderia.Location = New System.Drawing.Point(590, 184)
+        Me.btnMenuGestGuarderiesEliminarGuarderia.Location = New System.Drawing.Point(577, 238)
         Me.btnMenuGestGuarderiesEliminarGuarderia.Name = "btnMenuGestGuarderiesEliminarGuarderia"
         Me.btnMenuGestGuarderiesEliminarGuarderia.Size = New System.Drawing.Size(123, 61)
         Me.btnMenuGestGuarderiesEliminarGuarderia.TabIndex = 4
         Me.btnMenuGestGuarderiesEliminarGuarderia.Text = "Eliminar Guarderia"
         Me.btnMenuGestGuarderiesEliminarGuarderia.UseVisualStyleBackColor = False
-        '
-        'btnMenuGestGuarderiesGestioGuarderia
-        '
-        Me.btnMenuGestGuarderiesGestioGuarderia.BackColor = System.Drawing.Color.Aquamarine
-        Me.btnMenuGestGuarderiesGestioGuarderia.FlatAppearance.BorderColor = System.Drawing.Color.Aquamarine
-        Me.btnMenuGestGuarderiesGestioGuarderia.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnMenuGestGuarderiesGestioGuarderia.Location = New System.Drawing.Point(590, 277)
-        Me.btnMenuGestGuarderiesGestioGuarderia.Name = "btnMenuGestGuarderiesGestioGuarderia"
-        Me.btnMenuGestGuarderiesGestioGuarderia.Size = New System.Drawing.Size(123, 59)
-        Me.btnMenuGestGuarderiesGestioGuarderia.TabIndex = 5
-        Me.btnMenuGestGuarderiesGestioGuarderia.Text = "Gestionar Guarderia"
-        Me.btnMenuGestGuarderiesGestioGuarderia.UseVisualStyleBackColor = False
         '
         'btnMenuGestGuarderiesAtras
         '
@@ -123,7 +110,6 @@ Partial Class MenúGestióGuarderies
         Me.ClientSize = New System.Drawing.Size(795, 419)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.btnMenuGestGuarderiesAtras)
-        Me.Controls.Add(Me.btnMenuGestGuarderiesGestioGuarderia)
         Me.Controls.Add(Me.btnMenuGestGuarderiesEliminarGuarderia)
         Me.Controls.Add(Me.btnMenuGestGuarderiesAfegGuarderia)
         Me.Controls.Add(Me.pcbMenuGestGuarderiesUsuari)
@@ -144,7 +130,6 @@ Partial Class MenúGestióGuarderies
     Friend WithEvents pcbMenuGestGuarderiesUsuari As PictureBox
     Friend WithEvents btnMenuGestGuarderiesAfegGuarderia As Button
     Friend WithEvents btnMenuGestGuarderiesEliminarGuarderia As Button
-    Friend WithEvents btnMenuGestGuarderiesGestioGuarderia As Button
     Protected WithEvents btnMenuGestGuarderiesAtras As Button
     Friend WithEvents DataGridView1 As DataGridView
 End Class
