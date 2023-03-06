@@ -25,12 +25,13 @@ Partial Class MenúGestióGuarderies
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MenúGestióGuarderies))
         Me.lblMenuGestGuarderiesTitol = New System.Windows.Forms.Label()
         Me.pcbMenuGestGuarderiesUsuari = New System.Windows.Forms.PictureBox()
-        Me.lstMenuGestGuarderiesLlista = New System.Windows.Forms.ListBox()
         Me.btnMenuGestGuarderiesAfegGuarderia = New System.Windows.Forms.Button()
         Me.btnMenuGestGuarderiesEliminarGuarderia = New System.Windows.Forms.Button()
         Me.btnMenuGestGuarderiesGestioGuarderia = New System.Windows.Forms.Button()
         Me.btnMenuGestGuarderiesAtras = New System.Windows.Forms.Button()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         CType(Me.pcbMenuGestGuarderiesUsuari, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblMenuGestGuarderiesTitol
@@ -52,15 +53,6 @@ Partial Class MenúGestióGuarderies
         Me.pcbMenuGestGuarderiesUsuari.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.pcbMenuGestGuarderiesUsuari.TabIndex = 1
         Me.pcbMenuGestGuarderiesUsuari.TabStop = False
-        '
-        'lstMenuGestGuarderiesLlista
-        '
-        Me.lstMenuGestGuarderiesLlista.FormattingEnabled = True
-        Me.lstMenuGestGuarderiesLlista.ItemHeight = 20
-        Me.lstMenuGestGuarderiesLlista.Location = New System.Drawing.Point(12, 77)
-        Me.lstMenuGestGuarderiesLlista.Name = "lstMenuGestGuarderiesLlista"
-        Me.lstMenuGestGuarderiesLlista.Size = New System.Drawing.Size(504, 324)
-        Me.lstMenuGestGuarderiesLlista.TabIndex = 2
         '
         'btnMenuGestGuarderiesAfegGuarderia
         '
@@ -113,17 +105,27 @@ Partial Class MenúGestióGuarderies
         Me.btnMenuGestGuarderiesAtras.TabIndex = 6
         Me.btnMenuGestGuarderiesAtras.UseVisualStyleBackColor = False
         '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(12, 72)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.RowHeadersWidth = 51
+        Me.DataGridView1.RowTemplate.Height = 29
+        Me.DataGridView1.Size = New System.Drawing.Size(478, 335)
+        Me.DataGridView1.TabIndex = 7
+        '
         'MenúGestióGuarderies
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightSteelBlue
         Me.ClientSize = New System.Drawing.Size(795, 419)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.btnMenuGestGuarderiesAtras)
         Me.Controls.Add(Me.btnMenuGestGuarderiesGestioGuarderia)
         Me.Controls.Add(Me.btnMenuGestGuarderiesEliminarGuarderia)
         Me.Controls.Add(Me.btnMenuGestGuarderiesAfegGuarderia)
-        Me.Controls.Add(Me.lstMenuGestGuarderiesLlista)
         Me.Controls.Add(Me.pcbMenuGestGuarderiesUsuari)
         Me.Controls.Add(Me.lblMenuGestGuarderiesTitol)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -132,6 +134,7 @@ Partial Class MenúGestióGuarderies
         Me.Name = "MenúGestióGuarderies"
         Me.Text = "Pet Hotel Finder"
         CType(Me.pcbMenuGestGuarderiesUsuari, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -139,9 +142,9 @@ Partial Class MenúGestióGuarderies
 
     Friend WithEvents lblMenuGestGuarderiesTitol As Label
     Friend WithEvents pcbMenuGestGuarderiesUsuari As PictureBox
-    Friend WithEvents lstMenuGestGuarderiesLlista As ListBox
     Friend WithEvents btnMenuGestGuarderiesAfegGuarderia As Button
     Friend WithEvents btnMenuGestGuarderiesEliminarGuarderia As Button
     Friend WithEvents btnMenuGestGuarderiesGestioGuarderia As Button
     Protected WithEvents btnMenuGestGuarderiesAtras As Button
+    Friend WithEvents DataGridView1 As DataGridView
 End Class
