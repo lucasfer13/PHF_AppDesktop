@@ -23,152 +23,158 @@ Partial Class Login
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Login))
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.MaskedTextBox1 = New System.Windows.Forms.MaskedTextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pcbLoginLogo = New System.Windows.Forms.PictureBox()
+        Me.txtLoginPassword = New System.Windows.Forms.MaskedTextBox()
+        Me.txtLoginUsuari = New System.Windows.Forms.TextBox()
+        Me.btnLoginEntrar = New System.Windows.Forms.Button()
+        Me.pcbLoginUsuari = New System.Windows.Forms.PictureBox()
+        Me.pcbLoginPassword = New System.Windows.Forms.PictureBox()
+        Me.lblLoginUsuari = New System.Windows.Forms.TextBox()
+        Me.lblLoginPassword = New System.Windows.Forms.TextBox()
+        CType(Me.pcbLoginLogo, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pcbLoginUsuari, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pcbLoginPassword, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'PictureBox1
+        'pcbLoginLogo
         '
-        Me.PictureBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.pcbLoginLogo.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox1.Image = Global.PHF_Gestion.My.Resources.Resources.logo
-        Me.PictureBox1.Location = New System.Drawing.Point(43, 56)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(311, 317)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
+        Me.pcbLoginLogo.Image = CType(resources.GetObject("pcbLoginLogo.Image"), System.Drawing.Image)
+        Me.pcbLoginLogo.Location = New System.Drawing.Point(43, 56)
+        Me.pcbLoginLogo.Name = "pcbLoginLogo"
+        Me.pcbLoginLogo.Size = New System.Drawing.Size(301, 280)
+        Me.pcbLoginLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pcbLoginLogo.TabIndex = 0
+        Me.pcbLoginLogo.TabStop = False
         '
-        'MaskedTextBox1
+        'txtLoginPassword
         '
-        Me.MaskedTextBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.txtLoginPassword.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.MaskedTextBox1.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals
-        Me.MaskedTextBox1.Font = New System.Drawing.Font("Sitka Small", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.MaskedTextBox1.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Insert
-        Me.MaskedTextBox1.Location = New System.Drawing.Point(490, 226)
-        Me.MaskedTextBox1.Name = "MaskedTextBox1"
-        Me.MaskedTextBox1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(9679)
-        Me.MaskedTextBox1.Size = New System.Drawing.Size(249, 26)
-        Me.MaskedTextBox1.TabIndex = 1
+        Me.txtLoginPassword.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals
+        Me.txtLoginPassword.Font = New System.Drawing.Font("Sitka Small", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.txtLoginPassword.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Insert
+        Me.txtLoginPassword.Location = New System.Drawing.Point(490, 226)
+        Me.txtLoginPassword.Name = "txtLoginPassword"
+        Me.txtLoginPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(9679)
+        Me.txtLoginPassword.Size = New System.Drawing.Size(249, 26)
+        Me.txtLoginPassword.TabIndex = 1
         '
-        'TextBox1
+        'txtLoginUsuari
         '
-        Me.TextBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.txtLoginUsuari.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox1.Font = New System.Drawing.Font("Sitka Small", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.TextBox1.Location = New System.Drawing.Point(490, 118)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(249, 26)
-        Me.TextBox1.TabIndex = 2
+        Me.txtLoginUsuari.Font = New System.Drawing.Font("Sitka Small", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.txtLoginUsuari.Location = New System.Drawing.Point(490, 118)
+        Me.txtLoginUsuari.Name = "txtLoginUsuari"
+        Me.txtLoginUsuari.Size = New System.Drawing.Size(249, 26)
+        Me.txtLoginUsuari.TabIndex = 2
         '
-        'Button1
+        'btnLoginEntrar
         '
-        Me.Button1.Font = New System.Drawing.Font("Sitka Small", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Button1.Location = New System.Drawing.Point(566, 293)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(173, 80)
-        Me.Button1.TabIndex = 3
-        Me.Button1.Text = "Entra"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnLoginEntrar.BackColor = System.Drawing.Color.Aquamarine
+        Me.btnLoginEntrar.FlatAppearance.BorderColor = System.Drawing.Color.Aquamarine
+        Me.btnLoginEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnLoginEntrar.Font = New System.Drawing.Font("Sitka Small", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btnLoginEntrar.Location = New System.Drawing.Point(566, 293)
+        Me.btnLoginEntrar.Name = "btnLoginEntrar"
+        Me.btnLoginEntrar.Size = New System.Drawing.Size(173, 80)
+        Me.btnLoginEntrar.TabIndex = 3
+        Me.btnLoginEntrar.Text = "Entra"
+        Me.btnLoginEntrar.UseVisualStyleBackColor = False
         '
-        'PictureBox2
+        'pcbLoginUsuari
         '
-        Me.PictureBox2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.pcbLoginUsuari.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox2.Image = Global.PHF_Gestion.My.Resources.Resources.pngegg
-        Me.PictureBox2.Location = New System.Drawing.Point(415, 92)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(50, 52)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 4
-        Me.PictureBox2.TabStop = False
+        Me.pcbLoginUsuari.Image = Global.PHF_Gestion.My.Resources.Resources.pngegg
+        Me.pcbLoginUsuari.Location = New System.Drawing.Point(415, 92)
+        Me.pcbLoginUsuari.Name = "pcbLoginUsuari"
+        Me.pcbLoginUsuari.Size = New System.Drawing.Size(50, 52)
+        Me.pcbLoginUsuari.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pcbLoginUsuari.TabIndex = 4
+        Me.pcbLoginUsuari.TabStop = False
         '
-        'PictureBox3
+        'pcbLoginPassword
         '
-        Me.PictureBox3.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.pcbLoginPassword.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox3.Image = Global.PHF_Gestion.My.Resources.Resources.pngeggpaswd
-        Me.PictureBox3.Location = New System.Drawing.Point(415, 200)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(50, 52)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 5
-        Me.PictureBox3.TabStop = False
+        Me.pcbLoginPassword.Image = Global.PHF_Gestion.My.Resources.Resources.pngeggpaswd
+        Me.pcbLoginPassword.Location = New System.Drawing.Point(415, 200)
+        Me.pcbLoginPassword.Name = "pcbLoginPassword"
+        Me.pcbLoginPassword.Size = New System.Drawing.Size(50, 52)
+        Me.pcbLoginPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pcbLoginPassword.TabIndex = 5
+        Me.pcbLoginPassword.TabStop = False
         '
-        'TextBox2
+        'lblLoginUsuari
         '
-        Me.TextBox2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.lblLoginUsuari.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox2.Font = New System.Drawing.Font("Sitka Small", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.TextBox2.Location = New System.Drawing.Point(490, 85)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(125, 19)
-        Me.TextBox2.TabIndex = 6
-        Me.TextBox2.Text = "Usuari"
+        Me.lblLoginUsuari.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.lblLoginUsuari.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.lblLoginUsuari.Font = New System.Drawing.Font("Sitka Small", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.lblLoginUsuari.Location = New System.Drawing.Point(490, 85)
+        Me.lblLoginUsuari.Name = "lblLoginUsuari"
+        Me.lblLoginUsuari.Size = New System.Drawing.Size(125, 19)
+        Me.lblLoginUsuari.TabIndex = 6
+        Me.lblLoginUsuari.Text = "Usuari"
         '
-        'TextBox3
+        'lblLoginPassword
         '
-        Me.TextBox3.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.lblLoginPassword.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox3.Font = New System.Drawing.Font("Sitka Small", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.TextBox3.Location = New System.Drawing.Point(490, 192)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(125, 19)
-        Me.TextBox3.TabIndex = 7
-        Me.TextBox3.Text = "Contrasenya"
+        Me.lblLoginPassword.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.lblLoginPassword.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.lblLoginPassword.Font = New System.Drawing.Font("Sitka Small", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.lblLoginPassword.Location = New System.Drawing.Point(490, 192)
+        Me.lblLoginPassword.Name = "lblLoginPassword"
+        Me.lblLoginPassword.Size = New System.Drawing.Size(125, 19)
+        Me.lblLoginPassword.TabIndex = 7
+        Me.lblLoginPassword.Text = "Contrasenya"
         '
         'Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BackColor = System.Drawing.Color.LightSteelBlue
         Me.ClientSize = New System.Drawing.Size(795, 419)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.PictureBox3)
-        Me.Controls.Add(Me.PictureBox2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.MaskedTextBox1)
-        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.lblLoginPassword)
+        Me.Controls.Add(Me.lblLoginUsuari)
+        Me.Controls.Add(Me.pcbLoginPassword)
+        Me.Controls.Add(Me.pcbLoginUsuari)
+        Me.Controls.Add(Me.btnLoginEntrar)
+        Me.Controls.Add(Me.txtLoginUsuari)
+        Me.Controls.Add(Me.txtLoginPassword)
+        Me.Controls.Add(Me.pcbLoginLogo)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximumSize = New System.Drawing.Size(813, 466)
         Me.MinimumSize = New System.Drawing.Size(813, 466)
         Me.Name = "Login"
         Me.Text = "Pet Hotel Finder"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pcbLoginLogo, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pcbLoginUsuari, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pcbLoginPassword, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents MaskedTextBox1 As MaskedTextBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents PictureBox3 As PictureBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents pcbLoginLogo As PictureBox
+    Friend WithEvents txtLoginPassword As MaskedTextBox
+    Friend WithEvents txtLoginUsuari As TextBox
+    Friend WithEvents btnLoginEntrar As Button
+    Friend WithEvents pcbLoginUsuari As PictureBox
+    Friend WithEvents pcbLoginPassword As PictureBox
+    Friend WithEvents lblLoginUsuari As TextBox
+    Friend WithEvents lblLoginPassword As TextBox
 End Class
