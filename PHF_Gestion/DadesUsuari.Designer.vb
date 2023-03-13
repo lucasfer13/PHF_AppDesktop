@@ -287,6 +287,7 @@ Partial Class DadesUsuari
         Controls.Add(pcbDadesUsuariFotoPerfil)
         MinimumSize = New Size(858, 586)
         Name = "DadesUsuari"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "DadesUsuari"
         CType(pcbDadesUsuariFotoPerfil, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)

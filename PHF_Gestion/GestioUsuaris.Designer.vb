@@ -26,7 +26,7 @@ Partial Class GestioUsuaris
         lblGestioUsuarisBuscarTitol = New Label()
         txtGestioUsuarisBuscar = New TextBox()
         btnGestioUsuarisResetBuscar = New Button()
-        Button2 = New Button()
+        btnGestioUsuarisAfegir = New Button()
         btnGestioUsuarisEnrere = New Button()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -46,12 +46,12 @@ Partial Class GestioUsuaris
         ' 
         lblGestioUsuarisBuscarTitol.Anchor = AnchorStyles.Top Or AnchorStyles.Right
         lblGestioUsuarisBuscarTitol.AutoSize = True
-        lblGestioUsuarisBuscarTitol.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point)
+        lblGestioUsuarisBuscarTitol.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
         lblGestioUsuarisBuscarTitol.Location = New Point(553, 12)
         lblGestioUsuarisBuscarTitol.Name = "lblGestioUsuarisBuscarTitol"
         lblGestioUsuarisBuscarTitol.Size = New Size(125, 28)
         lblGestioUsuarisBuscarTitol.TabIndex = 1
-        lblGestioUsuarisBuscarTitol.Text = "Buscar usuari" ' 
+        lblGestioUsuarisBuscarTitol.Text = "Buscar usuari"' 
         ' txtGestioUsuarisBuscar
         ' 
         txtGestioUsuarisBuscar.Anchor = AnchorStyles.Top Or AnchorStyles.Right
@@ -71,16 +71,16 @@ Partial Class GestioUsuaris
         btnGestioUsuarisResetBuscar.Text = "Reset"
         btnGestioUsuarisResetBuscar.UseVisualStyleBackColor = False
         ' 
-        ' Button2
+        ' btnGestioUsuarisAfegir
         ' 
-        Button2.Anchor = AnchorStyles.Right
-        Button2.BackColor = Color.Aquamarine
-        Button2.Location = New Point(543, 209)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(135, 61)
-        Button2.TabIndex = 4
-        Button2.Text = "Afegir usuari"
-        Button2.UseVisualStyleBackColor = False
+        btnGestioUsuarisAfegir.Anchor = AnchorStyles.Right
+        btnGestioUsuarisAfegir.BackColor = Color.Aquamarine
+        btnGestioUsuarisAfegir.Location = New Point(543, 209)
+        btnGestioUsuarisAfegir.Name = "btnGestioUsuarisAfegir"
+        btnGestioUsuarisAfegir.Size = New Size(135, 61)
+        btnGestioUsuarisAfegir.TabIndex = 4
+        btnGestioUsuarisAfegir.Text = "Afegir usuari"
+        btnGestioUsuarisAfegir.UseVisualStyleBackColor = False
         ' 
         ' btnGestioUsuarisEnrere
         ' 
@@ -95,18 +95,19 @@ Partial Class GestioUsuaris
         ' 
         ' GestioUsuaris
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.LightSteelBlue
         ClientSize = New Size(773, 460)
         Controls.Add(btnGestioUsuarisEnrere)
-        Controls.Add(Button2)
+        Controls.Add(btnGestioUsuarisAfegir)
         Controls.Add(btnGestioUsuarisResetBuscar)
         Controls.Add(txtGestioUsuarisBuscar)
         Controls.Add(lblGestioUsuarisBuscarTitol)
         Controls.Add(DataGridView1)
         MinimumSize = New Size(791, 507)
         Name = "GestioUsuaris"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "GestioUsuaris"
         CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
@@ -117,6 +118,6 @@ Partial Class GestioUsuaris
     Friend WithEvents lblGestioUsuarisBuscarTitol As Label
     Friend WithEvents txtGestioUsuarisBuscar As TextBox
     Friend WithEvents btnGestioUsuarisResetBuscar As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btnGestioUsuarisAfegir As Button
     Friend WithEvents btnGestioUsuarisEnrere As Button
 End Class

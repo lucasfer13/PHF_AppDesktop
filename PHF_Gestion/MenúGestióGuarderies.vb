@@ -1,16 +1,16 @@
-﻿Public Class MenúGestióGuarderies
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles pcbMenuGestGuarderiesUsuari.Click
-        'Usuaris.Show()
-        Me.Hide()
-    End Sub
+﻿Imports System.ComponentModel
 
+Public Class MenúGestióGuarderies
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnMenuGestGuarderiesAfegGuarderia.Click
         'Afegir-Guarderia.Show()
-        Me.Hide()
+        InformacionGuarderia.ShowDialog()
     End Sub
 
-    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles btnMenuGestGuarderiesAtras.Click
-        Menú_Principal.Show()
-        Me.Hide()
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles btnMenuGestGuarderiesEnrere.Click, btnMenuGestGuarderiesEnrere.Click
+        Me.Close()
+    End Sub
+
+    Private Sub MenúGestióGuarderies_Closing(sender As Object, e As CancelEventArgs) Handles MyBase.Closing
+        MenuPrincipal.Show()
     End Sub
 End Class

@@ -34,6 +34,7 @@ Partial Class CameraForm
         btnGestioCameraGuardar = New Button()
         btnGestioCameraEliminar = New Button()
         btnGestioCameraEnrere = New Button()
+        btnGestioCameraModificar = New Button()
         SuspendLayout()
         ' 
         ' lblGestioCameraTitol
@@ -121,7 +122,7 @@ Partial Class CameraForm
         ' 
         btnGestioCameraGuardar.Anchor = AnchorStyles.Bottom
         btnGestioCameraGuardar.BackColor = Color.Aquamarine
-        btnGestioCameraGuardar.Location = New Point(182, 391)
+        btnGestioCameraGuardar.Location = New Point(489, 391)
         btnGestioCameraGuardar.Name = "btnGestioCameraGuardar"
         btnGestioCameraGuardar.Size = New Size(145, 73)
         btnGestioCameraGuardar.TabIndex = 9
@@ -132,7 +133,7 @@ Partial Class CameraForm
         ' 
         btnGestioCameraEliminar.Anchor = AnchorStyles.Bottom
         btnGestioCameraEliminar.BackColor = Color.Aquamarine
-        btnGestioCameraEliminar.Location = New Point(394, 391)
+        btnGestioCameraEliminar.Location = New Point(661, 391)
         btnGestioCameraEliminar.Name = "btnGestioCameraEliminar"
         btnGestioCameraEliminar.Size = New Size(145, 73)
         btnGestioCameraEliminar.TabIndex = 10
@@ -143,12 +144,23 @@ Partial Class CameraForm
         ' 
         btnGestioCameraEnrere.Anchor = AnchorStyles.Bottom
         btnGestioCameraEnrere.BackColor = Color.Aquamarine
-        btnGestioCameraEnrere.Location = New Point(611, 391)
+        btnGestioCameraEnrere.Location = New Point(148, 391)
         btnGestioCameraEnrere.Name = "btnGestioCameraEnrere"
         btnGestioCameraEnrere.Size = New Size(145, 73)
         btnGestioCameraEnrere.TabIndex = 11
         btnGestioCameraEnrere.Text = "Enrere"
         btnGestioCameraEnrere.UseVisualStyleBackColor = False
+        ' 
+        ' btnGestioCameraModificar
+        ' 
+        btnGestioCameraModificar.Anchor = AnchorStyles.Bottom
+        btnGestioCameraModificar.BackColor = Color.Aquamarine
+        btnGestioCameraModificar.Location = New Point(320, 391)
+        btnGestioCameraModificar.Name = "btnGestioCameraModificar"
+        btnGestioCameraModificar.Size = New Size(145, 73)
+        btnGestioCameraModificar.TabIndex = 12
+        btnGestioCameraModificar.Text = "Modificar"
+        btnGestioCameraModificar.UseVisualStyleBackColor = False
         ' 
         ' CameraForm
         ' 
@@ -156,6 +168,7 @@ Partial Class CameraForm
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.LightSteelBlue
         ClientSize = New Size(943, 499)
+        Controls.Add(btnGestioCameraModificar)
         Controls.Add(btnGestioCameraEnrere)
         Controls.Add(btnGestioCameraEliminar)
         Controls.Add(btnGestioCameraGuardar)
@@ -170,6 +183,7 @@ Partial Class CameraForm
         Controls.Add(lblGestioCameraTitol)
         MinimumSize = New Size(961, 546)
         Name = "CameraForm"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "CameraForm"
         ResumeLayout(False)
         PerformLayout()
@@ -187,4 +201,5 @@ Partial Class CameraForm
     Friend WithEvents btnGestioCameraGuardar As Button
     Friend WithEvents btnGestioCameraEliminar As Button
     Friend WithEvents btnGestioCameraEnrere As Button
+    Friend WithEvents btnGestioCameraModificar As Button
 End Class
