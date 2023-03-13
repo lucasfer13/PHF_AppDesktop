@@ -10,7 +10,8 @@ Partial Class Valoracions
                 components.Dispose()
             End If
         Finally
-            MyBase.Dispose(disposing)
+            MyBase.Dispose(disposing, components
+)
         End Try
     End Sub
 
