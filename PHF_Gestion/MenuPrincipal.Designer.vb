@@ -28,14 +28,15 @@ Partial Class MenuPrincipal
         btnMenuPrinGestioServeis = New Button()
         btnMenuPrinGestioAnimals = New Button()
         pcbMenuPrincipalUsuari = New PictureBox()
-        Button1 = New Button()
-        Button2 = New Button()
+        btnMenuPrincipalGestioUsuaris = New Button()
+        btnMenuPrincipalSortir = New Button()
         CType(pcbMenuPrinLogo, ComponentModel.ISupportInitialize).BeginInit()
         CType(pcbMenuPrincipalUsuari, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' btnMenuPrinGestioGuarderies
         ' 
+        btnMenuPrinGestioGuarderies.Anchor = AnchorStyles.None
         btnMenuPrinGestioGuarderies.BackColor = Color.Aquamarine
         btnMenuPrinGestioGuarderies.FlatAppearance.BorderColor = Color.Aquamarine
         btnMenuPrinGestioGuarderies.Location = New Point(240, 167)
@@ -47,6 +48,7 @@ Partial Class MenuPrincipal
         ' 
         ' pcbMenuPrinLogo
         ' 
+        pcbMenuPrinLogo.Anchor = AnchorStyles.Top
         pcbMenuPrinLogo.Image = CType(resources.GetObject("pcbMenuPrinLogo.Image"), Image)
         pcbMenuPrinLogo.Location = New Point(312, 12)
         pcbMenuPrinLogo.Name = "pcbMenuPrinLogo"
@@ -57,6 +59,7 @@ Partial Class MenuPrincipal
         ' 
         ' btnMenuPrinGestioServeis
         ' 
+        btnMenuPrinGestioServeis.Anchor = AnchorStyles.None
         btnMenuPrinGestioServeis.BackColor = Color.Aquamarine
         btnMenuPrinGestioServeis.FlatAppearance.BorderColor = Color.Aquamarine
         btnMenuPrinGestioServeis.Location = New Point(409, 167)
@@ -68,6 +71,7 @@ Partial Class MenuPrincipal
         ' 
         ' btnMenuPrinGestioAnimals
         ' 
+        btnMenuPrinGestioAnimals.Anchor = AnchorStyles.None
         btnMenuPrinGestioAnimals.BackColor = Color.Aquamarine
         btnMenuPrinGestioAnimals.FlatAppearance.BorderColor = Color.Aquamarine
         btnMenuPrinGestioAnimals.Location = New Point(240, 261)
@@ -79,6 +83,7 @@ Partial Class MenuPrincipal
         ' 
         ' pcbMenuPrincipalUsuari
         ' 
+        pcbMenuPrincipalUsuari.Anchor = AnchorStyles.Top Or AnchorStyles.Right
         pcbMenuPrincipalUsuari.Image = My.Resources.Resources.pngegg
         pcbMenuPrincipalUsuari.Location = New Point(700, 12)
         pcbMenuPrincipalUsuari.Name = "pcbMenuPrincipalUsuari"
@@ -87,45 +92,48 @@ Partial Class MenuPrincipal
         pcbMenuPrincipalUsuari.TabIndex = 6
         pcbMenuPrincipalUsuari.TabStop = False
         ' 
-        ' Button1
+        ' btnMenuPrincipalGestioUsuaris
         ' 
-        Button1.BackColor = Color.Aquamarine
-        Button1.FlatAppearance.BorderColor = Color.Aquamarine
-        Button1.Location = New Point(409, 261)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(126, 55)
-        Button1.TabIndex = 7
-        Button1.Text = "Gestió usuaris"
-        Button1.UseVisualStyleBackColor = False
+        btnMenuPrincipalGestioUsuaris.Anchor = AnchorStyles.None
+        btnMenuPrincipalGestioUsuaris.BackColor = Color.Aquamarine
+        btnMenuPrincipalGestioUsuaris.FlatAppearance.BorderColor = Color.Aquamarine
+        btnMenuPrincipalGestioUsuaris.Location = New Point(409, 261)
+        btnMenuPrincipalGestioUsuaris.Name = "btnMenuPrincipalGestioUsuaris"
+        btnMenuPrincipalGestioUsuaris.Size = New Size(126, 55)
+        btnMenuPrincipalGestioUsuaris.TabIndex = 7
+        btnMenuPrincipalGestioUsuaris.Text = "Gestió usuaris"
+        btnMenuPrincipalGestioUsuaris.UseVisualStyleBackColor = False
         ' 
-        ' Button2
+        ' btnMenuPrincipalSortir
         ' 
-        Button2.BackColor = Color.Aquamarine
-        Button2.FlatAppearance.BorderColor = Color.Aquamarine
-        Button2.Location = New Point(329, 352)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(126, 55)
-        Button2.TabIndex = 8
-        Button2.Text = "Sortir"
-        Button2.UseVisualStyleBackColor = False
+        btnMenuPrincipalSortir.Anchor = AnchorStyles.Bottom
+        btnMenuPrincipalSortir.BackColor = Color.Aquamarine
+        btnMenuPrincipalSortir.FlatAppearance.BorderColor = Color.Aquamarine
+        btnMenuPrincipalSortir.Location = New Point(329, 352)
+        btnMenuPrincipalSortir.Name = "btnMenuPrincipalSortir"
+        btnMenuPrincipalSortir.Size = New Size(126, 55)
+        btnMenuPrincipalSortir.TabIndex = 8
+        btnMenuPrincipalSortir.Text = "Sortir"
+        btnMenuPrincipalSortir.UseVisualStyleBackColor = False
         ' 
-        ' Menú_Principal
+        ' MenuPrincipal
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
+        AutoValidate = AutoValidate.EnablePreventFocusChange
         BackColor = Color.LightSteelBlue
+        BackgroundImageLayout = ImageLayout.None
         ClientSize = New Size(795, 419)
-        Controls.Add(Button2)
-        Controls.Add(Button1)
+        Controls.Add(btnMenuPrincipalSortir)
+        Controls.Add(btnMenuPrincipalGestioUsuaris)
         Controls.Add(pcbMenuPrincipalUsuari)
         Controls.Add(btnMenuPrinGestioAnimals)
         Controls.Add(btnMenuPrinGestioServeis)
         Controls.Add(pcbMenuPrinLogo)
         Controls.Add(btnMenuPrinGestioGuarderies)
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
-        MaximumSize = New Size(813, 466)
         MinimumSize = New Size(813, 466)
-        Name = "Menú_Principal"
+        Name = "MenuPrincipal"
         StartPosition = FormStartPosition.CenterScreen
         Text = "Pet Hotel Finder Gestion"
         CType(pcbMenuPrinLogo, ComponentModel.ISupportInitialize).EndInit()
@@ -137,6 +145,6 @@ Partial Class MenuPrincipal
     Friend WithEvents btnMenuPrinGestioServeis As Button
     Friend WithEvents btnMenuPrinGestioAnimals As Button
     Friend WithEvents pcbMenuPrincipalUsuari As PictureBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btnMenuPrincipalGestioUsuaris As Button
+    Friend WithEvents btnMenuPrincipalSortir As Button
 End Class

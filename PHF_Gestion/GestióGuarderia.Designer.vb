@@ -29,7 +29,7 @@ Partial Class GestióGuarderia
         btnGestGuarderiaAfegirHabitacio = New Button()
         btnGestGuarderiaModificar = New Button()
         btnGestGuarderiaAfegirTipusHabitacio = New Button()
-        Button1 = New Button()
+        btnGestioGuarderiaEnrere = New Button()
         SuspendLayout()
         ' 
         ' lblGestGuarderiaTitol
@@ -40,7 +40,7 @@ Partial Class GestióGuarderia
         lblGestGuarderiaTitol.Name = "lblGestGuarderiaTitol"
         lblGestGuarderiaTitol.Size = New Size(180, 40)
         lblGestGuarderiaTitol.TabIndex = 1
-        lblGestGuarderiaTitol.Text = "Guarderia:" ' 
+        lblGestGuarderiaTitol.Text = "Guarderia:"' 
         ' lblGestGuarderiaNomGuarderia
         ' 
         lblGestGuarderiaNomGuarderia.AutoSize = True
@@ -49,7 +49,7 @@ Partial Class GestióGuarderia
         lblGestGuarderiaNomGuarderia.Name = "lblGestGuarderiaNomGuarderia"
         lblGestGuarderiaNomGuarderia.Size = New Size(98, 40)
         lblGestGuarderiaNomGuarderia.TabIndex = 2
-        lblGestGuarderiaNomGuarderia.Text = "         " ' 
+        lblGestGuarderiaNomGuarderia.Text = "         "' 
         ' btnGestGuarderiaAfegCameres
         ' 
         btnGestGuarderiaAfegCameres.BackColor = Color.Aquamarine
@@ -97,25 +97,25 @@ Partial Class GestióGuarderia
         btnGestGuarderiaAfegirTipusHabitacio.Text = "Afegir Tipus Habitació"
         btnGestGuarderiaAfegirTipusHabitacio.UseVisualStyleBackColor = False
         ' 
-        ' Button1
+        ' btnGestioGuarderiaEnrere
         ' 
-        Button1.Anchor = AnchorStyles.Bottom
-        Button1.BackColor = Color.Aquamarine
-        Button1.FlatAppearance.BorderColor = Color.Aquamarine
-        Button1.Location = New Point(188, 358)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(123, 51)
-        Button1.TabIndex = 10
-        Button1.Text = "Enrere"
-        Button1.UseVisualStyleBackColor = False
+        btnGestioGuarderiaEnrere.Anchor = AnchorStyles.Bottom
+        btnGestioGuarderiaEnrere.BackColor = Color.Aquamarine
+        btnGestioGuarderiaEnrere.FlatAppearance.BorderColor = Color.Aquamarine
+        btnGestioGuarderiaEnrere.Location = New Point(188, 358)
+        btnGestioGuarderiaEnrere.Name = "btnGestioGuarderiaEnrere"
+        btnGestioGuarderiaEnrere.Size = New Size(123, 51)
+        btnGestioGuarderiaEnrere.TabIndex = 10
+        btnGestioGuarderiaEnrere.Text = "Enrere"
+        btnGestioGuarderiaEnrere.UseVisualStyleBackColor = False
         ' 
         ' GestióGuarderia
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.LightSteelBlue
         ClientSize = New Size(511, 433)
-        Controls.Add(Button1)
+        Controls.Add(btnGestioGuarderiaEnrere)
         Controls.Add(btnGestGuarderiaAfegirTipusHabitacio)
         Controls.Add(btnGestGuarderiaModificar)
         Controls.Add(btnGestGuarderiaAfegirHabitacio)
@@ -136,5 +136,5 @@ Partial Class GestióGuarderia
     Friend WithEvents btnGestGuarderiaAfegirHabitacio As Button
     Friend WithEvents btnGestGuarderiaModificar As Button
     Friend WithEvents btnGestGuarderiaAfegirTipusHabitacio As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnGestioGuarderiaEnrere As Button
 End Class

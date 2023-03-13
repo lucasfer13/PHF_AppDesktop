@@ -136,7 +136,7 @@ Partial Class FormSeveis
         MinimumSize = New Size(1066, 665)
         Name = "FormSeveis"
         StartPosition = FormStartPosition.CenterScreen
-        Text = "Serveis"
+        Text = "PHF - Serveis"
         CType(dgvServeis, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()

@@ -58,8 +58,8 @@ Partial Class InformacionGuarderia
         lblInformacioGuarderiaTitol = New Label()
         stcInformacioGuarderiaSeparador = New SplitContainer()
         tlpInformacioGuarderiaTaules = New TableLayoutPanel()
-        pnlInformacioGuarderiaServeis = New Panel()
         pnlInformacioGuarderiaVacances = New Panel()
+        pnlInformacioGuarderiaServeis = New Panel()
         Button1 = New Button()
         CType(dgvInformacioGuarderia, ComponentModel.ISupportInitialize).BeginInit()
         CType(dtvInformacioGuarderiaServeis, ComponentModel.ISupportInitialize).BeginInit()
@@ -68,8 +68,8 @@ Partial Class InformacionGuarderia
         stcInformacioGuarderiaSeparador.Panel2.SuspendLayout()
         stcInformacioGuarderiaSeparador.SuspendLayout()
         tlpInformacioGuarderiaTaules.SuspendLayout()
-        pnlInformacioGuarderiaServeis.SuspendLayout()
         pnlInformacioGuarderiaVacances.SuspendLayout()
+        pnlInformacioGuarderiaServeis.SuspendLayout()
         SuspendLayout()
         ' 
         ' btnInformacioGuarderiaEnrere
@@ -418,18 +418,6 @@ Partial Class InformacionGuarderia
         tlpInformacioGuarderiaTaules.Size = New Size(578, 685)
         tlpInformacioGuarderiaTaules.TabIndex = 0
         ' 
-        ' pnlInformacioGuarderiaServeis
-        ' 
-        pnlInformacioGuarderiaServeis.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        pnlInformacioGuarderiaServeis.Controls.Add(lblInformacioGuarderiaServei)
-        pnlInformacioGuarderiaServeis.Controls.Add(dtvInformacioGuarderiaServeis)
-        pnlInformacioGuarderiaServeis.Controls.Add(btnInformacioGuarderiaAfegirServei)
-        pnlInformacioGuarderiaServeis.Controls.Add(btnInformacioGuarderiaEliminarServei)
-        pnlInformacioGuarderiaServeis.Location = New Point(3, 345)
-        pnlInformacioGuarderiaServeis.Name = "pnlInformacioGuarderiaServeis"
-        pnlInformacioGuarderiaServeis.Size = New Size(572, 337)
-        pnlInformacioGuarderiaServeis.TabIndex = 0
-        ' 
         ' pnlInformacioGuarderiaVacances
         ' 
         pnlInformacioGuarderiaVacances.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
@@ -441,6 +429,18 @@ Partial Class InformacionGuarderia
         pnlInformacioGuarderiaVacances.Name = "pnlInformacioGuarderiaVacances"
         pnlInformacioGuarderiaVacances.Size = New Size(572, 336)
         pnlInformacioGuarderiaVacances.TabIndex = 1
+        ' 
+        ' pnlInformacioGuarderiaServeis
+        ' 
+        pnlInformacioGuarderiaServeis.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        pnlInformacioGuarderiaServeis.Controls.Add(lblInformacioGuarderiaServei)
+        pnlInformacioGuarderiaServeis.Controls.Add(dtvInformacioGuarderiaServeis)
+        pnlInformacioGuarderiaServeis.Controls.Add(btnInformacioGuarderiaAfegirServei)
+        pnlInformacioGuarderiaServeis.Controls.Add(btnInformacioGuarderiaEliminarServei)
+        pnlInformacioGuarderiaServeis.Location = New Point(3, 345)
+        pnlInformacioGuarderiaServeis.Name = "pnlInformacioGuarderiaServeis"
+        pnlInformacioGuarderiaServeis.Size = New Size(572, 337)
+        pnlInformacioGuarderiaServeis.TabIndex = 0
         ' 
         ' Button1
         ' 
@@ -475,10 +475,10 @@ Partial Class InformacionGuarderia
         CType(stcInformacioGuarderiaSeparador, ComponentModel.ISupportInitialize).EndInit()
         stcInformacioGuarderiaSeparador.ResumeLayout(False)
         tlpInformacioGuarderiaTaules.ResumeLayout(False)
-        pnlInformacioGuarderiaServeis.ResumeLayout(False)
-        pnlInformacioGuarderiaServeis.PerformLayout()
         pnlInformacioGuarderiaVacances.ResumeLayout(False)
         pnlInformacioGuarderiaVacances.PerformLayout()
+        pnlInformacioGuarderiaServeis.ResumeLayout(False)
+        pnlInformacioGuarderiaServeis.PerformLayout()
         ResumeLayout(False)
         PerformLayout()
     End Sub

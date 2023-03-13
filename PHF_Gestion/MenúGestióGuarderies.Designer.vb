@@ -26,8 +26,8 @@ Partial Class MenúGestióGuarderies
         lblMenuGestGuarderiesTitol = New Label()
         btnMenuGestGuarderiesAfegGuarderia = New Button()
         btnMenuGestGuarderiesEliminarGuarderia = New Button()
-        btnMenuGestGuarderiesEnrere = New Button()
         DataGridView1 = New DataGridView()
+        btnGestioGuarderiesEnrere = New Button()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -45,7 +45,7 @@ Partial Class MenúGestióGuarderies
         btnMenuGestGuarderiesAfegGuarderia.Anchor = AnchorStyles.Right
         btnMenuGestGuarderiesAfegGuarderia.BackColor = Color.Aquamarine
         btnMenuGestGuarderiesAfegGuarderia.FlatAppearance.BorderColor = Color.Aquamarine
-        btnMenuGestGuarderiesAfegGuarderia.Location = New Point(578, 129)
+        btnMenuGestGuarderiesAfegGuarderia.Location = New Point(604, 125)
         btnMenuGestGuarderiesAfegGuarderia.Name = "btnMenuGestGuarderiesAfegGuarderia"
         btnMenuGestGuarderiesAfegGuarderia.Size = New Size(123, 51)
         btnMenuGestGuarderiesAfegGuarderia.TabIndex = 3
@@ -57,47 +57,44 @@ Partial Class MenúGestióGuarderies
         btnMenuGestGuarderiesEliminarGuarderia.Anchor = AnchorStyles.Right
         btnMenuGestGuarderiesEliminarGuarderia.BackColor = Color.Aquamarine
         btnMenuGestGuarderiesEliminarGuarderia.FlatAppearance.BorderColor = Color.Aquamarine
-        btnMenuGestGuarderiesEliminarGuarderia.Location = New Point(578, 211)
+        btnMenuGestGuarderiesEliminarGuarderia.Location = New Point(604, 207)
         btnMenuGestGuarderiesEliminarGuarderia.Name = "btnMenuGestGuarderiesEliminarGuarderia"
         btnMenuGestGuarderiesEliminarGuarderia.Size = New Size(123, 61)
         btnMenuGestGuarderiesEliminarGuarderia.TabIndex = 4
         btnMenuGestGuarderiesEliminarGuarderia.Text = "Eliminar Guarderia"
         btnMenuGestGuarderiesEliminarGuarderia.UseVisualStyleBackColor = False
         ' 
-        ' btnMenuGestGuarderiesEnrere
-        ' 
-        btnMenuGestGuarderiesEnrere.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
-        btnMenuGestGuarderiesEnrere.BackColor = Color.LightSteelBlue
-        btnMenuGestGuarderiesEnrere.BackgroundImageLayout = ImageLayout.Center
-        btnMenuGestGuarderiesEnrere.Enabled = False
-        btnMenuGestGuarderiesEnrere.FlatAppearance.BorderColor = Color.LightSteelBlue
-        btnMenuGestGuarderiesEnrere.FlatStyle = FlatStyle.Flat
-        btnMenuGestGuarderiesEnrere.Font = New Font("Segoe UI", 3F, FontStyle.Regular, GraphicsUnit.Point)
-        btnMenuGestGuarderiesEnrere.Image = CType(resources.GetObject("btnMenuGestGuarderiesEnrere.Image"), Image)
-        btnMenuGestGuarderiesEnrere.Location = New Point(618, 345)
-        btnMenuGestGuarderiesEnrere.Name = "btnMenuGestGuarderiesEnrere"
-        btnMenuGestGuarderiesEnrere.Size = New Size(44, 35)
-        btnMenuGestGuarderiesEnrere.TabIndex = 6
-        btnMenuGestGuarderiesEnrere.UseVisualStyleBackColor = False
-        ' 
         ' DataGridView1
         ' 
+        DataGridView1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridView1.Location = New Point(12, 72)
         DataGridView1.Name = "DataGridView1"
         DataGridView1.RowHeadersWidth = 51
         DataGridView1.RowTemplate.Height = 29
-        DataGridView1.Size = New Size(478, 335)
+        DataGridView1.Size = New Size(489, 329)
         DataGridView1.TabIndex = 7
+        ' 
+        ' btnGestioGuarderiesEnrere
+        ' 
+        btnGestioGuarderiesEnrere.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
+        btnGestioGuarderiesEnrere.BackColor = Color.Aquamarine
+        btnGestioGuarderiesEnrere.FlatAppearance.BorderColor = Color.Aquamarine
+        btnGestioGuarderiesEnrere.Location = New Point(604, 339)
+        btnGestioGuarderiesEnrere.Name = "btnGestioGuarderiesEnrere"
+        btnGestioGuarderiesEnrere.Size = New Size(123, 61)
+        btnGestioGuarderiesEnrere.TabIndex = 8
+        btnGestioGuarderiesEnrere.Text = "Enrere"
+        btnGestioGuarderiesEnrere.UseVisualStyleBackColor = False
         ' 
         ' MenúGestióGuarderies
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.LightSteelBlue
-        ClientSize = New Size(795, 432)
+        ClientSize = New Size(821, 425)
+        Controls.Add(btnGestioGuarderiesEnrere)
         Controls.Add(DataGridView1)
-        Controls.Add(btnMenuGestGuarderiesEnrere)
         Controls.Add(btnMenuGestGuarderiesEliminarGuarderia)
         Controls.Add(btnMenuGestGuarderiesAfegGuarderia)
         Controls.Add(lblMenuGestGuarderiesTitol)
@@ -114,6 +111,6 @@ Partial Class MenúGestióGuarderies
     Friend WithEvents lblMenuGestGuarderiesTitol As Label
     Friend WithEvents btnMenuGestGuarderiesAfegGuarderia As Button
     Friend WithEvents btnMenuGestGuarderiesEliminarGuarderia As Button
-    Protected WithEvents btnMenuGestGuarderiesEnrere As Button
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents btnGestioGuarderiesEnrere As Button
 End Class

@@ -1,17 +1,31 @@
 ﻿Public Class GestióGuarderia
-    Private Sub GestióGuarderia_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles btnGestioGuarderiaEnrere.Click, btnGestioGuarderiaEnrere.Click
+        Me.Close()
     End Sub
 
-    Private Sub lblMenuGestGuarderiesTitol_Click(sender As Object, e As EventArgs) Handles lblGestGuarderiaTitol.Click
-
+    Private Sub GestióGuarderia_Click(sender As Object, e As EventArgs) Handles MyBase.Click
+        MenúGestióGuarderies.Show()
     End Sub
 
-    Private Sub lblGestGuarderiaNomGuarderia_Click(sender As Object, e As EventArgs) Handles lblGestGuarderiaNomGuarderia.Click
-
+    Private Sub btnGestGuarderiaModificar_Click(sender As Object, e As EventArgs) Handles btnGestGuarderiaModificar.Click
+        Dim guarderia As New InformacionGuarderia(False)
+        guarderia.Show()
+        Me.Hide()
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnGestGuarderiaModificar.Click
+    Private Sub btnGestGuarderiaAfegirHabitacio_Click(sender As Object, e As EventArgs) Handles btnGestGuarderiaAfegirHabitacio.Click
+        GestioHabitacions.Show()
+        Me.Hide()
+    End Sub
 
+    Private Sub btnGestGuarderiaAfegCameres_Click(sender As Object, e As EventArgs) Handles btnGestGuarderiaAfegCameres.Click
+        GestioCameres.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub btnGestGuarderiaAfegirTipusHabitacio_Click(sender As Object, e As EventArgs) Handles btnGestGuarderiaAfegirTipusHabitacio.Click
+        LlistatTipusHabitacions.Show()
+        Me.Hide()
     End Sub
 End Class
