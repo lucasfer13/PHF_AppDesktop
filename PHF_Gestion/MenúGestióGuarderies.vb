@@ -15,8 +15,12 @@ Public Class MenúGestióGuarderies
         Me.Close()
     End Sub
 
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.Click
         GestióGuarderia.Show()
         Me.Hide()
+    End Sub
+
+    Private Sub MenúGestióGuarderies_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class

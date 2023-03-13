@@ -37,7 +37,7 @@ Partial Class TipusAnimal
         lblAnimalAnimal.Font = New Font("Sitka Small", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
         lblAnimalAnimal.Location = New Point(118, 164)
         lblAnimalAnimal.Name = "lblAnimalAnimal"
-        lblAnimalAnimal.Size = New Size(103, 34)
+        lblAnimalAnimal.Size = New Size(103, 33)
         lblAnimalAnimal.TabIndex = 0
         lblAnimalAnimal.Text = "Animal"' 
         ' txtgestAnimalnom
@@ -53,7 +53,7 @@ Partial Class TipusAnimal
         Label1.Font = New Font("Sitka Small", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
         Label1.Location = New Point(35, 43)
         Label1.Name = "Label1"
-        Label1.Size = New Size(186, 34)
+        Label1.Size = New Size(186, 33)
         Label1.TabIndex = 6
         Label1.Text = "Tipus Animal "' 
         ' btnAnimalAfeg
