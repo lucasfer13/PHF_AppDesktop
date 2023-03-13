@@ -22,90 +22,124 @@ Partial Class FormSeveis
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormSeveis))
-        Me.dgvServeis = New System.Windows.Forms.DataGridView()
-        Me.btnServeisAdd = New System.Windows.Forms.Button()
-        Me.btnServeisModify = New System.Windows.Forms.Button()
-        Me.btnServeisBack = New System.Windows.Forms.Button()
-        Me.btnServeisDelete = New System.Windows.Forms.Button()
-        CType(Me.dgvServeis, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SuspendLayout()
-        '
-        'dgvServeis
-        '
-        Me.dgvServeis.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dgvServeis.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvServeis.Location = New System.Drawing.Point(12, 9)
-        Me.dgvServeis.Name = "dgvServeis"
-        Me.dgvServeis.RowHeadersWidth = 51
-        Me.dgvServeis.RowTemplate.Height = 29
-        Me.dgvServeis.Size = New System.Drawing.Size(583, 494)
-        Me.dgvServeis.TabIndex = 0
-        '
-        'btnServeisAdd
-        '
-        Me.btnServeisAdd.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnServeisAdd.BackColor = System.Drawing.Color.Aquamarine
-        Me.btnServeisAdd.Location = New System.Drawing.Point(667, 12)
-        Me.btnServeisAdd.Name = "btnServeisAdd"
-        Me.btnServeisAdd.Size = New System.Drawing.Size(185, 94)
-        Me.btnServeisAdd.TabIndex = 1
-        Me.btnServeisAdd.Text = "Afegir Servei"
-        Me.btnServeisAdd.UseVisualStyleBackColor = False
-        '
-        'btnServeisModify
-        '
-        Me.btnServeisModify.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnServeisModify.BackColor = System.Drawing.Color.Aquamarine
-        Me.btnServeisModify.Location = New System.Drawing.Point(667, 112)
-        Me.btnServeisModify.Name = "btnServeisModify"
-        Me.btnServeisModify.Size = New System.Drawing.Size(185, 94)
-        Me.btnServeisModify.TabIndex = 2
-        Me.btnServeisModify.Text = "Modificar"
-        Me.btnServeisModify.UseVisualStyleBackColor = False
-        '
-        'btnServeisBack
-        '
-        Me.btnServeisBack.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnServeisBack.BackColor = System.Drawing.Color.Aquamarine
-        Me.btnServeisBack.Location = New System.Drawing.Point(667, 409)
-        Me.btnServeisBack.Name = "btnServeisBack"
-        Me.btnServeisBack.Size = New System.Drawing.Size(185, 94)
-        Me.btnServeisBack.TabIndex = 3
-        Me.btnServeisBack.Text = "Atras"
-        Me.btnServeisBack.UseVisualStyleBackColor = False
-        '
-        'btnServeisDelete
-        '
-        Me.btnServeisDelete.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnServeisDelete.BackColor = System.Drawing.Color.Aquamarine
-        Me.btnServeisDelete.Location = New System.Drawing.Point(667, 212)
-        Me.btnServeisDelete.Name = "btnServeisDelete"
-        Me.btnServeisDelete.Size = New System.Drawing.Size(185, 94)
-        Me.btnServeisDelete.TabIndex = 4
-        Me.btnServeisDelete.Text = "Eliminar"
-        Me.btnServeisDelete.UseVisualStyleBackColor = False
-        '
-        'FormSeveis
-        '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.LightSteelBlue
-        Me.ClientSize = New System.Drawing.Size(904, 515)
-        Me.Controls.Add(Me.btnServeisDelete)
-        Me.Controls.Add(Me.btnServeisBack)
-        Me.Controls.Add(Me.btnServeisModify)
-        Me.Controls.Add(Me.btnServeisAdd)
-        Me.Controls.Add(Me.dgvServeis)
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.MinimumSize = New System.Drawing.Size(922, 562)
-        Me.Name = "FormSeveis"
-        Me.Text = "Serveis"
-        CType(Me.dgvServeis, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ResumeLayout(False)
-
+        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(FormSeveis))
+        dgvServeis = New DataGridView()
+        btnServeisAdd = New Button()
+        btnServeisModify = New Button()
+        btnServeisBack = New Button()
+        btnServeisDelete = New Button()
+        lblServeisTitol = New Label()
+        txtServeisBuscar = New TextBox()
+        btnServeisReset = New Button()
+        CType(dgvServeis, ComponentModel.ISupportInitialize).BeginInit()
+        SuspendLayout()
+        ' 
+        ' dgvServeis
+        ' 
+        dgvServeis.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        dgvServeis.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        dgvServeis.Location = New Point(12, 9)
+        dgvServeis.Name = "dgvServeis"
+        dgvServeis.RowHeadersWidth = 51
+        dgvServeis.RowTemplate.Height = 29
+        dgvServeis.Size = New Size(727, 597)
+        dgvServeis.TabIndex = 0
+        ' 
+        ' btnServeisAdd
+        ' 
+        btnServeisAdd.Anchor = AnchorStyles.Top Or AnchorStyles.Right
+        btnServeisAdd.BackColor = Color.Aquamarine
+        btnServeisAdd.Location = New Point(811, 132)
+        btnServeisAdd.Name = "btnServeisAdd"
+        btnServeisAdd.Size = New Size(185, 94)
+        btnServeisAdd.TabIndex = 1
+        btnServeisAdd.Text = "Afegir Servei"
+        btnServeisAdd.UseVisualStyleBackColor = False
+        ' 
+        ' btnServeisModify
+        ' 
+        btnServeisModify.Anchor = AnchorStyles.Top Or AnchorStyles.Right
+        btnServeisModify.BackColor = Color.Aquamarine
+        btnServeisModify.Location = New Point(811, 232)
+        btnServeisModify.Name = "btnServeisModify"
+        btnServeisModify.Size = New Size(185, 94)
+        btnServeisModify.TabIndex = 2
+        btnServeisModify.Text = "Modificar"
+        btnServeisModify.UseVisualStyleBackColor = False
+        ' 
+        ' btnServeisBack
+        ' 
+        btnServeisBack.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
+        btnServeisBack.BackColor = Color.Aquamarine
+        btnServeisBack.Location = New Point(811, 512)
+        btnServeisBack.Name = "btnServeisBack"
+        btnServeisBack.Size = New Size(185, 94)
+        btnServeisBack.TabIndex = 3
+        btnServeisBack.Text = "Atras"
+        btnServeisBack.UseVisualStyleBackColor = False
+        ' 
+        ' btnServeisDelete
+        ' 
+        btnServeisDelete.Anchor = AnchorStyles.Top Or AnchorStyles.Right
+        btnServeisDelete.BackColor = Color.Aquamarine
+        btnServeisDelete.Location = New Point(811, 332)
+        btnServeisDelete.Name = "btnServeisDelete"
+        btnServeisDelete.Size = New Size(185, 94)
+        btnServeisDelete.TabIndex = 4
+        btnServeisDelete.Text = "Eliminar"
+        btnServeisDelete.UseVisualStyleBackColor = False
+        ' 
+        ' lblServeisTitol
+        ' 
+        lblServeisTitol.Anchor = AnchorStyles.Top Or AnchorStyles.Right
+        lblServeisTitol.AutoSize = True
+        lblServeisTitol.Font = New Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point)
+        lblServeisTitol.Location = New Point(838, 9)
+        lblServeisTitol.Name = "lblServeisTitol"
+        lblServeisTitol.Size = New Size(104, 38)
+        lblServeisTitol.TabIndex = 5
+        lblServeisTitol.Text = "Serveis"' 
+        ' txtServeisBuscar
+        ' 
+        txtServeisBuscar.Anchor = AnchorStyles.Top Or AnchorStyles.Right
+        txtServeisBuscar.Location = New Point(783, 69)
+        txtServeisBuscar.Name = "txtServeisBuscar"
+        txtServeisBuscar.Size = New Size(159, 27)
+        txtServeisBuscar.TabIndex = 6
+        ' 
+        ' btnServeisReset
+        ' 
+        btnServeisReset.Anchor = AnchorStyles.Top Or AnchorStyles.Right
+        btnServeisReset.BackColor = Color.Aquamarine
+        btnServeisReset.Location = New Point(948, 69)
+        btnServeisReset.Name = "btnServeisReset"
+        btnServeisReset.Size = New Size(73, 27)
+        btnServeisReset.TabIndex = 7
+        btnServeisReset.Text = "Reset"
+        btnServeisReset.UseVisualStyleBackColor = False
+        ' 
+        ' FormSeveis
+        ' 
+        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleMode = AutoScaleMode.Font
+        BackColor = Color.LightSteelBlue
+        ClientSize = New Size(1048, 618)
+        Controls.Add(btnServeisReset)
+        Controls.Add(txtServeisBuscar)
+        Controls.Add(lblServeisTitol)
+        Controls.Add(btnServeisDelete)
+        Controls.Add(btnServeisBack)
+        Controls.Add(btnServeisModify)
+        Controls.Add(btnServeisAdd)
+        Controls.Add(dgvServeis)
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
+        MinimumSize = New Size(1066, 665)
+        Name = "FormSeveis"
+        StartPosition = FormStartPosition.CenterScreen
+        Text = "Serveis"
+        CType(dgvServeis, ComponentModel.ISupportInitialize).EndInit()
+        ResumeLayout(False)
+        PerformLayout()
     End Sub
 
     Friend WithEvents dgvServeis As DataGridView
@@ -113,4 +147,7 @@ Partial Class FormSeveis
     Friend WithEvents btnServeisModify As Button
     Friend WithEvents btnServeisBack As Button
     Friend WithEvents btnServeisDelete As Button
+    Friend WithEvents lblServeisTitol As Label
+    Friend WithEvents txtServeisBuscar As TextBox
+    Friend WithEvents btnServeisReset As Button
 End Class

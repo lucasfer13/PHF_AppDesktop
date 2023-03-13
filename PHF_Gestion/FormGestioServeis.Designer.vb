@@ -22,78 +22,76 @@ Partial Class FormGestioServeis
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormGestioServeis))
-        Me.lblGestioServeiTitleName = New System.Windows.Forms.Label()
-        Me.lblGestioServeiTitle = New System.Windows.Forms.Label()
-        Me.txtGestioServeiName = New System.Windows.Forms.TextBox()
-        Me.btnGestioServeiSave = New System.Windows.Forms.Button()
-        Me.btnGestioServeiCancel = New System.Windows.Forms.Button()
-        Me.SuspendLayout()
-        '
-        'lblGestioServeiTitleName
-        '
-        Me.lblGestioServeiTitleName.AutoSize = True
-        Me.lblGestioServeiTitleName.Location = New System.Drawing.Point(93, 118)
-        Me.lblGestioServeiTitleName.Name = "lblGestioServeiTitleName"
-        Me.lblGestioServeiTitleName.Size = New System.Drawing.Size(86, 20)
-        Me.lblGestioServeiTitleName.TabIndex = 0
-        Me.lblGestioServeiTitleName.Text = "Nom Servei"
-        '
-        'lblGestioServeiTitle
-        '
-        Me.lblGestioServeiTitle.AutoSize = True
-        Me.lblGestioServeiTitle.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lblGestioServeiTitle.Location = New System.Drawing.Point(171, 33)
-        Me.lblGestioServeiTitle.Name = "lblGestioServeiTitle"
-        Me.lblGestioServeiTitle.Size = New System.Drawing.Size(97, 41)
-        Me.lblGestioServeiTitle.TabIndex = 1
-        Me.lblGestioServeiTitle.Text = "Servei"
-        '
-        'txtGestioServeiName
-        '
-        Me.txtGestioServeiName.Location = New System.Drawing.Point(210, 115)
-        Me.txtGestioServeiName.Name = "txtGestioServeiName"
-        Me.txtGestioServeiName.Size = New System.Drawing.Size(125, 27)
-        Me.txtGestioServeiName.TabIndex = 2
-        '
-        'btnGestioServeiSave
-        '
-        Me.btnGestioServeiSave.BackColor = System.Drawing.Color.Aquamarine
-        Me.btnGestioServeiSave.Location = New System.Drawing.Point(251, 208)
-        Me.btnGestioServeiSave.Name = "btnGestioServeiSave"
-        Me.btnGestioServeiSave.Size = New System.Drawing.Size(169, 72)
-        Me.btnGestioServeiSave.TabIndex = 3
-        Me.btnGestioServeiSave.Text = "Guardar"
-        Me.btnGestioServeiSave.UseVisualStyleBackColor = False
-        '
-        'btnGestioServeiCancel
-        '
-        Me.btnGestioServeiCancel.BackColor = System.Drawing.Color.Aquamarine
-        Me.btnGestioServeiCancel.Location = New System.Drawing.Point(23, 208)
-        Me.btnGestioServeiCancel.Name = "btnGestioServeiCancel"
-        Me.btnGestioServeiCancel.Size = New System.Drawing.Size(169, 72)
-        Me.btnGestioServeiCancel.TabIndex = 4
-        Me.btnGestioServeiCancel.Text = "Cancelar"
-        Me.btnGestioServeiCancel.UseVisualStyleBackColor = False
-        '
-        'FormGestioServeis
-        '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.LightSteelBlue
-        Me.ClientSize = New System.Drawing.Size(433, 308)
-        Me.Controls.Add(Me.btnGestioServeiCancel)
-        Me.Controls.Add(Me.btnGestioServeiSave)
-        Me.Controls.Add(Me.txtGestioServeiName)
-        Me.Controls.Add(Me.lblGestioServeiTitle)
-        Me.Controls.Add(Me.lblGestioServeiTitleName)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Name = "FormGestioServeis"
-        Me.Text = "Gestio Servei"
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
-
+        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(FormGestioServeis))
+        lblGestioServeiTitleName = New Label()
+        lblGestioServeiTitle = New Label()
+        txtGestioServeiName = New TextBox()
+        btnGestioServeiSave = New Button()
+        btnGestioServeiCancel = New Button()
+        SuspendLayout()
+        ' 
+        ' lblGestioServeiTitleName
+        ' 
+        lblGestioServeiTitleName.AutoSize = True
+        lblGestioServeiTitleName.Location = New Point(93, 118)
+        lblGestioServeiTitleName.Name = "lblGestioServeiTitleName"
+        lblGestioServeiTitleName.Size = New Size(86, 20)
+        lblGestioServeiTitleName.TabIndex = 0
+        lblGestioServeiTitleName.Text = "Nom Servei"' 
+        ' lblGestioServeiTitle
+        ' 
+        lblGestioServeiTitle.AutoSize = True
+        lblGestioServeiTitle.Font = New Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point)
+        lblGestioServeiTitle.Location = New Point(171, 33)
+        lblGestioServeiTitle.Name = "lblGestioServeiTitle"
+        lblGestioServeiTitle.Size = New Size(97, 41)
+        lblGestioServeiTitle.TabIndex = 1
+        lblGestioServeiTitle.Text = "Servei"' 
+        ' txtGestioServeiName
+        ' 
+        txtGestioServeiName.Location = New Point(210, 115)
+        txtGestioServeiName.Name = "txtGestioServeiName"
+        txtGestioServeiName.Size = New Size(125, 27)
+        txtGestioServeiName.TabIndex = 2
+        ' 
+        ' btnGestioServeiSave
+        ' 
+        btnGestioServeiSave.BackColor = Color.Aquamarine
+        btnGestioServeiSave.Location = New Point(251, 208)
+        btnGestioServeiSave.Name = "btnGestioServeiSave"
+        btnGestioServeiSave.Size = New Size(169, 72)
+        btnGestioServeiSave.TabIndex = 3
+        btnGestioServeiSave.Text = "Guardar"
+        btnGestioServeiSave.UseVisualStyleBackColor = False
+        ' 
+        ' btnGestioServeiCancel
+        ' 
+        btnGestioServeiCancel.BackColor = Color.Aquamarine
+        btnGestioServeiCancel.Location = New Point(23, 208)
+        btnGestioServeiCancel.Name = "btnGestioServeiCancel"
+        btnGestioServeiCancel.Size = New Size(169, 72)
+        btnGestioServeiCancel.TabIndex = 4
+        btnGestioServeiCancel.Text = "Cancelar"
+        btnGestioServeiCancel.UseVisualStyleBackColor = False
+        ' 
+        ' FormGestioServeis
+        ' 
+        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleMode = AutoScaleMode.Font
+        BackColor = Color.LightSteelBlue
+        ClientSize = New Size(433, 308)
+        Controls.Add(btnGestioServeiCancel)
+        Controls.Add(btnGestioServeiSave)
+        Controls.Add(txtGestioServeiName)
+        Controls.Add(lblGestioServeiTitle)
+        Controls.Add(lblGestioServeiTitleName)
+        FormBorderStyle = FormBorderStyle.FixedToolWindow
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
+        Name = "FormGestioServeis"
+        StartPosition = FormStartPosition.CenterScreen
+        Text = "Gestio Servei"
+        ResumeLayout(False)
+        PerformLayout()
     End Sub
 
     Friend WithEvents lblGestioServeiTitleName As Label

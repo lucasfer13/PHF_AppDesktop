@@ -107,6 +107,7 @@ Partial Class GestioCameres
         Controls.Add(dgvCameresLlistat)
         MinimumSize = New Size(827, 489)
         Name = "GestioCameres"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "GestioCameres"
         CType(dgvCameresLlistat, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
