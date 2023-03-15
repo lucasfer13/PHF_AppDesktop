@@ -22,6 +22,7 @@ Partial Class FormTipusHabitacio
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(FormTipusHabitacio))
         lblFTipusHabitacioTitol = New Label()
         lblFTipusHabitacioNom = New Label()
         lblFTipusHabitacio = New Label()
@@ -30,14 +31,14 @@ Partial Class FormTipusHabitacio
         txtFTipusHabitacioDesc = New TextBox()
         txtFTipusHabitacioPreu = New TextBox()
         spcFTipusHabitacioSeparador = New SplitContainer()
+        btnFTipusHabitacioEliminarAnimal = New Button()
+        btnFTipusHabitacioAfegirAnimal = New Button()
+        lblFTipusHabitacioTitolAnimal = New Label()
+        dgvFTipusHabitacioAnimals = New DataGridView()
         btnFTipusHabitacioEnrere = New Button()
         btnFTipusHabitacioModificar = New Button()
         btnFTipusHabitacioGuardar = New Button()
         btnFTipusHabitacioEliminar = New Button()
-        dgvFTipusHabitacioAnimals = New DataGridView()
-        lblFTipusHabitacioTitolAnimal = New Label()
-        btnFTipusHabitacioAfegirAnimal = New Button()
-        btnFTipusHabitacioEliminarAnimal = New Button()
         CType(spcFTipusHabitacioSeparador, ComponentModel.ISupportInitialize).BeginInit()
         spcFTipusHabitacioSeparador.Panel1.SuspendLayout()
         spcFTipusHabitacioSeparador.Panel2.SuspendLayout()
@@ -132,6 +133,49 @@ Partial Class FormTipusHabitacio
         spcFTipusHabitacioSeparador.SplitterDistance = 451
         spcFTipusHabitacioSeparador.TabIndex = 7
         ' 
+        ' btnFTipusHabitacioEliminarAnimal
+        ' 
+        btnFTipusHabitacioEliminarAnimal.BackColor = Color.Aquamarine
+        btnFTipusHabitacioEliminarAnimal.Location = New Point(269, 32)
+        btnFTipusHabitacioEliminarAnimal.Name = "btnFTipusHabitacioEliminarAnimal"
+        btnFTipusHabitacioEliminarAnimal.Size = New Size(83, 29)
+        btnFTipusHabitacioEliminarAnimal.TabIndex = 3
+        btnFTipusHabitacioEliminarAnimal.Text = "Eliminar"
+        btnFTipusHabitacioEliminarAnimal.UseVisualStyleBackColor = False
+        ' 
+        ' btnFTipusHabitacioAfegirAnimal
+        ' 
+        btnFTipusHabitacioAfegirAnimal.BackColor = Color.Aquamarine
+        btnFTipusHabitacioAfegirAnimal.Location = New Point(165, 32)
+        btnFTipusHabitacioAfegirAnimal.Name = "btnFTipusHabitacioAfegirAnimal"
+        btnFTipusHabitacioAfegirAnimal.Size = New Size(83, 29)
+        btnFTipusHabitacioAfegirAnimal.TabIndex = 2
+        btnFTipusHabitacioAfegirAnimal.Text = "Afegir"
+        btnFTipusHabitacioAfegirAnimal.UseVisualStyleBackColor = False
+        ' 
+        ' lblFTipusHabitacioTitolAnimal
+        ' 
+        lblFTipusHabitacioTitolAnimal.AutoSize = True
+        lblFTipusHabitacioTitolAnimal.Font = New Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point)
+        lblFTipusHabitacioTitolAnimal.Location = New Point(25, 29)
+        lblFTipusHabitacioTitolAnimal.Name = "lblFTipusHabitacioTitolAnimal"
+        lblFTipusHabitacioTitolAnimal.Size = New Size(134, 25)
+        lblFTipusHabitacioTitolAnimal.TabIndex = 1
+        lblFTipusHabitacioTitolAnimal.Text = "Tipus d'animals"' 
+        ' dgvFTipusHabitacioAnimals
+        ' 
+        dgvFTipusHabitacioAnimals.AllowUserToAddRows = False
+        dgvFTipusHabitacioAnimals.AllowUserToDeleteRows = False
+        dgvFTipusHabitacioAnimals.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        dgvFTipusHabitacioAnimals.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        dgvFTipusHabitacioAnimals.Location = New Point(25, 67)
+        dgvFTipusHabitacioAnimals.Name = "dgvFTipusHabitacioAnimals"
+        dgvFTipusHabitacioAnimals.ReadOnly = True
+        dgvFTipusHabitacioAnimals.RowHeadersWidth = 51
+        dgvFTipusHabitacioAnimals.RowTemplate.Height = 29
+        dgvFTipusHabitacioAnimals.Size = New Size(366, 212)
+        dgvFTipusHabitacioAnimals.TabIndex = 0
+        ' 
         ' btnFTipusHabitacioEnrere
         ' 
         btnFTipusHabitacioEnrere.Anchor = AnchorStyles.Bottom
@@ -176,46 +220,6 @@ Partial Class FormTipusHabitacio
         btnFTipusHabitacioEliminar.Text = "Eliminar"
         btnFTipusHabitacioEliminar.UseVisualStyleBackColor = False
         ' 
-        ' dgvFTipusHabitacioAnimals
-        ' 
-        dgvFTipusHabitacioAnimals.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        dgvFTipusHabitacioAnimals.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgvFTipusHabitacioAnimals.Location = New Point(25, 67)
-        dgvFTipusHabitacioAnimals.Name = "dgvFTipusHabitacioAnimals"
-        dgvFTipusHabitacioAnimals.RowHeadersWidth = 51
-        dgvFTipusHabitacioAnimals.RowTemplate.Height = 29
-        dgvFTipusHabitacioAnimals.Size = New Size(366, 212)
-        dgvFTipusHabitacioAnimals.TabIndex = 0
-        ' 
-        ' lblFTipusHabitacioTitolAnimal
-        ' 
-        lblFTipusHabitacioTitolAnimal.AutoSize = True
-        lblFTipusHabitacioTitolAnimal.Font = New Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point)
-        lblFTipusHabitacioTitolAnimal.Location = New Point(25, 29)
-        lblFTipusHabitacioTitolAnimal.Name = "lblFTipusHabitacioTitolAnimal"
-        lblFTipusHabitacioTitolAnimal.Size = New Size(134, 25)
-        lblFTipusHabitacioTitolAnimal.TabIndex = 1
-        lblFTipusHabitacioTitolAnimal.Text = "Tipus d'animals"' 
-        ' btnFTipusHabitacioAfegirAnimal
-        ' 
-        btnFTipusHabitacioAfegirAnimal.BackColor = Color.Aquamarine
-        btnFTipusHabitacioAfegirAnimal.Location = New Point(165, 32)
-        btnFTipusHabitacioAfegirAnimal.Name = "btnFTipusHabitacioAfegirAnimal"
-        btnFTipusHabitacioAfegirAnimal.Size = New Size(83, 29)
-        btnFTipusHabitacioAfegirAnimal.TabIndex = 2
-        btnFTipusHabitacioAfegirAnimal.Text = "Afegir"
-        btnFTipusHabitacioAfegirAnimal.UseVisualStyleBackColor = False
-        ' 
-        ' btnFTipusHabitacioEliminarAnimal
-        ' 
-        btnFTipusHabitacioEliminarAnimal.BackColor = Color.Aquamarine
-        btnFTipusHabitacioEliminarAnimal.Location = New Point(269, 32)
-        btnFTipusHabitacioEliminarAnimal.Name = "btnFTipusHabitacioEliminarAnimal"
-        btnFTipusHabitacioEliminarAnimal.Size = New Size(83, 29)
-        btnFTipusHabitacioEliminarAnimal.TabIndex = 3
-        btnFTipusHabitacioEliminarAnimal.Text = "Eliminar"
-        btnFTipusHabitacioEliminarAnimal.UseVisualStyleBackColor = False
-        ' 
         ' FormTipusHabitacio
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
@@ -228,10 +232,12 @@ Partial Class FormTipusHabitacio
         Controls.Add(btnFTipusHabitacioEnrere)
         Controls.Add(spcFTipusHabitacioSeparador)
         Controls.Add(lblFTipusHabitacioTitol)
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         MinimumSize = New Size(997, 538)
         Name = "FormTipusHabitacio"
         StartPosition = FormStartPosition.CenterScreen
         Text = "PHF - Formulari Tipus Habitacio"
+        WindowState = FormWindowState.Maximized
         spcFTipusHabitacioSeparador.Panel1.ResumeLayout(False)
         spcFTipusHabitacioSeparador.Panel1.PerformLayout()
         spcFTipusHabitacioSeparador.Panel2.ResumeLayout(False)

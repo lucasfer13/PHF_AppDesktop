@@ -22,6 +22,7 @@ Partial Class GestioUsuaris
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(GestioUsuaris))
         DataGridView1 = New DataGridView()
         lblGestioUsuarisBuscarTitol = New Label()
         txtGestioUsuarisBuscar = New TextBox()
@@ -33,10 +34,13 @@ Partial Class GestioUsuaris
         ' 
         ' DataGridView1
         ' 
+        DataGridView1.AllowUserToAddRows = False
+        DataGridView1.AllowUserToDeleteRows = False
         DataGridView1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridView1.Location = New Point(12, 12)
         DataGridView1.Name = "DataGridView1"
+        DataGridView1.ReadOnly = True
         DataGridView1.RowHeadersWidth = 51
         DataGridView1.RowTemplate.Height = 29
         DataGridView1.Size = New Size(450, 436)
@@ -105,10 +109,12 @@ Partial Class GestioUsuaris
         Controls.Add(txtGestioUsuarisBuscar)
         Controls.Add(lblGestioUsuarisBuscarTitol)
         Controls.Add(DataGridView1)
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         MinimumSize = New Size(791, 507)
         Name = "GestioUsuaris"
         StartPosition = FormStartPosition.CenterScreen
-        Text = "GestioUsuaris"
+        Text = "PHF - Gestio usuaris"
+        WindowState = FormWindowState.Maximized
         CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()

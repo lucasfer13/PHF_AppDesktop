@@ -22,6 +22,7 @@ Partial Class DetallReserva
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(DetallReserva))
         dgvDetallReservaLiniesReserva = New DataGridView()
         btnDetallReservaEnrere = New Button()
         lblDetallReservaTitolDataI = New Label()
@@ -38,10 +39,13 @@ Partial Class DetallReserva
         ' 
         ' dgvDetallReservaLiniesReserva
         ' 
+        dgvDetallReservaLiniesReserva.AllowUserToAddRows = False
+        dgvDetallReservaLiniesReserva.AllowUserToDeleteRows = False
         dgvDetallReservaLiniesReserva.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         dgvDetallReservaLiniesReserva.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         dgvDetallReservaLiniesReserva.Location = New Point(12, 225)
         dgvDetallReservaLiniesReserva.Name = "dgvDetallReservaLiniesReserva"
+        dgvDetallReservaLiniesReserva.ReadOnly = True
         dgvDetallReservaLiniesReserva.RowHeadersWidth = 51
         dgvDetallReservaLiniesReserva.RowTemplate.Height = 29
         dgvDetallReservaLiniesReserva.Size = New Size(908, 237)
@@ -159,6 +163,7 @@ Partial Class DetallReserva
         Controls.Add(lblDetallReservaTitolDataI)
         Controls.Add(btnDetallReservaEnrere)
         Controls.Add(dgvDetallReservaLiniesReserva)
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         MinimumSize = New Size(950, 598)
         Name = "DetallReserva"
         StartPosition = FormStartPosition.CenterScreen

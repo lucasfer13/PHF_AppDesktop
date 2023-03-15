@@ -72,7 +72,6 @@ Partial Class Login
         ' 
         btnLoginEntrar.BackColor = Color.Aquamarine
         btnLoginEntrar.FlatAppearance.BorderColor = Color.Aquamarine
-        btnLoginEntrar.FlatStyle = FlatStyle.Flat
         btnLoginEntrar.Font = New Font("Sitka Small", 9F, FontStyle.Regular, GraphicsUnit.Point)
         btnLoginEntrar.Location = New Point(566, 293)
         btnLoginEntrar.Name = "btnLoginEntrar"

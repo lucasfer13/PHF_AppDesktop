@@ -22,6 +22,7 @@ Partial Class GestioTipusAnimals
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(GestioTipusAnimals))
         dgvTipusAnimalsLlistat = New DataGridView()
         lblTipusAnimalsTitol = New Label()
         txtTipusAnimalBuscar = New TextBox()
@@ -33,10 +34,13 @@ Partial Class GestioTipusAnimals
         ' 
         ' dgvTipusAnimalsLlistat
         ' 
+        dgvTipusAnimalsLlistat.AllowUserToAddRows = False
+        dgvTipusAnimalsLlistat.AllowUserToDeleteRows = False
         dgvTipusAnimalsLlistat.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         dgvTipusAnimalsLlistat.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         dgvTipusAnimalsLlistat.Location = New Point(12, 12)
         dgvTipusAnimalsLlistat.Name = "dgvTipusAnimalsLlistat"
+        dgvTipusAnimalsLlistat.ReadOnly = True
         dgvTipusAnimalsLlistat.RowHeadersWidth = 51
         dgvTipusAnimalsLlistat.RowTemplate.Height = 29
         dgvTipusAnimalsLlistat.Size = New Size(435, 426)
@@ -106,10 +110,12 @@ Partial Class GestioTipusAnimals
         Controls.Add(txtTipusAnimalBuscar)
         Controls.Add(lblTipusAnimalsTitol)
         Controls.Add(dgvTipusAnimalsLlistat)
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         MinimumSize = New Size(818, 497)
         Name = "GestioTipusAnimals"
         StartPosition = FormStartPosition.CenterScreen
         Text = "PHF - Tipus d'animals"
+        WindowState = FormWindowState.Maximized
         CType(dgvTipusAnimalsLlistat, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()

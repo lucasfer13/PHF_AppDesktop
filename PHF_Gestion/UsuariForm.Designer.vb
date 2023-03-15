@@ -22,6 +22,7 @@ Partial Class UsuariForm
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(UsuariForm))
         lblUsuariTitol = New Label()
         lblUsuariGuarderia = New Label()
         dgvUsuariGuarderies = New DataGridView()
@@ -84,7 +85,7 @@ Partial Class UsuariForm
         dgvUsuariGuarderies.Name = "dgvUsuariGuarderies"
         dgvUsuariGuarderies.RowHeadersWidth = 51
         dgvUsuariGuarderies.RowTemplate.Height = 29
-        dgvUsuariGuarderies.Size = New Size(439, 392)
+        dgvUsuariGuarderies.Size = New Size(411, 392)
         dgvUsuariGuarderies.TabIndex = 2
         ' 
         ' btnUsuariAfegirGuarderia
@@ -355,9 +356,12 @@ Partial Class UsuariForm
         Controls.Add(btnUsuariEliminar)
         Controls.Add(btnUsuariGuardar)
         Controls.Add(lblUsuariTitol)
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         MinimumSize = New Size(1087, 781)
         Name = "UsuariForm"
-        Text = "Usuari"
+        StartPosition = FormStartPosition.CenterScreen
+        Text = "PHF - Formulari usuari"
+        WindowState = FormWindowState.Maximized
         CType(dgvUsuariGuarderies, ComponentModel.ISupportInitialize).EndInit()
         gpbUsuariTipusUsuaris.ResumeLayout(False)
         gpbUsuariTipusUsuaris.PerformLayout()

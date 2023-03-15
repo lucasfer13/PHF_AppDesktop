@@ -22,6 +22,7 @@ Partial Class FormulariHabitacio
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(FormulariHabitacio))
         lblFormulariHabitacioTitol = New Label()
         lblFormulariHabitacioNumeracio = New Label()
         txtFormulariHabitacioNumeracio = New TextBox()
@@ -138,6 +139,7 @@ Partial Class FormulariHabitacio
         Controls.Add(lblFormulariHabitacioNumeracio)
         Controls.Add(lblFormulariHabitacioTitol)
         FormBorderStyle = FormBorderStyle.FixedSingle
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         MinimumSize = New Size(687, 460)
         Name = "FormulariHabitacio"
         StartPosition = FormStartPosition.CenterScreen

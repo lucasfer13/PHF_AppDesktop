@@ -36,10 +36,13 @@ Partial Class FormSeveis
         ' 
         ' dgvServeis
         ' 
+        dgvServeis.AllowUserToAddRows = False
+        dgvServeis.AllowUserToDeleteRows = False
         dgvServeis.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         dgvServeis.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         dgvServeis.Location = New Point(12, 9)
         dgvServeis.Name = "dgvServeis"
+        dgvServeis.ReadOnly = True
         dgvServeis.RowHeadersWidth = 51
         dgvServeis.RowTemplate.Height = 29
         dgvServeis.Size = New Size(727, 597)
@@ -136,7 +139,8 @@ Partial Class FormSeveis
         MinimumSize = New Size(1066, 665)
         Name = "FormSeveis"
         StartPosition = FormStartPosition.CenterScreen
-        Text = "Serveis"
+        Text = "PHF - Serveis"
+        WindowState = FormWindowState.Maximized
         CType(dgvServeis, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()

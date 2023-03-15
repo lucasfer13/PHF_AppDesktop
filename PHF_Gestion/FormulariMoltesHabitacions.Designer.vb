@@ -22,6 +22,7 @@ Partial Class FormulariMoltesHabitacions
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(FormulariMoltesHabitacions))
         lblAfegirHabitacionsTitol = New Label()
         lblAfegirHabitacionsQuantitat = New Label()
         lblAfegirHabitacionsTipus = New Label()
@@ -113,6 +114,7 @@ Partial Class FormulariMoltesHabitacions
         Controls.Add(lblAfegirHabitacionsQuantitat)
         Controls.Add(lblAfegirHabitacionsTitol)
         FormBorderStyle = FormBorderStyle.FixedSingle
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         MinimumSize = New Size(631, 410)
         Name = "FormulariMoltesHabitacions"
         StartPosition = FormStartPosition.CenterScreen

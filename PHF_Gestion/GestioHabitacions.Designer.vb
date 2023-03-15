@@ -22,6 +22,7 @@ Partial Class GestioHabitacions
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(GestioHabitacions))
         dgvGestioHabitacionsLlistat = New DataGridView()
         lblGestioHabitacionsTitol = New Label()
         txtGestioHabitacionsBuscar = New TextBox()
@@ -34,10 +35,13 @@ Partial Class GestioHabitacions
         ' 
         ' dgvGestioHabitacionsLlistat
         ' 
+        dgvGestioHabitacionsLlistat.AllowUserToAddRows = False
+        dgvGestioHabitacionsLlistat.AllowUserToDeleteRows = False
         dgvGestioHabitacionsLlistat.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         dgvGestioHabitacionsLlistat.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         dgvGestioHabitacionsLlistat.Location = New Point(12, 12)
         dgvGestioHabitacionsLlistat.Name = "dgvGestioHabitacionsLlistat"
+        dgvGestioHabitacionsLlistat.ReadOnly = True
         dgvGestioHabitacionsLlistat.RowHeadersWidth = 51
         dgvGestioHabitacionsLlistat.RowTemplate.Height = 29
         dgvGestioHabitacionsLlistat.Size = New Size(475, 416)
@@ -118,10 +122,12 @@ Partial Class GestioHabitacions
         Controls.Add(txtGestioHabitacionsBuscar)
         Controls.Add(lblGestioHabitacionsTitol)
         Controls.Add(dgvGestioHabitacionsLlistat)
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         MinimumSize = New Size(818, 487)
         Name = "GestioHabitacions"
         StartPosition = FormStartPosition.CenterScreen
         Text = "PHF - Gestió Habitacions"
+        WindowState = FormWindowState.Maximized
         CType(dgvGestioHabitacionsLlistat, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()

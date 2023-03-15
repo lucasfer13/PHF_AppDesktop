@@ -29,6 +29,7 @@ Partial Class TipusAnimal
         btnAnimalAfeg = New Button()
         btnAnimalElimin = New Button()
         btnAnimalBack = New Button()
+        Button1 = New Button()
         SuspendLayout()
         ' 
         ' lblAnimalAnimal
@@ -37,7 +38,7 @@ Partial Class TipusAnimal
         lblAnimalAnimal.Font = New Font("Sitka Small", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
         lblAnimalAnimal.Location = New Point(118, 164)
         lblAnimalAnimal.Name = "lblAnimalAnimal"
-        lblAnimalAnimal.Size = New Size(103, 34)
+        lblAnimalAnimal.Size = New Size(103, 33)
         lblAnimalAnimal.TabIndex = 0
         lblAnimalAnimal.Text = "Animal"' 
         ' txtgestAnimalnom
@@ -53,13 +54,14 @@ Partial Class TipusAnimal
         Label1.Font = New Font("Sitka Small", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
         Label1.Location = New Point(35, 43)
         Label1.Name = "Label1"
-        Label1.Size = New Size(186, 34)
+        Label1.Size = New Size(186, 33)
         Label1.TabIndex = 6
         Label1.Text = "Tipus Animal "' 
         ' btnAnimalAfeg
         ' 
+        btnAnimalAfeg.Anchor = AnchorStyles.Bottom
         btnAnimalAfeg.BackColor = Color.Aquamarine
-        btnAnimalAfeg.Location = New Point(482, 306)
+        btnAnimalAfeg.Location = New Point(540, 302)
         btnAnimalAfeg.Name = "btnAnimalAfeg"
         btnAnimalAfeg.Size = New Size(135, 64)
         btnAnimalAfeg.TabIndex = 7
@@ -68,8 +70,9 @@ Partial Class TipusAnimal
         ' 
         ' btnAnimalElimin
         ' 
+        btnAnimalElimin.Anchor = AnchorStyles.Bottom
         btnAnimalElimin.BackColor = Color.Aquamarine
-        btnAnimalElimin.Location = New Point(289, 306)
+        btnAnimalElimin.Location = New Point(205, 302)
         btnAnimalElimin.Name = "btnAnimalElimin"
         btnAnimalElimin.Size = New Size(135, 64)
         btnAnimalElimin.TabIndex = 8
@@ -78,28 +81,43 @@ Partial Class TipusAnimal
         ' 
         ' btnAnimalBack
         ' 
+        btnAnimalBack.Anchor = AnchorStyles.Bottom
         btnAnimalBack.BackColor = Color.Aquamarine
-        btnAnimalBack.Location = New Point(102, 306)
+        btnAnimalBack.Location = New Point(35, 302)
         btnAnimalBack.Name = "btnAnimalBack"
         btnAnimalBack.Size = New Size(135, 64)
         btnAnimalBack.TabIndex = 9
         btnAnimalBack.Text = "Enrrere"
         btnAnimalBack.UseVisualStyleBackColor = False
         ' 
+        ' Button1
+        ' 
+        Button1.Anchor = AnchorStyles.Bottom
+        Button1.BackColor = Color.Aquamarine
+        Button1.Location = New Point(377, 302)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(135, 64)
+        Button1.TabIndex = 10
+        Button1.Text = "Modificar"
+        Button1.UseVisualStyleBackColor = False
+        ' 
         ' TipusAnimal
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.LightSteelBlue
-        ClientSize = New Size(698, 429)
+        ClientSize = New Size(703, 396)
+        Controls.Add(Button1)
         Controls.Add(btnAnimalBack)
         Controls.Add(btnAnimalElimin)
         Controls.Add(btnAnimalAfeg)
         Controls.Add(Label1)
         Controls.Add(txtgestAnimalnom)
         Controls.Add(lblAnimalAnimal)
+        FormBorderStyle = FormBorderStyle.FixedSingle
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Name = "TipusAnimal"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Tipus Animal"
         ResumeLayout(False)
         PerformLayout()
@@ -111,4 +129,5 @@ Partial Class TipusAnimal
     Friend WithEvents btnAnimalAfeg As Button
     Friend WithEvents btnAnimalElimin As Button
     Friend WithEvents btnAnimalBack As Button
+    Friend WithEvents Button1 As Button
 End Class

@@ -22,6 +22,7 @@ Partial Class GestioCameres
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(GestioCameres))
         dgvCameresLlistat = New DataGridView()
         btnCameresAfegir = New Button()
         btnCameresEnrere = New Button()
@@ -105,10 +106,12 @@ Partial Class GestioCameres
         Controls.Add(btnCameresEnrere)
         Controls.Add(btnCameresAfegir)
         Controls.Add(dgvCameresLlistat)
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         MinimumSize = New Size(827, 489)
         Name = "GestioCameres"
         StartPosition = FormStartPosition.CenterScreen
-        Text = "GestioCameres"
+        Text = "PHF - Gestio cameres"
+        WindowState = FormWindowState.Maximized
         CType(dgvCameresLlistat, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()

@@ -22,11 +22,12 @@ Partial Class DadesUsuari
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(DadesUsuari))
         pcbDadesUsuariFotoPerfil = New PictureBox()
         btnDadesUsuariModificar = New Button()
         btnDadesUsuariGuardar = New Button()
         lblDadesUsuariTitol = New Label()
-        Button3 = New Button()
+        btnDadesUsuariSeleccionarImatge = New Button()
         lblDadesUsuariNom = New Label()
         lblDadesUsuariCognom1 = New Label()
         lblDadesUsuariCognom2 = New Label()
@@ -44,7 +45,7 @@ Partial Class DadesUsuari
         txtDadesUsuariNom = New TextBox()
         txtDadesUsuariCognom1 = New TextBox()
         btnDadesUsuariEnrere = New Button()
-        btnDadesUsuariSeleccionarImatge = New Button()
+        btnDadesUsuariTencarSessio = New Button()
         CType(pcbDadesUsuariFotoPerfil, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -87,16 +88,16 @@ Partial Class DadesUsuari
         lblDadesUsuariTitol.Size = New Size(126, 28)
         lblDadesUsuariTitol.TabIndex = 3
         lblDadesUsuariTitol.Text = "Dades Usuari"' 
-        ' Button3
+        ' btnDadesUsuariSeleccionarImatge
         ' 
-        Button3.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        Button3.BackColor = Color.Aquamarine
-        Button3.Location = New Point(651, 189)
-        Button3.Name = "Button3"
-        Button3.Size = New Size(156, 43)
-        Button3.TabIndex = 4
-        Button3.Text = "Imatge Perfil"
-        Button3.UseVisualStyleBackColor = False
+        btnDadesUsuariSeleccionarImatge.Anchor = AnchorStyles.Top Or AnchorStyles.Right
+        btnDadesUsuariSeleccionarImatge.BackColor = Color.Aquamarine
+        btnDadesUsuariSeleccionarImatge.Location = New Point(651, 189)
+        btnDadesUsuariSeleccionarImatge.Name = "btnDadesUsuariSeleccionarImatge"
+        btnDadesUsuariSeleccionarImatge.Size = New Size(156, 43)
+        btnDadesUsuariSeleccionarImatge.TabIndex = 4
+        btnDadesUsuariSeleccionarImatge.Text = "Imatge Perfil"
+        btnDadesUsuariSeleccionarImatge.UseVisualStyleBackColor = False
         ' 
         ' lblDadesUsuariNom
         ' 
@@ -245,16 +246,16 @@ Partial Class DadesUsuari
         btnDadesUsuariEnrere.Text = "Enrere"
         btnDadesUsuariEnrere.UseVisualStyleBackColor = False
         ' 
-        ' btnDadesUsuariSeleccionarImatge
+        ' btnDadesUsuariTencarSessio
         ' 
-        btnDadesUsuariSeleccionarImatge.Anchor = AnchorStyles.Bottom
-        btnDadesUsuariSeleccionarImatge.BackColor = Color.Aquamarine
-        btnDadesUsuariSeleccionarImatge.Location = New Point(374, 458)
-        btnDadesUsuariSeleccionarImatge.Name = "btnDadesUsuariSeleccionarImatge"
-        btnDadesUsuariSeleccionarImatge.Size = New Size(131, 69)
-        btnDadesUsuariSeleccionarImatge.TabIndex = 39
-        btnDadesUsuariSeleccionarImatge.Text = "Tencar Sessio"
-        btnDadesUsuariSeleccionarImatge.UseVisualStyleBackColor = False
+        btnDadesUsuariTencarSessio.Anchor = AnchorStyles.Bottom
+        btnDadesUsuariTencarSessio.BackColor = Color.Aquamarine
+        btnDadesUsuariTencarSessio.Location = New Point(374, 458)
+        btnDadesUsuariTencarSessio.Name = "btnDadesUsuariTencarSessio"
+        btnDadesUsuariTencarSessio.Size = New Size(131, 69)
+        btnDadesUsuariTencarSessio.TabIndex = 39
+        btnDadesUsuariTencarSessio.Text = "Tencar Sessio"
+        btnDadesUsuariTencarSessio.UseVisualStyleBackColor = False
         ' 
         ' DadesUsuari
         ' 
@@ -262,7 +263,7 @@ Partial Class DadesUsuari
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.LightSteelBlue
         ClientSize = New Size(840, 539)
-        Controls.Add(btnDadesUsuariSeleccionarImatge)
+        Controls.Add(btnDadesUsuariTencarSessio)
         Controls.Add(btnDadesUsuariEnrere)
         Controls.Add(lblDadesUsuariNom)
         Controls.Add(lblDadesUsuariCognom1)
@@ -280,15 +281,16 @@ Partial Class DadesUsuari
         Controls.Add(txtDadesUsuariCognom2)
         Controls.Add(txtDadesUsuariNom)
         Controls.Add(txtDadesUsuariCognom1)
-        Controls.Add(Button3)
+        Controls.Add(btnDadesUsuariSeleccionarImatge)
         Controls.Add(lblDadesUsuariTitol)
         Controls.Add(btnDadesUsuariGuardar)
         Controls.Add(btnDadesUsuariModificar)
         Controls.Add(pcbDadesUsuariFotoPerfil)
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         MinimumSize = New Size(858, 586)
         Name = "DadesUsuari"
         StartPosition = FormStartPosition.CenterScreen
-        Text = "DadesUsuari"
+        Text = "PHF - Perfil"
         CType(pcbDadesUsuariFotoPerfil, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
@@ -298,7 +300,7 @@ Partial Class DadesUsuari
     Friend WithEvents btnDadesUsuariModificar As Button
     Friend WithEvents btnDadesUsuariGuardar As Button
     Friend WithEvents lblDadesUsuariTitol As Label
-    Friend WithEvents Button3 As Button
+    Friend WithEvents btnDadesUsuariSeleccionarImatge As Button
     Friend WithEvents lblDadesUsuariNom As Label
     Friend WithEvents lblDadesUsuariCognom1 As Label
     Friend WithEvents lblDadesUsuariCognom2 As Label
@@ -316,5 +318,5 @@ Partial Class DadesUsuari
     Friend WithEvents txtDadesUsuariNom As TextBox
     Friend WithEvents txtDadesUsuariCognom1 As TextBox
     Friend WithEvents btnDadesUsuariEnrere As Button
-    Friend WithEvents btnDadesUsuariSeleccionarImatge As Button
+    Friend WithEvents btnDadesUsuariTencarSessio As Button
 End Class
