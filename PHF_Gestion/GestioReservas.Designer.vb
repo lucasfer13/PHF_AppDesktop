@@ -22,6 +22,7 @@ Partial Class GestioReservas
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(GestioReservas))
         dgvGestioReservesReserves = New DataGridView()
         btnReservesPendents = New Button()
         btnDenegarReserva = New Button()
@@ -34,10 +35,13 @@ Partial Class GestioReservas
         ' 
         ' dgvGestioReservesReserves
         ' 
+        dgvGestioReservesReserves.AllowUserToAddRows = False
+        dgvGestioReservesReserves.AllowUserToDeleteRows = False
         dgvGestioReservesReserves.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         dgvGestioReservesReserves.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         dgvGestioReservesReserves.Location = New Point(12, 12)
         dgvGestioReservesReserves.Name = "dgvGestioReservesReserves"
+        dgvGestioReservesReserves.ReadOnly = True
         dgvGestioReservesReserves.RowHeadersWidth = 51
         dgvGestioReservesReserves.RowTemplate.Height = 29
         dgvGestioReservesReserves.Size = New Size(471, 496)
@@ -117,9 +121,12 @@ Partial Class GestioReservas
         Controls.Add(btnDenegarReserva)
         Controls.Add(btnReservesPendents)
         Controls.Add(dgvGestioReservesReserves)
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         MinimumSize = New Size(869, 575)
         Name = "GestioReservas"
-        Text = "GestioReservas"
+        StartPosition = FormStartPosition.CenterScreen
+        Text = "PHF - Gestio reserves"
+        WindowState = FormWindowState.Maximized
         CType(dgvGestioReservesReserves, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()

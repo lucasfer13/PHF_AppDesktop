@@ -5,7 +5,7 @@ Public Class CameraForm
         Me.Close()
     End Sub
 
-    Private Sub CameraForm_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+    Private Sub CameraForm_Closing(sender As Object, e As CancelEventArgs) Handles MyBase.Closing
         GestioCameres.Show()
     End Sub
 End Class

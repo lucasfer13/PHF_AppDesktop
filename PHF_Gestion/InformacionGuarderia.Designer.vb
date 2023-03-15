@@ -23,6 +23,7 @@ Partial Class InformacionGuarderia
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
+        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(InformacionGuarderia))
         btnInformacioGuarderiaEnrere = New Button()
         btnInformacioGuarderiaModificar = New Button()
         lblInformacioGuarderiaNom = New Label()
@@ -60,7 +61,7 @@ Partial Class InformacionGuarderia
         tlpInformacioGuarderiaTaules = New TableLayoutPanel()
         pnlInformacioGuarderiaVacances = New Panel()
         pnlInformacioGuarderiaServeis = New Panel()
-        Button1 = New Button()
+        btnInformacioGuarderiaGuardar = New Button()
         CType(dgvInformacioGuarderia, ComponentModel.ISupportInitialize).BeginInit()
         CType(dtvInformacioGuarderiaServeis, ComponentModel.ISupportInitialize).BeginInit()
         CType(stcInformacioGuarderiaSeparador, ComponentModel.ISupportInitialize).BeginInit()
@@ -258,7 +259,7 @@ Partial Class InformacionGuarderia
         ' 
         ' btnInformacioGuarderiaMunicipi
         ' 
-        btnInformacioGuarderiaMunicipi.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        btnInformacioGuarderiaMunicipi.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
         btnInformacioGuarderiaMunicipi.BackColor = Color.Aquamarine
         btnInformacioGuarderiaMunicipi.Location = New Point(409, 157)
         btnInformacioGuarderiaMunicipi.Name = "btnInformacioGuarderiaMunicipi"
@@ -269,7 +270,7 @@ Partial Class InformacionGuarderia
         ' 
         ' btnInformacioGuarderiaPais
         ' 
-        btnInformacioGuarderiaPais.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        btnInformacioGuarderiaPais.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
         btnInformacioGuarderiaPais.BackColor = Color.Aquamarine
         btnInformacioGuarderiaPais.Location = New Point(413, 109)
         btnInformacioGuarderiaPais.Name = "btnInformacioGuarderiaPais"
@@ -442,16 +443,16 @@ Partial Class InformacionGuarderia
         pnlInformacioGuarderiaServeis.Size = New Size(572, 337)
         pnlInformacioGuarderiaServeis.TabIndex = 0
         ' 
-        ' Button1
+        ' btnInformacioGuarderiaGuardar
         ' 
-        Button1.Anchor = AnchorStyles.Bottom
-        Button1.BackColor = Color.Aquamarine
-        Button1.Location = New Point(746, 776)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(134, 69)
-        Button1.TabIndex = 33
-        Button1.Text = "Guardar"
-        Button1.UseVisualStyleBackColor = False
+        btnInformacioGuarderiaGuardar.Anchor = AnchorStyles.Bottom
+        btnInformacioGuarderiaGuardar.BackColor = Color.Aquamarine
+        btnInformacioGuarderiaGuardar.Location = New Point(746, 776)
+        btnInformacioGuarderiaGuardar.Name = "btnInformacioGuarderiaGuardar"
+        btnInformacioGuarderiaGuardar.Size = New Size(134, 69)
+        btnInformacioGuarderiaGuardar.TabIndex = 33
+        btnInformacioGuarderiaGuardar.Text = "Guardar"
+        btnInformacioGuarderiaGuardar.UseVisualStyleBackColor = False
         ' 
         ' InformacionGuarderia
         ' 
@@ -459,14 +460,17 @@ Partial Class InformacionGuarderia
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.LightSteelBlue
         ClientSize = New Size(1209, 857)
-        Controls.Add(Button1)
+        Controls.Add(btnInformacioGuarderiaGuardar)
         Controls.Add(stcInformacioGuarderiaSeparador)
         Controls.Add(lblInformacioGuarderiaTitol)
         Controls.Add(btnInformacioGuarderiaModificar)
         Controls.Add(btnInformacioGuarderiaEnrere)
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         MinimumSize = New Size(1227, 904)
         Name = "InformacionGuarderia"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "PHF - Informació Guarderia"
+        WindowState = FormWindowState.Maximized
         CType(dgvInformacioGuarderia, ComponentModel.ISupportInitialize).EndInit()
         CType(dtvInformacioGuarderiaServeis, ComponentModel.ISupportInitialize).EndInit()
         stcInformacioGuarderiaSeparador.Panel1.ResumeLayout(False)
@@ -520,5 +524,5 @@ Partial Class InformacionGuarderia
     Friend WithEvents tlpInformacioGuarderiaTaules As TableLayoutPanel
     Friend WithEvents pnlInformacioGuarderiaVacances As Panel
     Friend WithEvents pnlInformacioGuarderiaServeis As Panel
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnInformacioGuarderiaGuardar As Button
 End Class

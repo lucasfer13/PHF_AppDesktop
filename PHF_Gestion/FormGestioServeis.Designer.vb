@@ -32,6 +32,7 @@ Partial Class FormGestioServeis
         ' 
         ' lblGestioServeiTitleName
         ' 
+        lblGestioServeiTitleName.Anchor = AnchorStyles.None
         lblGestioServeiTitleName.AutoSize = True
         lblGestioServeiTitleName.Location = New Point(93, 118)
         lblGestioServeiTitleName.Name = "lblGestioServeiTitleName"
@@ -40,6 +41,7 @@ Partial Class FormGestioServeis
         lblGestioServeiTitleName.Text = "Nom Servei"' 
         ' lblGestioServeiTitle
         ' 
+        lblGestioServeiTitle.Anchor = AnchorStyles.Top
         lblGestioServeiTitle.AutoSize = True
         lblGestioServeiTitle.Font = New Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point)
         lblGestioServeiTitle.Location = New Point(171, 33)
@@ -49,6 +51,7 @@ Partial Class FormGestioServeis
         lblGestioServeiTitle.Text = "Servei"' 
         ' txtGestioServeiName
         ' 
+        txtGestioServeiName.Anchor = AnchorStyles.None
         txtGestioServeiName.Location = New Point(210, 115)
         txtGestioServeiName.Name = "txtGestioServeiName"
         txtGestioServeiName.Size = New Size(125, 27)
@@ -56,6 +59,7 @@ Partial Class FormGestioServeis
         ' 
         ' btnGestioServeiSave
         ' 
+        btnGestioServeiSave.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
         btnGestioServeiSave.BackColor = Color.Aquamarine
         btnGestioServeiSave.Location = New Point(251, 208)
         btnGestioServeiSave.Name = "btnGestioServeiSave"
@@ -66,6 +70,7 @@ Partial Class FormGestioServeis
         ' 
         ' btnGestioServeiCancel
         ' 
+        btnGestioServeiCancel.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
         btnGestioServeiCancel.BackColor = Color.Aquamarine
         btnGestioServeiCancel.Location = New Point(23, 208)
         btnGestioServeiCancel.Name = "btnGestioServeiCancel"
@@ -79,7 +84,7 @@ Partial Class FormGestioServeis
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.LightSteelBlue
-        ClientSize = New Size(433, 308)
+        ClientSize = New Size(436, 291)
         Controls.Add(btnGestioServeiCancel)
         Controls.Add(btnGestioServeiSave)
         Controls.Add(txtGestioServeiName)
@@ -89,7 +94,7 @@ Partial Class FormGestioServeis
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Name = "FormGestioServeis"
         StartPosition = FormStartPosition.CenterScreen
-        Text = "Gestio Servei"
+        Text = "PHF - Servei"
         ResumeLayout(False)
         PerformLayout()
     End Sub

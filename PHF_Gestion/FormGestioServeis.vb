@@ -6,7 +6,7 @@ Public Class FormGestioServeis
         Me.Close()
     End Sub
 
-    Private Sub FormGestioServeis_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+    Private Sub FormGestioServeis_Closing(sender As Object, e As CancelEventArgs) Handles MyBase.Closing
         FormSeveis.Show()
     End Sub
 End Class

@@ -4,14 +4,15 @@ Public Class InformacionGuarderia
     Private afegir As Boolean
 
     Public Sub New(afegir As Boolean)
+        InitializeComponent()
         Me.afegir = afegir
     End Sub
 
-    Private Sub InformacionGuarderia_Closing(sender As Object, e As CancelEventArgs) Handles MyBase.Closing
+    Private Sub InformacionGuarderia_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
         If afegir Then
-            MenúGestióGuarderies.Show()
+            MenuGestioGuarderies.Show()
         Else
-            GestióGuarderia.Show()
+            GestioGuarderia.Show()
         End If
     End Sub
 
@@ -19,7 +20,7 @@ Public Class InformacionGuarderia
         Me.Close()
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub btnInformacioGuarderiaGuardar_Click(sender As Object, e As EventArgs) Handles btnInformacioGuarderiaGuardar.Click
         Me.Close()
     End Sub
 

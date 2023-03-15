@@ -1,6 +1,6 @@
 ﻿Public Class MenuPrincipal
     Private Sub btnMenuPrinGestioGuarderies_Click(sender As Object, e As EventArgs) Handles btnMenuPrinGestioGuarderies.Click
-        MenúGestióGuarderies.Show()
+        MenuGestioGuarderies.Show()
         Me.Hide()
     End Sub
 

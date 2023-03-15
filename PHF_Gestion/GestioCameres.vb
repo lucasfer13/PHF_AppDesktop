@@ -6,7 +6,7 @@ Public Class GestioCameres
     End Sub
 
     Private Sub GestioCameres_Closing(sender As Object, e As CancelEventArgs) Handles MyBase.Closing
-        GestióGuarderia.Show()
+        GestioGuarderia.Show()
     End Sub
 
     Private Sub btnCameresAfegir_Click(sender As Object, e As EventArgs) Handles btnCameresAfegir.Click

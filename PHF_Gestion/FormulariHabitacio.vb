@@ -5,7 +5,7 @@ Public Class FormulariHabitacio
         Me.Close()
     End Sub
 
-    Private Sub FormulariHabitacio_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+    Private Sub FormulariHabitacio_Closing(sender As Object, e As CancelEventArgs) Handles MyBase.Closing
         GestioHabitacions.Show()
     End Sub
 End Class

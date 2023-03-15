@@ -22,6 +22,7 @@ Partial Class DadesUsuari
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(DadesUsuari))
         pcbDadesUsuariFotoPerfil = New PictureBox()
         btnDadesUsuariModificar = New Button()
         btnDadesUsuariGuardar = New Button()
@@ -285,10 +286,11 @@ Partial Class DadesUsuari
         Controls.Add(btnDadesUsuariGuardar)
         Controls.Add(btnDadesUsuariModificar)
         Controls.Add(pcbDadesUsuariFotoPerfil)
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         MinimumSize = New Size(858, 586)
         Name = "DadesUsuari"
         StartPosition = FormStartPosition.CenterScreen
-        Text = "DadesUsuari"
+        Text = "PHF - Perfil"
         CType(pcbDadesUsuariFotoPerfil, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()

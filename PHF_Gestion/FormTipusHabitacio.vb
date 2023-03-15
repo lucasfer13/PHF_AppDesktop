@@ -5,7 +5,7 @@ Public Class FormTipusHabitacio
         Me.Close()
     End Sub
 
-    Private Sub FormTipusHabitacio_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+    Private Sub FormTipusHabitacio_Closing(sender As Object, e As CancelEventArgs) Handles MyBase.Closing
         LlistatTipusHabitacions.Show()
     End Sub
 End Class

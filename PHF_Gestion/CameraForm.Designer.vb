@@ -22,6 +22,7 @@ Partial Class CameraForm
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(CameraForm))
         lblGestioCameraTitol = New Label()
         lblGestioCameraTitolURL = New Label()
         txtGestioCameraURL = New TextBox()
@@ -181,10 +182,11 @@ Partial Class CameraForm
         Controls.Add(txtGestioCameraURL)
         Controls.Add(lblGestioCameraTitolURL)
         Controls.Add(lblGestioCameraTitol)
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         MinimumSize = New Size(961, 546)
         Name = "CameraForm"
         StartPosition = FormStartPosition.CenterScreen
-        Text = "CameraForm"
+        Text = "PHF - Formulari camera"
         ResumeLayout(False)
         PerformLayout()
     End Sub

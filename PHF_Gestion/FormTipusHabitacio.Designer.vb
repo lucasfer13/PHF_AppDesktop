@@ -22,6 +22,7 @@ Partial Class FormTipusHabitacio
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(FormTipusHabitacio))
         lblFTipusHabitacioTitol = New Label()
         lblFTipusHabitacioNom = New Label()
         lblFTipusHabitacio = New Label()
@@ -163,10 +164,13 @@ Partial Class FormTipusHabitacio
         lblFTipusHabitacioTitolAnimal.Text = "Tipus d'animals"' 
         ' dgvFTipusHabitacioAnimals
         ' 
+        dgvFTipusHabitacioAnimals.AllowUserToAddRows = False
+        dgvFTipusHabitacioAnimals.AllowUserToDeleteRows = False
         dgvFTipusHabitacioAnimals.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         dgvFTipusHabitacioAnimals.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         dgvFTipusHabitacioAnimals.Location = New Point(25, 67)
         dgvFTipusHabitacioAnimals.Name = "dgvFTipusHabitacioAnimals"
+        dgvFTipusHabitacioAnimals.ReadOnly = True
         dgvFTipusHabitacioAnimals.RowHeadersWidth = 51
         dgvFTipusHabitacioAnimals.RowTemplate.Height = 29
         dgvFTipusHabitacioAnimals.Size = New Size(366, 212)
@@ -228,10 +232,12 @@ Partial Class FormTipusHabitacio
         Controls.Add(btnFTipusHabitacioEnrere)
         Controls.Add(spcFTipusHabitacioSeparador)
         Controls.Add(lblFTipusHabitacioTitol)
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         MinimumSize = New Size(997, 538)
         Name = "FormTipusHabitacio"
         StartPosition = FormStartPosition.CenterScreen
         Text = "PHF - Formulari Tipus Habitacio"
+        WindowState = FormWindowState.Maximized
         spcFTipusHabitacioSeparador.Panel1.ResumeLayout(False)
         spcFTipusHabitacioSeparador.Panel1.PerformLayout()
         spcFTipusHabitacioSeparador.Panel2.ResumeLayout(False)

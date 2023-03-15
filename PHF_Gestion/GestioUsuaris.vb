@@ -9,9 +9,8 @@ Public Class GestioUsuaris
         MenuPrincipal.Show()
     End Sub
 
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.Click, btnGestioUsuarisAfegir.Click
+    Private Sub btnGestioUsuarisAfegir_Click(sender As Object, e As EventArgs) Handles btnGestioUsuarisAfegir.Click
         UsuariForm.Show()
         Me.Hide()
     End Sub
-
 End Class

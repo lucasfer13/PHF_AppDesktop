@@ -15,7 +15,7 @@ Public Class FormSeveis
         Me.Close()
     End Sub
 
-    Private Sub FormSeveis_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+    Private Sub FormSeveis_Closing(sender As Object, e As CancelEventArgs) Handles MyBase.Closing
         MenuPrincipal.Show()
     End Sub
 End Class

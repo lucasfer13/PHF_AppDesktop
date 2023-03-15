@@ -22,6 +22,7 @@ Partial Class Valoracions
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(Valoracions))
         btnValoracioEnrere = New Button()
         lblValoracioTitol = New Label()
         dgvValoriacioLlistat = New DataGridView()
@@ -53,10 +54,13 @@ Partial Class Valoracions
         lblValoracioTitol.Text = "Valoracions"' 
         ' dgvValoriacioLlistat
         ' 
+        dgvValoriacioLlistat.AllowUserToAddRows = False
+        dgvValoriacioLlistat.AllowUserToDeleteRows = False
         dgvValoriacioLlistat.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         dgvValoriacioLlistat.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         dgvValoriacioLlistat.Location = New Point(387, 48)
         dgvValoriacioLlistat.Name = "dgvValoriacioLlistat"
+        dgvValoriacioLlistat.ReadOnly = True
         dgvValoriacioLlistat.RowHeadersWidth = 51
         dgvValoriacioLlistat.RowTemplate.Height = 29
         dgvValoriacioLlistat.Size = New Size(397, 361)
@@ -93,9 +97,12 @@ Partial Class Valoracions
         Controls.Add(dgvValoriacioLlistat)
         Controls.Add(lblValoracioTitol)
         Controls.Add(btnValoracioEnrere)
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         MinimumSize = New Size(854, 482)
         Name = "Valoracions"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "PHF - Valoracions"
+        WindowState = FormWindowState.Maximized
         CType(dgvValoriacioLlistat, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
