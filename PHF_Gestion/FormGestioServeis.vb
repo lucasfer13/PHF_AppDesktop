@@ -1,18 +1,18 @@
 ﻿Imports System.ComponentModel
 
 Public Class FormGestioServeis
-    Private Sub btnGestioServeiCancel_Click(sender As Object, e As EventArgs)
+    Private Sub btnGestioServeiCancel_Click(sender As Object, e As EventArgs) Handles btnGestioServeiCancel.Click
         Me.Close()
     End Sub
 
-    Private Sub FormGestioServeis_Closing(sender As Object, e As CancelEventArgs)
-        If btnGestioServeiModify.Enabled Then
+    Private Sub FormGestioServeis_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+        If btnGestioServeiSave.Enabled Then
             If MsgBox(My.Resources.MisatjeAdvertenciaModificant, MessageBoxButtons.YesNo, My.Resources.Advertencia) = MsgBoxResult.No Then
                 e.Cancel = True
-            Else
-                FormSeveis.Show()
+                Return
             End If
         End If
+        FormSeveis.Show()
     End Sub
 
     Private Sub modify()
@@ -31,11 +31,11 @@ Public Class FormGestioServeis
         btnGestioServeiEliminar.Enabled = True
     End Sub
 
-    Private Sub btnGestioServeiModify_Click(sender As Object, e As EventArgs)
+    Private Sub btnGestioServeiModify_Click(sender As Object, e As EventArgs) Handles btnGestioServeiModify.Click
         modify()
     End Sub
 
-    Private Sub txtGestioServeiName_Validating(sender As Object, e As CancelEventArgs)
+    Private Sub txtGestioServeiName_Validating(sender As Object, e As CancelEventArgs) Handles txtGestioServeiName.Validating
         If String.IsNullOrEmpty(txtGestioServeiName.Text) Then
             e.Cancel = True
             erpGestioServeiErrors.SetError(sender, My.Resources.ErrorObligatoryField)
@@ -45,7 +45,7 @@ Public Class FormGestioServeis
         End If
     End Sub
 
-    Private Sub btnGestioServeiSave_Click(sender As Object, e As EventArgs)
+    Private Sub btnGestioServeiSave_Click(sender As Object, e As EventArgs) Handles btnGestioServeiSave.Click
         If ValidateChildren() Then
             read()
         End If
