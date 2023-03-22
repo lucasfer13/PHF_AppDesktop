@@ -51,7 +51,7 @@ Partial Class FormGestioServeis
         lblGestioServeiTitle.Anchor = AnchorStyles.Top
         lblGestioServeiTitle.AutoSize = True
         lblGestioServeiTitle.Font = New Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point)
-        lblGestioServeiTitle.Location = New Point(309, 33)
+        lblGestioServeiTitle.Location = New Point(314, 9)
         lblGestioServeiTitle.Name = "lblGestioServeiTitle"
         lblGestioServeiTitle.Size = New Size(97, 41)
         lblGestioServeiTitle.TabIndex = 1
@@ -63,17 +63,17 @@ Partial Class FormGestioServeis
         txtGestioServeiName.Location = New Point(171, 110)
         txtGestioServeiName.Name = "txtGestioServeiName"
         txtGestioServeiName.Size = New Size(475, 27)
-        txtGestioServeiName.TabIndex = 2
+        txtGestioServeiName.TabIndex = 1
         ' 
         ' btnGestioServeiSave
         ' 
         btnGestioServeiSave.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
         btnGestioServeiSave.BackColor = Color.Aquamarine
         btnGestioServeiSave.Enabled = False
-        btnGestioServeiSave.Location = New Point(543, 316)
+        btnGestioServeiSave.Location = New Point(555, 316)
         btnGestioServeiSave.Name = "btnGestioServeiSave"
-        btnGestioServeiSave.Size = New Size(158, 72)
-        btnGestioServeiSave.TabIndex = 3
+        btnGestioServeiSave.Size = New Size(156, 71)
+        btnGestioServeiSave.TabIndex = 6
         btnGestioServeiSave.Text = "Guardar"
         btnGestioServeiSave.UseVisualStyleBackColor = False
         ' 
@@ -81,20 +81,20 @@ Partial Class FormGestioServeis
         ' 
         btnGestioServeiCancel.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
         btnGestioServeiCancel.BackColor = Color.Aquamarine
-        btnGestioServeiCancel.Location = New Point(23, 316)
+        btnGestioServeiCancel.Location = New Point(15, 316)
         btnGestioServeiCancel.Name = "btnGestioServeiCancel"
-        btnGestioServeiCancel.Size = New Size(134, 72)
-        btnGestioServeiCancel.TabIndex = 4
-        btnGestioServeiCancel.Text = "Cancelar"
+        btnGestioServeiCancel.Size = New Size(156, 71)
+        btnGestioServeiCancel.TabIndex = 3
+        btnGestioServeiCancel.Text = "Enrere"
         btnGestioServeiCancel.UseVisualStyleBackColor = False
         ' 
         ' btnGestioServeiEliminar
         ' 
         btnGestioServeiEliminar.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
         btnGestioServeiEliminar.BackColor = Color.Aquamarine
-        btnGestioServeiEliminar.Location = New Point(374, 317)
+        btnGestioServeiEliminar.Location = New Point(375, 316)
         btnGestioServeiEliminar.Name = "btnGestioServeiEliminar"
-        btnGestioServeiEliminar.Size = New Size(147, 71)
+        btnGestioServeiEliminar.Size = New Size(156, 71)
         btnGestioServeiEliminar.TabIndex = 5
         btnGestioServeiEliminar.Text = "Eliminar"
         btnGestioServeiEliminar.UseVisualStyleBackColor = False
@@ -103,10 +103,10 @@ Partial Class FormGestioServeis
         ' 
         btnGestioServeiModify.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
         btnGestioServeiModify.BackColor = Color.Aquamarine
-        btnGestioServeiModify.Location = New Point(190, 316)
+        btnGestioServeiModify.Location = New Point(195, 316)
         btnGestioServeiModify.Name = "btnGestioServeiModify"
         btnGestioServeiModify.Size = New Size(156, 71)
-        btnGestioServeiModify.TabIndex = 6
+        btnGestioServeiModify.TabIndex = 4
         btnGestioServeiModify.Text = "Modificar"
         btnGestioServeiModify.UseVisualStyleBackColor = False
         ' 
@@ -118,7 +118,7 @@ Partial Class FormGestioServeis
         txtGestioServeiDescripcio.Multiline = True
         txtGestioServeiDescripcio.Name = "txtGestioServeiDescripcio"
         txtGestioServeiDescripcio.Size = New Size(475, 69)
-        txtGestioServeiDescripcio.TabIndex = 7
+        txtGestioServeiDescripcio.TabIndex = 2
         ' 
         ' lblGestioServeiDescripcio
         ' 

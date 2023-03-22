@@ -22,6 +22,7 @@ Partial Class TipusAnimal
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        components = New ComponentModel.Container()
         Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(TipusAnimal))
         lblAnimalAnimal = New Label()
         txtgestAnimalnom = New TextBox()
@@ -29,42 +30,48 @@ Partial Class TipusAnimal
         btnAnimalAfeg = New Button()
         btnAnimalElimin = New Button()
         btnAnimalBack = New Button()
-        Button1 = New Button()
+        btnTipusAnimalModify = New Button()
+        erpTipusAnimalErrors = New ErrorProvider(components)
+        CType(erpTipusAnimalErrors, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' lblAnimalAnimal
         ' 
+        lblAnimalAnimal.Anchor = AnchorStyles.Left Or AnchorStyles.Right
         lblAnimalAnimal.AutoSize = True
-        lblAnimalAnimal.Font = New Font("Sitka Small", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        lblAnimalAnimal.Location = New Point(118, 164)
+        lblAnimalAnimal.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        lblAnimalAnimal.Location = New Point(141, 154)
         lblAnimalAnimal.Name = "lblAnimalAnimal"
-        lblAnimalAnimal.Size = New Size(103, 33)
+        lblAnimalAnimal.Size = New Size(59, 20)
         lblAnimalAnimal.TabIndex = 0
-        lblAnimalAnimal.Text = "Animal"' 
+        lblAnimalAnimal.Text = "Animal:"' 
         ' txtgestAnimalnom
         ' 
-        txtgestAnimalnom.Location = New Point(299, 171)
+        txtgestAnimalnom.Anchor = AnchorStyles.Left Or AnchorStyles.Right
+        txtgestAnimalnom.Enabled = False
+        txtgestAnimalnom.Location = New Point(275, 151)
         txtgestAnimalnom.Name = "txtgestAnimalnom"
         txtgestAnimalnom.Size = New Size(318, 27)
-        txtgestAnimalnom.TabIndex = 3
+        txtgestAnimalnom.TabIndex = 1
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Sitka Small", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        Label1.Location = New Point(35, 43)
+        Label1.Font = New Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        Label1.Location = New Point(275, 37)
         Label1.Name = "Label1"
-        Label1.Size = New Size(186, 33)
+        Label1.Size = New Size(153, 31)
         Label1.TabIndex = 6
         Label1.Text = "Tipus Animal "' 
         ' btnAnimalAfeg
         ' 
         btnAnimalAfeg.Anchor = AnchorStyles.Bottom
         btnAnimalAfeg.BackColor = Color.Aquamarine
-        btnAnimalAfeg.Location = New Point(540, 302)
+        btnAnimalAfeg.Enabled = False
+        btnAnimalAfeg.Location = New Point(539, 302)
         btnAnimalAfeg.Name = "btnAnimalAfeg"
         btnAnimalAfeg.Size = New Size(135, 64)
-        btnAnimalAfeg.TabIndex = 7
+        btnAnimalAfeg.TabIndex = 5
         btnAnimalAfeg.Text = "Afegir"
         btnAnimalAfeg.UseVisualStyleBackColor = False
         ' 
@@ -72,10 +79,10 @@ Partial Class TipusAnimal
         ' 
         btnAnimalElimin.Anchor = AnchorStyles.Bottom
         btnAnimalElimin.BackColor = Color.Aquamarine
-        btnAnimalElimin.Location = New Point(205, 302)
+        btnAnimalElimin.Location = New Point(203, 302)
         btnAnimalElimin.Name = "btnAnimalElimin"
         btnAnimalElimin.Size = New Size(135, 64)
-        btnAnimalElimin.TabIndex = 8
+        btnAnimalElimin.TabIndex = 3
         btnAnimalElimin.Text = "Eliminar"
         btnAnimalElimin.UseVisualStyleBackColor = False
         ' 
@@ -86,20 +93,24 @@ Partial Class TipusAnimal
         btnAnimalBack.Location = New Point(35, 302)
         btnAnimalBack.Name = "btnAnimalBack"
         btnAnimalBack.Size = New Size(135, 64)
-        btnAnimalBack.TabIndex = 9
+        btnAnimalBack.TabIndex = 2
         btnAnimalBack.Text = "Enrrere"
         btnAnimalBack.UseVisualStyleBackColor = False
         ' 
-        ' Button1
+        ' btnTipusAnimalModify
         ' 
-        Button1.Anchor = AnchorStyles.Bottom
-        Button1.BackColor = Color.Aquamarine
-        Button1.Location = New Point(377, 302)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(135, 64)
-        Button1.TabIndex = 10
-        Button1.Text = "Modificar"
-        Button1.UseVisualStyleBackColor = False
+        btnTipusAnimalModify.Anchor = AnchorStyles.Bottom
+        btnTipusAnimalModify.BackColor = Color.Aquamarine
+        btnTipusAnimalModify.Location = New Point(371, 302)
+        btnTipusAnimalModify.Name = "btnTipusAnimalModify"
+        btnTipusAnimalModify.Size = New Size(135, 64)
+        btnTipusAnimalModify.TabIndex = 4
+        btnTipusAnimalModify.Text = "Modificar"
+        btnTipusAnimalModify.UseVisualStyleBackColor = False
+        ' 
+        ' erpTipusAnimalErrors
+        ' 
+        erpTipusAnimalErrors.ContainerControl = Me
         ' 
         ' TipusAnimal
         ' 
@@ -107,7 +118,7 @@ Partial Class TipusAnimal
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.LightSteelBlue
         ClientSize = New Size(703, 396)
-        Controls.Add(Button1)
+        Controls.Add(btnTipusAnimalModify)
         Controls.Add(btnAnimalBack)
         Controls.Add(btnAnimalElimin)
         Controls.Add(btnAnimalAfeg)
@@ -119,6 +130,7 @@ Partial Class TipusAnimal
         Name = "TipusAnimal"
         StartPosition = FormStartPosition.CenterScreen
         Text = "Tipus Animal"
+        CType(erpTipusAnimalErrors, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -129,5 +141,6 @@ Partial Class TipusAnimal
     Friend WithEvents btnAnimalAfeg As Button
     Friend WithEvents btnAnimalElimin As Button
     Friend WithEvents btnAnimalBack As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnTipusAnimalModify As Button
+    Friend WithEvents erpTipusAnimalErrors As ErrorProvider
 End Class
