@@ -1,10 +1,6 @@
 ﻿Imports System.ComponentModel
 
 Public Class FormSeveis
-    Private Sub btnServeisModify_Click(sender As Object, e As EventArgs) Handles btnServeisModify.Click
-        Me.Hide()
-        FormGestioServeis.Show()
-    End Sub
 
     Private Sub btnServeisAdd_Click(sender As Object, e As EventArgs) Handles btnServeisAdd.Click
         Me.Hide()

@@ -22,13 +22,16 @@ Partial Class MenuGestioGuarderies
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        components = New ComponentModel.Container()
         Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(MenuGestioGuarderies))
         lblMenuGestGuarderiesTitol = New Label()
         btnMenuGestGuarderiesAfegGuarderia = New Button()
         btnMenuGestGuarderiesEliminarGuarderia = New Button()
         dgvMenuGuarderiesLlistat = New DataGridView()
         btnGestioGuarderiesEnrere = New Button()
+        BindingSource1 = New BindingSource(components)
         CType(dgvMenuGuarderiesLlistat, ComponentModel.ISupportInitialize).BeginInit()
+        CType(BindingSource1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' lblMenuGestGuarderiesTitol
@@ -108,6 +111,7 @@ Partial Class MenuGestioGuarderies
         Text = "Pet Hotel Finder"
         WindowState = FormWindowState.Maximized
         CType(dgvMenuGuarderiesLlistat, ComponentModel.ISupportInitialize).EndInit()
+        CType(BindingSource1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -117,4 +121,5 @@ Partial Class MenuGestioGuarderies
     Friend WithEvents btnMenuGestGuarderiesEliminarGuarderia As Button
     Friend WithEvents dgvMenuGuarderiesLlistat As DataGridView
     Friend WithEvents btnGestioGuarderiesEnrere As Button
+    Friend WithEvents BindingSource1 As BindingSource
 End Class
