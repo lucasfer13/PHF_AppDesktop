@@ -25,9 +25,7 @@ Partial Class FormSeveis
         Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(FormSeveis))
         dgvServeis = New DataGridView()
         btnServeisAdd = New Button()
-        btnServeisModify = New Button()
         btnServeisBack = New Button()
-        btnServeisDelete = New Button()
         lblServeisTitol = New Label()
         txtServeisBuscar = New TextBox()
         btnServeisReset = New Button()
@@ -50,25 +48,14 @@ Partial Class FormSeveis
         ' 
         ' btnServeisAdd
         ' 
-        btnServeisAdd.Anchor = AnchorStyles.Top Or AnchorStyles.Right
+        btnServeisAdd.Anchor = AnchorStyles.Right
         btnServeisAdd.BackColor = Color.Aquamarine
-        btnServeisAdd.Location = New Point(811, 132)
+        btnServeisAdd.Location = New Point(811, 224)
         btnServeisAdd.Name = "btnServeisAdd"
         btnServeisAdd.Size = New Size(185, 94)
         btnServeisAdd.TabIndex = 1
         btnServeisAdd.Text = "Afegir Servei"
         btnServeisAdd.UseVisualStyleBackColor = False
-        ' 
-        ' btnServeisModify
-        ' 
-        btnServeisModify.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        btnServeisModify.BackColor = Color.Aquamarine
-        btnServeisModify.Location = New Point(811, 232)
-        btnServeisModify.Name = "btnServeisModify"
-        btnServeisModify.Size = New Size(185, 94)
-        btnServeisModify.TabIndex = 2
-        btnServeisModify.Text = "Modificar"
-        btnServeisModify.UseVisualStyleBackColor = False
         ' 
         ' btnServeisBack
         ' 
@@ -80,17 +67,6 @@ Partial Class FormSeveis
         btnServeisBack.TabIndex = 3
         btnServeisBack.Text = "Atras"
         btnServeisBack.UseVisualStyleBackColor = False
-        ' 
-        ' btnServeisDelete
-        ' 
-        btnServeisDelete.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        btnServeisDelete.BackColor = Color.Aquamarine
-        btnServeisDelete.Location = New Point(811, 332)
-        btnServeisDelete.Name = "btnServeisDelete"
-        btnServeisDelete.Size = New Size(185, 94)
-        btnServeisDelete.TabIndex = 4
-        btnServeisDelete.Text = "Eliminar"
-        btnServeisDelete.UseVisualStyleBackColor = False
         ' 
         ' lblServeisTitol
         ' 
@@ -130,9 +106,7 @@ Partial Class FormSeveis
         Controls.Add(btnServeisReset)
         Controls.Add(txtServeisBuscar)
         Controls.Add(lblServeisTitol)
-        Controls.Add(btnServeisDelete)
         Controls.Add(btnServeisBack)
-        Controls.Add(btnServeisModify)
         Controls.Add(btnServeisAdd)
         Controls.Add(dgvServeis)
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
@@ -148,9 +122,7 @@ Partial Class FormSeveis
 
     Friend WithEvents dgvServeis As DataGridView
     Friend WithEvents btnServeisAdd As Button
-    Friend WithEvents btnServeisModify As Button
     Friend WithEvents btnServeisBack As Button
-    Friend WithEvents btnServeisDelete As Button
     Friend WithEvents lblServeisTitol As Label
     Friend WithEvents txtServeisBuscar As TextBox
     Friend WithEvents btnServeisReset As Button

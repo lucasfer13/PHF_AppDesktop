@@ -39,7 +39,7 @@ Namespace My.Resources
         Friend ReadOnly Property ResourceManager() As Global.System.Resources.ResourceManager
             Get
                 If Object.ReferenceEquals(resourceMan, Nothing) Then
-                    Dim temp As Global.System.Resources.ResourceManager = New Global.System.Resources.ResourceManager("PHF_Gestion.Resources", GetType(Resources).Assembly)
+                    Dim temp As Global.System.Resources.ResourceManager = New Global.System.Resources.ResourceManager("ConexioBD.Resources", GetType(Resources).Assembly)
                     resourceMan = temp
                 End If
                 Return resourceMan
@@ -58,63 +58,6 @@ Namespace My.Resources
             Set
                 resourceCulture = value
             End Set
-        End Property
-        
-        '''<summary>
-        '''  Busca una cadena traducida similar a Advertencia.
-        '''</summary>
-        Friend ReadOnly Property Advertencia() As String
-            Get
-                Return ResourceManager.GetString("Advertencia", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Busca una cadena traducida similar a Aquest camp no pot estar buit..
-        '''</summary>
-        Friend ReadOnly Property ErrorObligatoryField() As String
-            Get
-                Return ResourceManager.GetString("ErrorObligatoryField", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        '''</summary>
-        Friend ReadOnly Property logo() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("logo", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Busca una cadena traducida similar a Tens canvis sense guardar segur que vols sortir?.
-        '''</summary>
-        Friend ReadOnly Property MisatjeAdvertenciaModificant() As String
-            Get
-                Return ResourceManager.GetString("MisatjeAdvertenciaModificant", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        '''</summary>
-        Friend ReadOnly Property pngegg() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("pngegg", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        '''</summary>
-        Friend ReadOnly Property pngeggpaswd() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("pngeggpaswd", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
         End Property
     End Module
 End Namespace

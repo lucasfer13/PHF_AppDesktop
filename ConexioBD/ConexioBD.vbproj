@@ -1,0 +1,67 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>ConexioBD</RootNamespace>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImportedNamespaces>Ado=False,MySql.Data.common.DnsClient=False,MySql.Data.MySqlClient=False,MySql.Data.MySqlClient.Authentication=False,MySql.Data.MySqlClient.Interceptors=False,MySql.Data.MySqlClient.Replication=False,MySql.Data.MySqlClient.X.XDevAPI.Common=False,MySql.Data.Types=False,MySqlConnector=False,MySqlConnector.Authentication=False,MySqlConnector.Logging=False,Newtonsoft.Json.Serialization=False,System.Data.OracleClient=False,System.Data.SqlClient=False,Microsoft.VisualBasic=True,System=True,System.Collections=True,System.Collections.Generic=True,System.Diagnostics=True,System.Linq=True,System.Xml.Linq=True,System.Threading.Tasks=True,ConexioBD=True</ImportedNamespaces>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Ado" Version="1.1.1" />
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <PackageReference Include="MySql.Data" Version="8.0.32.1" />
+    <PackageReference Include="MySqlConnector" Version="2.2.5" />
+    <PackageReference Include="System.Data.Odbc" Version="7.0.0" />
+    <PackageReference Include="System.Data.OracleClient" Version="1.0.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="DataSet1.Designer.vb">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="My Project\Resources.Designer.vb">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="My Project\Resources.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Import Include="Ado" />
+    <Import Include="MySql.Data.common.DnsClient" />
+    <Import Include="MySql.Data.MySqlClient" />
+    <Import Include="MySql.Data.MySqlClient.Authentication" />
+    <Import Include="MySql.Data.MySqlClient.Interceptors" />
+    <Import Include="MySql.Data.MySqlClient.Replication" />
+    <Import Include="MySql.Data.MySqlClient.X.XDevAPI.Common" />
+    <Import Include="MySql.Data.Types" />
+    <Import Include="MySqlConnector" />
+    <Import Include="MySqlConnector.Authentication" />
+    <Import Include="MySqlConnector.Logging" />
+    <Import Include="Newtonsoft.Json.Serialization" />
+    <Import Include="System.Data.OracleClient" />
+    <Import Include="System.Data.SqlClient" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+
+</Project>
