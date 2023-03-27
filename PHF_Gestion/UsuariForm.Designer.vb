@@ -22,6 +22,7 @@ Partial Class UsuariForm
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        components = New ComponentModel.Container()
         Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(UsuariForm))
         lblUsuariTitol = New Label()
         lblUsuariGuarderia = New Label()
@@ -51,12 +52,15 @@ Partial Class UsuariForm
         btnUsuariEliminar = New Button()
         btnUsuariEnrere = New Button()
         SplitContainer1 = New SplitContainer()
+        erpFormulariUsuariErrors = New ErrorProvider(components)
+        hlpFormulariUsuariAjuda = New HelpProvider()
         CType(dgvUsuariGuarderies, ComponentModel.ISupportInitialize).BeginInit()
         gpbUsuariTipusUsuaris.SuspendLayout()
         CType(SplitContainer1, ComponentModel.ISupportInitialize).BeginInit()
         SplitContainer1.Panel1.SuspendLayout()
         SplitContainer1.Panel2.SuspendLayout()
         SplitContainer1.SuspendLayout()
+        CType(erpFormulariUsuariErrors, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' lblUsuariTitol
@@ -72,8 +76,12 @@ Partial Class UsuariForm
         ' lblUsuariGuarderia
         ' 
         lblUsuariGuarderia.AutoSize = True
+        hlpFormulariUsuariAjuda.SetHelpKeyword(lblUsuariGuarderia, "Afegir guarderies que pot administrar l'usuari")
+        hlpFormulariUsuariAjuda.SetHelpString(lblUsuariGuarderia, "")
+        erpFormulariUsuariErrors.SetIconAlignment(lblUsuariGuarderia, ErrorIconAlignment.MiddleLeft)
         lblUsuariGuarderia.Location = New Point(31, 22)
         lblUsuariGuarderia.Name = "lblUsuariGuarderia"
+        hlpFormulariUsuariAjuda.SetShowHelp(lblUsuariGuarderia, True)
         lblUsuariGuarderia.Size = New Size(80, 20)
         lblUsuariGuarderia.TabIndex = 1
         lblUsuariGuarderia.Text = "Guarderies"' 
@@ -85,7 +93,7 @@ Partial Class UsuariForm
         dgvUsuariGuarderies.Name = "dgvUsuariGuarderies"
         dgvUsuariGuarderies.RowHeadersWidth = 51
         dgvUsuariGuarderies.RowTemplate.Height = 29
-        dgvUsuariGuarderies.Size = New Size(411, 392)
+        dgvUsuariGuarderies.Size = New Size(420, 411)
         dgvUsuariGuarderies.TabIndex = 2
         ' 
         ' btnUsuariAfegirGuarderia
@@ -112,7 +120,7 @@ Partial Class UsuariForm
         ' 
         lblUsuariNom.Anchor = AnchorStyles.Left Or AnchorStyles.Right
         lblUsuariNom.AutoSize = True
-        lblUsuariNom.Location = New Point(9, 42)
+        lblUsuariNom.Location = New Point(9, 45)
         lblUsuariNom.Name = "lblUsuariNom"
         lblUsuariNom.Size = New Size(45, 20)
         lblUsuariNom.TabIndex = 5
@@ -121,7 +129,7 @@ Partial Class UsuariForm
         ' 
         lblUsuariCognom1.Anchor = AnchorStyles.Left Or AnchorStyles.Right
         lblUsuariCognom1.AutoSize = True
-        lblUsuariCognom1.Location = New Point(9, 80)
+        lblUsuariCognom1.Location = New Point(9, 82)
         lblUsuariCognom1.Name = "lblUsuariCognom1"
         lblUsuariCognom1.Size = New Size(81, 20)
         lblUsuariCognom1.TabIndex = 6
@@ -130,7 +138,7 @@ Partial Class UsuariForm
         ' 
         lblUsuariCognom2.Anchor = AnchorStyles.Left Or AnchorStyles.Right
         lblUsuariCognom2.AutoSize = True
-        lblUsuariCognom2.Location = New Point(9, 118)
+        lblUsuariCognom2.Location = New Point(9, 119)
         lblUsuariCognom2.Name = "lblUsuariCognom2"
         lblUsuariCognom2.Size = New Size(81, 20)
         lblUsuariCognom2.TabIndex = 7
@@ -139,7 +147,7 @@ Partial Class UsuariForm
         ' 
         lblUsuariNomUsuari.Anchor = AnchorStyles.Left Or AnchorStyles.Right
         lblUsuariNomUsuari.AutoSize = True
-        lblUsuariNomUsuari.Location = New Point(9, 194)
+        lblUsuariNomUsuari.Location = New Point(9, 193)
         lblUsuariNomUsuari.Name = "lblUsuariNomUsuari"
         lblUsuariNomUsuari.Size = New Size(88, 20)
         lblUsuariNomUsuari.TabIndex = 8
@@ -148,7 +156,7 @@ Partial Class UsuariForm
         ' 
         lblUsuariContrasenya.Anchor = AnchorStyles.Left Or AnchorStyles.Right
         lblUsuariContrasenya.AutoSize = True
-        lblUsuariContrasenya.Location = New Point(9, 232)
+        lblUsuariContrasenya.Location = New Point(9, 230)
         lblUsuariContrasenya.Name = "lblUsuariContrasenya"
         lblUsuariContrasenya.Size = New Size(93, 20)
         lblUsuariContrasenya.TabIndex = 9
@@ -157,8 +165,12 @@ Partial Class UsuariForm
         ' 
         lblUsuariDI.Anchor = AnchorStyles.Left Or AnchorStyles.Right
         lblUsuariDI.AutoSize = True
+        hlpFormulariUsuariAjuda.SetHelpKeyword(lblUsuariDI, "Document Identitat")
+        hlpFormulariUsuariAjuda.SetHelpNavigator(lblUsuariDI, HelpNavigator.Topic)
+        hlpFormulariUsuariAjuda.SetHelpString(lblUsuariDI, "Document Identitat")
         lblUsuariDI.Location = New Point(9, 156)
         lblUsuariDI.Name = "lblUsuariDI"
+        hlpFormulariUsuariAjuda.SetShowHelp(lblUsuariDI, True)
         lblUsuariDI.Size = New Size(27, 20)
         lblUsuariDI.TabIndex = 10
         lblUsuariDI.Text = "DI:"' 
@@ -166,7 +178,7 @@ Partial Class UsuariForm
         ' 
         lblUsuariCorreu.Anchor = AnchorStyles.Left Or AnchorStyles.Right
         lblUsuariCorreu.AutoSize = True
-        lblUsuariCorreu.Location = New Point(9, 270)
+        lblUsuariCorreu.Location = New Point(9, 267)
         lblUsuariCorreu.Name = "lblUsuariCorreu"
         lblUsuariCorreu.Size = New Size(56, 20)
         lblUsuariCorreu.TabIndex = 11
@@ -175,7 +187,7 @@ Partial Class UsuariForm
         ' 
         lblUsuariTelefon.Anchor = AnchorStyles.Left Or AnchorStyles.Right
         lblUsuariTelefon.AutoSize = True
-        lblUsuariTelefon.Location = New Point(9, 308)
+        lblUsuariTelefon.Location = New Point(9, 304)
         lblUsuariTelefon.Name = "lblUsuariTelefon"
         lblUsuariTelefon.Size = New Size(61, 20)
         lblUsuariTelefon.TabIndex = 12
@@ -224,7 +236,7 @@ Partial Class UsuariForm
         ' txtUsuariCognom1
         ' 
         txtUsuariCognom1.Anchor = AnchorStyles.Left Or AnchorStyles.Right
-        txtUsuariCognom1.Location = New Point(134, 80)
+        txtUsuariCognom1.Location = New Point(134, 79)
         txtUsuariCognom1.Name = "txtUsuariCognom1"
         txtUsuariCognom1.Size = New Size(305, 27)
         txtUsuariCognom1.TabIndex = 15
@@ -232,7 +244,7 @@ Partial Class UsuariForm
         ' txtUsuariCognom2
         ' 
         txtUsuariCognom2.Anchor = AnchorStyles.Left Or AnchorStyles.Right
-        txtUsuariCognom2.Location = New Point(134, 118)
+        txtUsuariCognom2.Location = New Point(134, 116)
         txtUsuariCognom2.Name = "txtUsuariCognom2"
         txtUsuariCognom2.Size = New Size(305, 27)
         txtUsuariCognom2.TabIndex = 16
@@ -248,7 +260,7 @@ Partial Class UsuariForm
         ' txtUsuariNomUsuari
         ' 
         txtUsuariNomUsuari.Anchor = AnchorStyles.Left Or AnchorStyles.Right
-        txtUsuariNomUsuari.Location = New Point(134, 194)
+        txtUsuariNomUsuari.Location = New Point(134, 190)
         txtUsuariNomUsuari.Name = "txtUsuariNomUsuari"
         txtUsuariNomUsuari.Size = New Size(305, 27)
         txtUsuariNomUsuari.TabIndex = 18
@@ -256,7 +268,7 @@ Partial Class UsuariForm
         ' txtUsuariContrasenya
         ' 
         txtUsuariContrasenya.Anchor = AnchorStyles.Left Or AnchorStyles.Right
-        txtUsuariContrasenya.Location = New Point(134, 232)
+        txtUsuariContrasenya.Location = New Point(134, 227)
         txtUsuariContrasenya.Name = "txtUsuariContrasenya"
         txtUsuariContrasenya.Size = New Size(305, 27)
         txtUsuariContrasenya.TabIndex = 19
@@ -264,7 +276,7 @@ Partial Class UsuariForm
         ' txtUsuariCorreu
         ' 
         txtUsuariCorreu.Anchor = AnchorStyles.Left Or AnchorStyles.Right
-        txtUsuariCorreu.Location = New Point(134, 270)
+        txtUsuariCorreu.Location = New Point(134, 264)
         txtUsuariCorreu.Name = "txtUsuariCorreu"
         txtUsuariCorreu.Size = New Size(305, 27)
         txtUsuariCorreu.TabIndex = 20
@@ -272,7 +284,7 @@ Partial Class UsuariForm
         ' txtUsuariTelefon
         ' 
         txtUsuariTelefon.Anchor = AnchorStyles.Left Or AnchorStyles.Right
-        txtUsuariTelefon.Location = New Point(134, 306)
+        txtUsuariTelefon.Location = New Point(134, 301)
         txtUsuariTelefon.Name = "txtUsuariTelefon"
         txtUsuariTelefon.Size = New Size(305, 27)
         txtUsuariTelefon.TabIndex = 21
@@ -281,7 +293,7 @@ Partial Class UsuariForm
         ' 
         btnUsuariGuardar.Anchor = AnchorStyles.Bottom
         btnUsuariGuardar.BackColor = Color.Aquamarine
-        btnUsuariGuardar.Location = New Point(254, 647)
+        btnUsuariGuardar.Location = New Point(275, 648)
         btnUsuariGuardar.Name = "btnUsuariGuardar"
         btnUsuariGuardar.Size = New Size(158, 61)
         btnUsuariGuardar.TabIndex = 22
@@ -292,7 +304,7 @@ Partial Class UsuariForm
         ' 
         btnUsuariEliminar.Anchor = AnchorStyles.Bottom
         btnUsuariEliminar.BackColor = Color.Aquamarine
-        btnUsuariEliminar.Location = New Point(461, 647)
+        btnUsuariEliminar.Location = New Point(468, 648)
         btnUsuariEliminar.Name = "btnUsuariEliminar"
         btnUsuariEliminar.Size = New Size(158, 61)
         btnUsuariEliminar.TabIndex = 23
@@ -303,7 +315,7 @@ Partial Class UsuariForm
         ' 
         btnUsuariEnrere.Anchor = AnchorStyles.Bottom
         btnUsuariEnrere.BackColor = Color.Aquamarine
-        btnUsuariEnrere.Location = New Point(677, 647)
+        btnUsuariEnrere.Location = New Point(661, 648)
         btnUsuariEnrere.Name = "btnUsuariEnrere"
         btnUsuariEnrere.Size = New Size(158, 61)
         btnUsuariEnrere.TabIndex = 24
@@ -345,6 +357,10 @@ Partial Class UsuariForm
         SplitContainer1.SplitterDistance = 477
         SplitContainer1.TabIndex = 25
         ' 
+        ' erpFormulariUsuariErrors
+        ' 
+        erpFormulariUsuariErrors.ContainerControl = Me
+        ' 
         ' UsuariForm
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
@@ -371,6 +387,7 @@ Partial Class UsuariForm
         SplitContainer1.Panel2.PerformLayout()
         CType(SplitContainer1, ComponentModel.ISupportInitialize).EndInit()
         SplitContainer1.ResumeLayout(False)
+        CType(erpFormulariUsuariErrors, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -403,4 +420,6 @@ Partial Class UsuariForm
     Friend WithEvents btnUsuariEliminar As Button
     Friend WithEvents btnUsuariEnrere As Button
     Friend WithEvents SplitContainer1 As SplitContainer
+    Friend WithEvents erpFormulariUsuariErrors As ErrorProvider
+    Friend WithEvents hlpFormulariUsuariAjuda As HelpProvider
 End Class
