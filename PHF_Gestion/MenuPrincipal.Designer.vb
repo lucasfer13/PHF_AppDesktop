@@ -39,10 +39,11 @@ Partial Class MenuPrincipal
         btnMenuPrinGestioGuarderies.Anchor = AnchorStyles.None
         btnMenuPrinGestioGuarderies.BackColor = Color.Aquamarine
         btnMenuPrinGestioGuarderies.FlatAppearance.BorderColor = Color.Aquamarine
-        btnMenuPrinGestioGuarderies.Location = New Point(213, 136)
+        btnMenuPrinGestioGuarderies.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        btnMenuPrinGestioGuarderies.Location = New Point(209, 146)
         btnMenuPrinGestioGuarderies.Margin = New Padding(3, 2, 3, 2)
         btnMenuPrinGestioGuarderies.Name = "btnMenuPrinGestioGuarderies"
-        btnMenuPrinGestioGuarderies.Size = New Size(110, 56)
+        btnMenuPrinGestioGuarderies.Size = New Size(149, 87)
         btnMenuPrinGestioGuarderies.TabIndex = 1
         btnMenuPrinGestioGuarderies.Text = "Gestió de guarderies"
         btnMenuPrinGestioGuarderies.UseVisualStyleBackColor = False
@@ -51,7 +52,7 @@ Partial Class MenuPrincipal
         ' 
         pcbMenuPrinLogo.Anchor = AnchorStyles.Top
         pcbMenuPrinLogo.Image = CType(resources.GetObject("pcbMenuPrinLogo.Image"), Image)
-        pcbMenuPrinLogo.Location = New Point(276, 9)
+        pcbMenuPrinLogo.Location = New Point(289, 9)
         pcbMenuPrinLogo.Margin = New Padding(3, 2, 3, 2)
         pcbMenuPrinLogo.Name = "pcbMenuPrinLogo"
         pcbMenuPrinLogo.Size = New Size(134, 103)
@@ -64,10 +65,11 @@ Partial Class MenuPrincipal
         btnMenuPrinGestioServeis.Anchor = AnchorStyles.None
         btnMenuPrinGestioServeis.BackColor = Color.Aquamarine
         btnMenuPrinGestioServeis.FlatAppearance.BorderColor = Color.Aquamarine
-        btnMenuPrinGestioServeis.Location = New Point(361, 136)
+        btnMenuPrinGestioServeis.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        btnMenuPrinGestioServeis.Location = New Point(374, 146)
         btnMenuPrinGestioServeis.Margin = New Padding(3, 2, 3, 2)
         btnMenuPrinGestioServeis.Name = "btnMenuPrinGestioServeis"
-        btnMenuPrinGestioServeis.Size = New Size(110, 56)
+        btnMenuPrinGestioServeis.Size = New Size(149, 87)
         btnMenuPrinGestioServeis.TabIndex = 3
         btnMenuPrinGestioServeis.Text = "Gestió de serveis"
         btnMenuPrinGestioServeis.UseVisualStyleBackColor = False
@@ -77,10 +79,11 @@ Partial Class MenuPrincipal
         btnMenuPrinGestioAnimals.Anchor = AnchorStyles.None
         btnMenuPrinGestioAnimals.BackColor = Color.Aquamarine
         btnMenuPrinGestioAnimals.FlatAppearance.BorderColor = Color.Aquamarine
-        btnMenuPrinGestioAnimals.Location = New Point(213, 207)
+        btnMenuPrinGestioAnimals.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        btnMenuPrinGestioAnimals.Location = New Point(209, 253)
         btnMenuPrinGestioAnimals.Margin = New Padding(3, 2, 3, 2)
         btnMenuPrinGestioAnimals.Name = "btnMenuPrinGestioAnimals"
-        btnMenuPrinGestioAnimals.Size = New Size(110, 52)
+        btnMenuPrinGestioAnimals.Size = New Size(149, 87)
         btnMenuPrinGestioAnimals.TabIndex = 4
         btnMenuPrinGestioAnimals.Text = "Gestió d'animals"
         btnMenuPrinGestioAnimals.UseVisualStyleBackColor = False
@@ -88,8 +91,9 @@ Partial Class MenuPrincipal
         ' pcbMenuPrincipalUsuari
         ' 
         pcbMenuPrincipalUsuari.Anchor = AnchorStyles.Top Or AnchorStyles.Right
+        pcbMenuPrincipalUsuari.Cursor = Cursors.Hand
         pcbMenuPrincipalUsuari.Image = My.Resources.Resources.pngegg
-        pcbMenuPrincipalUsuari.Location = New Point(617, 9)
+        pcbMenuPrincipalUsuari.Location = New Point(643, 9)
         pcbMenuPrincipalUsuari.Margin = New Padding(3, 2, 3, 2)
         pcbMenuPrincipalUsuari.Name = "pcbMenuPrincipalUsuari"
         pcbMenuPrincipalUsuari.Size = New Size(62, 46)
@@ -102,10 +106,11 @@ Partial Class MenuPrincipal
         btnMenuPrincipalGestioUsuaris.Anchor = AnchorStyles.None
         btnMenuPrincipalGestioUsuaris.BackColor = Color.Aquamarine
         btnMenuPrincipalGestioUsuaris.FlatAppearance.BorderColor = Color.Aquamarine
-        btnMenuPrincipalGestioUsuaris.Location = New Point(361, 207)
+        btnMenuPrincipalGestioUsuaris.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        btnMenuPrincipalGestioUsuaris.Location = New Point(374, 253)
         btnMenuPrincipalGestioUsuaris.Margin = New Padding(3, 2, 3, 2)
         btnMenuPrincipalGestioUsuaris.Name = "btnMenuPrincipalGestioUsuaris"
-        btnMenuPrincipalGestioUsuaris.Size = New Size(110, 52)
+        btnMenuPrincipalGestioUsuaris.Size = New Size(149, 87)
         btnMenuPrincipalGestioUsuaris.TabIndex = 7
         btnMenuPrincipalGestioUsuaris.Text = "Gestió usuaris"
         btnMenuPrincipalGestioUsuaris.UseVisualStyleBackColor = False
@@ -115,7 +120,8 @@ Partial Class MenuPrincipal
         btnMenuPrincipalSortir.Anchor = AnchorStyles.Bottom
         btnMenuPrincipalSortir.BackColor = Color.Aquamarine
         btnMenuPrincipalSortir.FlatAppearance.BorderColor = Color.Aquamarine
-        btnMenuPrincipalSortir.Location = New Point(291, 286)
+        btnMenuPrincipalSortir.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        btnMenuPrincipalSortir.Location = New Point(304, 378)
         btnMenuPrincipalSortir.Margin = New Padding(3, 2, 3, 2)
         btnMenuPrincipalSortir.Name = "btnMenuPrincipalSortir"
         btnMenuPrincipalSortir.Size = New Size(110, 41)
@@ -130,7 +136,7 @@ Partial Class MenuPrincipal
         AutoValidate = AutoValidate.EnablePreventFocusChange
         BackColor = Color.LightSteelBlue
         BackgroundImageLayout = ImageLayout.None
-        ClientSize = New Size(702, 342)
+        ClientSize = New Size(728, 434)
         Controls.Add(btnMenuPrincipalSortir)
         Controls.Add(btnMenuPrincipalGestioUsuaris)
         Controls.Add(pcbMenuPrincipalUsuari)
@@ -141,7 +147,7 @@ Partial Class MenuPrincipal
         Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Margin = New Padding(3, 2, 3, 2)
-        MinimumSize = New Size(713, 359)
+        MinimumSize = New Size(746, 481)
         Name = "MenuPrincipal"
         StartPosition = FormStartPosition.CenterScreen
         Text = "Pet Hotel Finder Gestion"

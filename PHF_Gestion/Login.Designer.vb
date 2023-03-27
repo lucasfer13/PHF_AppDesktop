@@ -22,6 +22,7 @@ Partial Class Login
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        components = New ComponentModel.Container()
         Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(Login))
         pcbLoginLogo = New PictureBox()
         txtLoginPassword = New MaskedTextBox()
@@ -29,11 +30,13 @@ Partial Class Login
         btnLoginEntrar = New Button()
         pcbLoginUsuari = New PictureBox()
         pcbLoginPassword = New PictureBox()
-        lblLoginUsuari = New TextBox()
-        lblLoginPassword = New TextBox()
+        erpLoginError = New ErrorProvider(components)
+        lblLoginUsuari = New Label()
+        lblLoginContrasenya = New Label()
         CType(pcbLoginLogo, ComponentModel.ISupportInitialize).BeginInit()
         CType(pcbLoginUsuari, ComponentModel.ISupportInitialize).BeginInit()
         CType(pcbLoginPassword, ComponentModel.ISupportInitialize).BeginInit()
+        CType(erpLoginError, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' pcbLoginLogo
@@ -57,7 +60,7 @@ Partial Class Login
         txtLoginPassword.Name = "txtLoginPassword"
         txtLoginPassword.PasswordChar = "●"c
         txtLoginPassword.Size = New Size(249, 26)
-        txtLoginPassword.TabIndex = 1
+        txtLoginPassword.TabIndex = 2
         ' 
         ' txtLoginUsuari
         ' 
@@ -66,7 +69,7 @@ Partial Class Login
         txtLoginUsuari.Location = New Point(490, 118)
         txtLoginUsuari.Name = "txtLoginUsuari"
         txtLoginUsuari.Size = New Size(249, 26)
-        txtLoginUsuari.TabIndex = 2
+        txtLoginUsuari.TabIndex = 1
         ' 
         ' btnLoginEntrar
         ' 
@@ -102,35 +105,33 @@ Partial Class Login
         pcbLoginPassword.TabIndex = 5
         pcbLoginPassword.TabStop = False
         ' 
+        ' erpLoginError
+        ' 
+        erpLoginError.ContainerControl = Me
+        ' 
         ' lblLoginUsuari
         ' 
-        lblLoginUsuari.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        lblLoginUsuari.BackColor = Color.LightSteelBlue
-        lblLoginUsuari.BorderStyle = BorderStyle.None
-        lblLoginUsuari.Font = New Font("Sitka Small", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        lblLoginUsuari.Location = New Point(490, 85)
+        lblLoginUsuari.AutoSize = True
+        lblLoginUsuari.Location = New Point(490, 92)
         lblLoginUsuari.Name = "lblLoginUsuari"
-        lblLoginUsuari.Size = New Size(125, 19)
-        lblLoginUsuari.TabIndex = 6
+        lblLoginUsuari.Size = New Size(50, 20)
+        lblLoginUsuari.TabIndex = 8
         lblLoginUsuari.Text = "Usuari"' 
-        ' lblLoginPassword
+        ' lblLoginContrasenya
         ' 
-        lblLoginPassword.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        lblLoginPassword.BackColor = Color.LightSteelBlue
-        lblLoginPassword.BorderStyle = BorderStyle.None
-        lblLoginPassword.Font = New Font("Sitka Small", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        lblLoginPassword.Location = New Point(490, 192)
-        lblLoginPassword.Name = "lblLoginPassword"
-        lblLoginPassword.Size = New Size(125, 19)
-        lblLoginPassword.TabIndex = 7
-        lblLoginPassword.Text = "Contrasenya"' 
+        lblLoginContrasenya.AutoSize = True
+        lblLoginContrasenya.Location = New Point(490, 200)
+        lblLoginContrasenya.Name = "lblLoginContrasenya"
+        lblLoginContrasenya.Size = New Size(90, 20)
+        lblLoginContrasenya.TabIndex = 9
+        lblLoginContrasenya.Text = "Contrasenya"' 
         ' Login
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.LightSteelBlue
         ClientSize = New Size(795, 419)
-        Controls.Add(lblLoginPassword)
+        Controls.Add(lblLoginContrasenya)
         Controls.Add(lblLoginUsuari)
         Controls.Add(pcbLoginPassword)
         Controls.Add(pcbLoginUsuari)
@@ -148,6 +149,7 @@ Partial Class Login
         CType(pcbLoginLogo, ComponentModel.ISupportInitialize).EndInit()
         CType(pcbLoginUsuari, ComponentModel.ISupportInitialize).EndInit()
         CType(pcbLoginPassword, ComponentModel.ISupportInitialize).EndInit()
+        CType(erpLoginError, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -158,6 +160,7 @@ Partial Class Login
     Friend WithEvents btnLoginEntrar As Button
     Friend WithEvents pcbLoginUsuari As PictureBox
     Friend WithEvents pcbLoginPassword As PictureBox
-    Friend WithEvents lblLoginUsuari As TextBox
-    Friend WithEvents lblLoginPassword As TextBox
+    Friend WithEvents erpLoginError As ErrorProvider
+    Friend WithEvents lblLoginContrasenya As Label
+    Friend WithEvents lblLoginUsuari As Label
 End Class

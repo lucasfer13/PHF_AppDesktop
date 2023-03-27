@@ -1,4 +1,5 @@
 ﻿Public Class MenuPrincipal
+    Public Shared user As DataTable
     Private Sub btnMenuPrinGestioGuarderies_Click(sender As Object, e As EventArgs) Handles btnMenuPrinGestioGuarderies.Click
         MenuGestioGuarderies.Show()
         Me.Hide()
@@ -27,6 +28,16 @@
     End Sub
 
     Private Sub MenuPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Login.ShowDialog()
+        If (Not user.Rows.Item(0).Item(11) = 1) Then
+            setSupervisor()
+        Else
 
+        End If
+    End Sub
+    Private Sub setSupervisor()
+        btnMenuPrincipalGestioUsuaris.Enabled = False
+        btnMenuPrinGestioAnimals.Enabled = False
+        btnMenuPrinGestioServeis.Enabled = False
     End Sub
 End Class
