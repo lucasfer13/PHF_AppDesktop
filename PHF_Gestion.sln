@@ -4,13 +4,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "PHF_Gestion", "PHF_Gestion\PHF_Gestion.vbproj", "{B6D18B1F-1E1F-483F-B590-7B0AB8EF0CB8}"
-	ProjectSection(ProjectDependencies) = postProject
-		{D29E2924-103B-44D2-9B29-6ED01F24C3D4} = {D29E2924-103B-44D2-9B29-6ED01F24C3D4}
-	EndProjectSection
 EndProject
-Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "ConexioBD", "ConexioBD\ConexioBD.vbproj", "{D29E2924-103B-44D2-9B29-6ED01F24C3D4}"
-EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Data", "Data\Data.vbproj", "{54AA6075-B3A3-4EF9-A1A3-B33D65C97C18}"
+Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "Data", "Data\Data.vbproj", "{54AA6075-B3A3-4EF9-A1A3-B33D65C97C18}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,10 +17,6 @@ Global
 		{B6D18B1F-1E1F-483F-B590-7B0AB8EF0CB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6D18B1F-1E1F-483F-B590-7B0AB8EF0CB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6D18B1F-1E1F-483F-B590-7B0AB8EF0CB8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D29E2924-103B-44D2-9B29-6ED01F24C3D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D29E2924-103B-44D2-9B29-6ED01F24C3D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D29E2924-103B-44D2-9B29-6ED01F24C3D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D29E2924-103B-44D2-9B29-6ED01F24C3D4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{54AA6075-B3A3-4EF9-A1A3-B33D65C97C18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{54AA6075-B3A3-4EF9-A1A3-B33D65C97C18}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{54AA6075-B3A3-4EF9-A1A3-B33D65C97C18}.Release|Any CPU.ActiveCfg = Release|Any CPU
