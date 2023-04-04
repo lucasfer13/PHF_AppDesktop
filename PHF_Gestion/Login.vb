@@ -5,6 +5,10 @@ Imports Data.Usuari
 Public Class Login
     Private valid As Boolean = False
     Private Sub btnLoginEntrar_Click(sender As Object, e As EventArgs) Handles btnLoginEntrar.Click
+        validar()
+    End Sub
+
+    Private Sub validar()
         If Me.ValidateChildren Then
             Dim usuari As New Usuari
             Dim dt As DataTable
@@ -23,6 +27,7 @@ Public Class Login
         If Not valid Then
             MenuPrincipal.Close()
         Else
+            MenuPrincipal.permisos()
             MenuPrincipal.Show()
         End If
     End Sub
@@ -34,6 +39,12 @@ Public Class Login
         End If
         If Not e.Cancel Then
             erpLoginError.SetError(sender, "")
+        End If
+    End Sub
+
+    Private Sub txtLoginUsuari_TextChanged(sender As Object, e As KeyEventArgs) Handles txtLoginUsuari.KeyDown, txtLoginPassword.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            validar()
         End If
     End Sub
 End Class

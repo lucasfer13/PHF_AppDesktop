@@ -22,6 +22,7 @@ Partial Class FormSeveis
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        components = New ComponentModel.Container()
         Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(FormSeveis))
         dgvServeis = New DataGridView()
         btnServeisAdd = New Button()
@@ -29,7 +30,9 @@ Partial Class FormSeveis
         lblServeisTitol = New Label()
         txtServeisBuscar = New TextBox()
         btnServeisReset = New Button()
+        bdgServeisVista = New BindingSource(components)
         CType(dgvServeis, ComponentModel.ISupportInitialize).BeginInit()
+        CType(bdgServeisVista, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' dgvServeis
@@ -37,8 +40,10 @@ Partial Class FormSeveis
         dgvServeis.AllowUserToAddRows = False
         dgvServeis.AllowUserToDeleteRows = False
         dgvServeis.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        dgvServeis.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         dgvServeis.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         dgvServeis.Location = New Point(12, 9)
+        dgvServeis.MultiSelect = False
         dgvServeis.Name = "dgvServeis"
         dgvServeis.ReadOnly = True
         dgvServeis.RowHeadersWidth = 51
@@ -116,6 +121,7 @@ Partial Class FormSeveis
         Text = "PHF - Serveis"
         WindowState = FormWindowState.Maximized
         CType(dgvServeis, ComponentModel.ISupportInitialize).EndInit()
+        CType(bdgServeisVista, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -126,4 +132,5 @@ Partial Class FormSeveis
     Friend WithEvents lblServeisTitol As Label
     Friend WithEvents txtServeisBuscar As TextBox
     Friend WithEvents btnServeisReset As Button
+    Friend WithEvents bdgServeisVista As BindingSource
 End Class
