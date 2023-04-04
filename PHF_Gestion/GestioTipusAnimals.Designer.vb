@@ -22,6 +22,7 @@ Partial Class GestioTipusAnimals
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        components = New ComponentModel.Container()
         Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(GestioTipusAnimals))
         dgvTipusAnimalsLlistat = New DataGridView()
         lblTipusAnimalsTitol = New Label()
@@ -29,7 +30,9 @@ Partial Class GestioTipusAnimals
         btnTipusAnimalReset = New Button()
         btnTipusAnimalAfegir = New Button()
         btnTipusAnimalEnrere = New Button()
+        bdgGestioTipusAnimalsVista = New BindingSource(components)
         CType(dgvTipusAnimalsLlistat, ComponentModel.ISupportInitialize).BeginInit()
+        CType(bdgGestioTipusAnimalsVista, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' dgvTipusAnimalsLlistat
@@ -37,6 +40,7 @@ Partial Class GestioTipusAnimals
         dgvTipusAnimalsLlistat.AllowUserToAddRows = False
         dgvTipusAnimalsLlistat.AllowUserToDeleteRows = False
         dgvTipusAnimalsLlistat.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        dgvTipusAnimalsLlistat.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         dgvTipusAnimalsLlistat.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         dgvTipusAnimalsLlistat.Location = New Point(12, 12)
         dgvTipusAnimalsLlistat.Name = "dgvTipusAnimalsLlistat"
@@ -117,6 +121,7 @@ Partial Class GestioTipusAnimals
         Text = "PHF - Tipus d'animals"
         WindowState = FormWindowState.Maximized
         CType(dgvTipusAnimalsLlistat, ComponentModel.ISupportInitialize).EndInit()
+        CType(bdgGestioTipusAnimalsVista, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -127,4 +132,5 @@ Partial Class GestioTipusAnimals
     Friend WithEvents btnTipusAnimalReset As Button
     Friend WithEvents btnTipusAnimalAfegir As Button
     Friend WithEvents btnTipusAnimalEnrere As Button
+    Friend WithEvents bdgGestioTipusAnimalsVista As BindingSource
 End Class
