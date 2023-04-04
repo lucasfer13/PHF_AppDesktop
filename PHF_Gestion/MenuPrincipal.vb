@@ -29,11 +29,19 @@
 
     Private Sub MenuPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Login.ShowDialog()
+    End Sub
+
+    Public Sub permisos()
         If (Not user.Rows.Item(0).Item(11) = 1) Then
             setSupervisor()
         Else
-
+            setAdministrador()
         End If
+    End Sub
+    Private Sub setAdministrador()
+        btnMenuPrincipalGestioUsuaris.Enabled = True
+        btnMenuPrinGestioAnimals.Enabled = True
+        btnMenuPrinGestioServeis.Enabled = True
     End Sub
     Private Sub setSupervisor()
         btnMenuPrincipalGestioUsuaris.Enabled = False

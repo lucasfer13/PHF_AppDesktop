@@ -107,6 +107,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Busca una cadena traducida similar a No s&apos;ha trobat cap coincidencia..
+        '''</summary>
+        Friend ReadOnly Property NoResultat() As String
+            Get
+                Return ResourceManager.GetString("NoResultat", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
         Friend ReadOnly Property pngegg() As System.Drawing.Bitmap
