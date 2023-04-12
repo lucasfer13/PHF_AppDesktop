@@ -10,11 +10,21 @@ Public Class Usuari
         Return dt
     End Function
 
-    Function generarSHA(pass As String) As String
+    Public Shared Function generarSHA(pass As String) As String
         Dim algorithm As SHA256 = SHA256.Create
         Dim enc As New UTF8Encoding
         Dim hash As Byte() = (algorithm.ComputeHash(enc.GetBytes(pass)))
         Return System.Convert.ToBase64String(hash)
+    End Function
+
+    Public Function modifyPassword(pass As String, id As Integer) As Boolean
+        Dim sql As New ConnectionBD
+        Return sql.comand(String.Format(Constantes.MODIFY_USER_PASSWORD, generarSHA(pass), id))
+    End Function
+
+    Public Function getUser(userName As String) As DataRow
+        Dim sql As New ConnectionBD
+        Return sql.query(String.Format(Constantes.QUERY_SPECIFIC_USER, userName)).Rows(0)
     End Function
 
 End Class

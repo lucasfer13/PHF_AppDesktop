@@ -22,6 +22,7 @@ Partial Class DadesUsuari
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        components = New ComponentModel.Container()
         Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(DadesUsuari))
         pcbDadesUsuariFotoPerfil = New PictureBox()
         btnDadesUsuariModificar = New Button()
@@ -36,7 +37,6 @@ Partial Class DadesUsuari
         lblDadesUsuariContrasenya = New Label()
         txtDadesUsuariCorreu = New TextBox()
         lblDadesUsuariDI = New Label()
-        txtDadesUsuariContrasenya = New TextBox()
         lblDadesUsuariCorreu = New Label()
         txtDadesUsuariNomUsuari = New TextBox()
         lblDadesUsuariTelefon = New Label()
@@ -46,7 +46,10 @@ Partial Class DadesUsuari
         txtDadesUsuariCognom1 = New TextBox()
         btnDadesUsuariEnrere = New Button()
         btnDadesUsuariTencarSessio = New Button()
+        btnDadesUsuariChangePass = New Button()
+        erpDadesUsuariErrors = New ErrorProvider(components)
         CType(pcbDadesUsuariFotoPerfil, ComponentModel.ISupportInitialize).BeginInit()
+        CType(erpDadesUsuariErrors, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' pcbDadesUsuariFotoPerfil
@@ -72,6 +75,7 @@ Partial Class DadesUsuari
         ' btnDadesUsuariGuardar
         ' 
         btnDadesUsuariGuardar.BackColor = Color.Aquamarine
+        btnDadesUsuariGuardar.Enabled = False
         btnDadesUsuariGuardar.Location = New Point(297, 41)
         btnDadesUsuariGuardar.Name = "btnDadesUsuariGuardar"
         btnDadesUsuariGuardar.Size = New Size(94, 34)
@@ -138,6 +142,7 @@ Partial Class DadesUsuari
         ' txtDadesUsuariTelefon
         ' 
         txtDadesUsuariTelefon.Anchor = AnchorStyles.Left Or AnchorStyles.Right
+        txtDadesUsuariTelefon.Enabled = False
         txtDadesUsuariTelefon.Location = New Point(180, 372)
         txtDadesUsuariTelefon.Name = "txtDadesUsuariTelefon"
         txtDadesUsuariTelefon.Size = New Size(393, 27)
@@ -155,6 +160,7 @@ Partial Class DadesUsuari
         ' txtDadesUsuariCorreu
         ' 
         txtDadesUsuariCorreu.Anchor = AnchorStyles.Left Or AnchorStyles.Right
+        txtDadesUsuariCorreu.Enabled = False
         txtDadesUsuariCorreu.Location = New Point(180, 336)
         txtDadesUsuariCorreu.Name = "txtDadesUsuariCorreu"
         txtDadesUsuariCorreu.Size = New Size(393, 27)
@@ -169,14 +175,6 @@ Partial Class DadesUsuari
         lblDadesUsuariDI.Size = New Size(27, 20)
         lblDadesUsuariDI.TabIndex = 27
         lblDadesUsuariDI.Text = "DI:"' 
-        ' txtDadesUsuariContrasenya
-        ' 
-        txtDadesUsuariContrasenya.Anchor = AnchorStyles.Left Or AnchorStyles.Right
-        txtDadesUsuariContrasenya.Location = New Point(180, 298)
-        txtDadesUsuariContrasenya.Name = "txtDadesUsuariContrasenya"
-        txtDadesUsuariContrasenya.Size = New Size(393, 27)
-        txtDadesUsuariContrasenya.TabIndex = 35
-        ' 
         ' lblDadesUsuariCorreu
         ' 
         lblDadesUsuariCorreu.Anchor = AnchorStyles.Left Or AnchorStyles.Right
@@ -189,6 +187,7 @@ Partial Class DadesUsuari
         ' txtDadesUsuariNomUsuari
         ' 
         txtDadesUsuariNomUsuari.Anchor = AnchorStyles.Left Or AnchorStyles.Right
+        txtDadesUsuariNomUsuari.Enabled = False
         txtDadesUsuariNomUsuari.Location = New Point(180, 260)
         txtDadesUsuariNomUsuari.Name = "txtDadesUsuariNomUsuari"
         txtDadesUsuariNomUsuari.Size = New Size(393, 27)
@@ -206,6 +205,7 @@ Partial Class DadesUsuari
         ' txtDadesUsuariDI
         ' 
         txtDadesUsuariDI.Anchor = AnchorStyles.Left Or AnchorStyles.Right
+        txtDadesUsuariDI.Enabled = False
         txtDadesUsuariDI.Location = New Point(180, 219)
         txtDadesUsuariDI.Name = "txtDadesUsuariDI"
         txtDadesUsuariDI.Size = New Size(393, 27)
@@ -214,6 +214,7 @@ Partial Class DadesUsuari
         ' txtDadesUsuariCognom2
         ' 
         txtDadesUsuariCognom2.Anchor = AnchorStyles.Left Or AnchorStyles.Right
+        txtDadesUsuariCognom2.Enabled = False
         txtDadesUsuariCognom2.Location = New Point(180, 184)
         txtDadesUsuariCognom2.Name = "txtDadesUsuariCognom2"
         txtDadesUsuariCognom2.Size = New Size(393, 27)
@@ -222,6 +223,7 @@ Partial Class DadesUsuari
         ' txtDadesUsuariNom
         ' 
         txtDadesUsuariNom.Anchor = AnchorStyles.Left Or AnchorStyles.Right
+        txtDadesUsuariNom.Enabled = False
         txtDadesUsuariNom.Location = New Point(180, 108)
         txtDadesUsuariNom.Name = "txtDadesUsuariNom"
         txtDadesUsuariNom.Size = New Size(393, 27)
@@ -230,6 +232,7 @@ Partial Class DadesUsuari
         ' txtDadesUsuariCognom1
         ' 
         txtDadesUsuariCognom1.Anchor = AnchorStyles.Left Or AnchorStyles.Right
+        txtDadesUsuariCognom1.Enabled = False
         txtDadesUsuariCognom1.Location = New Point(180, 146)
         txtDadesUsuariCognom1.Name = "txtDadesUsuariCognom1"
         txtDadesUsuariCognom1.Size = New Size(393, 27)
@@ -257,12 +260,28 @@ Partial Class DadesUsuari
         btnDadesUsuariTencarSessio.Text = "Tencar Sessio"
         btnDadesUsuariTencarSessio.UseVisualStyleBackColor = False
         ' 
+        ' btnDadesUsuariChangePass
+        ' 
+        btnDadesUsuariChangePass.BackColor = Color.Aquamarine
+        btnDadesUsuariChangePass.Enabled = False
+        btnDadesUsuariChangePass.Location = New Point(180, 294)
+        btnDadesUsuariChangePass.Name = "btnDadesUsuariChangePass"
+        btnDadesUsuariChangePass.Size = New Size(167, 36)
+        btnDadesUsuariChangePass.TabIndex = 40
+        btnDadesUsuariChangePass.Text = "Canviar contrasenya"
+        btnDadesUsuariChangePass.UseVisualStyleBackColor = False
+        ' 
+        ' erpDadesUsuariErrors
+        ' 
+        erpDadesUsuariErrors.ContainerControl = Me
+        ' 
         ' DadesUsuari
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.LightSteelBlue
         ClientSize = New Size(840, 539)
+        Controls.Add(btnDadesUsuariChangePass)
         Controls.Add(btnDadesUsuariTencarSessio)
         Controls.Add(btnDadesUsuariEnrere)
         Controls.Add(lblDadesUsuariNom)
@@ -273,7 +292,6 @@ Partial Class DadesUsuari
         Controls.Add(lblDadesUsuariContrasenya)
         Controls.Add(txtDadesUsuariCorreu)
         Controls.Add(lblDadesUsuariDI)
-        Controls.Add(txtDadesUsuariContrasenya)
         Controls.Add(lblDadesUsuariCorreu)
         Controls.Add(txtDadesUsuariNomUsuari)
         Controls.Add(lblDadesUsuariTelefon)
@@ -292,6 +310,7 @@ Partial Class DadesUsuari
         StartPosition = FormStartPosition.CenterScreen
         Text = "PHF - Perfil"
         CType(pcbDadesUsuariFotoPerfil, ComponentModel.ISupportInitialize).EndInit()
+        CType(erpDadesUsuariErrors, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -309,7 +328,6 @@ Partial Class DadesUsuari
     Friend WithEvents lblDadesUsuariContrasenya As Label
     Friend WithEvents txtDadesUsuariCorreu As TextBox
     Friend WithEvents lblDadesUsuariDI As Label
-    Friend WithEvents txtDadesUsuariContrasenya As TextBox
     Friend WithEvents lblDadesUsuariCorreu As Label
     Friend WithEvents txtDadesUsuariNomUsuari As TextBox
     Friend WithEvents lblDadesUsuariTelefon As Label
@@ -319,4 +337,6 @@ Partial Class DadesUsuari
     Friend WithEvents txtDadesUsuariCognom1 As TextBox
     Friend WithEvents btnDadesUsuariEnrere As Button
     Friend WithEvents btnDadesUsuariTencarSessio As Button
+    Friend WithEvents btnDadesUsuariChangePass As Button
+    Friend WithEvents erpDadesUsuariErrors As ErrorProvider
 End Class

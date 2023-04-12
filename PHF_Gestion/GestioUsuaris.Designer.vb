@@ -22,29 +22,34 @@ Partial Class GestioUsuaris
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        components = New ComponentModel.Container()
         Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(GestioUsuaris))
-        DataGridView1 = New DataGridView()
+        dgvGestioUsuarisLlista = New DataGridView()
         lblGestioUsuarisBuscarTitol = New Label()
         txtGestioUsuarisBuscar = New TextBox()
         btnGestioUsuarisResetBuscar = New Button()
         btnGestioUsuarisAfegir = New Button()
         btnGestioUsuarisEnrere = New Button()
-        CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
+        bdgGestioUsuarisVista = New BindingSource(components)
+        CType(dgvGestioUsuarisLlista, ComponentModel.ISupportInitialize).BeginInit()
+        CType(bdgGestioUsuarisVista, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
-        ' DataGridView1
+        ' dgvGestioUsuarisLlista
         ' 
-        DataGridView1.AllowUserToAddRows = False
-        DataGridView1.AllowUserToDeleteRows = False
-        DataGridView1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.Location = New Point(12, 12)
-        DataGridView1.Name = "DataGridView1"
-        DataGridView1.ReadOnly = True
-        DataGridView1.RowHeadersWidth = 51
-        DataGridView1.RowTemplate.Height = 29
-        DataGridView1.Size = New Size(450, 436)
-        DataGridView1.TabIndex = 0
+        dgvGestioUsuarisLlista.AllowUserToAddRows = False
+        dgvGestioUsuarisLlista.AllowUserToDeleteRows = False
+        dgvGestioUsuarisLlista.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        dgvGestioUsuarisLlista.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        dgvGestioUsuarisLlista.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        dgvGestioUsuarisLlista.Location = New Point(12, 12)
+        dgvGestioUsuarisLlista.Name = "dgvGestioUsuarisLlista"
+        dgvGestioUsuarisLlista.ReadOnly = True
+        dgvGestioUsuarisLlista.RowHeadersWidth = 51
+        dgvGestioUsuarisLlista.RowTemplate.Height = 29
+        dgvGestioUsuarisLlista.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+        dgvGestioUsuarisLlista.Size = New Size(450, 436)
+        dgvGestioUsuarisLlista.TabIndex = 0
         ' 
         ' lblGestioUsuarisBuscarTitol
         ' 
@@ -108,22 +113,24 @@ Partial Class GestioUsuaris
         Controls.Add(btnGestioUsuarisResetBuscar)
         Controls.Add(txtGestioUsuarisBuscar)
         Controls.Add(lblGestioUsuarisBuscarTitol)
-        Controls.Add(DataGridView1)
+        Controls.Add(dgvGestioUsuarisLlista)
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
         MinimumSize = New Size(791, 507)
         Name = "GestioUsuaris"
         StartPosition = FormStartPosition.CenterScreen
         Text = "PHF - Gestio usuaris"
         WindowState = FormWindowState.Maximized
-        CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
+        CType(dgvGestioUsuarisLlista, ComponentModel.ISupportInitialize).EndInit()
+        CType(bdgGestioUsuarisVista, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
 
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents dgvGestioUsuarisLlista As DataGridView
     Friend WithEvents lblGestioUsuarisBuscarTitol As Label
     Friend WithEvents txtGestioUsuarisBuscar As TextBox
     Friend WithEvents btnGestioUsuarisResetBuscar As Button
     Friend WithEvents btnGestioUsuarisAfegir As Button
     Friend WithEvents btnGestioUsuarisEnrere As Button
+    Friend WithEvents bdgGestioUsuarisVista As BindingSource
 End Class
