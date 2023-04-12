@@ -120,6 +120,9 @@
   <data name="Advertencia" xml:space="preserve">
     <value>Advertencia</value>
   </data>
+  <data name="ErrorContrasenya" xml:space="preserve">
+    <value>Contrasenya incorrecta, torna a intentar-ho.</value>
+  </data>
   <data name="ErrorObligatoryField" xml:space="preserve">
     <value>Aquest camp no pot estar buit.</value>
   </data>
@@ -132,6 +135,12 @@
   </data>
   <data name="MisatjeAdvertenciaModificant" xml:space="preserve">
     <value>Tens canvis sense guardar segur que vols sortir?</value>
+  </data>
+  <data name="MisatjeIntroduirContrasenya" xml:space="preserve">
+    <value>Introdueix la contrasenya actual: </value>
+  </data>
+  <data name="MisatjeIntroduirNovaContrasenya" xml:space="preserve">
+    <value>Introdueix la nova contrasenya: </value>
   </data>
   <data name="NoResultat" xml:space="preserve">
     <value>No s'ha trobat cap coincidencia.</value>

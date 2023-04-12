@@ -54,6 +54,7 @@ Partial Class UsuariForm
         SplitContainer1 = New SplitContainer()
         erpFormulariUsuariErrors = New ErrorProvider(components)
         hlpFormulariUsuariAjuda = New HelpProvider()
+        bdgFormUserVista = New BindingSource(components)
         CType(dgvUsuariGuarderies, ComponentModel.ISupportInitialize).BeginInit()
         gpbUsuariTipusUsuaris.SuspendLayout()
         CType(SplitContainer1, ComponentModel.ISupportInitialize).BeginInit()
@@ -61,6 +62,7 @@ Partial Class UsuariForm
         SplitContainer1.Panel2.SuspendLayout()
         SplitContainer1.SuspendLayout()
         CType(erpFormulariUsuariErrors, ComponentModel.ISupportInitialize).BeginInit()
+        CType(bdgFormUserVista, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' lblUsuariTitol
@@ -87,10 +89,14 @@ Partial Class UsuariForm
         lblUsuariGuarderia.Text = "Guarderies"' 
         ' dgvUsuariGuarderies
         ' 
+        dgvUsuariGuarderies.AllowUserToAddRows = False
+        dgvUsuariGuarderies.AllowUserToDeleteRows = False
         dgvUsuariGuarderies.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        dgvUsuariGuarderies.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         dgvUsuariGuarderies.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         dgvUsuariGuarderies.Location = New Point(31, 68)
         dgvUsuariGuarderies.Name = "dgvUsuariGuarderies"
+        dgvUsuariGuarderies.ReadOnly = True
         dgvUsuariGuarderies.RowHeadersWidth = 51
         dgvUsuariGuarderies.RowTemplate.Height = 29
         dgvUsuariGuarderies.Size = New Size(420, 411)
@@ -199,7 +205,7 @@ Partial Class UsuariForm
         gpbUsuariTipusUsuaris.Controls.Add(robUsuariAdminstrador)
         gpbUsuariTipusUsuaris.Location = New Point(112, 354)
         gpbUsuariTipusUsuaris.Name = "gpbUsuariTipusUsuaris"
-        gpbUsuariTipusUsuaris.Size = New Size(250, 125)
+        gpbUsuariTipusUsuaris.Size = New Size(251, 125)
         gpbUsuariTipusUsuaris.TabIndex = 13
         gpbUsuariTipusUsuaris.TabStop = False
         gpbUsuariTipusUsuaris.Text = "Tipus Usuari"' 
@@ -388,6 +394,7 @@ Partial Class UsuariForm
         CType(SplitContainer1, ComponentModel.ISupportInitialize).EndInit()
         SplitContainer1.ResumeLayout(False)
         CType(erpFormulariUsuariErrors, ComponentModel.ISupportInitialize).EndInit()
+        CType(bdgFormUserVista, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -422,4 +429,5 @@ Partial Class UsuariForm
     Friend WithEvents SplitContainer1 As SplitContainer
     Friend WithEvents erpFormulariUsuariErrors As ErrorProvider
     Friend WithEvents hlpFormulariUsuariAjuda As HelpProvider
+    Friend WithEvents bdgFormUserVista As BindingSource
 End Class

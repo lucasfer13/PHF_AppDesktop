@@ -70,6 +70,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Busca una cadena traducida similar a Contrasenya incorrecta, torna a intentar-ho..
+        '''</summary>
+        Friend ReadOnly Property ErrorContrasenya() As String
+            Get
+                Return ResourceManager.GetString("ErrorContrasenya", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Busca una cadena traducida similar a Aquest camp no pot estar buit..
         '''</summary>
         Friend ReadOnly Property ErrorObligatoryField() As String
@@ -103,6 +112,24 @@ Namespace My.Resources
         Friend ReadOnly Property MisatjeAdvertenciaModificant() As String
             Get
                 Return ResourceManager.GetString("MisatjeAdvertenciaModificant", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca una cadena traducida similar a Introdueix la contrasenya actual: .
+        '''</summary>
+        Friend ReadOnly Property MisatjeIntroduirContrasenya() As String
+            Get
+                Return ResourceManager.GetString("MisatjeIntroduirContrasenya", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca una cadena traducida similar a Introdueix la nova contrasenya: .
+        '''</summary>
+        Friend ReadOnly Property MisatjeIntroduirNovaContrasenya() As String
+            Get
+                Return ResourceManager.GetString("MisatjeIntroduirNovaContrasenya", resourceCulture)
             End Get
         End Property
         
