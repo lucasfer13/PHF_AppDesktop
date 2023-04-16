@@ -30,7 +30,7 @@ Public Class Constantes
     Public Const MODIFY_TANIMALS = "UPDATE tipusanimal SET nom = '{0}' WHERE idTipusAnimal = {1}"
 
     ' Comandes guarderies
-    Public Const QUERY_GUARDERIES = "SELECT * FROM guarderia"
+    Public Const QUERY_GUARDERIES = "SELECT * FROM guarderia WHERE actiu = 1"
     Public Const INSERT_SUPERVISOR_GUARDERIA = "INSERT INTO guarderiasupervisor (idGuarderia, idUsuari) VALUES ({0}, {1})"
     Public Const QUERY_GUARDERIES_SUPERVISOR = "SELECT g.idGuarderia, g.cif, g.nom, g.correu FROM guarderia g
     JOIN guarderiasupervisor gs ON gs.idGuarderia = g.idGuarderia

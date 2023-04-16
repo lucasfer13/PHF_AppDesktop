@@ -24,4 +24,7 @@ Public Class InformacionGuarderia
         Me.Close()
     End Sub
 
+    Private Sub txtInformacioGuarderia_Validating(sender As Object, e As CancelEventArgs) Handles txtInformacioGuarderiaNom.Validating, txtInformacioGuarderiaCarrer.Validating
+
+    End Sub
 End Class
