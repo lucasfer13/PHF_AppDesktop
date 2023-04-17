@@ -29,9 +29,9 @@ Partial Class MenuGestioGuarderies
         dgvMenuGuarderiesLlistat = New DataGridView()
         btnGestioGuarderiesEnrere = New Button()
         bdgGestioGuarderiesVista = New BindingSource(components)
-        TextBox1 = New TextBox()
-        Button1 = New Button()
-        Label1 = New Label()
+        txtGestioGuarderiesBuscar = New TextBox()
+        btnGestioGuarderiesReset = New Button()
+        lblGestioGuarderiesBuscar = New Label()
         CType(dgvMenuGuarderiesLlistat, ComponentModel.ISupportInitialize).BeginInit()
         CType(bdgGestioGuarderiesVista, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -86,45 +86,45 @@ Partial Class MenuGestioGuarderies
         btnGestioGuarderiesEnrere.Text = "Enrere"
         btnGestioGuarderiesEnrere.UseVisualStyleBackColor = False
         ' 
-        ' TextBox1
+        ' txtGestioGuarderiesBuscar
         ' 
-        TextBox1.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        TextBox1.Location = New Point(512, 72)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(189, 27)
-        TextBox1.TabIndex = 9
+        txtGestioGuarderiesBuscar.Anchor = AnchorStyles.Top Or AnchorStyles.Right
+        txtGestioGuarderiesBuscar.Location = New Point(512, 72)
+        txtGestioGuarderiesBuscar.Name = "txtGestioGuarderiesBuscar"
+        txtGestioGuarderiesBuscar.Size = New Size(189, 27)
+        txtGestioGuarderiesBuscar.TabIndex = 9
         ' 
-        ' Button1
+        ' btnGestioGuarderiesReset
         ' 
-        Button1.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        Button1.BackColor = Color.Aquamarine
-        Button1.FlatAppearance.BorderColor = Color.Aquamarine
-        Button1.Location = New Point(713, 68)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(70, 34)
-        Button1.TabIndex = 10
-        Button1.Text = "Reset"
-        Button1.UseVisualStyleBackColor = False
+        btnGestioGuarderiesReset.Anchor = AnchorStyles.Top Or AnchorStyles.Right
+        btnGestioGuarderiesReset.BackColor = Color.Aquamarine
+        btnGestioGuarderiesReset.FlatAppearance.BorderColor = Color.Aquamarine
+        btnGestioGuarderiesReset.Location = New Point(713, 68)
+        btnGestioGuarderiesReset.Name = "btnGestioGuarderiesReset"
+        btnGestioGuarderiesReset.Size = New Size(70, 34)
+        btnGestioGuarderiesReset.TabIndex = 10
+        btnGestioGuarderiesReset.Text = "Reset"
+        btnGestioGuarderiesReset.UseVisualStyleBackColor = False
         ' 
-        ' Label1
+        ' lblGestioGuarderiesBuscar
         ' 
-        Label1.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        Label1.Location = New Point(553, 18)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(157, 28)
-        Label1.TabIndex = 11
-        Label1.Text = "Buscar guarderia"' 
+        lblGestioGuarderiesBuscar.Anchor = AnchorStyles.Top Or AnchorStyles.Right
+        lblGestioGuarderiesBuscar.AutoSize = True
+        lblGestioGuarderiesBuscar.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        lblGestioGuarderiesBuscar.Location = New Point(553, 18)
+        lblGestioGuarderiesBuscar.Name = "lblGestioGuarderiesBuscar"
+        lblGestioGuarderiesBuscar.Size = New Size(157, 28)
+        lblGestioGuarderiesBuscar.TabIndex = 11
+        lblGestioGuarderiesBuscar.Text = "Buscar guarderia"' 
         ' MenuGestioGuarderies
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.LightSteelBlue
         ClientSize = New Size(795, 419)
-        Controls.Add(Label1)
-        Controls.Add(Button1)
-        Controls.Add(TextBox1)
+        Controls.Add(lblGestioGuarderiesBuscar)
+        Controls.Add(btnGestioGuarderiesReset)
+        Controls.Add(txtGestioGuarderiesBuscar)
         Controls.Add(btnGestioGuarderiesEnrere)
         Controls.Add(dgvMenuGuarderiesLlistat)
         Controls.Add(btnMenuGestGuarderiesAfegGuarderia)
@@ -146,7 +146,7 @@ Partial Class MenuGestioGuarderies
     Friend WithEvents dgvMenuGuarderiesLlistat As DataGridView
     Friend WithEvents btnGestioGuarderiesEnrere As Button
     Friend WithEvents bdgGestioGuarderiesVista As BindingSource
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Label1 As Label
+    Friend WithEvents txtGestioGuarderiesBuscar As TextBox
+    Friend WithEvents btnGestioGuarderiesReset As Button
+    Friend WithEvents lblGestioGuarderiesBuscar As Label
 End Class

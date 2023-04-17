@@ -31,7 +31,6 @@ Partial Class InformacionGuarderia
         iglInformacioGuarderiaImatges = New ImageList(components)
         lblInformacioGuarderiaImatges = New Label()
         flpInformacioGuarderiaImatges = New FlowLayoutPanel()
-        BackgroundWorker1 = New ComponentModel.BackgroundWorker()
         btnInformacioGuarderiaAfegirImatge = New Button()
         btnInformacioGuarderiaEliminarImatge = New Button()
         txtInformacioGuarderiaDescripcio = New TextBox()
@@ -62,6 +61,12 @@ Partial Class InformacionGuarderia
         pnlInformacioGuarderiaVacances = New Panel()
         pnlInformacioGuarderiaServeis = New Panel()
         btnInformacioGuarderiaGuardar = New Button()
+        btnInformacioGuarderiaEliminar = New Button()
+        erpInformacioGuarderiaErrors = New ErrorProvider(components)
+        txtInformacioGuarderiaTelefon = New TextBox()
+        lblInformacioGuarderiaTelefon = New Label()
+        txtInformacioGuarderiaCorreu = New TextBox()
+        lblInformacioGuarderiaCorreu = New Label()
         CType(dgvInformacioGuarderia, ComponentModel.ISupportInitialize).BeginInit()
         CType(dtvInformacioGuarderiaServeis, ComponentModel.ISupportInitialize).BeginInit()
         CType(stcInformacioGuarderiaSeparador, ComponentModel.ISupportInitialize).BeginInit()
@@ -71,13 +76,14 @@ Partial Class InformacionGuarderia
         tlpInformacioGuarderiaTaules.SuspendLayout()
         pnlInformacioGuarderiaVacances.SuspendLayout()
         pnlInformacioGuarderiaServeis.SuspendLayout()
+        CType(erpInformacioGuarderiaErrors, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' btnInformacioGuarderiaEnrere
         ' 
         btnInformacioGuarderiaEnrere.Anchor = AnchorStyles.Bottom
         btnInformacioGuarderiaEnrere.BackColor = Color.Aquamarine
-        btnInformacioGuarderiaEnrere.Location = New Point(389, 776)
+        btnInformacioGuarderiaEnrere.Location = New Point(332, 883)
         btnInformacioGuarderiaEnrere.Name = "btnInformacioGuarderiaEnrere"
         btnInformacioGuarderiaEnrere.Size = New Size(134, 69)
         btnInformacioGuarderiaEnrere.TabIndex = 0
@@ -88,7 +94,7 @@ Partial Class InformacionGuarderia
         ' 
         btnInformacioGuarderiaModificar.Anchor = AnchorStyles.Bottom
         btnInformacioGuarderiaModificar.BackColor = Color.Aquamarine
-        btnInformacioGuarderiaModificar.Location = New Point(565, 776)
+        btnInformacioGuarderiaModificar.Location = New Point(646, 883)
         btnInformacioGuarderiaModificar.Name = "btnInformacioGuarderiaModificar"
         btnInformacioGuarderiaModificar.Size = New Size(134, 69)
         btnInformacioGuarderiaModificar.TabIndex = 1
@@ -121,7 +127,7 @@ Partial Class InformacionGuarderia
         ' 
         lblInformacioGuarderiaImatges.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         lblInformacioGuarderiaImatges.AutoSize = True
-        lblInformacioGuarderiaImatges.Location = New Point(64, 340)
+        lblInformacioGuarderiaImatges.Location = New Point(62, 490)
         lblInformacioGuarderiaImatges.Name = "lblInformacioGuarderiaImatges"
         lblInformacioGuarderiaImatges.Size = New Size(65, 20)
         lblInformacioGuarderiaImatges.TabIndex = 5
@@ -129,16 +135,16 @@ Partial Class InformacionGuarderia
         ' flpInformacioGuarderiaImatges
         ' 
         flpInformacioGuarderiaImatges.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        flpInformacioGuarderiaImatges.Location = New Point(64, 382)
+        flpInformacioGuarderiaImatges.Location = New Point(64, 526)
         flpInformacioGuarderiaImatges.Name = "flpInformacioGuarderiaImatges"
-        flpInformacioGuarderiaImatges.Size = New Size(458, 286)
+        flpInformacioGuarderiaImatges.Size = New Size(507, 249)
         flpInformacioGuarderiaImatges.TabIndex = 6
         ' 
         ' btnInformacioGuarderiaAfegirImatge
         ' 
         btnInformacioGuarderiaAfegirImatge.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
         btnInformacioGuarderiaAfegirImatge.BackColor = Color.Aquamarine
-        btnInformacioGuarderiaAfegirImatge.Location = New Point(187, 330)
+        btnInformacioGuarderiaAfegirImatge.Location = New Point(185, 480)
         btnInformacioGuarderiaAfegirImatge.Name = "btnInformacioGuarderiaAfegirImatge"
         btnInformacioGuarderiaAfegirImatge.Size = New Size(97, 30)
         btnInformacioGuarderiaAfegirImatge.TabIndex = 7
@@ -149,7 +155,7 @@ Partial Class InformacionGuarderia
         ' 
         btnInformacioGuarderiaEliminarImatge.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
         btnInformacioGuarderiaEliminarImatge.BackColor = Color.Aquamarine
-        btnInformacioGuarderiaEliminarImatge.Location = New Point(309, 330)
+        btnInformacioGuarderiaEliminarImatge.Location = New Point(307, 480)
         btnInformacioGuarderiaEliminarImatge.Name = "btnInformacioGuarderiaEliminarImatge"
         btnInformacioGuarderiaEliminarImatge.Size = New Size(89, 30)
         btnInformacioGuarderiaEliminarImatge.TabIndex = 8
@@ -162,21 +168,21 @@ Partial Class InformacionGuarderia
         txtInformacioGuarderiaDescripcio.Location = New Point(188, 61)
         txtInformacioGuarderiaDescripcio.Multiline = True
         txtInformacioGuarderiaDescripcio.Name = "txtInformacioGuarderiaDescripcio"
-        txtInformacioGuarderiaDescripcio.Size = New Size(293, 42)
+        txtInformacioGuarderiaDescripcio.Size = New Size(317, 76)
         txtInformacioGuarderiaDescripcio.TabIndex = 9
         ' 
         ' txtInformacioGuarderiaNom
         ' 
         txtInformacioGuarderiaNom.Location = New Point(187, 27)
         txtInformacioGuarderiaNom.Name = "txtInformacioGuarderiaNom"
-        txtInformacioGuarderiaNom.Size = New Size(293, 27)
+        txtInformacioGuarderiaNom.Size = New Size(319, 27)
         txtInformacioGuarderiaNom.TabIndex = 10
         ' 
         ' lblInformacioGuarderiaPais
         ' 
         lblInformacioGuarderiaPais.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         lblInformacioGuarderiaPais.AutoSize = True
-        lblInformacioGuarderiaPais.Location = New Point(64, 112)
+        lblInformacioGuarderiaPais.Location = New Point(65, 151)
         lblInformacioGuarderiaPais.Name = "lblInformacioGuarderiaPais"
         lblInformacioGuarderiaPais.Size = New Size(37, 20)
         lblInformacioGuarderiaPais.TabIndex = 11
@@ -185,7 +191,7 @@ Partial Class InformacionGuarderia
         ' 
         lblInformacioGuarderiaMuncipi.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         lblInformacioGuarderiaMuncipi.AutoSize = True
-        lblInformacioGuarderiaMuncipi.Location = New Point(64, 160)
+        lblInformacioGuarderiaMuncipi.Location = New Point(65, 199)
         lblInformacioGuarderiaMuncipi.Name = "lblInformacioGuarderiaMuncipi"
         lblInformacioGuarderiaMuncipi.Size = New Size(69, 20)
         lblInformacioGuarderiaMuncipi.TabIndex = 12
@@ -194,7 +200,7 @@ Partial Class InformacionGuarderia
         ' 
         lblInformacioGuarderiaPorta.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         lblInformacioGuarderiaPorta.AutoSize = True
-        lblInformacioGuarderiaPorta.Location = New Point(64, 292)
+        lblInformacioGuarderiaPorta.Location = New Point(65, 331)
         lblInformacioGuarderiaPorta.Name = "lblInformacioGuarderiaPorta"
         lblInformacioGuarderiaPorta.Size = New Size(46, 20)
         lblInformacioGuarderiaPorta.TabIndex = 13
@@ -203,7 +209,7 @@ Partial Class InformacionGuarderia
         ' 
         lblInformacioGuarderiaCP.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         lblInformacioGuarderiaCP.AutoSize = True
-        lblInformacioGuarderiaCP.Location = New Point(64, 210)
+        lblInformacioGuarderiaCP.Location = New Point(65, 249)
         lblInformacioGuarderiaCP.Name = "lblInformacioGuarderiaCP"
         lblInformacioGuarderiaCP.Size = New Size(29, 20)
         lblInformacioGuarderiaCP.TabIndex = 14
@@ -212,7 +218,7 @@ Partial Class InformacionGuarderia
         ' 
         lblInformacioGuarderiaCarrer.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         lblInformacioGuarderiaCarrer.AutoSize = True
-        lblInformacioGuarderiaCarrer.Location = New Point(64, 253)
+        lblInformacioGuarderiaCarrer.Location = New Point(65, 292)
         lblInformacioGuarderiaCarrer.Name = "lblInformacioGuarderiaCarrer"
         lblInformacioGuarderiaCarrer.Size = New Size(52, 20)
         lblInformacioGuarderiaCarrer.TabIndex = 15
@@ -220,48 +226,51 @@ Partial Class InformacionGuarderia
         ' txtInformacioGuarderiaPais
         ' 
         txtInformacioGuarderiaPais.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        txtInformacioGuarderiaPais.Location = New Point(187, 109)
+        txtInformacioGuarderiaPais.Enabled = False
+        txtInformacioGuarderiaPais.Location = New Point(188, 148)
         txtInformacioGuarderiaPais.Name = "txtInformacioGuarderiaPais"
-        txtInformacioGuarderiaPais.Size = New Size(220, 27)
+        txtInformacioGuarderiaPais.Size = New Size(244, 27)
         txtInformacioGuarderiaPais.TabIndex = 16
         ' 
         ' txtInformacioGuarderiaMunicipi
         ' 
         txtInformacioGuarderiaMunicipi.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        txtInformacioGuarderiaMunicipi.Location = New Point(187, 157)
+        txtInformacioGuarderiaMunicipi.Enabled = False
+        txtInformacioGuarderiaMunicipi.Location = New Point(188, 196)
         txtInformacioGuarderiaMunicipi.Name = "txtInformacioGuarderiaMunicipi"
-        txtInformacioGuarderiaMunicipi.Size = New Size(220, 27)
+        txtInformacioGuarderiaMunicipi.Size = New Size(244, 27)
         txtInformacioGuarderiaMunicipi.TabIndex = 17
         ' 
         ' txtInformacioGuarderiaCP
         ' 
         txtInformacioGuarderiaCP.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        txtInformacioGuarderiaCP.Location = New Point(187, 203)
+        txtInformacioGuarderiaCP.Enabled = False
+        txtInformacioGuarderiaCP.Location = New Point(188, 242)
         txtInformacioGuarderiaCP.Name = "txtInformacioGuarderiaCP"
-        txtInformacioGuarderiaCP.Size = New Size(294, 27)
+        txtInformacioGuarderiaCP.Size = New Size(318, 27)
         txtInformacioGuarderiaCP.TabIndex = 18
         ' 
         ' txtInformacioGuarderiaCarrer
         ' 
         txtInformacioGuarderiaCarrer.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        txtInformacioGuarderiaCarrer.Location = New Point(187, 246)
+        txtInformacioGuarderiaCarrer.Location = New Point(188, 285)
         txtInformacioGuarderiaCarrer.Name = "txtInformacioGuarderiaCarrer"
-        txtInformacioGuarderiaCarrer.Size = New Size(294, 27)
+        txtInformacioGuarderiaCarrer.Size = New Size(318, 27)
         txtInformacioGuarderiaCarrer.TabIndex = 19
         ' 
         ' txtInformacioGuarderiaPorta
         ' 
         txtInformacioGuarderiaPorta.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        txtInformacioGuarderiaPorta.Location = New Point(187, 289)
+        txtInformacioGuarderiaPorta.Location = New Point(188, 328)
         txtInformacioGuarderiaPorta.Name = "txtInformacioGuarderiaPorta"
-        txtInformacioGuarderiaPorta.Size = New Size(294, 27)
+        txtInformacioGuarderiaPorta.Size = New Size(318, 27)
         txtInformacioGuarderiaPorta.TabIndex = 20
         ' 
         ' btnInformacioGuarderiaMunicipi
         ' 
         btnInformacioGuarderiaMunicipi.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
         btnInformacioGuarderiaMunicipi.BackColor = Color.Aquamarine
-        btnInformacioGuarderiaMunicipi.Location = New Point(409, 157)
+        btnInformacioGuarderiaMunicipi.Location = New Point(434, 196)
         btnInformacioGuarderiaMunicipi.Name = "btnInformacioGuarderiaMunicipi"
         btnInformacioGuarderiaMunicipi.Size = New Size(73, 27)
         btnInformacioGuarderiaMunicipi.TabIndex = 21
@@ -272,7 +281,7 @@ Partial Class InformacionGuarderia
         ' 
         btnInformacioGuarderiaPais.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
         btnInformacioGuarderiaPais.BackColor = Color.Aquamarine
-        btnInformacioGuarderiaPais.Location = New Point(413, 109)
+        btnInformacioGuarderiaPais.Location = New Point(438, 148)
         btnInformacioGuarderiaPais.Name = "btnInformacioGuarderiaPais"
         btnInformacioGuarderiaPais.Size = New Size(69, 27)
         btnInformacioGuarderiaPais.TabIndex = 22
@@ -287,7 +296,7 @@ Partial Class InformacionGuarderia
         dgvInformacioGuarderia.Name = "dgvInformacioGuarderia"
         dgvInformacioGuarderia.RowHeadersWidth = 51
         dgvInformacioGuarderia.RowTemplate.Height = 29
-        dgvInformacioGuarderia.Size = New Size(566, 291)
+        dgvInformacioGuarderia.Size = New Size(591, 345)
         dgvInformacioGuarderia.TabIndex = 23
         ' 
         ' dtvInformacioGuarderiaServeis
@@ -298,7 +307,7 @@ Partial Class InformacionGuarderia
         dtvInformacioGuarderiaServeis.Name = "dtvInformacioGuarderiaServeis"
         dtvInformacioGuarderiaServeis.RowHeadersWidth = 51
         dtvInformacioGuarderiaServeis.RowTemplate.Height = 29
-        dtvInformacioGuarderiaServeis.Size = New Size(566, 297)
+        dtvInformacioGuarderiaServeis.Size = New Size(591, 350)
         dtvInformacioGuarderiaServeis.TabIndex = 24
         ' 
         ' lblInformacioGuarderiaServei
@@ -364,7 +373,7 @@ Partial Class InformacionGuarderia
         lblInformacioGuarderiaTitol.Anchor = AnchorStyles.Top
         lblInformacioGuarderiaTitol.AutoSize = True
         lblInformacioGuarderiaTitol.Font = New Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point)
-        lblInformacioGuarderiaTitol.Location = New Point(400, 3)
+        lblInformacioGuarderiaTitol.Location = New Point(425, 3)
         lblInformacioGuarderiaTitol.Name = "lblInformacioGuarderiaTitol"
         lblInformacioGuarderiaTitol.Size = New Size(294, 41)
         lblInformacioGuarderiaTitol.TabIndex = 31
@@ -376,6 +385,10 @@ Partial Class InformacionGuarderia
         stcInformacioGuarderiaSeparador.Name = "stcInformacioGuarderiaSeparador"' 
         ' stcInformacioGuarderiaSeparador.Panel1
         ' 
+        stcInformacioGuarderiaSeparador.Panel1.Controls.Add(txtInformacioGuarderiaTelefon)
+        stcInformacioGuarderiaSeparador.Panel1.Controls.Add(lblInformacioGuarderiaTelefon)
+        stcInformacioGuarderiaSeparador.Panel1.Controls.Add(txtInformacioGuarderiaCorreu)
+        stcInformacioGuarderiaSeparador.Panel1.Controls.Add(lblInformacioGuarderiaCorreu)
         stcInformacioGuarderiaSeparador.Panel1.Controls.Add(txtInformacioGuarderiaPorta)
         stcInformacioGuarderiaSeparador.Panel1.Controls.Add(lblInformacioGuarderiaNom)
         stcInformacioGuarderiaSeparador.Panel1.Controls.Add(lblInformacioGuarderiaDescripcio)
@@ -400,8 +413,8 @@ Partial Class InformacionGuarderia
         ' stcInformacioGuarderiaSeparador.Panel2
         ' 
         stcInformacioGuarderiaSeparador.Panel2.Controls.Add(tlpInformacioGuarderiaTaules)
-        stcInformacioGuarderiaSeparador.Size = New Size(1188, 693)
-        stcInformacioGuarderiaSeparador.SplitterDistance = 600
+        stcInformacioGuarderiaSeparador.Size = New Size(1237, 800)
+        stcInformacioGuarderiaSeparador.SplitterDistance = 624
         stcInformacioGuarderiaSeparador.TabIndex = 32
         ' 
         ' tlpInformacioGuarderiaTaules
@@ -416,7 +429,7 @@ Partial Class InformacionGuarderia
         tlpInformacioGuarderiaTaules.RowCount = 2
         tlpInformacioGuarderiaTaules.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
         tlpInformacioGuarderiaTaules.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        tlpInformacioGuarderiaTaules.Size = New Size(578, 685)
+        tlpInformacioGuarderiaTaules.Size = New Size(603, 792)
         tlpInformacioGuarderiaTaules.TabIndex = 0
         ' 
         ' pnlInformacioGuarderiaVacances
@@ -428,7 +441,7 @@ Partial Class InformacionGuarderia
         pnlInformacioGuarderiaVacances.Controls.Add(btnInformacioGuarderiaAfegirVacances)
         pnlInformacioGuarderiaVacances.Location = New Point(3, 3)
         pnlInformacioGuarderiaVacances.Name = "pnlInformacioGuarderiaVacances"
-        pnlInformacioGuarderiaVacances.Size = New Size(572, 336)
+        pnlInformacioGuarderiaVacances.Size = New Size(597, 390)
         pnlInformacioGuarderiaVacances.TabIndex = 1
         ' 
         ' pnlInformacioGuarderiaServeis
@@ -438,28 +451,78 @@ Partial Class InformacionGuarderia
         pnlInformacioGuarderiaServeis.Controls.Add(dtvInformacioGuarderiaServeis)
         pnlInformacioGuarderiaServeis.Controls.Add(btnInformacioGuarderiaAfegirServei)
         pnlInformacioGuarderiaServeis.Controls.Add(btnInformacioGuarderiaEliminarServei)
-        pnlInformacioGuarderiaServeis.Location = New Point(3, 345)
+        pnlInformacioGuarderiaServeis.Location = New Point(3, 399)
         pnlInformacioGuarderiaServeis.Name = "pnlInformacioGuarderiaServeis"
-        pnlInformacioGuarderiaServeis.Size = New Size(572, 337)
+        pnlInformacioGuarderiaServeis.Size = New Size(597, 390)
         pnlInformacioGuarderiaServeis.TabIndex = 0
         ' 
         ' btnInformacioGuarderiaGuardar
         ' 
         btnInformacioGuarderiaGuardar.Anchor = AnchorStyles.Bottom
         btnInformacioGuarderiaGuardar.BackColor = Color.Aquamarine
-        btnInformacioGuarderiaGuardar.Location = New Point(746, 776)
+        btnInformacioGuarderiaGuardar.Location = New Point(807, 883)
         btnInformacioGuarderiaGuardar.Name = "btnInformacioGuarderiaGuardar"
         btnInformacioGuarderiaGuardar.Size = New Size(134, 69)
         btnInformacioGuarderiaGuardar.TabIndex = 33
         btnInformacioGuarderiaGuardar.Text = "Guardar"
         btnInformacioGuarderiaGuardar.UseVisualStyleBackColor = False
         ' 
+        ' btnInformacioGuarderiaEliminar
+        ' 
+        btnInformacioGuarderiaEliminar.Anchor = AnchorStyles.Bottom
+        btnInformacioGuarderiaEliminar.BackColor = Color.Aquamarine
+        btnInformacioGuarderiaEliminar.Location = New Point(489, 883)
+        btnInformacioGuarderiaEliminar.Name = "btnInformacioGuarderiaEliminar"
+        btnInformacioGuarderiaEliminar.Size = New Size(134, 69)
+        btnInformacioGuarderiaEliminar.TabIndex = 34
+        btnInformacioGuarderiaEliminar.Text = "Eliminar"
+        btnInformacioGuarderiaEliminar.UseVisualStyleBackColor = False
+        ' 
+        ' erpInformacioGuarderiaErrors
+        ' 
+        erpInformacioGuarderiaErrors.ContainerControl = Me
+        ' 
+        ' txtInformacioGuarderiaTelefon
+        ' 
+        txtInformacioGuarderiaTelefon.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        txtInformacioGuarderiaTelefon.Location = New Point(187, 411)
+        txtInformacioGuarderiaTelefon.Name = "txtInformacioGuarderiaTelefon"
+        txtInformacioGuarderiaTelefon.Size = New Size(318, 27)
+        txtInformacioGuarderiaTelefon.TabIndex = 26
+        ' 
+        ' lblInformacioGuarderiaTelefon
+        ' 
+        lblInformacioGuarderiaTelefon.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        lblInformacioGuarderiaTelefon.AutoSize = True
+        lblInformacioGuarderiaTelefon.Location = New Point(64, 414)
+        lblInformacioGuarderiaTelefon.Name = "lblInformacioGuarderiaTelefon"
+        lblInformacioGuarderiaTelefon.Size = New Size(61, 20)
+        lblInformacioGuarderiaTelefon.TabIndex = 23
+        lblInformacioGuarderiaTelefon.Text = "Telefon:"' 
+        ' txtInformacioGuarderiaCorreu
+        ' 
+        txtInformacioGuarderiaCorreu.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        txtInformacioGuarderiaCorreu.Location = New Point(187, 368)
+        txtInformacioGuarderiaCorreu.Name = "txtInformacioGuarderiaCorreu"
+        txtInformacioGuarderiaCorreu.Size = New Size(318, 27)
+        txtInformacioGuarderiaCorreu.TabIndex = 25
+        ' 
+        ' lblInformacioGuarderiaCorreu
+        ' 
+        lblInformacioGuarderiaCorreu.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        lblInformacioGuarderiaCorreu.AutoSize = True
+        lblInformacioGuarderiaCorreu.Location = New Point(64, 375)
+        lblInformacioGuarderiaCorreu.Name = "lblInformacioGuarderiaCorreu"
+        lblInformacioGuarderiaCorreu.Size = New Size(56, 20)
+        lblInformacioGuarderiaCorreu.TabIndex = 24
+        lblInformacioGuarderiaCorreu.Text = "Correu:"' 
         ' InformacionGuarderia
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.LightSteelBlue
-        ClientSize = New Size(1209, 857)
+        ClientSize = New Size(1258, 964)
+        Controls.Add(btnInformacioGuarderiaEliminar)
         Controls.Add(btnInformacioGuarderiaGuardar)
         Controls.Add(stcInformacioGuarderiaSeparador)
         Controls.Add(lblInformacioGuarderiaTitol)
@@ -483,6 +546,7 @@ Partial Class InformacionGuarderia
         pnlInformacioGuarderiaVacances.PerformLayout()
         pnlInformacioGuarderiaServeis.ResumeLayout(False)
         pnlInformacioGuarderiaServeis.PerformLayout()
+        CType(erpInformacioGuarderiaErrors, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -494,7 +558,6 @@ Partial Class InformacionGuarderia
     Friend WithEvents iglInformacioGuarderiaImatges As ImageList
     Friend WithEvents lblInformacioGuarderiaImatges As Label
     Friend WithEvents flpInformacioGuarderiaImatges As FlowLayoutPanel
-    Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
     Friend WithEvents btnInformacioGuarderiaAfegirImatge As Button
     Friend WithEvents btnInformacioGuarderiaEliminarImatge As Button
     Friend WithEvents txtInformacioGuarderiaDescripcio As TextBox
@@ -525,4 +588,10 @@ Partial Class InformacionGuarderia
     Friend WithEvents pnlInformacioGuarderiaVacances As Panel
     Friend WithEvents pnlInformacioGuarderiaServeis As Panel
     Friend WithEvents btnInformacioGuarderiaGuardar As Button
+    Friend WithEvents btnInformacioGuarderiaEliminar As Button
+    Friend WithEvents erpInformacioGuarderiaErrors As ErrorProvider
+    Friend WithEvents txtInformacioGuarderiaTelefon As TextBox
+    Friend WithEvents lblInformacioGuarderiaTelefon As Label
+    Friend WithEvents txtInformacioGuarderiaCorreu As TextBox
+    Friend WithEvents lblInformacioGuarderiaCorreu As Label
 End Class

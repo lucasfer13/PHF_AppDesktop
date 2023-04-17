@@ -9,7 +9,7 @@
     End Sub
 
     Private Sub btnGestGuarderiaModificar_Click(sender As Object, e As EventArgs) Handles btnGestGuarderiaModificar.Click
-        Dim guarderia As New InformacionGuarderia(False)
+        Dim guarderia As New InformacionGuarderia(Nothing)
         guarderia.Show()
         Me.Hide()
     End Sub

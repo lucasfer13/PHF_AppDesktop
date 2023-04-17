@@ -6,10 +6,17 @@ Public Class ConnectionBD
     Private connexio As MySqlConnection
     Public Function connect() As Boolean
         connexio = New MySqlConnection
-        connexio.ConnectionString = Constantes.CONNECTION_STRING
+        connexio.ConnectionString = Constantes.CONNECTION_STRING_REMOTO_INS
         Try
             connexio.Open()
         Catch ex As Exception
+            Try
+                connexio.ConnectionString = Constantes.CONNECTION_STRING_REMOTO
+                connexio.Open()
+            Catch e As Exception
+                connexio.ConnectionString = Constantes.CONNECTION_STRING_LOCAL
+                connexio.Open()
+            End Try
             Return False
         End Try
         Return True

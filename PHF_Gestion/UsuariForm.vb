@@ -115,7 +115,10 @@ Public Class UsuariForm
         txtUsuariDI.Text = usuari(1)
         txtUsuariNom.Text = usuari(2)
         txtUsuariCognom1.Text = usuari(3)
-        txtUsuariCognom2.Text = usuari(4)
+        Try
+            txtUsuariCognom2.Text = usuari(4)
+        Catch ex As Exception
+        End Try
         txtUsuariNomUsuari.Text = usuari(5)
         txtUsuariTelefon.Text = usuari(7)
         txtUsuariCorreu.Text = usuari(8)
