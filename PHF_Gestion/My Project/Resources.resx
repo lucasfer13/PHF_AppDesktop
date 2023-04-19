@@ -120,6 +120,9 @@
   <data name="Advertencia" xml:space="preserve">
     <value>Advertencia</value>
   </data>
+  <data name="DataIniciInferior" xml:space="preserve">
+    <value>La data d'inici es inferior a la data final.</value>
+  </data>
   <data name="ErrorContrasenya" xml:space="preserve">
     <value>Contrasenya incorrecta, torna a intentar-ho.</value>
   </data>

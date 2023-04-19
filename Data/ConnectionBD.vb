@@ -116,4 +116,52 @@ Public Class ConnectionBD
     Public Function guarderiesGestionadesUsuari(id As Integer) As DataTable
         Return query(String.Format(Constantes.QUERY_GUARDERIES_SUPERVISOR, id))
     End Function
+
+    Public Function insertGuarderia(cif As String, nom As String, desc As String, correu As String, telefon As String, idPC As Integer, carrer As String, porta As String)
+        Return comand(String.Format(Constantes.INSERT_GUARDERIA, cif, nom, desc, correu, telefon, idPC, carrer, porta))
+    End Function
+
+    Public Function modifyGuarderia(cif As String, nom As String, desc As String, correu As String, telefon As String, idPC As Integer, carrer As String, porta As String, idGuarderia As Integer)
+        Return comand(String.Format(Constantes.MODIFY_GUARDERIA, cif, nom, desc, correu, telefon, idPC, carrer, porta, idGuarderia))
+    End Function
+
+    Public Function deleteGuarderia(idGuarderia As Integer)
+        Return comand(String.Format(Constantes.DELETE_GUARDERIA, idGuarderia))
+    End Function
+
+    Public Function getGuarderiaServeis(idGuarderia As Integer) As DataTable
+        Return query(String.Format(Constantes.QUERY_GUARDERIES_SERVEIS, idGuarderia))
+    End Function
+
+    Public Function addGuarderiaServei(idGuarderia As Integer, idServei As Integer)
+        Return comand(String.Format(Constantes.INSERT_GUARDERIES_SERVEIS, idGuarderia, idServei))
+    End Function
+
+    Public Function deleteGuarderiaServei(idGuarderia As Integer, idServei As Integer)
+        Return comand(String.Format(Constantes.DELETE_GUARDERIES_SERVEIS, idGuarderia, idServei))
+    End Function
+
+    Public Function getGuarderiaVacances(idGuarderia As Integer)
+        Return query(String.Format(Constantes.QUERY_GUARDERIES_VACANCES, idGuarderia))
+    End Function
+
+    Public Function createVacances(idGuarderia As Integer, dataInici As Date, dataFi As Date)
+        Return comand(String.Format(Constantes.INSERT_VACANCES, idGuarderia, dataInici.ToShortDateString, dataFi.ToShortDateString))
+    End Function
+
+    Public Function deleteVacances(idVacances As Integer)
+        Return comand(String.Format(Constantes.DELETE_VACANCES, idVacances))
+    End Function
+
+    Public Function getPaisos() As DataTable
+        Return query(Constantes.QUERY_PAIS)
+    End Function
+
+    Public Function getMunicipis(idPais As Integer) As DataTable
+        Return query(String.Format(Constantes.QUERY_CP_CIUTAT, idPais))
+    End Function
+
+    Public Function getDireccio(idCP As Integer, idPais As Integer)
+        Return query(String.Format(Constantes.QUERY_DIRECCIO, idCP, idPais))
+    End Function
 End Class
