@@ -5,10 +5,6 @@ Public Class GestioCameres
         Me.Close()
     End Sub
 
-    Private Sub GestioCameres_Closing(sender As Object, e As CancelEventArgs) Handles MyBase.Closing
-        GestioGuarderia.Show()
-    End Sub
-
     Private Sub btnCameresAfegir_Click(sender As Object, e As EventArgs) Handles btnCameresAfegir.Click
         Me.Hide()
         CameraForm.Show()

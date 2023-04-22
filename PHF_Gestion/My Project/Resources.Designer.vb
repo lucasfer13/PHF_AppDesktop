@@ -70,6 +70,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Busca una cadena traducida similar a La data d&apos;inici es inferior a la data final..
+        '''</summary>
+        Friend ReadOnly Property DataIniciInferior() As String
+            Get
+                Return ResourceManager.GetString("DataIniciInferior", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Busca una cadena traducida similar a Contrasenya incorrecta, torna a intentar-ho..
         '''</summary>
         Friend ReadOnly Property ErrorContrasenya() As String

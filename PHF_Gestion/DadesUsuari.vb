@@ -19,7 +19,10 @@ Public Class DadesUsuari
     Private Sub setData()
         txtDadesUsuariNom.Text = MenuPrincipal.user.Rows.Item(0).Item(2)
         txtDadesUsuariCognom1.Text = MenuPrincipal.user.Rows.Item(0).Item(3)
-        txtDadesUsuariCognom1.Text = MenuPrincipal.user.Rows.Item(0).Item(4)
+        Try
+            txtDadesUsuariCognom1.Text = MenuPrincipal.user.Rows.Item(0).Item(4)
+        Catch ex As Exception
+        End Try
         txtDadesUsuariDI.Text = MenuPrincipal.user.Rows.Item(0).Item(1)
         txtDadesUsuariNomUsuari.Text = MenuPrincipal.user.Rows.Item(0).Item(5)
         txtDadesUsuariCorreu.Text = MenuPrincipal.user.Rows.Item(0).Item(7)
