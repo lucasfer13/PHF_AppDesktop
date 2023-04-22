@@ -118,15 +118,15 @@ Public Class ConnectionBD
         Return query(String.Format(Constantes.QUERY_GUARDERIES_SUPERVISOR, id))
     End Function
 
-    Public Function insertGuarderia(cif As String, nom As String, desc As String, correu As String, telefon As String, idPC As Integer, carrer As String, porta As String)
+    Public Function insertGuarderia(cif As String, nom As String, desc As String, correu As String, telefon As String, idPC As Integer, carrer As String, porta As String) As Boolean
         Return comand(String.Format(Constantes.INSERT_GUARDERIA, cif, nom, desc, correu, telefon, idPC, carrer, porta))
     End Function
 
-    Public Function modifyGuarderia(cif As String, nom As String, desc As String, correu As String, telefon As String, idPC As Integer, carrer As String, porta As String, idGuarderia As Integer)
+    Public Function modifyGuarderia(cif As String, nom As String, desc As String, correu As String, telefon As String, idPC As Integer, carrer As String, porta As String, idGuarderia As Integer) As Boolean
         Return comand(String.Format(Constantes.MODIFY_GUARDERIA, cif, nom, desc, correu, telefon, idPC, carrer, porta, idGuarderia))
     End Function
 
-    Public Function deleteGuarderia(idGuarderia As Integer)
+    Public Function deleteGuarderia(idGuarderia As Integer) As Boolean
         Return comand(String.Format(Constantes.DELETE_GUARDERIA, idGuarderia))
     End Function
 
@@ -142,15 +142,15 @@ Public Class ConnectionBD
         Return comand(String.Format(Constantes.DELETE_GUARDERIES_SERVEIS, idGuarderia, idServei))
     End Function
 
-    Public Function getGuarderiaVacances(idGuarderia As Integer)
+    Public Function getGuarderiaVacances(idGuarderia As Integer) As DataTable
         Return query(String.Format(Constantes.QUERY_GUARDERIES_VACANCES, idGuarderia))
     End Function
 
-    Public Function createVacances(idGuarderia As Integer, dataInici As Date, dataFi As Date)
+    Public Function createVacances(idGuarderia As Integer, dataInici As Date, dataFi As Date) As Boolean
         Return comand(String.Format(Constantes.INSERT_VACANCES, idGuarderia, dataInici.ToString(Constantes.DATE_MYSQL), dataFi.ToString(Constantes.DATE_MYSQL)))
     End Function
 
-    Public Function deleteVacances(idVacances As Integer)
+    Public Function deleteVacances(idVacances As Integer) As Boolean
         Return comand(String.Format(Constantes.DELETE_VACANCES, idVacances))
     End Function
 
@@ -162,11 +162,27 @@ Public Class ConnectionBD
         Return query(String.Format(Constantes.QUERY_CP_CIUTAT, idPais))
     End Function
 
-    Public Function getDireccio(idCP As Integer, idPais As Integer)
+    Public Function getDireccio(idCP As Integer, idPais As Integer) As DataTable
         Return query(String.Format(Constantes.QUERY_DIRECCIO, idCP, idPais))
     End Function
 
     Public Function getDireccioByCP(idCP As Integer) As DataTable
         Return query(String.Format(Constantes.QUERY_DIRECCIO_BY_CP, idCP))
+    End Function
+
+    Public Function getCameres(idGuarderia As Integer) As DataTable
+        Return query(String.Format(Constantes.QUERY_CAMERES, idGuarderia))
+    End Function
+
+    Public Function insertCamera(idGuarderia As Integer, url As String, usuari As String, contrasenya As String, desc As String) As Boolean
+        Return comand(String.Format(Constantes.INSERT_CAMERA, idGuarderia, url, usuari, contrasenya, desc))
+    End Function
+
+    Public Function modifyCamera(url As String, usuari As String, contrasenya As String, desc As String, idCamera As Integer) As Boolean
+        Return comand(String.Format(Constantes.MODIFY_CAMERA, url, usuari, contrasenya, desc, idCamera))
+    End Function
+
+    Public Function deleteCamera(idCamera As Integer) As Boolean
+        Return comand(String.Format(Constantes.DELETE_CAMERE, idCamera))
     End Function
 End Class

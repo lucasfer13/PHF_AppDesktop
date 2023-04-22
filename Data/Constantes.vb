@@ -84,4 +84,11 @@ Public Class Constantes
     JOIN ciutat c ON cp.idCiutat = c.idCiutat
     JOIN pais p ON p.idPais = c.idPais
     WHERE cp.idCP = {0}"
+
+    ' QUERYS CAMERES
+    Public Const QUERY_CAMERES = "SELECT * FROM cameres WHERE idGuarderia = {0}"
+    Public Const INSERT_CAMERA = "INSERT INTO cameres (idGuarderia, url, usuari, contrasenya, descripcio) 
+    VALUES ({0},'{1}','{2}','{3}','{4}')"
+    Public Const MODIFY_CAMERA = "UPDATE cameres SET url = '{0}', usuari = '{1}', contrasenya = '{2}', descripcio = '{3}' WHERE idCamara = {4}"
+    Public Const DELETE_CAMERE = "DELETE FROM cameres WHERE idCamara = {0}"
 End Class
