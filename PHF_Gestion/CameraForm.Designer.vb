@@ -22,173 +22,198 @@ Partial Class CameraForm
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(CameraForm))
-        lblGestioCameraTitol = New Label()
-        lblGestioCameraTitolURL = New Label()
-        txtGestioCameraURL = New TextBox()
-        txtGestioCameraDescripció = New TextBox()
-        lblGestioCameraTitolDescripcio = New Label()
-        txtGestioCameraUsuari = New TextBox()
-        lblGestioCameraTitolUsuari = New Label()
-        txtGestioCameraContrasenya = New TextBox()
-        lblGestioCameraTitolContrasenya = New Label()
-        btnGestioCameraGuardar = New Button()
-        btnGestioCameraEliminar = New Button()
-        btnGestioCameraEnrere = New Button()
-        btnGestioCameraModificar = New Button()
-        SuspendLayout()
-        ' 
-        ' lblGestioCameraTitol
-        ' 
-        lblGestioCameraTitol.AutoSize = True
-        lblGestioCameraTitol.Font = New Font("Segoe UI", 22.2F, FontStyle.Regular, GraphicsUnit.Point)
-        lblGestioCameraTitol.Location = New Point(378, 34)
-        lblGestioCameraTitol.Name = "lblGestioCameraTitol"
-        lblGestioCameraTitol.Size = New Size(147, 50)
-        lblGestioCameraTitol.TabIndex = 0
-        lblGestioCameraTitol.Text = "Camera"' 
-        ' lblGestioCameraTitolURL
-        ' 
-        lblGestioCameraTitolURL.AutoSize = True
-        lblGestioCameraTitolURL.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        lblGestioCameraTitolURL.Location = New Point(50, 134)
-        lblGestioCameraTitolURL.Name = "lblGestioCameraTitolURL"
-        lblGestioCameraTitolURL.Size = New Size(56, 28)
-        lblGestioCameraTitolURL.TabIndex = 1
-        lblGestioCameraTitolURL.Text = "URL: "' 
-        ' txtGestioCameraURL
-        ' 
-        txtGestioCameraURL.Location = New Point(187, 138)
-        txtGestioCameraURL.Name = "txtGestioCameraURL"
-        txtGestioCameraURL.Size = New Size(233, 27)
-        txtGestioCameraURL.TabIndex = 2
-        ' 
-        ' txtGestioCameraDescripció
-        ' 
-        txtGestioCameraDescripció.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left
-        txtGestioCameraDescripció.Location = New Point(187, 188)
-        txtGestioCameraDescripció.Multiline = True
-        txtGestioCameraDescripció.Name = "txtGestioCameraDescripció"
-        txtGestioCameraDescripció.Size = New Size(233, 155)
-        txtGestioCameraDescripció.TabIndex = 4
-        ' 
-        ' lblGestioCameraTitolDescripcio
-        ' 
-        lblGestioCameraTitolDescripcio.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left
-        lblGestioCameraTitolDescripcio.AutoSize = True
-        lblGestioCameraTitolDescripcio.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        lblGestioCameraTitolDescripcio.Location = New Point(50, 184)
-        lblGestioCameraTitolDescripcio.Name = "lblGestioCameraTitolDescripcio"
-        lblGestioCameraTitolDescripcio.Size = New Size(112, 28)
-        lblGestioCameraTitolDescripcio.TabIndex = 3
-        lblGestioCameraTitolDescripcio.Text = "Descripció: "' 
-        ' txtGestioCameraUsuari
-        ' 
-        txtGestioCameraUsuari.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        txtGestioCameraUsuari.Location = New Point(622, 138)
-        txtGestioCameraUsuari.Name = "txtGestioCameraUsuari"
-        txtGestioCameraUsuari.Size = New Size(233, 27)
-        txtGestioCameraUsuari.TabIndex = 6
-        ' 
-        ' lblGestioCameraTitolUsuari
-        ' 
-        lblGestioCameraTitolUsuari.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        lblGestioCameraTitolUsuari.AutoSize = True
-        lblGestioCameraTitolUsuari.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        lblGestioCameraTitolUsuari.Location = New Point(463, 134)
-        lblGestioCameraTitolUsuari.Name = "lblGestioCameraTitolUsuari"
-        lblGestioCameraTitolUsuari.Size = New Size(76, 28)
-        lblGestioCameraTitolUsuari.TabIndex = 5
-        lblGestioCameraTitolUsuari.Text = "Usuari: "' 
-        ' txtGestioCameraContrasenya
-        ' 
-        txtGestioCameraContrasenya.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        txtGestioCameraContrasenya.Location = New Point(622, 188)
-        txtGestioCameraContrasenya.Name = "txtGestioCameraContrasenya"
-        txtGestioCameraContrasenya.PasswordChar = "*"c
-        txtGestioCameraContrasenya.Size = New Size(233, 27)
-        txtGestioCameraContrasenya.TabIndex = 8
-        ' 
-        ' lblGestioCameraTitolContrasenya
-        ' 
-        lblGestioCameraTitolContrasenya.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        lblGestioCameraTitolContrasenya.AutoSize = True
-        lblGestioCameraTitolContrasenya.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        lblGestioCameraTitolContrasenya.Location = New Point(463, 184)
-        lblGestioCameraTitolContrasenya.Name = "lblGestioCameraTitolContrasenya"
-        lblGestioCameraTitolContrasenya.Size = New Size(129, 28)
-        lblGestioCameraTitolContrasenya.TabIndex = 7
-        lblGestioCameraTitolContrasenya.Text = "Contrasenya: "' 
-        ' btnGestioCameraGuardar
-        ' 
-        btnGestioCameraGuardar.Anchor = AnchorStyles.Bottom
-        btnGestioCameraGuardar.BackColor = Color.Aquamarine
-        btnGestioCameraGuardar.Location = New Point(489, 391)
-        btnGestioCameraGuardar.Name = "btnGestioCameraGuardar"
-        btnGestioCameraGuardar.Size = New Size(145, 73)
-        btnGestioCameraGuardar.TabIndex = 9
-        btnGestioCameraGuardar.Text = "Guardar"
-        btnGestioCameraGuardar.UseVisualStyleBackColor = False
-        ' 
-        ' btnGestioCameraEliminar
-        ' 
-        btnGestioCameraEliminar.Anchor = AnchorStyles.Bottom
-        btnGestioCameraEliminar.BackColor = Color.Aquamarine
-        btnGestioCameraEliminar.Location = New Point(661, 391)
-        btnGestioCameraEliminar.Name = "btnGestioCameraEliminar"
-        btnGestioCameraEliminar.Size = New Size(145, 73)
-        btnGestioCameraEliminar.TabIndex = 10
-        btnGestioCameraEliminar.Text = "Eliminar"
-        btnGestioCameraEliminar.UseVisualStyleBackColor = False
-        ' 
-        ' btnGestioCameraEnrere
-        ' 
-        btnGestioCameraEnrere.Anchor = AnchorStyles.Bottom
-        btnGestioCameraEnrere.BackColor = Color.Aquamarine
-        btnGestioCameraEnrere.Location = New Point(148, 391)
-        btnGestioCameraEnrere.Name = "btnGestioCameraEnrere"
-        btnGestioCameraEnrere.Size = New Size(145, 73)
-        btnGestioCameraEnrere.TabIndex = 11
-        btnGestioCameraEnrere.Text = "Enrere"
-        btnGestioCameraEnrere.UseVisualStyleBackColor = False
-        ' 
-        ' btnGestioCameraModificar
-        ' 
-        btnGestioCameraModificar.Anchor = AnchorStyles.Bottom
-        btnGestioCameraModificar.BackColor = Color.Aquamarine
-        btnGestioCameraModificar.Location = New Point(320, 391)
-        btnGestioCameraModificar.Name = "btnGestioCameraModificar"
-        btnGestioCameraModificar.Size = New Size(145, 73)
-        btnGestioCameraModificar.TabIndex = 12
-        btnGestioCameraModificar.Text = "Modificar"
-        btnGestioCameraModificar.UseVisualStyleBackColor = False
-        ' 
-        ' CameraForm
-        ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
-        BackColor = Color.LightSteelBlue
-        ClientSize = New Size(943, 499)
-        Controls.Add(btnGestioCameraModificar)
-        Controls.Add(btnGestioCameraEnrere)
-        Controls.Add(btnGestioCameraEliminar)
-        Controls.Add(btnGestioCameraGuardar)
-        Controls.Add(txtGestioCameraContrasenya)
-        Controls.Add(lblGestioCameraTitolContrasenya)
-        Controls.Add(txtGestioCameraUsuari)
-        Controls.Add(lblGestioCameraTitolUsuari)
-        Controls.Add(txtGestioCameraDescripció)
-        Controls.Add(lblGestioCameraTitolDescripcio)
-        Controls.Add(txtGestioCameraURL)
-        Controls.Add(lblGestioCameraTitolURL)
-        Controls.Add(lblGestioCameraTitol)
-        Icon = CType(resources.GetObject("$this.Icon"), Icon)
-        MinimumSize = New Size(961, 546)
-        Name = "CameraForm"
-        StartPosition = FormStartPosition.CenterScreen
-        Text = "PHF - Formulari camera"
-        ResumeLayout(False)
-        PerformLayout()
+        Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CameraForm))
+        Me.lblGestioCameraTitol = New System.Windows.Forms.Label()
+        Me.lblGestioCameraTitolURL = New System.Windows.Forms.Label()
+        Me.txtGestioCameraURL = New System.Windows.Forms.TextBox()
+        Me.txtGestioCameraDescripció = New System.Windows.Forms.TextBox()
+        Me.lblGestioCameraTitolDescripcio = New System.Windows.Forms.Label()
+        Me.txtGestioCameraUsuari = New System.Windows.Forms.TextBox()
+        Me.lblGestioCameraTitolUsuari = New System.Windows.Forms.Label()
+        Me.txtGestioCameraContrasenya = New System.Windows.Forms.TextBox()
+        Me.lblGestioCameraTitolContrasenya = New System.Windows.Forms.Label()
+        Me.btnGestioCameraGuardar = New System.Windows.Forms.Button()
+        Me.btnGestioCameraEliminar = New System.Windows.Forms.Button()
+        Me.btnGestioCameraEnrere = New System.Windows.Forms.Button()
+        Me.btnGestioCameraModificar = New System.Windows.Forms.Button()
+        Me.erpFormCameraErrors = New System.Windows.Forms.ErrorProvider(Me.components)
+        CType(Me.erpFormCameraErrors, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
+        '
+        'lblGestioCameraTitol
+        '
+        Me.lblGestioCameraTitol.AutoSize = True
+        Me.lblGestioCameraTitol.Font = New System.Drawing.Font("Segoe UI", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.lblGestioCameraTitol.Location = New System.Drawing.Point(331, 26)
+        Me.lblGestioCameraTitol.Name = "lblGestioCameraTitol"
+        Me.lblGestioCameraTitol.Size = New System.Drawing.Size(119, 41)
+        Me.lblGestioCameraTitol.TabIndex = 0
+        Me.lblGestioCameraTitol.Text = "Camera"
+        '
+        'lblGestioCameraTitolURL
+        '
+        Me.lblGestioCameraTitolURL.AutoSize = True
+        Me.lblGestioCameraTitolURL.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.lblGestioCameraTitolURL.Location = New System.Drawing.Point(44, 100)
+        Me.lblGestioCameraTitolURL.Name = "lblGestioCameraTitolURL"
+        Me.lblGestioCameraTitolURL.Size = New System.Drawing.Size(46, 21)
+        Me.lblGestioCameraTitolURL.TabIndex = 1
+        Me.lblGestioCameraTitolURL.Text = "URL: "
+        '
+        'txtGestioCameraURL
+        '
+        Me.txtGestioCameraURL.Location = New System.Drawing.Point(164, 104)
+        Me.txtGestioCameraURL.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtGestioCameraURL.Name = "txtGestioCameraURL"
+        Me.txtGestioCameraURL.Size = New System.Drawing.Size(204, 23)
+        Me.txtGestioCameraURL.TabIndex = 2
+        '
+        'txtGestioCameraDescripció
+        '
+        Me.txtGestioCameraDescripció.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.txtGestioCameraDescripció.Location = New System.Drawing.Point(164, 141)
+        Me.txtGestioCameraDescripció.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtGestioCameraDescripció.Multiline = True
+        Me.txtGestioCameraDescripció.Name = "txtGestioCameraDescripció"
+        Me.txtGestioCameraDescripció.Size = New System.Drawing.Size(204, 134)
+        Me.txtGestioCameraDescripció.TabIndex = 4
+        '
+        'lblGestioCameraTitolDescripcio
+        '
+        Me.lblGestioCameraTitolDescripcio.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.lblGestioCameraTitolDescripcio.AutoSize = True
+        Me.lblGestioCameraTitolDescripcio.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.lblGestioCameraTitolDescripcio.Location = New System.Drawing.Point(44, 138)
+        Me.lblGestioCameraTitolDescripcio.Name = "lblGestioCameraTitolDescripcio"
+        Me.lblGestioCameraTitolDescripcio.Size = New System.Drawing.Size(89, 21)
+        Me.lblGestioCameraTitolDescripcio.TabIndex = 3
+        Me.lblGestioCameraTitolDescripcio.Text = "Descripció: "
+        '
+        'txtGestioCameraUsuari
+        '
+        Me.txtGestioCameraUsuari.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtGestioCameraUsuari.Location = New System.Drawing.Point(554, 104)
+        Me.txtGestioCameraUsuari.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtGestioCameraUsuari.Name = "txtGestioCameraUsuari"
+        Me.txtGestioCameraUsuari.Size = New System.Drawing.Size(204, 23)
+        Me.txtGestioCameraUsuari.TabIndex = 6
+        '
+        'lblGestioCameraTitolUsuari
+        '
+        Me.lblGestioCameraTitolUsuari.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblGestioCameraTitolUsuari.AutoSize = True
+        Me.lblGestioCameraTitolUsuari.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.lblGestioCameraTitolUsuari.Location = New System.Drawing.Point(415, 100)
+        Me.lblGestioCameraTitolUsuari.Name = "lblGestioCameraTitolUsuari"
+        Me.lblGestioCameraTitolUsuari.Size = New System.Drawing.Size(62, 21)
+        Me.lblGestioCameraTitolUsuari.TabIndex = 5
+        Me.lblGestioCameraTitolUsuari.Text = "Usuari: "
+        '
+        'txtGestioCameraContrasenya
+        '
+        Me.txtGestioCameraContrasenya.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtGestioCameraContrasenya.Location = New System.Drawing.Point(554, 141)
+        Me.txtGestioCameraContrasenya.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtGestioCameraContrasenya.Name = "txtGestioCameraContrasenya"
+        Me.txtGestioCameraContrasenya.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtGestioCameraContrasenya.Size = New System.Drawing.Size(204, 23)
+        Me.txtGestioCameraContrasenya.TabIndex = 8
+        '
+        'lblGestioCameraTitolContrasenya
+        '
+        Me.lblGestioCameraTitolContrasenya.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblGestioCameraTitolContrasenya.AutoSize = True
+        Me.lblGestioCameraTitolContrasenya.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.lblGestioCameraTitolContrasenya.Location = New System.Drawing.Point(415, 138)
+        Me.lblGestioCameraTitolContrasenya.Name = "lblGestioCameraTitolContrasenya"
+        Me.lblGestioCameraTitolContrasenya.Size = New System.Drawing.Size(104, 21)
+        Me.lblGestioCameraTitolContrasenya.TabIndex = 7
+        Me.lblGestioCameraTitolContrasenya.Text = "Contrasenya: "
+        '
+        'btnGestioCameraGuardar
+        '
+        Me.btnGestioCameraGuardar.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.btnGestioCameraGuardar.BackColor = System.Drawing.Color.Aquamarine
+        Me.btnGestioCameraGuardar.Location = New System.Drawing.Point(433, 310)
+        Me.btnGestioCameraGuardar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnGestioCameraGuardar.Name = "btnGestioCameraGuardar"
+        Me.btnGestioCameraGuardar.Size = New System.Drawing.Size(127, 55)
+        Me.btnGestioCameraGuardar.TabIndex = 9
+        Me.btnGestioCameraGuardar.Text = "Guardar"
+        Me.btnGestioCameraGuardar.UseVisualStyleBackColor = False
+        '
+        'btnGestioCameraEliminar
+        '
+        Me.btnGestioCameraEliminar.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.btnGestioCameraEliminar.BackColor = System.Drawing.Color.Aquamarine
+        Me.btnGestioCameraEliminar.Location = New System.Drawing.Point(583, 310)
+        Me.btnGestioCameraEliminar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnGestioCameraEliminar.Name = "btnGestioCameraEliminar"
+        Me.btnGestioCameraEliminar.Size = New System.Drawing.Size(127, 55)
+        Me.btnGestioCameraEliminar.TabIndex = 10
+        Me.btnGestioCameraEliminar.Text = "Eliminar"
+        Me.btnGestioCameraEliminar.UseVisualStyleBackColor = False
+        '
+        'btnGestioCameraEnrere
+        '
+        Me.btnGestioCameraEnrere.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.btnGestioCameraEnrere.BackColor = System.Drawing.Color.Aquamarine
+        Me.btnGestioCameraEnrere.Location = New System.Drawing.Point(135, 310)
+        Me.btnGestioCameraEnrere.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnGestioCameraEnrere.Name = "btnGestioCameraEnrere"
+        Me.btnGestioCameraEnrere.Size = New System.Drawing.Size(127, 55)
+        Me.btnGestioCameraEnrere.TabIndex = 11
+        Me.btnGestioCameraEnrere.Text = "Enrere"
+        Me.btnGestioCameraEnrere.UseVisualStyleBackColor = False
+        '
+        'btnGestioCameraModificar
+        '
+        Me.btnGestioCameraModificar.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.btnGestioCameraModificar.BackColor = System.Drawing.Color.Aquamarine
+        Me.btnGestioCameraModificar.Location = New System.Drawing.Point(285, 310)
+        Me.btnGestioCameraModificar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnGestioCameraModificar.Name = "btnGestioCameraModificar"
+        Me.btnGestioCameraModificar.Size = New System.Drawing.Size(127, 55)
+        Me.btnGestioCameraModificar.TabIndex = 12
+        Me.btnGestioCameraModificar.Text = "Modificar"
+        Me.btnGestioCameraModificar.UseVisualStyleBackColor = False
+        '
+        'erpFormCameraErrors
+        '
+        Me.erpFormCameraErrors.ContainerControl = Me
+        '
+        'CameraForm
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.ClientSize = New System.Drawing.Size(837, 397)
+        Me.Controls.Add(Me.btnGestioCameraModificar)
+        Me.Controls.Add(Me.btnGestioCameraEnrere)
+        Me.Controls.Add(Me.btnGestioCameraEliminar)
+        Me.Controls.Add(Me.btnGestioCameraGuardar)
+        Me.Controls.Add(Me.txtGestioCameraContrasenya)
+        Me.Controls.Add(Me.lblGestioCameraTitolContrasenya)
+        Me.Controls.Add(Me.txtGestioCameraUsuari)
+        Me.Controls.Add(Me.lblGestioCameraTitolUsuari)
+        Me.Controls.Add(Me.txtGestioCameraDescripció)
+        Me.Controls.Add(Me.lblGestioCameraTitolDescripcio)
+        Me.Controls.Add(Me.txtGestioCameraURL)
+        Me.Controls.Add(Me.lblGestioCameraTitolURL)
+        Me.Controls.Add(Me.lblGestioCameraTitol)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.MinimumSize = New System.Drawing.Size(843, 419)
+        Me.Name = "CameraForm"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "PHF - Formulari camera"
+        CType(Me.erpFormCameraErrors, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
     End Sub
 
     Friend WithEvents lblGestioCameraTitol As Label
@@ -204,4 +229,5 @@ Partial Class CameraForm
     Friend WithEvents btnGestioCameraEliminar As Button
     Friend WithEvents btnGestioCameraEnrere As Button
     Friend WithEvents btnGestioCameraModificar As Button
+    Friend WithEvents erpFormCameraErrors As ErrorProvider
 End Class

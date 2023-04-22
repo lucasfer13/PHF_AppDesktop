@@ -28,6 +28,10 @@ Public Class MenuGestioGuarderies
     Private Sub Buscar_KeyDown(sender As TextBox, e As KeyEventArgs) Handles txtGestioGuarderiesBuscar.KeyDown, txtGestioGuarderiesBuscar.KeyDown
         If e.KeyCode = Keys.Enter Then
             bdgGestioGuarderiesVista.Filter = String.Format(FILTER, sender.Text)
+            If bdgGestioGuarderiesVista.Count = 0 Then
+                MsgBox(My.Resources.NoResultat, , My.Resources.Advertencia)
+                bdgGestioGuarderiesVista.RemoveFilter()
+            End If
         End If
     End Sub
 

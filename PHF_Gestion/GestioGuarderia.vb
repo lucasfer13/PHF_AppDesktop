@@ -26,8 +26,8 @@
     End Sub
 
     Private Sub btnGestGuarderiaAfegCameres_Click(sender As Object, e As EventArgs) Handles btnGestGuarderiaAfegCameres.Click
-        GestioCameres.Show()
-        Me.Hide()
+        Dim cameres As New GestioCameres(guarderia)
+        cameres.ShowDialog()
     End Sub
 
     Private Sub btnGestGuarderiaAfegirTipusHabitacio_Click(sender As Object, e As EventArgs) Handles btnGestGuarderiaAfegirTipusHabitacio.Click
