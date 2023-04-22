@@ -5,10 +5,6 @@ Public Class GestioHabitacions
         Me.Close()
     End Sub
 
-    Private Sub GestioHabitacions_Closing(sender As Object, e As CancelEventArgs) Handles MyBase.Closing
-        GestioGuarderia.Show()
-    End Sub
-
     Private Sub btnGestioHabitacionsAfegir_Click(sender As Object, e As EventArgs) Handles btnGestioHabitacionsAfegir.Click
         Me.Hide()
         FormulariHabitacio.Show()

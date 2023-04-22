@@ -13,7 +13,7 @@ Public Class LlistatServeis
         Return idServei
     End Function
 
-    Private Sub dgvLlistaServeisLlista_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvLlistaServeisLlista.CellContentClick
+    Private Sub dgvLlistaServeisLlista_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvLlistaServeisLlista.CellClick
         If e.RowIndex >= 0 Then
             idServei = bdgLlistatServeisVista.Current.Row.Item(0)
             Me.Close()

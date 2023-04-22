@@ -1,5 +1,9 @@
 ﻿Public Class GestioGuarderia
-
+    Public guarderia As DataRow
+    Public Sub New(guarderia As DataRow)
+        InitializeComponent()
+        Me.guarderia = guarderia
+    End Sub
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles btnGestioGuarderiaEnrere.Click
         Me.Close()
     End Sub
@@ -9,9 +13,11 @@
     End Sub
 
     Private Sub btnGestGuarderiaModificar_Click(sender As Object, e As EventArgs) Handles btnGestGuarderiaModificar.Click
-        Dim guarderia As New InformacionGuarderia(Nothing)
-        guarderia.Show()
-        Me.Hide()
+        Dim guarderia As New InformacionGuarderia(Me.guarderia)
+        guarderia.ShowDialog()
+        If guarderia.guarderia Is Nothing Then
+            Me.Close()
+        End If
     End Sub
 
     Private Sub btnGestGuarderiaAfegirHabitacio_Click(sender As Object, e As EventArgs) Handles btnGestGuarderiaAfegirHabitacio.Click

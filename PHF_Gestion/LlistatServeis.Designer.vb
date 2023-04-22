@@ -112,6 +112,7 @@ Partial Class LlistatServeis
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
         MinimumSize = New Size(892, 569)
         Name = "LlistatServeis"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "PHF - Llistat Serveis"
         CType(dgvLlistaServeisLlista, ComponentModel.ISupportInitialize).EndInit()
         CType(bdgLlistatServeisVista, ComponentModel.ISupportInitialize).EndInit()

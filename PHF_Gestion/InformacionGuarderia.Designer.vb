@@ -277,7 +277,7 @@ Partial Class InformacionGuarderia
         ' 
         btnInformacioGuarderiaMunicipi.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
         btnInformacioGuarderiaMunicipi.BackColor = Color.Aquamarine
-        btnInformacioGuarderiaMunicipi.Location = New Point(456, 249)
+        btnInformacioGuarderiaMunicipi.Location = New Point(477, 249)
         btnInformacioGuarderiaMunicipi.Name = "btnInformacioGuarderiaMunicipi"
         btnInformacioGuarderiaMunicipi.Size = New Size(73, 27)
         btnInformacioGuarderiaMunicipi.TabIndex = 6
@@ -288,7 +288,7 @@ Partial Class InformacionGuarderia
         ' 
         btnInformacioGuarderiaPais.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
         btnInformacioGuarderiaPais.BackColor = Color.Aquamarine
-        btnInformacioGuarderiaPais.Location = New Point(460, 201)
+        btnInformacioGuarderiaPais.Location = New Point(477, 201)
         btnInformacioGuarderiaPais.Name = "btnInformacioGuarderiaPais"
         btnInformacioGuarderiaPais.Size = New Size(69, 27)
         btnInformacioGuarderiaPais.TabIndex = 4

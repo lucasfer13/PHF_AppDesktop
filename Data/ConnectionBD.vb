@@ -8,6 +8,7 @@ Public Class ConnectionBD
         connexio = New MySqlConnection
         connexio.ConnectionString = Constantes.CONNECTION_STRING_REMOTO_INS
         Try
+            connexio.ConnectionString = Constantes.CONNECTION_STRING_REMOTO
             connexio.Open()
         Catch ex As Exception
             Try
@@ -146,7 +147,7 @@ Public Class ConnectionBD
     End Function
 
     Public Function createVacances(idGuarderia As Integer, dataInici As Date, dataFi As Date)
-        Return comand(String.Format(Constantes.INSERT_VACANCES, idGuarderia, dataInici.ToShortDateString, dataFi.ToShortDateString))
+        Return comand(String.Format(Constantes.INSERT_VACANCES, idGuarderia, dataInici.ToString(Constantes.DATE_MYSQL), dataFi.ToString(Constantes.DATE_MYSQL)))
     End Function
 
     Public Function deleteVacances(idVacances As Integer)
@@ -163,5 +164,9 @@ Public Class ConnectionBD
 
     Public Function getDireccio(idCP As Integer, idPais As Integer)
         Return query(String.Format(Constantes.QUERY_DIRECCIO, idCP, idPais))
+    End Function
+
+    Public Function getDireccioByCP(idCP As Integer) As DataTable
+        Return query(String.Format(Constantes.QUERY_DIRECCIO_BY_CP, idCP))
     End Function
 End Class

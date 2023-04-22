@@ -9,13 +9,13 @@ Public Class LlistatMunicipi
         InitializeComponent()
         Me.idPais = idPais
     End Sub
-    Private Sub LlistatMunicipi_Load(sender As Object, e As EventArgs)
+    Private Sub LlistatMunicipi_Load(sender As Object, e As EventArgs) Handles Me.Load
         Dim sql As New ConnectionBD
         bdgLlistatMunicipiVista.DataSource = sql.getMunicipis(idPais)
         dgvLlistatMunicipisLlista.DataSource = bdgLlistatMunicipiVista
     End Sub
 
-    Private Sub btnLlistaMunicipisEnrere_Click(sender As Object, e As EventArgs)
+    Private Sub btnLlistaMunicipisEnrere_Click(sender As Object, e As EventArgs) Handles btnLlistaMunicipisEnrere.Click
         Me.Close()
     End Sub
 
@@ -23,14 +23,14 @@ Public Class LlistatMunicipi
         Return idPC
     End Function
 
-    Private Sub dgvLlistatMunicipisLlista_CellClick(sender As Object, e As DataGridViewCellEventArgs)
+    Private Sub dgvLlistatMunicipisLlista_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvLlistatMunicipisLlista.CellClick
         If e.RowIndex >= 0 Then
             idPC = CType(bdgLlistatMunicipiVista.Current, DataRowView).Row.Item(0)
             Me.Close()
         End If
     End Sub
 
-    Private Sub txtLlistatMunicipisBuscar_KeyDown(sender As TextBox, e As KeyEventArgs)
+    Private Sub txtLlistatMunicipisBuscar_KeyDown(sender As TextBox, e As KeyEventArgs) Handles txtLlistatMunicipisBuscar.KeyDown
         If e.KeyCode = Keys.KeyCode.Enter Then
             bdgLlistatMunicipiVista.Filter = String.Format(FILTER, sender.Text)
             If bdgLlistatMunicipiVista.Count = 0 Then

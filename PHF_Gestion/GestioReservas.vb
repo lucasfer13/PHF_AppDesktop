@@ -5,10 +5,6 @@ Public Class GestioReservas
         Me.Close()
     End Sub
 
-    Private Sub GestioReservas_Closing(sender As Object, e As CancelEventArgs) Handles MyBase.Closing
-        GestioGuarderia.Show()
-    End Sub
-
     Private Sub dgvGestioReservesReserves_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvGestioReservesReserves.Click
         Me.Hide()
         DetallReserva.Show()

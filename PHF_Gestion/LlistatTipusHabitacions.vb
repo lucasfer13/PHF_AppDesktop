@@ -5,10 +5,6 @@ Public Class LlistatTipusHabitacions
         Me.Close()
     End Sub
 
-    Private Sub LlistatTipusHabitacions_Closing(sender As Object, e As CancelEventArgs) Handles MyBase.Closing
-        GestioGuarderia.Show()
-    End Sub
-
     Private Sub btnTipusHabitacioAfegir_Click(sender As Object, e As EventArgs) Handles btnTipusHabitacioAfegir.Click
         FormTipusHabitacio.Show()
     End Sub
