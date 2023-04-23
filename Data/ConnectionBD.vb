@@ -220,4 +220,8 @@ Public Class ConnectionBD
     Public Function delteUserGuarderia(idUsuari As Integer, idGuarderia As Integer) As Boolean
         Return comand(String.Format(Constantes.DELETE_SUPERVISOR_GUARDERIA, idUsuari, idGuarderia))
     End Function
+
+    Public Function getValoracions(idGuarderia As Integer) As DataTable
+        Return query(String.Format(Constantes.QUERY_VALORACIONS, idGuarderia))
+    End Function
 End Class

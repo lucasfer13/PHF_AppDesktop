@@ -106,4 +106,7 @@ Public Class Constantes
     WHERE th.idTipusHabitacio = {0}"
     Public Const INSERT_TIPUSH_TANIMAL = "INSERT INTO animal_tipushabitacio (idTipusHabitacio, idTipusAnimal) VALUES ({0}, {1})"
     Public Const DELETE_TIPUSH_TANIMAL = "DELETE FROM animal_tipushabitacio WHERE idTipusHabitacio = {0} AND idTipusAnimal = {1}"
+
+    ' Comandes valoracions
+    Public Const QUERY_VALORACIONS = "SELECT rating as Valoracio, dataValoracio as Data FROM valoracions WHERE idGuarderia = {0}"
 End Class

@@ -40,8 +40,8 @@
     End Sub
 
     Private Sub btnGestioGuarderiaValoracions_Click(sender As Object, e As EventArgs) Handles btnGestioGuarderiaValoracions.Click
-        Valoracions.Show()
-        Me.Hide()
+        Dim val As New Valoracions(guarderia)
+        val.ShowDialog()
     End Sub
 
     Private Sub loadName()
