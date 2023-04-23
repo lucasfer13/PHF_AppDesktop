@@ -45,10 +45,12 @@ Partial Class LlistatTipusHabitacions
         Me.dgvTipusHabitacionsLlistat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvTipusHabitacionsLlistat.Location = New System.Drawing.Point(10, 9)
         Me.dgvTipusHabitacionsLlistat.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.dgvTipusHabitacionsLlistat.MultiSelect = False
         Me.dgvTipusHabitacionsLlistat.Name = "dgvTipusHabitacionsLlistat"
         Me.dgvTipusHabitacionsLlistat.ReadOnly = True
         Me.dgvTipusHabitacionsLlistat.RowHeadersWidth = 51
         Me.dgvTipusHabitacionsLlistat.RowTemplate.Height = 29
+        Me.dgvTipusHabitacionsLlistat.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvTipusHabitacionsLlistat.Size = New System.Drawing.Size(423, 320)
         Me.dgvTipusHabitacionsLlistat.TabIndex = 0
         '
@@ -126,7 +128,6 @@ Partial Class LlistatTipusHabitacions
         Me.Name = "LlistatTipusHabitacions"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "PHF - Tipus Habitacions"
-        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.dgvTipusHabitacionsLlistat, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.bdgLListatTHabitacionsVista, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

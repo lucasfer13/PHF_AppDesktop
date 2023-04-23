@@ -6,7 +6,7 @@ Public Class FormulariMoltesHabitacions
     End Sub
 
     Private Sub FormulariMoltesHabitacions_Closing(sender As Object, e As CancelEventArgs) Handles MyBase.Closing
-        GestioHabitacions.Show()
+        'GestioHabitacions.Show()
     End Sub
 
     Private Sub btnAfegirHabitacionsEnrere_Click(sender As Object, e As EventArgs) Handles btnAfegirHabitacionsEnrere.Click

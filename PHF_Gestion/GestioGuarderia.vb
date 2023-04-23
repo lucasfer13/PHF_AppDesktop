@@ -25,8 +25,8 @@
     End Sub
 
     Private Sub btnGestGuarderiaAfegirHabitacio_Click(sender As Object, e As EventArgs) Handles btnGestGuarderiaAfegirHabitacio.Click
-        GestioHabitacions.Show()
-        Me.Hide()
+        Dim habitacions As New GestioHabitacions(guarderia)
+        habitacions.ShowDialog()
     End Sub
 
     Private Sub btnGestGuarderiaAfegCameres_Click(sender As Object, e As EventArgs) Handles btnGestGuarderiaAfegCameres.Click

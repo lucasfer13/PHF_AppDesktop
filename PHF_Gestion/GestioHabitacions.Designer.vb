@@ -22,115 +22,118 @@ Partial Class GestioHabitacions
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(GestioHabitacions))
-        dgvGestioHabitacionsLlistat = New DataGridView()
-        lblGestioHabitacionsTitol = New Label()
-        txtGestioHabitacionsBuscar = New TextBox()
-        btnGestioHabitacionsReset = New Button()
-        btnGestioHabitacionsAfegir = New Button()
-        btnGestioHabitacionsAfegirVaries = New Button()
-        btnGestioHabitacionsEnrere = New Button()
-        CType(dgvGestioHabitacionsLlistat, ComponentModel.ISupportInitialize).BeginInit()
-        SuspendLayout()
-        ' 
-        ' dgvGestioHabitacionsLlistat
-        ' 
-        dgvGestioHabitacionsLlistat.AllowUserToAddRows = False
-        dgvGestioHabitacionsLlistat.AllowUserToDeleteRows = False
-        dgvGestioHabitacionsLlistat.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        dgvGestioHabitacionsLlistat.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgvGestioHabitacionsLlistat.Location = New Point(12, 12)
-        dgvGestioHabitacionsLlistat.Name = "dgvGestioHabitacionsLlistat"
-        dgvGestioHabitacionsLlistat.ReadOnly = True
-        dgvGestioHabitacionsLlistat.RowHeadersWidth = 51
-        dgvGestioHabitacionsLlistat.RowTemplate.Height = 29
-        dgvGestioHabitacionsLlistat.Size = New Size(475, 416)
-        dgvGestioHabitacionsLlistat.TabIndex = 0
-        ' 
-        ' lblGestioHabitacionsTitol
-        ' 
-        lblGestioHabitacionsTitol.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        lblGestioHabitacionsTitol.AutoSize = True
-        lblGestioHabitacionsTitol.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        lblGestioHabitacionsTitol.Location = New Point(578, 12)
-        lblGestioHabitacionsTitol.Name = "lblGestioHabitacionsTitol"
-        lblGestioHabitacionsTitol.Size = New Size(115, 28)
-        lblGestioHabitacionsTitol.TabIndex = 1
-        lblGestioHabitacionsTitol.Text = "Habitacions"' 
-        ' txtGestioHabitacionsBuscar
-        ' 
-        txtGestioHabitacionsBuscar.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        txtGestioHabitacionsBuscar.Location = New Point(528, 52)
-        txtGestioHabitacionsBuscar.Name = "txtGestioHabitacionsBuscar"
-        txtGestioHabitacionsBuscar.Size = New Size(175, 27)
-        txtGestioHabitacionsBuscar.TabIndex = 2
-        ' 
-        ' btnGestioHabitacionsReset
-        ' 
-        btnGestioHabitacionsReset.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        btnGestioHabitacionsReset.BackColor = Color.Aquamarine
-        btnGestioHabitacionsReset.Location = New Point(709, 51)
-        btnGestioHabitacionsReset.Name = "btnGestioHabitacionsReset"
-        btnGestioHabitacionsReset.Size = New Size(79, 29)
-        btnGestioHabitacionsReset.TabIndex = 3
-        btnGestioHabitacionsReset.Text = "Reset"
-        btnGestioHabitacionsReset.UseVisualStyleBackColor = False
-        ' 
-        ' btnGestioHabitacionsAfegir
-        ' 
-        btnGestioHabitacionsAfegir.Anchor = AnchorStyles.Right
-        btnGestioHabitacionsAfegir.BackColor = Color.Aquamarine
-        btnGestioHabitacionsAfegir.Location = New Point(578, 149)
-        btnGestioHabitacionsAfegir.Name = "btnGestioHabitacionsAfegir"
-        btnGestioHabitacionsAfegir.Size = New Size(126, 58)
-        btnGestioHabitacionsAfegir.TabIndex = 4
-        btnGestioHabitacionsAfegir.Text = "Afegir habitacio"
-        btnGestioHabitacionsAfegir.UseVisualStyleBackColor = False
-        ' 
-        ' btnGestioHabitacionsAfegirVaries
-        ' 
-        btnGestioHabitacionsAfegirVaries.Anchor = AnchorStyles.Right
-        btnGestioHabitacionsAfegirVaries.BackColor = Color.Aquamarine
-        btnGestioHabitacionsAfegirVaries.Location = New Point(578, 228)
-        btnGestioHabitacionsAfegirVaries.Name = "btnGestioHabitacionsAfegirVaries"
-        btnGestioHabitacionsAfegirVaries.Size = New Size(126, 58)
-        btnGestioHabitacionsAfegirVaries.TabIndex = 5
-        btnGestioHabitacionsAfegirVaries.Text = "Afegir moltes habitacions"
-        btnGestioHabitacionsAfegirVaries.UseVisualStyleBackColor = False
-        ' 
-        ' btnGestioHabitacionsEnrere
-        ' 
-        btnGestioHabitacionsEnrere.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
-        btnGestioHabitacionsEnrere.BackColor = Color.Aquamarine
-        btnGestioHabitacionsEnrere.Location = New Point(577, 370)
-        btnGestioHabitacionsEnrere.Name = "btnGestioHabitacionsEnrere"
-        btnGestioHabitacionsEnrere.Size = New Size(126, 58)
-        btnGestioHabitacionsEnrere.TabIndex = 6
-        btnGestioHabitacionsEnrere.Text = "Enrere"
-        btnGestioHabitacionsEnrere.UseVisualStyleBackColor = False
-        ' 
-        ' GestioHabitacions
-        ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
-        BackColor = Color.LightSteelBlue
-        ClientSize = New Size(800, 440)
-        Controls.Add(btnGestioHabitacionsEnrere)
-        Controls.Add(btnGestioHabitacionsAfegirVaries)
-        Controls.Add(btnGestioHabitacionsAfegir)
-        Controls.Add(btnGestioHabitacionsReset)
-        Controls.Add(txtGestioHabitacionsBuscar)
-        Controls.Add(lblGestioHabitacionsTitol)
-        Controls.Add(dgvGestioHabitacionsLlistat)
-        Icon = CType(resources.GetObject("$this.Icon"), Icon)
-        MinimumSize = New Size(818, 487)
-        Name = "GestioHabitacions"
-        StartPosition = FormStartPosition.CenterScreen
-        Text = "PHF - Gestió Habitacions"
-        WindowState = FormWindowState.Maximized
-        CType(dgvGestioHabitacionsLlistat, ComponentModel.ISupportInitialize).EndInit()
-        ResumeLayout(False)
-        PerformLayout()
+        Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(GestioHabitacions))
+        Me.dgvGestioHabitacionsLlistat = New System.Windows.Forms.DataGridView()
+        Me.lblGestioHabitacionsTitol = New System.Windows.Forms.Label()
+        Me.txtGestioHabitacionsBuscar = New System.Windows.Forms.TextBox()
+        Me.btnGestioHabitacionsReset = New System.Windows.Forms.Button()
+        Me.btnGestioHabitacionsAfegir = New System.Windows.Forms.Button()
+        Me.btnGestioHabitacionsEnrere = New System.Windows.Forms.Button()
+        Me.bdgGestioHabitacionsVista = New System.Windows.Forms.BindingSource(Me.components)
+        CType(Me.dgvGestioHabitacionsLlistat, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.bdgGestioHabitacionsVista, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
+        '
+        'dgvGestioHabitacionsLlistat
+        '
+        Me.dgvGestioHabitacionsLlistat.AllowUserToAddRows = False
+        Me.dgvGestioHabitacionsLlistat.AllowUserToDeleteRows = False
+        Me.dgvGestioHabitacionsLlistat.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dgvGestioHabitacionsLlistat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvGestioHabitacionsLlistat.Location = New System.Drawing.Point(10, 9)
+        Me.dgvGestioHabitacionsLlistat.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.dgvGestioHabitacionsLlistat.MultiSelect = False
+        Me.dgvGestioHabitacionsLlistat.Name = "dgvGestioHabitacionsLlistat"
+        Me.dgvGestioHabitacionsLlistat.ReadOnly = True
+        Me.dgvGestioHabitacionsLlistat.RowHeadersWidth = 51
+        Me.dgvGestioHabitacionsLlistat.RowTemplate.Height = 29
+        Me.dgvGestioHabitacionsLlistat.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvGestioHabitacionsLlistat.Size = New System.Drawing.Size(416, 312)
+        Me.dgvGestioHabitacionsLlistat.TabIndex = 0
+        '
+        'lblGestioHabitacionsTitol
+        '
+        Me.lblGestioHabitacionsTitol.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblGestioHabitacionsTitol.AutoSize = True
+        Me.lblGestioHabitacionsTitol.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.lblGestioHabitacionsTitol.Location = New System.Drawing.Point(506, 9)
+        Me.lblGestioHabitacionsTitol.Name = "lblGestioHabitacionsTitol"
+        Me.lblGestioHabitacionsTitol.Size = New System.Drawing.Size(91, 21)
+        Me.lblGestioHabitacionsTitol.TabIndex = 1
+        Me.lblGestioHabitacionsTitol.Text = "Habitacions"
+        '
+        'txtGestioHabitacionsBuscar
+        '
+        Me.txtGestioHabitacionsBuscar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtGestioHabitacionsBuscar.Location = New System.Drawing.Point(462, 39)
+        Me.txtGestioHabitacionsBuscar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtGestioHabitacionsBuscar.Name = "txtGestioHabitacionsBuscar"
+        Me.txtGestioHabitacionsBuscar.Size = New System.Drawing.Size(154, 23)
+        Me.txtGestioHabitacionsBuscar.TabIndex = 2
+        '
+        'btnGestioHabitacionsReset
+        '
+        Me.btnGestioHabitacionsReset.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnGestioHabitacionsReset.BackColor = System.Drawing.Color.Aquamarine
+        Me.btnGestioHabitacionsReset.Location = New System.Drawing.Point(620, 38)
+        Me.btnGestioHabitacionsReset.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnGestioHabitacionsReset.Name = "btnGestioHabitacionsReset"
+        Me.btnGestioHabitacionsReset.Size = New System.Drawing.Size(69, 22)
+        Me.btnGestioHabitacionsReset.TabIndex = 3
+        Me.btnGestioHabitacionsReset.Text = "Reset"
+        Me.btnGestioHabitacionsReset.UseVisualStyleBackColor = False
+        '
+        'btnGestioHabitacionsAfegir
+        '
+        Me.btnGestioHabitacionsAfegir.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.btnGestioHabitacionsAfegir.BackColor = System.Drawing.Color.Aquamarine
+        Me.btnGestioHabitacionsAfegir.Location = New System.Drawing.Point(506, 136)
+        Me.btnGestioHabitacionsAfegir.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnGestioHabitacionsAfegir.Name = "btnGestioHabitacionsAfegir"
+        Me.btnGestioHabitacionsAfegir.Size = New System.Drawing.Size(110, 44)
+        Me.btnGestioHabitacionsAfegir.TabIndex = 4
+        Me.btnGestioHabitacionsAfegir.Text = "Afegir habitacio"
+        Me.btnGestioHabitacionsAfegir.UseVisualStyleBackColor = False
+        '
+        'btnGestioHabitacionsEnrere
+        '
+        Me.btnGestioHabitacionsEnrere.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnGestioHabitacionsEnrere.BackColor = System.Drawing.Color.Aquamarine
+        Me.btnGestioHabitacionsEnrere.Location = New System.Drawing.Point(505, 278)
+        Me.btnGestioHabitacionsEnrere.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnGestioHabitacionsEnrere.Name = "btnGestioHabitacionsEnrere"
+        Me.btnGestioHabitacionsEnrere.Size = New System.Drawing.Size(110, 44)
+        Me.btnGestioHabitacionsEnrere.TabIndex = 6
+        Me.btnGestioHabitacionsEnrere.Text = "Enrere"
+        Me.btnGestioHabitacionsEnrere.UseVisualStyleBackColor = False
+        '
+        'GestioHabitacions
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.ClientSize = New System.Drawing.Size(702, 336)
+        Me.Controls.Add(Me.btnGestioHabitacionsEnrere)
+        Me.Controls.Add(Me.btnGestioHabitacionsAfegir)
+        Me.Controls.Add(Me.btnGestioHabitacionsReset)
+        Me.Controls.Add(Me.txtGestioHabitacionsBuscar)
+        Me.Controls.Add(Me.lblGestioHabitacionsTitol)
+        Me.Controls.Add(Me.dgvGestioHabitacionsLlistat)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.MinimumSize = New System.Drawing.Size(718, 375)
+        Me.Name = "GestioHabitacions"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "PHF - Gestió Habitacions"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
+        CType(Me.dgvGestioHabitacionsLlistat, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.bdgGestioHabitacionsVista, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
     End Sub
 
     Friend WithEvents dgvGestioHabitacionsLlistat As DataGridView
@@ -138,6 +141,6 @@ Partial Class GestioHabitacions
     Friend WithEvents txtGestioHabitacionsBuscar As TextBox
     Friend WithEvents btnGestioHabitacionsReset As Button
     Friend WithEvents btnGestioHabitacionsAfegir As Button
-    Friend WithEvents btnGestioHabitacionsAfegirVaries As Button
     Friend WithEvents btnGestioHabitacionsEnrere As Button
+    Friend WithEvents bdgGestioHabitacionsVista As BindingSource
 End Class
