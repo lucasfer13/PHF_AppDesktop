@@ -109,4 +109,10 @@ Public Class Constantes
 
     ' Comandes valoracions
     Public Const QUERY_VALORACIONS = "SELECT rating as Valoracio, dataValoracio as Data FROM valoracions WHERE idGuarderia = {0}"
+
+    ' Comandes habitacions
+    Public Const QUERY_HABITACIONS = "SELECT * FROM habitacions WHERE idGuarderia = {0}"
+    Public Const INSERT_HABITACIO = "INSERT INTO habitacions (idTipusHabitacio, idGuarderia, numHabitacio) VALUES ({0}, {1}, '{2}')"
+    Public Const DELETE_HABITACIO = "DELETE FROM habitacions WHERE idHabitacio = {0}"
+    Public Const UPDATE_HABITACIO = "UPDATE habitacions SET idTipusHabitacio = {0}, numHabitacio = '{1}' WHERE idHabitacio = {2}"
 End Class

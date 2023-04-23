@@ -224,4 +224,20 @@ Public Class ConnectionBD
     Public Function getValoracions(idGuarderia As Integer) As DataTable
         Return query(String.Format(Constantes.QUERY_VALORACIONS, idGuarderia))
     End Function
+
+    Public Function getHabitacions(idGuarderia As Integer) As DataTable
+        Return query(String.Format(Constantes.QUERY_HABITACIONS, idGuarderia))
+    End Function
+
+    Public Function insertHabitacio(idTipusHabitacio As Integer, idGuarderia As Integer, numHabitacio As String) As Boolean
+        Return comand(String.Format(Constantes.INSERT_HABITACIO, idTipusHabitacio, idGuarderia, numHabitacio))
+    End Function
+
+    Public Function deleteHabitacio(idHabitacio) As Boolean
+        Return comand(String.Format(Constantes.DELETE_HABITACIO, idHabitacio))
+    End Function
+
+    Public Function updateHabitacio(idTipusHabitacio As Integer, numHabitacio As String, idHabitacio As Integer) As Boolean
+        Return comand(String.Format(Constantes.UPDATE_HABITACIO, idTipusHabitacio, numHabitacio, idHabitacio))
+    End Function
 End Class
