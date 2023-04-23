@@ -41,13 +41,14 @@ Public Class Constantes
     JOIN pais p ON p.idPais = c.idPais
     WHERE g.actiu = 1"
     Public Const INSERT_SUPERVISOR_GUARDERIA = "INSERT INTO usuariguarderia (idGuarderia, idUsuari) VALUES ({0}, {1})"
+    Public Const DELETE_SUPERVISOR_GUARDERIA = "DELETE FROM usuariguarderia WHERE idUsuari = {0} AND idGuarderia = {1}"
     Public Const QUERY_GUARDERIES_SUPERVISOR = "SELECT g.idGuarderia, g.cif, g.nom, g.descripcio, g.correu, g.telefon, g.idCP, g.carrer, g.porta, c.nom as Municipi, cp.cp as CP, p.nom as Pais, g.avRating FROM guarderia g
     JOIN usuariguarderia gs ON gs.idGuarderia = g.idGuarderia
     JOIN usuaris u ON u.idUsuari = gs.idUsuari
     JOIN codipostal cp ON cp.idCP = g.idCP
     JOIN ciutat c ON cp.idCiutat = c.idCiutat
     JOIN pais p ON p.idPais = c.idPais
-    WHERE u.idUsuari = {0} AND actiu=1"
+    WHERE u.idUsuari = {0} AND g.actiu=1"
     Public Const INSERT_GUARDERIA = "INSERT INTO guarderia (cif, nom, descripcio, correu, telefon, idCP, carrer, Porta, actiu, avgRating)
     VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', {5}, '{6}', '{7}', 1, 0)"
     Public Const MODIFY_GUARDERIA = "UPDATE guarderia SET cif = '{0}', nom = '{1}',descripcio = '{2}', correu = '{3}', telefon = '{4}', idCP = {5}, carrer = '{6}', porta = '{7}'
@@ -93,15 +94,15 @@ Public Class Constantes
     Public Const DELETE_CAMERE = "DELETE FROM cameres WHERE idCamara = {0}"
 
     ' Comandes Tipus habitacions
-    Public Const QUERY_TIPUS_HABITACIO = "SELECT * FROM tipushabitacio WHERE idGuarderia = {0}"
+    Public Const QUERY_TIPUS_HABITACIO = "SELECT * FROM tipushabitacio WHERE idGuarderia= {0}"
     Public Const INSERT_TIPUS_HABITACIO = "INSERT INTO tipushabitacio (idGuarderia, nom, descripcio, preu) VALUES ({0}, '{1}', '{2}', {3})"
     Public Const MODIFY_TIPUS_HABITACIO = "UPDATE tipushabitacio SET nom = '{0}', descripcio = '{1}', preu = '{2}' WHERE idTipusHabitacio = {3}"
-    Public Const DELETE_TIPUS_HABITACIO = "DELETE FORM tipushabitacio WHERE idTipusHabitacio = {0}"
+    Public Const DELETE_TIPUS_HABITACIO = "DELETE FROM tipushabitacio WHERE idTipusHabitacio = {0}"
 
     ' Comandes Tipus animal - Tipus habitacio
     Public Const QUERY_TIPUSH_TANIMAL = "SELECT ta.idTipusAnimal, ta.nom FROM tipusanimal ta
     JOIN animal_tipushabitacio ath ON ath.idTipusAnimal = ta.idTipusAnimal
-    JOIN tipushabitacio th ON th.idTipusHabitacio = ath.idTipusAnimal
+    JOIN tipushabitacio th ON th.idTipusHabitacio = ath.idTipusHabitacio
     WHERE th.idTipusHabitacio = {0}"
     Public Const INSERT_TIPUSH_TANIMAL = "INSERT INTO animal_tipushabitacio (idTipusHabitacio, idTipusAnimal) VALUES ({0}, {1})"
     Public Const DELETE_TIPUSH_TANIMAL = "DELETE FROM animal_tipushabitacio WHERE idTipusHabitacio = {0} AND idTipusAnimal = {1}"

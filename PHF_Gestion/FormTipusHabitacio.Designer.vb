@@ -195,10 +195,12 @@ Partial Class FormTipusHabitacio
         Me.dgvFTipusHabitacioAnimals.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvFTipusHabitacioAnimals.Location = New System.Drawing.Point(22, 50)
         Me.dgvFTipusHabitacioAnimals.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.dgvFTipusHabitacioAnimals.MultiSelect = False
         Me.dgvFTipusHabitacioAnimals.Name = "dgvFTipusHabitacioAnimals"
         Me.dgvFTipusHabitacioAnimals.ReadOnly = True
         Me.dgvFTipusHabitacioAnimals.RowHeadersWidth = 51
         Me.dgvFTipusHabitacioAnimals.RowTemplate.Height = 29
+        Me.dgvFTipusHabitacioAnimals.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvFTipusHabitacioAnimals.Size = New System.Drawing.Size(320, 159)
         Me.dgvFTipusHabitacioAnimals.TabIndex = 0
         '

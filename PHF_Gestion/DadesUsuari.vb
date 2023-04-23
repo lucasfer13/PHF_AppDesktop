@@ -2,6 +2,7 @@
 Imports Data
 
 Public Class DadesUsuari
+    Private contError As Integer
     Private Sub btnDadesUsuariTencarSessio_Click(sender As Object, e As EventArgs) Handles btnDadesUsuariTencarSessio.Click, btnDadesUsuariTencarSessio.Click
         Me.Close()
         Login.Show()
@@ -63,7 +64,9 @@ Public Class DadesUsuari
 
     Private Sub btnDadesUsuariGuardar_Click(sender As Object, e As EventArgs) Handles btnDadesUsuariGuardar.Click
         Dim sql As New ConnectionBD
-        If Me.ValidateChildren Then
+        contError = 0
+        Me.ValidateChildren()
+        If contError = 0 Then
             sql.modifyUser(txtDadesUsuariDI.Text, txtDadesUsuariNom.Text, txtDadesUsuariCognom1.Text, txtDadesUsuariCognom2.Text, txtDadesUsuariNomUsuari.Text, txtDadesUsuariTelefon.Text, txtDadesUsuariCorreu.Text, MenuPrincipal.user.Rows(0).Item(0))
             setRead()
         End If
@@ -87,11 +90,13 @@ Public Class DadesUsuari
     End Sub
 
     Private Sub lblDadesUsuari_Validating(sender As TextBox, e As CancelEventArgs) Handles txtDadesUsuariDI.Validating, txtDadesUsuariNom.Validating, txtDadesUsuariNomUsuari.Validating, txtDadesUsuariCorreu.Validating
+        Dim validate As Boolean = True
         If String.IsNullOrEmpty(sender.Text) Then
             erpDadesUsuariErrors.SetError(sender, My.Resources.ErrorObligatoryField)
-            e.Cancel = True
+            contError *= 1
+            validate = False
         End If
-        If Not e.Cancel Then
+        If validate Then
             erpDadesUsuariErrors.SetError(sender, "")
         End If
     End Sub

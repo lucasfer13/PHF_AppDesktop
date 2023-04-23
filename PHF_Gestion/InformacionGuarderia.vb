@@ -159,6 +159,7 @@ Public Class InformacionGuarderia
         If Not llistaServeis.getIdServei = Nothing Then
             Dim sql As New ConnectionBD
             sql.addGuarderiaServei(guarderia.Item(0), llistaServeis.getIdServei)
+            loadForeign()
         End If
     End Sub
 

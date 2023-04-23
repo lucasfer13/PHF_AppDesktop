@@ -57,7 +57,11 @@ Public Class FormTipusHabitacio
 
     Private Sub setValues()
         txtFTipusHabitacioNom.Text = tipusHabitacio.Item(2)
-        txtFTipusHabitacioDesc.Text = tipusHabitacio.Item(3)
+        Try
+            txtFTipusHabitacioDesc.Text = tipusHabitacio.Item(3)
+        Catch ex As Exception
+            txtFTipusHabitacioDesc.Text = ""
+        End Try
         txtFTipusHabitacioPreu.Text = tipusHabitacio.Item(4)
         loadAnimal()
     End Sub
@@ -113,13 +117,36 @@ Public Class FormTipusHabitacio
         If String.IsNullOrEmpty(sender.Text) Then
             contError += 1
             erpFromTHabitacioError.SetError(sender, My.Resources.ErrorObligatoryField)
+            validated = False
         ElseIf Not Double.TryParse(sender.Text, 0) OrElse Double.Parse(sender.Text) <= 0 Then
             contError += 1
             erpFromTHabitacioError.SetError(sender, My.Resources.FormatErrorNumber)
+            validated = False
+        End If
+        If validated Then
+            erpFromTHabitacioError.SetError(sender, "")
         End If
     End Sub
 
     Private Sub btnFTipusHabitacioAfegirAnimal_Click(sender As Object, e As EventArgs) Handles btnFTipusHabitacioAfegirAnimal.Click
+        Dim form As New LlistatTipusAnimals
+        form.ShowDialog()
+        If form.getIdTanimal <> Nothing Then
+            Dim sql As New ConnectionBD
+            sql.insertTanimalThabitacio(tipusHabitacio.Item(0), form.getIdTanimal)
+            loadAnimal()
+        End If
+    End Sub
 
+    Private Sub btnFTipusHabitacioEliminarAnimal_Click(sender As Object, e As EventArgs) Handles btnFTipusHabitacioEliminarAnimal.Click
+        Dim sql As New ConnectionBD
+        sql.deleteTanimalThabitacio(tipusHabitacio.Item(0), bdgFromThabitacioAnimalVista.Current.Row.Item(0))
+        loadAnimal()
+    End Sub
+
+    Private Sub btnFTipusHabitacioEliminar_Click(sender As Object, e As EventArgs) Handles btnFTipusHabitacioEliminar.Click
+        Dim sql As New ConnectionBD
+        sql.deleteTipusHabitacio(tipusHabitacio.Item(0))
+        Me.Close()
     End Sub
 End Class

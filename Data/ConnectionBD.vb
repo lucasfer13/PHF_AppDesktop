@@ -45,9 +45,12 @@ Public Class ConnectionBD
         connect()
         Dim c As Boolean = False
         Dim command As New MySqlCommand(query, connexio)
-        If command.ExecuteNonQuery > 0 Then
-            c = True
-        End If
+        Try
+            If command.ExecuteNonQuery > 0 Then
+                c = True
+            End If
+        Catch ex As Exception
+        End Try
         close()
         Return c
     End Function
@@ -212,5 +215,9 @@ Public Class ConnectionBD
 
     Public Function deleteTanimalThabitacio(idTipusHabitacio As Integer, idTipusAnimal As Integer) As Boolean
         Return comand(String.Format(Constantes.DELETE_TIPUSH_TANIMAL, idTipusHabitacio, idTipusAnimal))
+    End Function
+
+    Public Function delteUserGuarderia(idUsuari As Integer, idGuarderia As Integer) As Boolean
+        Return comand(String.Format(Constantes.DELETE_SUPERVISOR_GUARDERIA, idUsuari, idGuarderia))
     End Function
 End Class

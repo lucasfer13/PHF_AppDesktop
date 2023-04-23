@@ -22,102 +22,116 @@ Partial Class LlistatTipusHabitacions
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(LlistatTipusHabitacions))
-        dgvTipusHabitacionsLlistat = New DataGridView()
-        lblTipusHabitacionsTitol = New Label()
-        txtTipusHabitacionsBuscar = New TextBox()
-        btnTipusHabitacionsReset = New Button()
-        btnTipusHabitacioAfegir = New Button()
-        btnTipusHabitacioEnrere = New Button()
-        CType(dgvTipusHabitacionsLlistat, ComponentModel.ISupportInitialize).BeginInit()
-        SuspendLayout()
-        ' 
-        ' dgvTipusHabitacionsLlistat
-        ' 
-        dgvTipusHabitacionsLlistat.AllowUserToAddRows = False
-        dgvTipusHabitacionsLlistat.AllowUserToDeleteRows = False
-        dgvTipusHabitacionsLlistat.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        dgvTipusHabitacionsLlistat.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgvTipusHabitacionsLlistat.Location = New Point(12, 12)
-        dgvTipusHabitacionsLlistat.Name = "dgvTipusHabitacionsLlistat"
-        dgvTipusHabitacionsLlistat.ReadOnly = True
-        dgvTipusHabitacionsLlistat.RowHeadersWidth = 51
-        dgvTipusHabitacionsLlistat.RowTemplate.Height = 29
-        dgvTipusHabitacionsLlistat.Size = New Size(483, 426)
-        dgvTipusHabitacionsLlistat.TabIndex = 0
-        ' 
-        ' lblTipusHabitacionsTitol
-        ' 
-        lblTipusHabitacionsTitol.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        lblTipusHabitacionsTitol.AutoSize = True
-        lblTipusHabitacionsTitol.Font = New Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point)
-        lblTipusHabitacionsTitol.Location = New Point(566, 12)
-        lblTipusHabitacionsTitol.Name = "lblTipusHabitacionsTitol"
-        lblTipusHabitacionsTitol.Size = New Size(231, 38)
-        lblTipusHabitacionsTitol.TabIndex = 1
-        lblTipusHabitacionsTitol.Text = "Tipus habitacions"' 
-        ' txtTipusHabitacionsBuscar
-        ' 
-        txtTipusHabitacionsBuscar.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        txtTipusHabitacionsBuscar.Location = New Point(544, 68)
-        txtTipusHabitacionsBuscar.Name = "txtTipusHabitacionsBuscar"
-        txtTipusHabitacionsBuscar.Size = New Size(188, 27)
-        txtTipusHabitacionsBuscar.TabIndex = 2
-        ' 
-        ' btnTipusHabitacionsReset
-        ' 
-        btnTipusHabitacionsReset.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        btnTipusHabitacionsReset.BackColor = Color.Aquamarine
-        btnTipusHabitacionsReset.Location = New Point(746, 68)
-        btnTipusHabitacionsReset.Name = "btnTipusHabitacionsReset"
-        btnTipusHabitacionsReset.Size = New Size(89, 27)
-        btnTipusHabitacionsReset.TabIndex = 3
-        btnTipusHabitacionsReset.Text = "Reset"
-        btnTipusHabitacionsReset.UseVisualStyleBackColor = False
-        ' 
-        ' btnTipusHabitacioAfegir
-        ' 
-        btnTipusHabitacioAfegir.Anchor = AnchorStyles.Right
-        btnTipusHabitacioAfegir.BackColor = Color.Aquamarine
-        btnTipusHabitacioAfegir.Location = New Point(618, 202)
-        btnTipusHabitacioAfegir.Name = "btnTipusHabitacioAfegir"
-        btnTipusHabitacioAfegir.Size = New Size(129, 61)
-        btnTipusHabitacioAfegir.TabIndex = 4
-        btnTipusHabitacioAfegir.Text = "Afegir Tipus d'habitació"
-        btnTipusHabitacioAfegir.UseVisualStyleBackColor = False
-        ' 
-        ' btnTipusHabitacioEnrere
-        ' 
-        btnTipusHabitacioEnrere.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
-        btnTipusHabitacioEnrere.BackColor = Color.Aquamarine
-        btnTipusHabitacioEnrere.Location = New Point(618, 381)
-        btnTipusHabitacioEnrere.Name = "btnTipusHabitacioEnrere"
-        btnTipusHabitacioEnrere.Size = New Size(129, 61)
-        btnTipusHabitacioEnrere.TabIndex = 5
-        btnTipusHabitacioEnrere.Text = "Enrere"
-        btnTipusHabitacioEnrere.UseVisualStyleBackColor = False
-        ' 
-        ' LlistatTipusHabitacions
-        ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
-        BackColor = Color.LightSteelBlue
-        ClientSize = New Size(856, 455)
-        Controls.Add(btnTipusHabitacioEnrere)
-        Controls.Add(btnTipusHabitacioAfegir)
-        Controls.Add(btnTipusHabitacionsReset)
-        Controls.Add(txtTipusHabitacionsBuscar)
-        Controls.Add(lblTipusHabitacionsTitol)
-        Controls.Add(dgvTipusHabitacionsLlistat)
-        Icon = CType(resources.GetObject("$this.Icon"), Icon)
-        MinimumSize = New Size(874, 502)
-        Name = "LlistatTipusHabitacions"
-        StartPosition = FormStartPosition.CenterScreen
-        Text = "PHF - Tipus Habitacions"
-        WindowState = FormWindowState.Maximized
-        CType(dgvTipusHabitacionsLlistat, ComponentModel.ISupportInitialize).EndInit()
-        ResumeLayout(False)
-        PerformLayout()
+        Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(LlistatTipusHabitacions))
+        Me.dgvTipusHabitacionsLlistat = New System.Windows.Forms.DataGridView()
+        Me.lblTipusHabitacionsTitol = New System.Windows.Forms.Label()
+        Me.txtTipusHabitacionsBuscar = New System.Windows.Forms.TextBox()
+        Me.btnTipusHabitacionsReset = New System.Windows.Forms.Button()
+        Me.btnTipusHabitacioAfegir = New System.Windows.Forms.Button()
+        Me.btnTipusHabitacioEnrere = New System.Windows.Forms.Button()
+        Me.bdgLListatTHabitacionsVista = New System.Windows.Forms.BindingSource(Me.components)
+        CType(Me.dgvTipusHabitacionsLlistat, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.bdgLListatTHabitacionsVista, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
+        '
+        'dgvTipusHabitacionsLlistat
+        '
+        Me.dgvTipusHabitacionsLlistat.AllowUserToAddRows = False
+        Me.dgvTipusHabitacionsLlistat.AllowUserToDeleteRows = False
+        Me.dgvTipusHabitacionsLlistat.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dgvTipusHabitacionsLlistat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvTipusHabitacionsLlistat.Location = New System.Drawing.Point(10, 9)
+        Me.dgvTipusHabitacionsLlistat.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.dgvTipusHabitacionsLlistat.Name = "dgvTipusHabitacionsLlistat"
+        Me.dgvTipusHabitacionsLlistat.ReadOnly = True
+        Me.dgvTipusHabitacionsLlistat.RowHeadersWidth = 51
+        Me.dgvTipusHabitacionsLlistat.RowTemplate.Height = 29
+        Me.dgvTipusHabitacionsLlistat.Size = New System.Drawing.Size(423, 320)
+        Me.dgvTipusHabitacionsLlistat.TabIndex = 0
+        '
+        'lblTipusHabitacionsTitol
+        '
+        Me.lblTipusHabitacionsTitol.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblTipusHabitacionsTitol.AutoSize = True
+        Me.lblTipusHabitacionsTitol.Font = New System.Drawing.Font("Segoe UI", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.lblTipusHabitacionsTitol.Location = New System.Drawing.Point(495, 9)
+        Me.lblTipusHabitacionsTitol.Name = "lblTipusHabitacionsTitol"
+        Me.lblTipusHabitacionsTitol.Size = New System.Drawing.Size(178, 30)
+        Me.lblTipusHabitacionsTitol.TabIndex = 1
+        Me.lblTipusHabitacionsTitol.Text = "Tipus habitacions"
+        '
+        'txtTipusHabitacionsBuscar
+        '
+        Me.txtTipusHabitacionsBuscar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtTipusHabitacionsBuscar.Location = New System.Drawing.Point(476, 51)
+        Me.txtTipusHabitacionsBuscar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtTipusHabitacionsBuscar.Name = "txtTipusHabitacionsBuscar"
+        Me.txtTipusHabitacionsBuscar.Size = New System.Drawing.Size(165, 23)
+        Me.txtTipusHabitacionsBuscar.TabIndex = 2
+        '
+        'btnTipusHabitacionsReset
+        '
+        Me.btnTipusHabitacionsReset.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnTipusHabitacionsReset.BackColor = System.Drawing.Color.Aquamarine
+        Me.btnTipusHabitacionsReset.Location = New System.Drawing.Point(653, 51)
+        Me.btnTipusHabitacionsReset.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnTipusHabitacionsReset.Name = "btnTipusHabitacionsReset"
+        Me.btnTipusHabitacionsReset.Size = New System.Drawing.Size(78, 20)
+        Me.btnTipusHabitacionsReset.TabIndex = 3
+        Me.btnTipusHabitacionsReset.Text = "Reset"
+        Me.btnTipusHabitacionsReset.UseVisualStyleBackColor = False
+        '
+        'btnTipusHabitacioAfegir
+        '
+        Me.btnTipusHabitacioAfegir.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.btnTipusHabitacioAfegir.BackColor = System.Drawing.Color.Aquamarine
+        Me.btnTipusHabitacioAfegir.Location = New System.Drawing.Point(541, 152)
+        Me.btnTipusHabitacioAfegir.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnTipusHabitacioAfegir.Name = "btnTipusHabitacioAfegir"
+        Me.btnTipusHabitacioAfegir.Size = New System.Drawing.Size(113, 46)
+        Me.btnTipusHabitacioAfegir.TabIndex = 4
+        Me.btnTipusHabitacioAfegir.Text = "Afegir Tipus d'habitació"
+        Me.btnTipusHabitacioAfegir.UseVisualStyleBackColor = False
+        '
+        'btnTipusHabitacioEnrere
+        '
+        Me.btnTipusHabitacioEnrere.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnTipusHabitacioEnrere.BackColor = System.Drawing.Color.Aquamarine
+        Me.btnTipusHabitacioEnrere.Location = New System.Drawing.Point(541, 286)
+        Me.btnTipusHabitacioEnrere.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnTipusHabitacioEnrere.Name = "btnTipusHabitacioEnrere"
+        Me.btnTipusHabitacioEnrere.Size = New System.Drawing.Size(113, 46)
+        Me.btnTipusHabitacioEnrere.TabIndex = 5
+        Me.btnTipusHabitacioEnrere.Text = "Enrere"
+        Me.btnTipusHabitacioEnrere.UseVisualStyleBackColor = False
+        '
+        'LlistatTipusHabitacions
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.ClientSize = New System.Drawing.Size(751, 347)
+        Me.Controls.Add(Me.btnTipusHabitacioEnrere)
+        Me.Controls.Add(Me.btnTipusHabitacioAfegir)
+        Me.Controls.Add(Me.btnTipusHabitacionsReset)
+        Me.Controls.Add(Me.txtTipusHabitacionsBuscar)
+        Me.Controls.Add(Me.lblTipusHabitacionsTitol)
+        Me.Controls.Add(Me.dgvTipusHabitacionsLlistat)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.MinimumSize = New System.Drawing.Size(767, 386)
+        Me.Name = "LlistatTipusHabitacions"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "PHF - Tipus Habitacions"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
+        CType(Me.dgvTipusHabitacionsLlistat, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.bdgLListatTHabitacionsVista, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
     End Sub
 
     Friend WithEvents dgvTipusHabitacionsLlistat As DataGridView
@@ -126,4 +140,5 @@ Partial Class LlistatTipusHabitacions
     Friend WithEvents btnTipusHabitacionsReset As Button
     Friend WithEvents btnTipusHabitacioAfegir As Button
     Friend WithEvents btnTipusHabitacioEnrere As Button
+    Friend WithEvents bdgLListatTHabitacionsVista As BindingSource
 End Class
