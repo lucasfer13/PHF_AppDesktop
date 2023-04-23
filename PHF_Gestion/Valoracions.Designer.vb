@@ -22,90 +22,102 @@ Partial Class Valoracions
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(Valoracions))
-        btnValoracioEnrere = New Button()
-        lblValoracioTitol = New Label()
-        dgvValoriacioLlistat = New DataGridView()
-        dtpValoracioFiltrarData = New DateTimePicker()
-        btnValoracioResetFilter = New Button()
-        CType(dgvValoriacioLlistat, ComponentModel.ISupportInitialize).BeginInit()
-        SuspendLayout()
-        ' 
-        ' btnValoracioEnrere
-        ' 
-        btnValoracioEnrere.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
-        btnValoracioEnrere.BackColor = Color.Aquamarine
-        btnValoracioEnrere.Location = New Point(94, 345)
-        btnValoracioEnrere.Name = "btnValoracioEnrere"
-        btnValoracioEnrere.RightToLeft = RightToLeft.Yes
-        btnValoracioEnrere.Size = New Size(186, 64)
-        btnValoracioEnrere.TabIndex = 0
-        btnValoracioEnrere.Text = "Enrere"
-        btnValoracioEnrere.UseVisualStyleBackColor = False
-        ' 
-        ' lblValoracioTitol
-        ' 
-        lblValoracioTitol.AutoSize = True
-        lblValoracioTitol.Font = New Font("Sitka Small", 22.2F, FontStyle.Bold, GraphicsUnit.Point)
-        lblValoracioTitol.Location = New Point(53, 28)
-        lblValoracioTitol.Name = "lblValoracioTitol"
-        lblValoracioTitol.Size = New Size(255, 53)
-        lblValoracioTitol.TabIndex = 2
-        lblValoracioTitol.Text = "Valoracions"' 
-        ' dgvValoriacioLlistat
-        ' 
-        dgvValoriacioLlistat.AllowUserToAddRows = False
-        dgvValoriacioLlistat.AllowUserToDeleteRows = False
-        dgvValoriacioLlistat.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        dgvValoriacioLlistat.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgvValoriacioLlistat.Location = New Point(387, 48)
-        dgvValoriacioLlistat.Name = "dgvValoriacioLlistat"
-        dgvValoriacioLlistat.ReadOnly = True
-        dgvValoriacioLlistat.RowHeadersWidth = 51
-        dgvValoriacioLlistat.RowTemplate.Height = 29
-        dgvValoriacioLlistat.Size = New Size(397, 361)
-        dgvValoriacioLlistat.TabIndex = 4
-        ' 
-        ' dtpValoracioFiltrarData
-        ' 
-        dtpValoracioFiltrarData.Anchor = AnchorStyles.Left
-        dtpValoracioFiltrarData.Location = New Point(16, 172)
-        dtpValoracioFiltrarData.Name = "dtpValoracioFiltrarData"
-        dtpValoracioFiltrarData.Size = New Size(250, 27)
-        dtpValoracioFiltrarData.TabIndex = 5
-        ' 
-        ' btnValoracioResetFilter
-        ' 
-        btnValoracioResetFilter.Anchor = AnchorStyles.Left
-        btnValoracioResetFilter.BackColor = Color.Aquamarine
-        btnValoracioResetFilter.Location = New Point(272, 172)
-        btnValoracioResetFilter.Name = "btnValoracioResetFilter"
-        btnValoracioResetFilter.RightToLeft = RightToLeft.Yes
-        btnValoracioResetFilter.Size = New Size(75, 30)
-        btnValoracioResetFilter.TabIndex = 6
-        btnValoracioResetFilter.Text = "Reset"
-        btnValoracioResetFilter.UseVisualStyleBackColor = False
-        ' 
-        ' Valoracions
-        ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
-        BackColor = Color.LightSteelBlue
-        ClientSize = New Size(836, 435)
-        Controls.Add(btnValoracioResetFilter)
-        Controls.Add(dtpValoracioFiltrarData)
-        Controls.Add(dgvValoriacioLlistat)
-        Controls.Add(lblValoracioTitol)
-        Controls.Add(btnValoracioEnrere)
-        Icon = CType(resources.GetObject("$this.Icon"), Icon)
-        MinimumSize = New Size(854, 482)
-        Name = "Valoracions"
-        StartPosition = FormStartPosition.CenterScreen
-        Text = "PHF - Valoracions"
-        WindowState = FormWindowState.Maximized
-        CType(dgvValoriacioLlistat, ComponentModel.ISupportInitialize).EndInit()
-        ResumeLayout(False)
-        PerformLayout()
+        Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Valoracions))
+        Me.btnValoracioEnrere = New System.Windows.Forms.Button()
+        Me.lblValoracioTitol = New System.Windows.Forms.Label()
+        Me.dgvValoriacioLlistat = New System.Windows.Forms.DataGridView()
+        Me.dtpValoracioFiltrarData = New System.Windows.Forms.DateTimePicker()
+        Me.btnValoracioResetFilter = New System.Windows.Forms.Button()
+        Me.bdgValoracionsVista = New System.Windows.Forms.BindingSource(Me.components)
+        CType(Me.dgvValoriacioLlistat, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.bdgValoracionsVista, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
+        '
+        'btnValoracioEnrere
+        '
+        Me.btnValoracioEnrere.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnValoracioEnrere.BackColor = System.Drawing.Color.Aquamarine
+        Me.btnValoracioEnrere.Location = New System.Drawing.Point(82, 259)
+        Me.btnValoracioEnrere.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnValoracioEnrere.Name = "btnValoracioEnrere"
+        Me.btnValoracioEnrere.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.btnValoracioEnrere.Size = New System.Drawing.Size(163, 48)
+        Me.btnValoracioEnrere.TabIndex = 0
+        Me.btnValoracioEnrere.Text = "Enrere"
+        Me.btnValoracioEnrere.UseVisualStyleBackColor = False
+        '
+        'lblValoracioTitol
+        '
+        Me.lblValoracioTitol.AutoSize = True
+        Me.lblValoracioTitol.Font = New System.Drawing.Font("Sitka Small", 22.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.lblValoracioTitol.Location = New System.Drawing.Point(46, 21)
+        Me.lblValoracioTitol.Name = "lblValoracioTitol"
+        Me.lblValoracioTitol.Size = New System.Drawing.Size(208, 43)
+        Me.lblValoracioTitol.TabIndex = 2
+        Me.lblValoracioTitol.Text = "Valoracions"
+        '
+        'dgvValoriacioLlistat
+        '
+        Me.dgvValoriacioLlistat.AllowUserToAddRows = False
+        Me.dgvValoriacioLlistat.AllowUserToDeleteRows = False
+        Me.dgvValoriacioLlistat.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dgvValoriacioLlistat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvValoriacioLlistat.Location = New System.Drawing.Point(339, 36)
+        Me.dgvValoriacioLlistat.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.dgvValoriacioLlistat.Name = "dgvValoriacioLlistat"
+        Me.dgvValoriacioLlistat.ReadOnly = True
+        Me.dgvValoriacioLlistat.RowHeadersWidth = 51
+        Me.dgvValoriacioLlistat.RowTemplate.Height = 29
+        Me.dgvValoriacioLlistat.Size = New System.Drawing.Size(347, 271)
+        Me.dgvValoriacioLlistat.TabIndex = 4
+        '
+        'dtpValoracioFiltrarData
+        '
+        Me.dtpValoracioFiltrarData.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.dtpValoracioFiltrarData.Location = New System.Drawing.Point(14, 129)
+        Me.dtpValoracioFiltrarData.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.dtpValoracioFiltrarData.Name = "dtpValoracioFiltrarData"
+        Me.dtpValoracioFiltrarData.Size = New System.Drawing.Size(219, 23)
+        Me.dtpValoracioFiltrarData.TabIndex = 5
+        '
+        'btnValoracioResetFilter
+        '
+        Me.btnValoracioResetFilter.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.btnValoracioResetFilter.BackColor = System.Drawing.Color.Aquamarine
+        Me.btnValoracioResetFilter.Location = New System.Drawing.Point(238, 129)
+        Me.btnValoracioResetFilter.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnValoracioResetFilter.Name = "btnValoracioResetFilter"
+        Me.btnValoracioResetFilter.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.btnValoracioResetFilter.Size = New System.Drawing.Size(66, 22)
+        Me.btnValoracioResetFilter.TabIndex = 6
+        Me.btnValoracioResetFilter.Text = "Reset"
+        Me.btnValoracioResetFilter.UseVisualStyleBackColor = False
+        '
+        'Valoracions
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.ClientSize = New System.Drawing.Size(733, 332)
+        Me.Controls.Add(Me.btnValoracioResetFilter)
+        Me.Controls.Add(Me.dtpValoracioFiltrarData)
+        Me.Controls.Add(Me.dgvValoriacioLlistat)
+        Me.Controls.Add(Me.lblValoracioTitol)
+        Me.Controls.Add(Me.btnValoracioEnrere)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.MinimumSize = New System.Drawing.Size(749, 371)
+        Me.Name = "Valoracions"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "PHF - Valoracions"
+        CType(Me.dgvValoriacioLlistat, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.bdgValoracionsVista, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
     End Sub
 
     Friend WithEvents btnValoracioEnrere As Button
@@ -113,4 +125,5 @@ Partial Class Valoracions
     Friend WithEvents dgvValoriacioLlistat As DataGridView
     Friend WithEvents dtpValoracioFiltrarData As DateTimePicker
     Friend WithEvents btnValoracioResetFilter As Button
+    Friend WithEvents bdgValoracionsVista As BindingSource
 End Class
