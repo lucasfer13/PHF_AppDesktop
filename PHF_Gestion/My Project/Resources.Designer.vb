@@ -106,6 +106,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Busca una cadena traducida similar a Aquest camp te que ser un numero positiu..
+        '''</summary>
+        Friend ReadOnly Property FormatErrorNumber() As String
+            Get
+                Return ResourceManager.GetString("FormatErrorNumber", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
         Friend ReadOnly Property logo() As System.Drawing.Bitmap

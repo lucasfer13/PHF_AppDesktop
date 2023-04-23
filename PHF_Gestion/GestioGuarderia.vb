@@ -4,6 +4,8 @@
         InitializeComponent()
         Me.guarderia = guarderia
     End Sub
+
+
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles btnGestioGuarderiaEnrere.Click
         Me.Close()
     End Sub
@@ -17,6 +19,8 @@
         guarderia.ShowDialog()
         If guarderia.guarderia Is Nothing Then
             Me.Close()
+        Else
+            loadName()
         End If
     End Sub
 
@@ -31,12 +35,20 @@
     End Sub
 
     Private Sub btnGestGuarderiaAfegirTipusHabitacio_Click(sender As Object, e As EventArgs) Handles btnGestGuarderiaAfegirTipusHabitacio.Click
-        LlistatTipusHabitacions.Show()
-        Me.Hide()
+        Dim tipusHabitacions As New LlistatTipusHabitacions(guarderia)
+        tipusHabitacions.ShowDialog()
     End Sub
 
     Private Sub btnGestioGuarderiaValoracions_Click(sender As Object, e As EventArgs) Handles btnGestioGuarderiaValoracions.Click
         Valoracions.Show()
         Me.Hide()
+    End Sub
+
+    Private Sub loadName()
+        lblGestGuarderiaNomGuarderia.Text = guarderia.Item(2)
+    End Sub
+
+    Private Sub GestioGuarderia_Load(sender As Object, e As EventArgs) Handles Me.Load
+        loadName()
     End Sub
 End Class

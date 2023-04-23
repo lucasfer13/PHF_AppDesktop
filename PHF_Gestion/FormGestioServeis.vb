@@ -4,6 +4,7 @@ Imports Data
 Public Class FormGestioServeis
     Private dr As DataRow
     Private serveis As ConnectionBD
+    Private contError As Integer
     Public Sub New(dr As DataRow)
         InitializeComponent()
         Me.dr = dr
@@ -55,17 +56,21 @@ Public Class FormGestioServeis
     End Sub
 
     Private Sub txtGestioServeiName_Validating(sender As Object, e As CancelEventArgs) Handles txtGestioServeiName.Validating
+        Dim validated As Boolean = True
         If String.IsNullOrEmpty(txtGestioServeiName.Text) Then
-            e.Cancel = True
+            contError += 1
+            validated = False
             erpGestioServeiErrors.SetError(sender, My.Resources.ErrorObligatoryField)
         End If
-        If Not e.Cancel Then
+        If validated Then
             erpGestioServeiErrors.SetError(sender, "")
         End If
     End Sub
 
     Private Sub btnGestioServeiSave_Click(sender As Object, e As EventArgs) Handles btnGestioServeiSave.Click
-        If ValidateChildren() Then
+        contError = 0
+        Me.ValidateChildren()
+        If contError = 0 Then
             If dr Is Nothing Then
                 add()
                 Me.Close()

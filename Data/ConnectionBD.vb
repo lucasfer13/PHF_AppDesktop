@@ -45,9 +45,12 @@ Public Class ConnectionBD
         connect()
         Dim c As Boolean = False
         Dim command As New MySqlCommand(query, connexio)
-        If command.ExecuteNonQuery > 0 Then
-            c = True
-        End If
+        Try
+            If command.ExecuteNonQuery > 0 Then
+                c = True
+            End If
+        Catch ex As Exception
+        End Try
         close()
         Return c
     End Function
@@ -184,5 +187,37 @@ Public Class ConnectionBD
 
     Public Function deleteCamera(idCamera As Integer) As Boolean
         Return comand(String.Format(Constantes.DELETE_CAMERE, idCamera))
+    End Function
+
+    Public Function queryTipusHabitacio(idGuarderia As Integer) As DataTable
+        Return query(String.Format(Constantes.QUERY_TIPUS_HABITACIO, idGuarderia))
+    End Function
+
+    Public Function insertTipusHabitacio(idGuarderia As Integer, nom As String, descripcio As String, preu As Double) As Boolean
+        Return comand(String.Format(Constantes.INSERT_TIPUS_HABITACIO, idGuarderia, nom, descripcio, preu))
+    End Function
+
+    Public Function updateTipusHabitacio(nom As String, descripcio As String, preu As Boolean, idTipusHabitacio As Integer) As Boolean
+        Return comand(String.Format(Constantes.MODIFY_TIPUS_HABITACIO, nom, descripcio, preu, idTipusHabitacio))
+    End Function
+
+    Public Function deleteTipusHabitacio(idTipusHabitacio As Integer) As Boolean
+        Return comand(String.Format(Constantes.DELETE_TIPUS_HABITACIO, idTipusHabitacio))
+    End Function
+
+    Public Function queryTanimalThabtiacio(idTipusHabitacio As Integer) As DataTable
+        Return query(String.Format(Constantes.QUERY_TIPUSH_TANIMAL, idTipusHabitacio))
+    End Function
+
+    Public Function insertTanimalThabitacio(idTipusHabitacio As Integer, idTipusAnimal As Integer) As Boolean
+        Return comand(String.Format(Constantes.INSERT_TIPUSH_TANIMAL, idTipusHabitacio, idTipusAnimal))
+    End Function
+
+    Public Function deleteTanimalThabitacio(idTipusHabitacio As Integer, idTipusAnimal As Integer) As Boolean
+        Return comand(String.Format(Constantes.DELETE_TIPUSH_TANIMAL, idTipusHabitacio, idTipusAnimal))
+    End Function
+
+    Public Function delteUserGuarderia(idUsuari As Integer, idGuarderia As Integer) As Boolean
+        Return comand(String.Format(Constantes.DELETE_SUPERVISOR_GUARDERIA, idUsuari, idGuarderia))
     End Function
 End Class

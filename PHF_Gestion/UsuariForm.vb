@@ -4,17 +4,26 @@ Imports Data
 Public Class UsuariForm
     Private guarderies As DataTable
     Private usuari As DataRow
+    Private contError As Integer
 
     Public Sub New(usuari As DataRow)
         InitializeComponent()
         Me.usuari = usuari
     End Sub
     Private Sub UsuariForm_Closing(sender As Object, e As CancelEventArgs) Handles MyBase.Closing
+        If btnUsuariGuardar.Enabled Then
+            If MsgBox(My.Resources.MisatjeAdvertenciaModificant, MessageBoxButtons.YesNo, My.Resources.Advertencia) = MsgBoxResult.No Then
+                e.Cancel = True
+                Return
+            End If
+        End If
         GestioUsuaris.Show()
     End Sub
 
     Private Sub btnUsuariGuardar_Click(sender As Object, e As EventArgs) Handles btnUsuariGuardar.Click
-        If Me.ValidateChildren Then
+        contError = 0
+        Me.ValidateChildren()
+        If contError = 0 Then
             Dim sql As New ConnectionBD
             sql.addUser(txtUsuariDI.Text, txtUsuariNom.Text, txtUsuariCognom1.Text, txtUsuariCognom2.Text, txtUsuariNomUsuari.Text, txtUsuariContrasenya.Text, txtUsuariTelefon.Text, txtUsuariCorreu.Text)
             relation()
@@ -53,21 +62,24 @@ Public Class UsuariForm
     End Sub
 
     Private Sub gpbUsuariTipusUsuaris_Validating(sender As Object, e As CancelEventArgs) Handles gpbUsuariTipusUsuaris.Validating
+        Dim validated = True
         If Not robUsuariAdminstrador.Checked And Not robUsuariSupervisor.Checked Then
-            e.Cancel = True
             erpFormulariUsuariErrors.SetError(sender, My.Resources.ErrorObligatoryField)
+            contError += 1
         End If
-        If Not e.Cancel Then
+        If validated Then
             erpFormulariUsuariErrors.SetError(sender, "")
         End If
     End Sub
 
     Private Sub txtUsuariNom_Validating(sender As TextBox, e As CancelEventArgs) Handles txtUsuariDI.Validating, txtUsuariNom.Validating, txtUsuariCognom1.Validating, txtUsuariContrasenya.Validating, txtUsuariNomUsuari.Validating, txtUsuariCorreu.Validating, txtUsuariTelefon.Validating
+        Dim validated = True
         If String.IsNullOrEmpty(sender.Text) Then
-            e.Cancel = True
             erpFormulariUsuariErrors.SetError(sender, My.Resources.ErrorObligatoryField)
+            contError += 1
+            validated = False
         End If
-        If Not e.Cancel Then
+        If validated Then
             erpFormulariUsuariErrors.SetError(sender, "")
         End If
     End Sub
@@ -107,6 +119,17 @@ Public Class UsuariForm
         End If
     End Sub
 
+    Private Sub btnUsuariElminarGuarderia_Click(sender As Object, e As EventArgs) Handles btnUsuariElminarGuarderia.Click
+        If bdgFormUserVista.Count > 0 Then
+            If usuari IsNot Nothing Then
+                Dim sql As New ConnectionBD
+                sql.delteUserGuarderia(usuari(0), bdgFormUserVista.Current.Row.Item(0))
+            End If
+            guarderies.Rows.Remove(guarderies.Select("idGuarderia = " & bdgFormUserVista.Current.Row.Item(0))(0))
+            bdgFormUserVista.ResetBindings(False)
+        End If
+    End Sub
+
     Private Sub setValues()
         Dim sql As New ConnectionBD
         guarderies = sql.guarderiesGestionadesUsuari(usuari(0))
@@ -136,6 +159,7 @@ Public Class UsuariForm
         If usuari IsNot Nothing Then
             setValues()
             setRead()
+            gpbUsuariTipusUsuaris.Visible = False
         Else
             setAdd()
             guarderies = sql.getGuarderies
@@ -156,4 +180,5 @@ Public Class UsuariForm
             Me.Close()
         End If
     End Sub
+
 End Class

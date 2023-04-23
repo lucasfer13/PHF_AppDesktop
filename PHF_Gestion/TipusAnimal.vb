@@ -4,6 +4,7 @@ Imports Data
 Public Class TipusAnimal
     Private dr As DataRow
     Private con As ConnectionBD
+    Private contError As Integer
     Public Sub New(dr As DataRow)
         InitializeComponent()
         Me.dr = dr
@@ -33,7 +34,9 @@ Public Class TipusAnimal
         Me.Dispose()
     End Sub
     Private Sub btnAnimalAfeg_Click(sender As Object, e As EventArgs) Handles btnAnimalAfeg.Click
-        If ValidateChildren() Then
+        contError = 0
+        Me.ValidateChildren()
+        If contError = 0 Then
             If dr Is Nothing Then
                 add()
                 Me.Close()
@@ -65,11 +68,13 @@ Public Class TipusAnimal
         modify()
     End Sub
     Private Sub txtgestAnimalnom_Validating(sender As TextBox, e As CancelEventArgs) Handles txtgestAnimalnom.Validating
+        Dim validated As Boolean = True
         If String.IsNullOrEmpty(sender.Text) Then
             erpTipusAnimalErrors.SetError(sender, My.Resources.ErrorObligatoryField)
-            e.Cancel = True
+            validated = False
+            contError += 1
         End If
-        If Not e.Cancel Then
+        If validated Then
             erpTipusAnimalErrors.SetError(sender, "")
         End If
     End Sub
