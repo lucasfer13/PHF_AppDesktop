@@ -91,4 +91,18 @@ Public Class Constantes
     VALUES ({0},'{1}','{2}','{3}','{4}')"
     Public Const MODIFY_CAMERA = "UPDATE cameres SET url = '{0}', usuari = '{1}', contrasenya = '{2}', descripcio = '{3}' WHERE idCamara = {4}"
     Public Const DELETE_CAMERE = "DELETE FROM cameres WHERE idCamara = {0}"
+
+    ' Comandes Tipus habitacions
+    Public Const QUERY_TIPUS_HABITACIO = "SELECT * FROM tipushabitacio WHERE idGuarderia = {0}"
+    Public Const INSERT_TIPUS_HABITACIO = "INSERT INTO tipushabitacio (idGuarderia, nom, descripcio, preu) VALUES ({0}, '{1}', '{2}', {3})"
+    Public Const MODIFY_TIPUS_HABITACIO = "UPDATE tipushabitacio SET nom = '{0}', descripcio = '{1}', preu = '{2}' WHERE idTipusHabitacio = {3}"
+    Public Const DELETE_TIPUS_HABITACIO = "DELETE FORM tipushabitacio WHERE idTipusHabitacio = {0}"
+
+    ' Comandes Tipus animal - Tipus habitacio
+    Public Const QUERY_TIPUSH_TANIMAL = "SELECT ta.idTipusAnimal, ta.nom FROM tipusanimal ta
+    JOIN animal_tipushabitacio ath ON ath.idTipusAnimal = ta.idTipusAnimal
+    JOIN tipushabitacio th ON th.idTipusHabitacio = ath.idTipusAnimal
+    WHERE th.idTipusHabitacio = {0}"
+    Public Const INSERT_TIPUSH_TANIMAL = "INSERT INTO animal_tipushabitacio (idTipusHabitacio, idTipusAnimal) VALUES ({0}, {1})"
+    Public Const DELETE_TIPUSH_TANIMAL = "DELETE FROM animal_tipushabitacio WHERE idTipusHabitacio = {0} AND idTipusAnimal = {1}"
 End Class

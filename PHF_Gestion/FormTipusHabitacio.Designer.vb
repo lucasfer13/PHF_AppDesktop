@@ -22,231 +22,269 @@ Partial Class FormTipusHabitacio
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(FormTipusHabitacio))
-        lblFTipusHabitacioTitol = New Label()
-        lblFTipusHabitacioNom = New Label()
-        lblFTipusHabitacio = New Label()
-        lblFTipusHabitacioPreu = New Label()
-        txtFTipusHabitacioNom = New TextBox()
-        txtFTipusHabitacioDesc = New TextBox()
-        txtFTipusHabitacioPreu = New TextBox()
-        spcFTipusHabitacioSeparador = New SplitContainer()
-        btnFTipusHabitacioEliminarAnimal = New Button()
-        btnFTipusHabitacioAfegirAnimal = New Button()
-        lblFTipusHabitacioTitolAnimal = New Label()
-        dgvFTipusHabitacioAnimals = New DataGridView()
-        btnFTipusHabitacioEnrere = New Button()
-        btnFTipusHabitacioModificar = New Button()
-        btnFTipusHabitacioGuardar = New Button()
-        btnFTipusHabitacioEliminar = New Button()
-        CType(spcFTipusHabitacioSeparador, ComponentModel.ISupportInitialize).BeginInit()
-        spcFTipusHabitacioSeparador.Panel1.SuspendLayout()
-        spcFTipusHabitacioSeparador.Panel2.SuspendLayout()
-        spcFTipusHabitacioSeparador.SuspendLayout()
-        CType(dgvFTipusHabitacioAnimals, ComponentModel.ISupportInitialize).BeginInit()
-        SuspendLayout()
-        ' 
-        ' lblFTipusHabitacioTitol
-        ' 
-        lblFTipusHabitacioTitol.Anchor = AnchorStyles.Top
-        lblFTipusHabitacioTitol.AutoSize = True
-        lblFTipusHabitacioTitol.Font = New Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
-        lblFTipusHabitacioTitol.Location = New Point(357, 28)
-        lblFTipusHabitacioTitol.Name = "lblFTipusHabitacioTitol"
-        lblFTipusHabitacioTitol.Size = New Size(189, 31)
-        lblFTipusHabitacioTitol.TabIndex = 0
-        lblFTipusHabitacioTitol.Text = "Tipus d'habitació"' 
-        ' lblFTipusHabitacioNom
-        ' 
-        lblFTipusHabitacioNom.AutoSize = True
-        lblFTipusHabitacioNom.Font = New Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point)
-        lblFTipusHabitacioNom.Location = New Point(40, 45)
-        lblFTipusHabitacioNom.Name = "lblFTipusHabitacioNom"
-        lblFTipusHabitacioNom.Size = New Size(56, 25)
-        lblFTipusHabitacioNom.TabIndex = 1
-        lblFTipusHabitacioNom.Text = "Nom:"' 
-        ' lblFTipusHabitacio
-        ' 
-        lblFTipusHabitacio.AutoSize = True
-        lblFTipusHabitacio.Font = New Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point)
-        lblFTipusHabitacio.Location = New Point(40, 91)
-        lblFTipusHabitacio.Name = "lblFTipusHabitacio"
-        lblFTipusHabitacio.Size = New Size(98, 25)
-        lblFTipusHabitacio.TabIndex = 2
-        lblFTipusHabitacio.Text = "Descripció:"' 
-        ' lblFTipusHabitacioPreu
-        ' 
-        lblFTipusHabitacioPreu.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
-        lblFTipusHabitacioPreu.AutoSize = True
-        lblFTipusHabitacioPreu.Font = New Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point)
-        lblFTipusHabitacioPreu.Location = New Point(40, 212)
-        lblFTipusHabitacioPreu.Name = "lblFTipusHabitacioPreu"
-        lblFTipusHabitacioPreu.Size = New Size(51, 25)
-        lblFTipusHabitacioPreu.TabIndex = 3
-        lblFTipusHabitacioPreu.Text = "Preu:"' 
-        ' txtFTipusHabitacioNom
-        ' 
-        txtFTipusHabitacioNom.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
-        txtFTipusHabitacioNom.Location = New Point(184, 46)
-        txtFTipusHabitacioNom.Name = "txtFTipusHabitacioNom"
-        txtFTipusHabitacioNom.Size = New Size(226, 27)
-        txtFTipusHabitacioNom.TabIndex = 4
-        ' 
-        ' txtFTipusHabitacioDesc
-        ' 
-        txtFTipusHabitacioDesc.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        txtFTipusHabitacioDesc.Location = New Point(184, 91)
-        txtFTipusHabitacioDesc.Multiline = True
-        txtFTipusHabitacioDesc.Name = "txtFTipusHabitacioDesc"
-        txtFTipusHabitacioDesc.Size = New Size(226, 97)
-        txtFTipusHabitacioDesc.TabIndex = 5
-        ' 
-        ' txtFTipusHabitacioPreu
-        ' 
-        txtFTipusHabitacioPreu.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        txtFTipusHabitacioPreu.Location = New Point(184, 212)
-        txtFTipusHabitacioPreu.Name = "txtFTipusHabitacioPreu"
-        txtFTipusHabitacioPreu.Size = New Size(226, 27)
-        txtFTipusHabitacioPreu.TabIndex = 6
-        ' 
-        ' spcFTipusHabitacioSeparador
-        ' 
-        spcFTipusHabitacioSeparador.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        spcFTipusHabitacioSeparador.Location = New Point(31, 82)
-        spcFTipusHabitacioSeparador.Name = "spcFTipusHabitacioSeparador"' 
-        ' spcFTipusHabitacioSeparador.Panel1
-        ' 
-        spcFTipusHabitacioSeparador.Panel1.Controls.Add(lblFTipusHabitacioNom)
-        spcFTipusHabitacioSeparador.Panel1.Controls.Add(txtFTipusHabitacioPreu)
-        spcFTipusHabitacioSeparador.Panel1.Controls.Add(lblFTipusHabitacio)
-        spcFTipusHabitacioSeparador.Panel1.Controls.Add(txtFTipusHabitacioDesc)
-        spcFTipusHabitacioSeparador.Panel1.Controls.Add(lblFTipusHabitacioPreu)
-        spcFTipusHabitacioSeparador.Panel1.Controls.Add(txtFTipusHabitacioNom)
-        ' 
-        ' spcFTipusHabitacioSeparador.Panel2
-        ' 
-        spcFTipusHabitacioSeparador.Panel2.Controls.Add(btnFTipusHabitacioEliminarAnimal)
-        spcFTipusHabitacioSeparador.Panel2.Controls.Add(btnFTipusHabitacioAfegirAnimal)
-        spcFTipusHabitacioSeparador.Panel2.Controls.Add(lblFTipusHabitacioTitolAnimal)
-        spcFTipusHabitacioSeparador.Panel2.Controls.Add(dgvFTipusHabitacioAnimals)
-        spcFTipusHabitacioSeparador.Size = New Size(891, 309)
-        spcFTipusHabitacioSeparador.SplitterDistance = 451
-        spcFTipusHabitacioSeparador.TabIndex = 7
-        ' 
-        ' btnFTipusHabitacioEliminarAnimal
-        ' 
-        btnFTipusHabitacioEliminarAnimal.BackColor = Color.Aquamarine
-        btnFTipusHabitacioEliminarAnimal.Location = New Point(269, 32)
-        btnFTipusHabitacioEliminarAnimal.Name = "btnFTipusHabitacioEliminarAnimal"
-        btnFTipusHabitacioEliminarAnimal.Size = New Size(83, 29)
-        btnFTipusHabitacioEliminarAnimal.TabIndex = 3
-        btnFTipusHabitacioEliminarAnimal.Text = "Eliminar"
-        btnFTipusHabitacioEliminarAnimal.UseVisualStyleBackColor = False
-        ' 
-        ' btnFTipusHabitacioAfegirAnimal
-        ' 
-        btnFTipusHabitacioAfegirAnimal.BackColor = Color.Aquamarine
-        btnFTipusHabitacioAfegirAnimal.Location = New Point(165, 32)
-        btnFTipusHabitacioAfegirAnimal.Name = "btnFTipusHabitacioAfegirAnimal"
-        btnFTipusHabitacioAfegirAnimal.Size = New Size(83, 29)
-        btnFTipusHabitacioAfegirAnimal.TabIndex = 2
-        btnFTipusHabitacioAfegirAnimal.Text = "Afegir"
-        btnFTipusHabitacioAfegirAnimal.UseVisualStyleBackColor = False
-        ' 
-        ' lblFTipusHabitacioTitolAnimal
-        ' 
-        lblFTipusHabitacioTitolAnimal.AutoSize = True
-        lblFTipusHabitacioTitolAnimal.Font = New Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point)
-        lblFTipusHabitacioTitolAnimal.Location = New Point(25, 29)
-        lblFTipusHabitacioTitolAnimal.Name = "lblFTipusHabitacioTitolAnimal"
-        lblFTipusHabitacioTitolAnimal.Size = New Size(134, 25)
-        lblFTipusHabitacioTitolAnimal.TabIndex = 1
-        lblFTipusHabitacioTitolAnimal.Text = "Tipus d'animals"' 
-        ' dgvFTipusHabitacioAnimals
-        ' 
-        dgvFTipusHabitacioAnimals.AllowUserToAddRows = False
-        dgvFTipusHabitacioAnimals.AllowUserToDeleteRows = False
-        dgvFTipusHabitacioAnimals.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        dgvFTipusHabitacioAnimals.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgvFTipusHabitacioAnimals.Location = New Point(25, 67)
-        dgvFTipusHabitacioAnimals.Name = "dgvFTipusHabitacioAnimals"
-        dgvFTipusHabitacioAnimals.ReadOnly = True
-        dgvFTipusHabitacioAnimals.RowHeadersWidth = 51
-        dgvFTipusHabitacioAnimals.RowTemplate.Height = 29
-        dgvFTipusHabitacioAnimals.Size = New Size(366, 212)
-        dgvFTipusHabitacioAnimals.TabIndex = 0
-        ' 
-        ' btnFTipusHabitacioEnrere
-        ' 
-        btnFTipusHabitacioEnrere.Anchor = AnchorStyles.Bottom
-        btnFTipusHabitacioEnrere.BackColor = Color.Aquamarine
-        btnFTipusHabitacioEnrere.Location = New Point(181, 418)
-        btnFTipusHabitacioEnrere.Name = "btnFTipusHabitacioEnrere"
-        btnFTipusHabitacioEnrere.Size = New Size(138, 61)
-        btnFTipusHabitacioEnrere.TabIndex = 8
-        btnFTipusHabitacioEnrere.Text = "Enrere"
-        btnFTipusHabitacioEnrere.UseVisualStyleBackColor = False
-        ' 
-        ' btnFTipusHabitacioModificar
-        ' 
-        btnFTipusHabitacioModificar.Anchor = AnchorStyles.Bottom
-        btnFTipusHabitacioModificar.BackColor = Color.Aquamarine
-        btnFTipusHabitacioModificar.Location = New Point(345, 418)
-        btnFTipusHabitacioModificar.Name = "btnFTipusHabitacioModificar"
-        btnFTipusHabitacioModificar.Size = New Size(138, 61)
-        btnFTipusHabitacioModificar.TabIndex = 9
-        btnFTipusHabitacioModificar.Text = "Modificar"
-        btnFTipusHabitacioModificar.UseVisualStyleBackColor = False
-        ' 
-        ' btnFTipusHabitacioGuardar
-        ' 
-        btnFTipusHabitacioGuardar.Anchor = AnchorStyles.Bottom
-        btnFTipusHabitacioGuardar.BackColor = Color.Aquamarine
-        btnFTipusHabitacioGuardar.Location = New Point(512, 418)
-        btnFTipusHabitacioGuardar.Name = "btnFTipusHabitacioGuardar"
-        btnFTipusHabitacioGuardar.Size = New Size(138, 61)
-        btnFTipusHabitacioGuardar.TabIndex = 10
-        btnFTipusHabitacioGuardar.Text = "Guardar"
-        btnFTipusHabitacioGuardar.UseVisualStyleBackColor = False
-        ' 
-        ' btnFTipusHabitacioEliminar
-        ' 
-        btnFTipusHabitacioEliminar.Anchor = AnchorStyles.Bottom
-        btnFTipusHabitacioEliminar.BackColor = Color.Aquamarine
-        btnFTipusHabitacioEliminar.Location = New Point(682, 418)
-        btnFTipusHabitacioEliminar.Name = "btnFTipusHabitacioEliminar"
-        btnFTipusHabitacioEliminar.Size = New Size(138, 61)
-        btnFTipusHabitacioEliminar.TabIndex = 11
-        btnFTipusHabitacioEliminar.Text = "Eliminar"
-        btnFTipusHabitacioEliminar.UseVisualStyleBackColor = False
-        ' 
-        ' FormTipusHabitacio
-        ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
-        BackColor = Color.LightSteelBlue
-        ClientSize = New Size(979, 491)
-        Controls.Add(btnFTipusHabitacioEliminar)
-        Controls.Add(btnFTipusHabitacioGuardar)
-        Controls.Add(btnFTipusHabitacioModificar)
-        Controls.Add(btnFTipusHabitacioEnrere)
-        Controls.Add(spcFTipusHabitacioSeparador)
-        Controls.Add(lblFTipusHabitacioTitol)
-        Icon = CType(resources.GetObject("$this.Icon"), Icon)
-        MinimumSize = New Size(997, 538)
-        Name = "FormTipusHabitacio"
-        StartPosition = FormStartPosition.CenterScreen
-        Text = "PHF - Formulari Tipus Habitacio"
-        WindowState = FormWindowState.Maximized
-        spcFTipusHabitacioSeparador.Panel1.ResumeLayout(False)
-        spcFTipusHabitacioSeparador.Panel1.PerformLayout()
-        spcFTipusHabitacioSeparador.Panel2.ResumeLayout(False)
-        spcFTipusHabitacioSeparador.Panel2.PerformLayout()
-        CType(spcFTipusHabitacioSeparador, ComponentModel.ISupportInitialize).EndInit()
-        spcFTipusHabitacioSeparador.ResumeLayout(False)
-        CType(dgvFTipusHabitacioAnimals, ComponentModel.ISupportInitialize).EndInit()
-        ResumeLayout(False)
-        PerformLayout()
+        Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormTipusHabitacio))
+        Me.lblFTipusHabitacioTitol = New System.Windows.Forms.Label()
+        Me.lblFTipusHabitacioNom = New System.Windows.Forms.Label()
+        Me.lblFTipusHabitacio = New System.Windows.Forms.Label()
+        Me.lblFTipusHabitacioPreu = New System.Windows.Forms.Label()
+        Me.txtFTipusHabitacioNom = New System.Windows.Forms.TextBox()
+        Me.txtFTipusHabitacioDesc = New System.Windows.Forms.TextBox()
+        Me.txtFTipusHabitacioPreu = New System.Windows.Forms.TextBox()
+        Me.spcFTipusHabitacioSeparador = New System.Windows.Forms.SplitContainer()
+        Me.btnFTipusHabitacioEliminarAnimal = New System.Windows.Forms.Button()
+        Me.btnFTipusHabitacioAfegirAnimal = New System.Windows.Forms.Button()
+        Me.lblFTipusHabitacioTitolAnimal = New System.Windows.Forms.Label()
+        Me.dgvFTipusHabitacioAnimals = New System.Windows.Forms.DataGridView()
+        Me.btnFTipusHabitacioEnrere = New System.Windows.Forms.Button()
+        Me.btnFTipusHabitacioModificar = New System.Windows.Forms.Button()
+        Me.btnFTipusHabitacioGuardar = New System.Windows.Forms.Button()
+        Me.btnFTipusHabitacioEliminar = New System.Windows.Forms.Button()
+        Me.erpFromTHabitacioError = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.bdgFromThabitacioAnimalVista = New System.Windows.Forms.BindingSource(Me.components)
+        CType(Me.spcFTipusHabitacioSeparador, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.spcFTipusHabitacioSeparador.Panel1.SuspendLayout()
+        Me.spcFTipusHabitacioSeparador.Panel2.SuspendLayout()
+        Me.spcFTipusHabitacioSeparador.SuspendLayout()
+        CType(Me.dgvFTipusHabitacioAnimals, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.erpFromTHabitacioError, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.bdgFromThabitacioAnimalVista, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
+        '
+        'lblFTipusHabitacioTitol
+        '
+        Me.lblFTipusHabitacioTitol.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.lblFTipusHabitacioTitol.AutoSize = True
+        Me.lblFTipusHabitacioTitol.Font = New System.Drawing.Font("Segoe UI", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.lblFTipusHabitacioTitol.Location = New System.Drawing.Point(312, 21)
+        Me.lblFTipusHabitacioTitol.Name = "lblFTipusHabitacioTitol"
+        Me.lblFTipusHabitacioTitol.Size = New System.Drawing.Size(155, 25)
+        Me.lblFTipusHabitacioTitol.TabIndex = 0
+        Me.lblFTipusHabitacioTitol.Text = "Tipus d'habitació"
+        '
+        'lblFTipusHabitacioNom
+        '
+        Me.lblFTipusHabitacioNom.AutoSize = True
+        Me.lblFTipusHabitacioNom.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.lblFTipusHabitacioNom.Location = New System.Drawing.Point(35, 34)
+        Me.lblFTipusHabitacioNom.Name = "lblFTipusHabitacioNom"
+        Me.lblFTipusHabitacioNom.Size = New System.Drawing.Size(45, 20)
+        Me.lblFTipusHabitacioNom.TabIndex = 1
+        Me.lblFTipusHabitacioNom.Text = "Nom:"
+        '
+        'lblFTipusHabitacio
+        '
+        Me.lblFTipusHabitacio.AutoSize = True
+        Me.lblFTipusHabitacio.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.lblFTipusHabitacio.Location = New System.Drawing.Point(35, 68)
+        Me.lblFTipusHabitacio.Name = "lblFTipusHabitacio"
+        Me.lblFTipusHabitacio.Size = New System.Drawing.Size(82, 20)
+        Me.lblFTipusHabitacio.TabIndex = 2
+        Me.lblFTipusHabitacio.Text = "Descripció:"
+        '
+        'lblFTipusHabitacioPreu
+        '
+        Me.lblFTipusHabitacioPreu.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.lblFTipusHabitacioPreu.AutoSize = True
+        Me.lblFTipusHabitacioPreu.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.lblFTipusHabitacioPreu.Location = New System.Drawing.Point(35, 159)
+        Me.lblFTipusHabitacioPreu.Name = "lblFTipusHabitacioPreu"
+        Me.lblFTipusHabitacioPreu.Size = New System.Drawing.Size(41, 20)
+        Me.lblFTipusHabitacioPreu.TabIndex = 3
+        Me.lblFTipusHabitacioPreu.Text = "Preu:"
+        '
+        'txtFTipusHabitacioNom
+        '
+        Me.txtFTipusHabitacioNom.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtFTipusHabitacioNom.Location = New System.Drawing.Point(161, 34)
+        Me.txtFTipusHabitacioNom.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtFTipusHabitacioNom.Name = "txtFTipusHabitacioNom"
+        Me.txtFTipusHabitacioNom.Size = New System.Drawing.Size(197, 23)
+        Me.txtFTipusHabitacioNom.TabIndex = 4
+        '
+        'txtFTipusHabitacioDesc
+        '
+        Me.txtFTipusHabitacioDesc.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtFTipusHabitacioDesc.Location = New System.Drawing.Point(161, 68)
+        Me.txtFTipusHabitacioDesc.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtFTipusHabitacioDesc.Multiline = True
+        Me.txtFTipusHabitacioDesc.Name = "txtFTipusHabitacioDesc"
+        Me.txtFTipusHabitacioDesc.Size = New System.Drawing.Size(197, 74)
+        Me.txtFTipusHabitacioDesc.TabIndex = 5
+        '
+        'txtFTipusHabitacioPreu
+        '
+        Me.txtFTipusHabitacioPreu.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtFTipusHabitacioPreu.Location = New System.Drawing.Point(161, 159)
+        Me.txtFTipusHabitacioPreu.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtFTipusHabitacioPreu.Name = "txtFTipusHabitacioPreu"
+        Me.txtFTipusHabitacioPreu.Size = New System.Drawing.Size(197, 23)
+        Me.txtFTipusHabitacioPreu.TabIndex = 6
+        '
+        'spcFTipusHabitacioSeparador
+        '
+        Me.spcFTipusHabitacioSeparador.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.spcFTipusHabitacioSeparador.Location = New System.Drawing.Point(27, 62)
+        Me.spcFTipusHabitacioSeparador.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.spcFTipusHabitacioSeparador.Name = "spcFTipusHabitacioSeparador"
+        '
+        'spcFTipusHabitacioSeparador.Panel1
+        '
+        Me.spcFTipusHabitacioSeparador.Panel1.Controls.Add(Me.lblFTipusHabitacioNom)
+        Me.spcFTipusHabitacioSeparador.Panel1.Controls.Add(Me.txtFTipusHabitacioPreu)
+        Me.spcFTipusHabitacioSeparador.Panel1.Controls.Add(Me.lblFTipusHabitacio)
+        Me.spcFTipusHabitacioSeparador.Panel1.Controls.Add(Me.txtFTipusHabitacioDesc)
+        Me.spcFTipusHabitacioSeparador.Panel1.Controls.Add(Me.lblFTipusHabitacioPreu)
+        Me.spcFTipusHabitacioSeparador.Panel1.Controls.Add(Me.txtFTipusHabitacioNom)
+        '
+        'spcFTipusHabitacioSeparador.Panel2
+        '
+        Me.spcFTipusHabitacioSeparador.Panel2.Controls.Add(Me.btnFTipusHabitacioEliminarAnimal)
+        Me.spcFTipusHabitacioSeparador.Panel2.Controls.Add(Me.btnFTipusHabitacioAfegirAnimal)
+        Me.spcFTipusHabitacioSeparador.Panel2.Controls.Add(Me.lblFTipusHabitacioTitolAnimal)
+        Me.spcFTipusHabitacioSeparador.Panel2.Controls.Add(Me.dgvFTipusHabitacioAnimals)
+        Me.spcFTipusHabitacioSeparador.Size = New System.Drawing.Size(780, 232)
+        Me.spcFTipusHabitacioSeparador.SplitterDistance = 394
+        Me.spcFTipusHabitacioSeparador.TabIndex = 7
+        '
+        'btnFTipusHabitacioEliminarAnimal
+        '
+        Me.btnFTipusHabitacioEliminarAnimal.BackColor = System.Drawing.Color.Aquamarine
+        Me.btnFTipusHabitacioEliminarAnimal.Location = New System.Drawing.Point(235, 24)
+        Me.btnFTipusHabitacioEliminarAnimal.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnFTipusHabitacioEliminarAnimal.Name = "btnFTipusHabitacioEliminarAnimal"
+        Me.btnFTipusHabitacioEliminarAnimal.Size = New System.Drawing.Size(73, 22)
+        Me.btnFTipusHabitacioEliminarAnimal.TabIndex = 3
+        Me.btnFTipusHabitacioEliminarAnimal.Text = "Eliminar"
+        Me.btnFTipusHabitacioEliminarAnimal.UseVisualStyleBackColor = False
+        '
+        'btnFTipusHabitacioAfegirAnimal
+        '
+        Me.btnFTipusHabitacioAfegirAnimal.BackColor = System.Drawing.Color.Aquamarine
+        Me.btnFTipusHabitacioAfegirAnimal.Location = New System.Drawing.Point(144, 24)
+        Me.btnFTipusHabitacioAfegirAnimal.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnFTipusHabitacioAfegirAnimal.Name = "btnFTipusHabitacioAfegirAnimal"
+        Me.btnFTipusHabitacioAfegirAnimal.Size = New System.Drawing.Size(73, 22)
+        Me.btnFTipusHabitacioAfegirAnimal.TabIndex = 2
+        Me.btnFTipusHabitacioAfegirAnimal.Text = "Afegir"
+        Me.btnFTipusHabitacioAfegirAnimal.UseVisualStyleBackColor = False
+        '
+        'lblFTipusHabitacioTitolAnimal
+        '
+        Me.lblFTipusHabitacioTitolAnimal.AutoSize = True
+        Me.lblFTipusHabitacioTitolAnimal.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.lblFTipusHabitacioTitolAnimal.Location = New System.Drawing.Point(22, 22)
+        Me.lblFTipusHabitacioTitolAnimal.Name = "lblFTipusHabitacioTitolAnimal"
+        Me.lblFTipusHabitacioTitolAnimal.Size = New System.Drawing.Size(111, 20)
+        Me.lblFTipusHabitacioTitolAnimal.TabIndex = 1
+        Me.lblFTipusHabitacioTitolAnimal.Text = "Tipus d'animals"
+        '
+        'dgvFTipusHabitacioAnimals
+        '
+        Me.dgvFTipusHabitacioAnimals.AllowUserToAddRows = False
+        Me.dgvFTipusHabitacioAnimals.AllowUserToDeleteRows = False
+        Me.dgvFTipusHabitacioAnimals.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dgvFTipusHabitacioAnimals.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvFTipusHabitacioAnimals.Location = New System.Drawing.Point(22, 50)
+        Me.dgvFTipusHabitacioAnimals.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.dgvFTipusHabitacioAnimals.Name = "dgvFTipusHabitacioAnimals"
+        Me.dgvFTipusHabitacioAnimals.ReadOnly = True
+        Me.dgvFTipusHabitacioAnimals.RowHeadersWidth = 51
+        Me.dgvFTipusHabitacioAnimals.RowTemplate.Height = 29
+        Me.dgvFTipusHabitacioAnimals.Size = New System.Drawing.Size(320, 159)
+        Me.dgvFTipusHabitacioAnimals.TabIndex = 0
+        '
+        'btnFTipusHabitacioEnrere
+        '
+        Me.btnFTipusHabitacioEnrere.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.btnFTipusHabitacioEnrere.BackColor = System.Drawing.Color.Aquamarine
+        Me.btnFTipusHabitacioEnrere.Location = New System.Drawing.Point(158, 314)
+        Me.btnFTipusHabitacioEnrere.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnFTipusHabitacioEnrere.Name = "btnFTipusHabitacioEnrere"
+        Me.btnFTipusHabitacioEnrere.Size = New System.Drawing.Size(121, 46)
+        Me.btnFTipusHabitacioEnrere.TabIndex = 8
+        Me.btnFTipusHabitacioEnrere.Text = "Enrere"
+        Me.btnFTipusHabitacioEnrere.UseVisualStyleBackColor = False
+        '
+        'btnFTipusHabitacioModificar
+        '
+        Me.btnFTipusHabitacioModificar.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.btnFTipusHabitacioModificar.BackColor = System.Drawing.Color.Aquamarine
+        Me.btnFTipusHabitacioModificar.Location = New System.Drawing.Point(302, 314)
+        Me.btnFTipusHabitacioModificar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnFTipusHabitacioModificar.Name = "btnFTipusHabitacioModificar"
+        Me.btnFTipusHabitacioModificar.Size = New System.Drawing.Size(121, 46)
+        Me.btnFTipusHabitacioModificar.TabIndex = 9
+        Me.btnFTipusHabitacioModificar.Text = "Modificar"
+        Me.btnFTipusHabitacioModificar.UseVisualStyleBackColor = False
+        '
+        'btnFTipusHabitacioGuardar
+        '
+        Me.btnFTipusHabitacioGuardar.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.btnFTipusHabitacioGuardar.BackColor = System.Drawing.Color.Aquamarine
+        Me.btnFTipusHabitacioGuardar.Location = New System.Drawing.Point(448, 314)
+        Me.btnFTipusHabitacioGuardar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnFTipusHabitacioGuardar.Name = "btnFTipusHabitacioGuardar"
+        Me.btnFTipusHabitacioGuardar.Size = New System.Drawing.Size(121, 46)
+        Me.btnFTipusHabitacioGuardar.TabIndex = 10
+        Me.btnFTipusHabitacioGuardar.Text = "Guardar"
+        Me.btnFTipusHabitacioGuardar.UseVisualStyleBackColor = False
+        '
+        'btnFTipusHabitacioEliminar
+        '
+        Me.btnFTipusHabitacioEliminar.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.btnFTipusHabitacioEliminar.BackColor = System.Drawing.Color.Aquamarine
+        Me.btnFTipusHabitacioEliminar.Location = New System.Drawing.Point(597, 314)
+        Me.btnFTipusHabitacioEliminar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnFTipusHabitacioEliminar.Name = "btnFTipusHabitacioEliminar"
+        Me.btnFTipusHabitacioEliminar.Size = New System.Drawing.Size(121, 46)
+        Me.btnFTipusHabitacioEliminar.TabIndex = 11
+        Me.btnFTipusHabitacioEliminar.Text = "Eliminar"
+        Me.btnFTipusHabitacioEliminar.UseVisualStyleBackColor = False
+        '
+        'erpFromTHabitacioError
+        '
+        Me.erpFromTHabitacioError.ContainerControl = Me
+        '
+        'FormTipusHabitacio
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.ClientSize = New System.Drawing.Size(858, 374)
+        Me.Controls.Add(Me.btnFTipusHabitacioEliminar)
+        Me.Controls.Add(Me.btnFTipusHabitacioGuardar)
+        Me.Controls.Add(Me.btnFTipusHabitacioModificar)
+        Me.Controls.Add(Me.btnFTipusHabitacioEnrere)
+        Me.Controls.Add(Me.spcFTipusHabitacioSeparador)
+        Me.Controls.Add(Me.lblFTipusHabitacioTitol)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.MinimumSize = New System.Drawing.Size(874, 413)
+        Me.Name = "FormTipusHabitacio"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "PHF - Formulari Tipus Habitacio"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
+        Me.spcFTipusHabitacioSeparador.Panel1.ResumeLayout(False)
+        Me.spcFTipusHabitacioSeparador.Panel1.PerformLayout()
+        Me.spcFTipusHabitacioSeparador.Panel2.ResumeLayout(False)
+        Me.spcFTipusHabitacioSeparador.Panel2.PerformLayout()
+        CType(Me.spcFTipusHabitacioSeparador, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.spcFTipusHabitacioSeparador.ResumeLayout(False)
+        CType(Me.dgvFTipusHabitacioAnimals, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.erpFromTHabitacioError, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.bdgFromThabitacioAnimalVista, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
     End Sub
 
     Friend WithEvents lblFTipusHabitacioTitol As Label
@@ -265,4 +303,6 @@ Partial Class FormTipusHabitacio
     Friend WithEvents btnFTipusHabitacioAfegirAnimal As Button
     Friend WithEvents lblFTipusHabitacioTitolAnimal As Label
     Friend WithEvents dgvFTipusHabitacioAnimals As DataGridView
+    Friend WithEvents erpFromTHabitacioError As ErrorProvider
+    Friend WithEvents bdgFromThabitacioAnimalVista As BindingSource
 End Class

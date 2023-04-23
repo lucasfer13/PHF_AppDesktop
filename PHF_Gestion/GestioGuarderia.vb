@@ -31,8 +31,8 @@
     End Sub
 
     Private Sub btnGestGuarderiaAfegirTipusHabitacio_Click(sender As Object, e As EventArgs) Handles btnGestGuarderiaAfegirTipusHabitacio.Click
-        LlistatTipusHabitacions.Show()
-        Me.Hide()
+        Dim tipusHabitacions As New LlistatTipusHabitacions(guarderia)
+        tipusHabitacions.ShowDialog()
     End Sub
 
     Private Sub btnGestioGuarderiaValoracions_Click(sender As Object, e As EventArgs) Handles btnGestioGuarderiaValoracions.Click

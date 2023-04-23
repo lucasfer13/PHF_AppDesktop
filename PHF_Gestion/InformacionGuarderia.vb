@@ -214,7 +214,7 @@ Public Class InformacionGuarderia
         txtInformacioGuarderiaPais.Text = dt.Rows(0).Item(4)
     End Sub
 
-    Private Sub btnInformacioGuarderiaModificar_Click(sender As Object, e As EventArgs)
+    Private Sub btnInformacioGuarderiaModificar_Click(sender As Object, e As EventArgs) hand
         setModify()
     End Sub
 
