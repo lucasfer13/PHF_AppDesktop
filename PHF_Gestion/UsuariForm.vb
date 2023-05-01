@@ -25,8 +25,15 @@ Public Class UsuariForm
         Me.ValidateChildren()
         If contError = 0 Then
             Dim sql As New ConnectionBD
-            sql.addUser(txtUsuariDI.Text, txtUsuariNom.Text, txtUsuariCognom1.Text, txtUsuariCognom2.Text, txtUsuariNomUsuari.Text, txtUsuariContrasenya.Text, txtUsuariTelefon.Text, txtUsuariCorreu.Text)
+            Dim tipusUsuari As Integer
+            If robUsuariAdminstrador.Checked Then
+                tipusUsuari = 1
+            Else
+                tipusUsuari = 2
+            End If
+            sql.addUser(txtUsuariDI.Text, txtUsuariNom.Text, txtUsuariCognom1.Text, txtUsuariCognom2.Text, txtUsuariNomUsuari.Text, txtUsuariContrasenya.Text, txtUsuariTelefon.Text, txtUsuariCorreu.Text, tipusUsuari)
             relation()
+            setRead()
             Me.Close()
         End If
     End Sub
@@ -174,10 +181,12 @@ Public Class UsuariForm
     End Sub
 
     Private Sub btnUsuariEliminar_Click(sender As Object, e As EventArgs) Handles btnUsuariEliminar.Click
-        If usuari(0) <> MenuPrincipal.user.Rows(0).Item(0) Then
-            Dim sql As New ConnectionBD
-            sql.deleteUser(usuari(0))
-            Me.Close()
+        If MsgBox(My.Resources.AdviseDelete, MsgBoxStyle.YesNo, My.Resources.Advertencia) = MsgBoxResult.Yes Then
+            If usuari(0) <> MenuPrincipal.user.Rows(0).Item(0) Then
+                Dim sql As New ConnectionBD
+                sql.deleteUser(usuari(0))
+                Me.Close()
+            End If
         End If
     End Sub
 

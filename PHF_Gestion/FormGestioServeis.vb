@@ -90,6 +90,8 @@ Public Class FormGestioServeis
     End Sub
 
     Private Sub btnGestioServeiEliminar_Click(sender As Object, e As EventArgs) Handles btnGestioServeiEliminar.Click
-        serveis.deleteServei(dr.Item(0))
+        If MsgBox(My.Resources.AdviseDelete, MsgBoxStyle.YesNo, My.Resources.Advertencia) = MsgBoxResult.Yes Then
+            serveis.deleteServei(dr.Item(0))
+        End If
     End Sub
 End Class

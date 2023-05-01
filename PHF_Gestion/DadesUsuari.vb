@@ -8,6 +8,8 @@ Public Class DadesUsuari
         Login.Show()
     End Sub
 
+
+
     Private Sub btnDadesUsuariEnrere_Click(sender As Object, e As EventArgs) Handles btnDadesUsuariEnrere.Click
         Me.Close()
         MenuPrincipal.Show()
@@ -98,6 +100,15 @@ Public Class DadesUsuari
         End If
         If validate Then
             erpDadesUsuariErrors.SetError(sender, "")
+        End If
+    End Sub
+
+    Private Sub DadesUsuari_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+        If btnDadesUsuariGuardar.Enabled Then
+            If MsgBox(My.Resources.MisatjeAdvertenciaModificant, MessageBoxButtons.YesNo, My.Resources.Advertencia) = MsgBoxResult.No Then
+                e.Cancel = True
+                Return
+            End If
         End If
     End Sub
 End Class

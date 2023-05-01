@@ -50,7 +50,11 @@ Public Class CameraForm
         txtGestioCameraURL.Text = camera.Item(2)
         txtGestioCameraUsuari.Text = camera.Item(3)
         txtGestioCameraContrasenya.Text = camera.Item(4)
-        txtGestioCameraDescripció.Text = camera.Item(5)
+        Try
+            txtGestioCameraDescripció.Text = camera.Item(5)
+        Catch ex As Exception
+            txtGestioCameraContrasenya.Text = ""
+        End Try
     End Sub
 
     Private Sub CameraForm_Load(sender As Object, e As EventArgs) Handles Me.Load

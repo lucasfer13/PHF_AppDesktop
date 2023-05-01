@@ -70,6 +70,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Busca una cadena traducida similar a Segur que vols eliminar aquest element?.
+        '''</summary>
+        Friend ReadOnly Property AdviseDelete() As String
+            Get
+                Return ResourceManager.GetString("AdviseDelete", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Busca una cadena traducida similar a La data d&apos;inici es inferior a la data final..
         '''</summary>
         Friend ReadOnly Property DataIniciInferior() As String

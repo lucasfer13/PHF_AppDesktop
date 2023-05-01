@@ -80,7 +80,9 @@ Public Class TipusAnimal
     End Sub
 
     Private Sub btnAnimalElimin_Click(sender As Object, e As EventArgs) Handles btnAnimalElimin.Click
-        con.comand(String.Format(Constantes.DELETE_TANIMALS, dr.Item(0)))
-        Me.Close()
+        If MsgBox(My.Resources.AdviseDelete, MsgBoxStyle.YesNo, My.Resources.Advertencia) = MsgBoxResult.Yes Then
+            con.comand(String.Format(Constantes.DELETE_TANIMALS, dr.Item(0)))
+            Me.Close()
+        End If
     End Sub
 End Class

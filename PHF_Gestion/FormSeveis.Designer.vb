@@ -70,7 +70,7 @@ Partial Class FormSeveis
         btnServeisBack.Name = "btnServeisBack"
         btnServeisBack.Size = New Size(185, 94)
         btnServeisBack.TabIndex = 3
-        btnServeisBack.Text = "Atras"
+        btnServeisBack.Text = "Enrere"
         btnServeisBack.UseVisualStyleBackColor = False
         ' 
         ' lblServeisTitol

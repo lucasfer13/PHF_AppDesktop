@@ -220,10 +220,12 @@ Public Class InformacionGuarderia
     End Sub
 
     Private Sub btnInformacioGuarderiaEliminar_Click(sender As Object, e As EventArgs) Handles btnInformacioGuarderiaEliminar.Click
-        Dim sql As New ConnectionBD
-        sql.deleteGuarderia(guarderia.Item(0))
-        MenuGestioGuarderies.cargar()
-        guarderia = Nothing
-        Me.Close()
+        If MsgBox(My.Resources.AdviseDelete, MsgBoxStyle.YesNo, My.Resources.Advertencia) = MsgBoxResult.Yes Then
+            Dim sql As New ConnectionBD
+            sql.deleteGuarderia(guarderia.Item(0))
+            MenuGestioGuarderies.cargar()
+            guarderia = Nothing
+            Me.Close()
+        End If
     End Sub
 End Class

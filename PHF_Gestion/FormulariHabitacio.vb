@@ -119,8 +119,10 @@ Public Class FormulariHabitacio
     End Sub
 
     Private Sub btnFormulariHabitacioEliminar_Click(sender As Object, e As EventArgs) Handles btnFormulariHabitacioEliminar.Click
-        Dim sql As New ConnectionBD
-        sql.deleteHabitacio(habitacio.Item(0))
-        Me.Close()
+        If MsgBox(My.Resources.AdviseDelete, MsgBoxStyle.YesNo, My.Resources.Advertencia) = MsgBoxResult.Yes Then
+            Dim sql As New ConnectionBD
+            sql.deleteHabitacio(habitacio.Item(0))
+            Me.Close()
+        End If
     End Sub
 End Class

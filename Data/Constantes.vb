@@ -9,14 +9,14 @@ Public Class Constantes
 
     ' Comandes usuaris
     Public Const QUERY_USER = "SELECT * FROM usuaris 
-    WHERE nomUsuari = '{0}' AND contrasenya = '{1}' AND actiu = 1"
+    WHERE nomUsuari = '{0}' AND contrasenya = '{1}' AND actiu = 1 AND (tipusUsuari = 1 OR tipusUsuari = 2)"
     Public Const QUERY_USERS = "SELECT * FROM usuaris WHERE actiu = 1"
     Public Const QUERY_SPECIFIC_USER = "SELECT * FROM usuaris WHERE nomUsuari = '{0}'"
     Public Const MODIFY_USER = "UPDATE usuaris 
     SET DocumentIdentitat = '{0}', nom = '{1}', cognom1  = '{2}', cognom2 = '{3}', NomUsuari = '{4}', Telefon = '{5}', Correu = '{6}'
     WHERE idUsuari = {7}"
-    Public Const INSERT_USER = "INSERT INTO usuaris (DocumentIdentitat, nom, cognom1, cognom2, NomUsuari, Contrasenya, Telefon, Correu, actiu)
-    VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', 'True')"
+    Public Const INSERT_USER = "INSERT INTO usuaris (DocumentIdentitat, nom, cognom1, cognom2, NomUsuari, Contrasenya, Telefon, Correu, actiu, tipusUsuari)
+    VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', 1, {8})"
     Public Const DELETE_USER = "UPDATE usuaris SET actiu = 'False' WHERE idUsuari = {0}"
     Public Const MODIFY_USER_PASSWORD = "UPDATE usuaris
     SET Contrasenya = '{0}'

@@ -145,8 +145,10 @@ Public Class FormTipusHabitacio
     End Sub
 
     Private Sub btnFTipusHabitacioEliminar_Click(sender As Object, e As EventArgs) Handles btnFTipusHabitacioEliminar.Click
-        Dim sql As New ConnectionBD
-        sql.deleteTipusHabitacio(tipusHabitacio.Item(0))
-        Me.Close()
+        If MsgBox(My.Resources.AdviseDelete, MsgBoxStyle.YesNo, My.Resources.Advertencia) = MsgBoxResult.Yes Then
+            Dim sql As New ConnectionBD
+            sql.deleteTipusHabitacio(tipusHabitacio.Item(0))
+            Me.Close()
+        End If
     End Sub
 End Class

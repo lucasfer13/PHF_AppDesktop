@@ -8,7 +8,7 @@ Public Class ConnectionBD
         connexio = New MySqlConnection
         connexio.ConnectionString = Constantes.CONNECTION_STRING_REMOTO_INS
         Try
-            connexio.ConnectionString = Constantes.CONNECTION_STRING_REMOTO
+            ' connexio.ConnectionString = Constantes.CONNECTION_STRING_REMOTO
             connexio.Open()
         Catch ex As Exception
             Try
@@ -95,8 +95,8 @@ Public Class ConnectionBD
         Return comand(String.Format(Constantes.DELETE_USER, id))
     End Function
 
-    Public Function addUser(di As String, nom As String, cognom1 As String, cognom2 As String, nomusuari As String, pass As String, tel As String, correu As String)
-        Return comand(String.Format(Constantes.INSERT_USER, di, nom, cognom1, cognom1, nomusuari, Usuari.generarSHA(pass), tel, correu))
+    Public Function addUser(di As String, nom As String, cognom1 As String, cognom2 As String, nomusuari As String, pass As String, tel As String, correu As String, tipusUsuari As Integer)
+        Return comand(String.Format(Constantes.INSERT_USER, di, nom, cognom1, cognom1, nomusuari, Usuari.generarSHA(pass), tel, correu, tipusUsuari))
     End Function
 
     Public Function getUsers() As DataTable
