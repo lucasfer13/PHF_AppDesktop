@@ -31,8 +31,6 @@ Public Class InformacionGuarderia
         txtInformacioGuarderiaCarrer.Enabled = False
         txtInformacioGuarderiaDescripcio.Enabled = False
         txtInformacioGuarderiaPorta.Enabled = False
-        btnInformacioGuarderiaAfegirImatge.Enabled = False
-        btnInformacioGuarderiaEliminarImatge.Enabled = False
         btnInformacioGuarderiaAfegirServei.Enabled = False
         btnInformacioGuarderiaEliminarServei.Enabled = False
         btnInformacioGuarderiaAfegirVacances.Enabled = False
@@ -55,8 +53,6 @@ Public Class InformacionGuarderia
         txtInformacioGuarderiaCarrer.Enabled = True
         txtInformacioGuarderiaDescripcio.Enabled = True
         txtInformacioGuarderiaPorta.Enabled = True
-        btnInformacioGuarderiaAfegirImatge.Enabled = True
-        btnInformacioGuarderiaEliminarImatge.Enabled = True
         btnInformacioGuarderiaAfegirServei.Enabled = True
         btnInformacioGuarderiaEliminarServei.Enabled = True
         btnInformacioGuarderiaAfegirVacances.Enabled = True
@@ -120,6 +116,9 @@ Public Class InformacionGuarderia
             btnInformacioGuarderiaEliminarVacances.Enabled = False
             btnInformacioGuarderiaAfegirServei.Enabled = False
             btnInformacioGuarderiaEliminarServei.Enabled = False
+            btnInformacioGuarderiaEliminarImatge.Enabled = False
+            btnInformacioGuarderiaAfegirImatge.Enabled = False
+            btnInformacioGuarderiaPenjarImatges.Enabled = False
         Else
             setValues()
             setRead()
@@ -213,6 +212,7 @@ Public Class InformacionGuarderia
         txtInformacioGuarderiaCP.Text = dt.Rows(0).Item(2)
         txtInformacioGuarderiaMunicipi.Text = dt.Rows(0).Item(3)
         txtInformacioGuarderiaPais.Text = dt.Rows(0).Item(4)
+        dgvInformacioGuarderiaImatges.DataSource = sql.queryImatges(guarderia.Item(0))
     End Sub
 
     Private Sub btnInformacioGuarderiaModificar_Click(sender As Object, e As EventArgs) Handles btnInformacioGuarderiaModificar.Click
@@ -227,5 +227,28 @@ Public Class InformacionGuarderia
             guarderia = Nothing
             Me.Close()
         End If
+    End Sub
+
+    Private Sub btnInformacioGuarderiaAfegirImatge_Click(sender As Object, e As EventArgs) Handles btnInformacioGuarderiaAfegirImatge.Click
+        If ofdInformacioGuarderiaImatges.ShowDialog = DialogResult.OK Then
+            Dim sql As New ConnectionBD
+            Dim nameFile As String
+            Dim id = sql.insertImatge(guarderia.Item(0))
+            GestioArxius.directoryExists(Constantes.PICTURES & "/" & guarderia.Item(0))
+            nameFile = GestioArxius.copyFile(ofdInformacioGuarderiaImatges.FileName, Constantes.PICTURES & "/" & guarderia.Item(0), id)
+            sql.modifyImatge(nameFile, id)
+            loadForeign()
+        End If
+    End Sub
+
+    Private Sub btnInformacioGuarderiaEliminarImatge_Click(sender As Object, e As EventArgs) Handles btnInformacioGuarderiaEliminarImatge.Click
+        Dim sql As New ConnectionBD
+        sql.deleteImatge(dgvInformacioGuarderiaImatges.SelectedRows(0).Cells(0).Value)
+        loadForeign()
+    End Sub
+
+    Private Sub btnInformacioGuarderiaPenjarImatges_Click(sender As Object, e As EventArgs) Handles btnInformacioGuarderiaPenjarImatges.Click
+        GestioArxius.generateTXT(dgvInformacioGuarderiaImatges.DataSource, guarderia.Item(0))
+        Shell("java -jar PHP_AppPSP.jar " & guarderia.ItemArray(0))
     End Sub
 End Class

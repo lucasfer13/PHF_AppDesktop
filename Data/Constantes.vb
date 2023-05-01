@@ -115,4 +115,16 @@ Public Class Constantes
     Public Const INSERT_HABITACIO = "INSERT INTO habitacions (idTipusHabitacio, idGuarderia, numHabitacio) VALUES ({0}, {1}, '{2}')"
     Public Const DELETE_HABITACIO = "DELETE FROM habitacions WHERE idHabitacio = {0}"
     Public Const UPDATE_HABITACIO = "UPDATE habitacions SET idTipusHabitacio = {0}, numHabitacio = '{1}' WHERE idHabitacio = {2}"
+
+    ' Comandes imatges
+    Public Const QUERY_IMG = "SELECT idImatge, url, descripcio FROM imatges WHERE idGuarderia = {0}"
+    Public Const INSERT_IMG = "INSERT INTO imatges (idGuarderia, url) VALUES ({0}, ''); SELECT MAX(idImatge) FROM imatges"
+    Public Const MODIFY_IMG = "UPDATE imatges SET url = '{0}' WHERE idImatge = {1}"
+    Public Const DELETE_IMG = "DELETE FROM imatges WHERE idImatge = {0}"
+
+    ' Directoris
+    Public Const RESOURCES = "Resources"
+    Public Const PICTURES = "Resources/Pictures"
+    Public Const TXT = "Resources/TXT"
+    Public Const XML = "XMLS"
 End Class
