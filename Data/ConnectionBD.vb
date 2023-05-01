@@ -8,7 +8,7 @@ Public Class ConnectionBD
         connexio = New MySqlConnection
         connexio.ConnectionString = Constantes.CONNECTION_STRING_REMOTO_INS
         Try
-            ' connexio.ConnectionString = Constantes.CONNECTION_STRING_REMOTO
+            connexio.ConnectionString = Constantes.CONNECTION_STRING_REMOTO
             connexio.Open()
         Catch ex As Exception
             Try
@@ -21,6 +21,19 @@ Public Class ConnectionBD
             Return False
         End Try
         Return True
+    End Function
+
+    Public Function comandReturnID(cmd As String) As Integer
+        connect()
+        Dim id As Integer
+        Dim command As New MySqlCommand(cmd, connexio)
+        Try
+            id = command.ExecuteScalar
+        Catch ex As Exception
+
+        End Try
+        close()
+        Return id
     End Function
 
     Public Sub close()
@@ -239,5 +252,21 @@ Public Class ConnectionBD
 
     Public Function updateHabitacio(idTipusHabitacio As Integer, numHabitacio As String, idHabitacio As Integer) As Boolean
         Return comand(String.Format(Constantes.UPDATE_HABITACIO, idTipusHabitacio, numHabitacio, idHabitacio))
+    End Function
+
+    Public Function queryImatges(idGuarderia As Integer) As DataTable
+        Return query(String.Format(Constantes.QUERY_IMG, idGuarderia))
+    End Function
+
+    Public Function insertImatge(idGuarderia As Integer) As Integer
+        Return comandReturnID(String.Format(Constantes.INSERT_IMG, idGuarderia))
+    End Function
+
+    Public Function modifyImatge(nom As String, idImatge As Integer) As Boolean
+        Return comand(String.Format(Constantes.MODIFY_IMG, nom, idImatge))
+    End Function
+
+    Public Function deleteImatge(idImatge As Integer)
+        Return comand(String.Format(Constantes.DELETE_IMG, idImatge))
     End Function
 End Class

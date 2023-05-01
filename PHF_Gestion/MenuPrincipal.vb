@@ -1,4 +1,6 @@
-﻿Public Class MenuPrincipal
+﻿Imports Data
+
+Public Class MenuPrincipal
     Public Shared user As DataTable
     Private Sub btnMenuPrinGestioGuarderies_Click(sender As Object, e As EventArgs) Handles btnMenuPrinGestioGuarderies.Click
         MenuGestioGuarderies.Show()
@@ -29,6 +31,7 @@
     End Sub
 
     Private Sub MenuPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        GestioArxius.addDefaultDirectoris()
         Login.ShowDialog()
     End Sub
 
