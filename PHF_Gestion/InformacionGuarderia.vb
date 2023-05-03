@@ -13,7 +13,7 @@ Public Class InformacionGuarderia
         Me.guarderia = guarderia
     End Sub
 
-    Private Sub InformacionGuarderia_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+    Private Sub InformacionGuarderia_Closing(sender As Object, e As CancelEventArgs) Handles MyBase.Closing
         If btnInformacioGuarderiaGuardar.Enabled Then
             If MsgBox(My.Resources.MisatjeAdvertenciaModificant, MessageBoxButtons.YesNo, My.Resources.Advertencia) = MsgBoxResult.No Then
                 e.Cancel = True
@@ -77,8 +77,9 @@ Public Class InformacionGuarderia
         If contError = 0 Then
             If guarderia Is Nothing Then
                 guardar()
-                Me.Close()
                 MenuGestioGuarderies.cargar()
+                setRead()
+                Me.Close()
             Else
                 modificar()
                 setRead()
@@ -109,7 +110,7 @@ Public Class InformacionGuarderia
         End If
     End Sub
 
-    Private Sub InformacionGuarderia_Load(sender As Object, e As EventArgs) Handles Me.Load
+    Private Sub InformacionGuarderia_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If guarderia Is Nothing Then
             setModify()
             btnInformacioGuarderiaAfegirVacances.Enabled = False
