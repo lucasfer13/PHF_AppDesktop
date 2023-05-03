@@ -23,8 +23,9 @@ Public Class DadesUsuari
         txtDadesUsuariNom.Text = MenuPrincipal.user.Rows.Item(0).Item(2)
         txtDadesUsuariCognom1.Text = MenuPrincipal.user.Rows.Item(0).Item(3)
         Try
-            txtDadesUsuariCognom1.Text = MenuPrincipal.user.Rows.Item(0).Item(4)
+            txtDadesUsuariCognom2.Text = MenuPrincipal.user.Rows.Item(0).Item(4)
         Catch ex As Exception
+            txtDadesUsuariCognom2.Text = ""
         End Try
         txtDadesUsuariDI.Text = MenuPrincipal.user.Rows.Item(0).Item(1)
         txtDadesUsuariNomUsuari.Text = MenuPrincipal.user.Rows.Item(0).Item(5)
@@ -70,6 +71,7 @@ Public Class DadesUsuari
         Me.ValidateChildren()
         If contError = 0 Then
             sql.modifyUser(txtDadesUsuariDI.Text, txtDadesUsuariNom.Text, txtDadesUsuariCognom1.Text, txtDadesUsuariCognom2.Text, txtDadesUsuariNomUsuari.Text, txtDadesUsuariTelefon.Text, txtDadesUsuariCorreu.Text, MenuPrincipal.user.Rows(0).Item(0))
+            MenuPrincipal.user = sql.getUserById(MenuPrincipal.user.Rows(0).Item(0))
             setRead()
         End If
     End Sub

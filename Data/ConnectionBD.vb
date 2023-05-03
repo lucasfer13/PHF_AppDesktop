@@ -8,7 +8,7 @@ Public Class ConnectionBD
         connexio = New MySqlConnection
         connexio.ConnectionString = Constantes.CONNECTION_STRING_REMOTO_INS
         Try
-            connexio.ConnectionString = Constantes.CONNECTION_STRING_REMOTO
+            ' connexio.ConnectionString = Constantes.CONNECTION_STRING_REMOTO
             connexio.Open()
         Catch ex As Exception
             Try
@@ -17,6 +17,7 @@ Public Class ConnectionBD
             Catch e As Exception
                 connexio.ConnectionString = Constantes.CONNECTION_STRING_LOCAL
                 connexio.Open()
+                Debug.Print(e.Message)
             End Try
             Return False
         End Try
@@ -30,7 +31,7 @@ Public Class ConnectionBD
         Try
             id = command.ExecuteScalar
         Catch ex As Exception
-
+            Debug.Print(ex.Message)
         End Try
         close()
         Return id
@@ -41,6 +42,7 @@ Public Class ConnectionBD
             Try
                 connexio.Dispose()
             Catch ex As Exception
+                Debug.Print(ex.Message)
             End Try
         End If
     End Sub
@@ -63,6 +65,7 @@ Public Class ConnectionBD
                 c = True
             End If
         Catch ex As Exception
+            Debug.Print(ex.Message)
         End Try
         close()
         Return c
@@ -109,7 +112,7 @@ Public Class ConnectionBD
     End Function
 
     Public Function addUser(di As String, nom As String, cognom1 As String, cognom2 As String, nomusuari As String, pass As String, tel As String, correu As String, tipusUsuari As Integer)
-        Return comand(String.Format(Constantes.INSERT_USER, di, nom, cognom1, cognom1, nomusuari, Usuari.generarSHA(pass), tel, correu, tipusUsuari))
+        Return comand(String.Format(Constantes.INSERT_USER, di, nom, cognom1, cognom2, nomusuari, Usuari.generarSHA(pass), tel, correu, tipusUsuari))
     End Function
 
     Public Function getUsers() As DataTable
@@ -268,5 +271,9 @@ Public Class ConnectionBD
 
     Public Function deleteImatge(idImatge As Integer)
         Return comand(String.Format(Constantes.DELETE_IMG, idImatge))
+    End Function
+
+    Public Function getUserById(id As Integer) As DataTable
+        Return query(String.Format(Constantes.QUERY_USER_BY_ID, id))
     End Function
 End Class

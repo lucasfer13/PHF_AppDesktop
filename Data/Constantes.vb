@@ -10,6 +10,7 @@ Public Class Constantes
     ' Comandes usuaris
     Public Const QUERY_USER = "SELECT * FROM usuaris 
     WHERE nomUsuari = '{0}' AND contrasenya = '{1}' AND actiu = 1 AND (tipusUsuari = 1 OR tipusUsuari = 2)"
+    Public Const QUERY_USER_BY_ID = "SELECT * FROM usuaris WHERE idUsuari = {0}"
     Public Const QUERY_USERS = "SELECT * FROM usuaris WHERE actiu = 1"
     Public Const QUERY_SPECIFIC_USER = "SELECT * FROM usuaris WHERE nomUsuari = '{0}'"
     Public Const MODIFY_USER = "UPDATE usuaris 
