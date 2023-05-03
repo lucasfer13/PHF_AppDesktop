@@ -250,6 +250,6 @@ Public Class InformacionGuarderia
 
     Private Sub btnInformacioGuarderiaPenjarImatges_Click(sender As Object, e As EventArgs) Handles btnInformacioGuarderiaPenjarImatges.Click
         GestioArxius.generateTXT(dgvInformacioGuarderiaImatges.DataSource, guarderia.Item(0))
-        Shell("java -jar PHP_AppPSP.jar " & guarderia.ItemArray(0))
+        Shell("java -jar PHP_PSP.jar " & guarderia.Item(0))
     End Sub
 End Class
