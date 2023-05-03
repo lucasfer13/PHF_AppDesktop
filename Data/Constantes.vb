@@ -50,7 +50,7 @@ Public Class Constantes
     JOIN ciutat c ON cp.idCiutat = c.idCiutat
     JOIN pais p ON p.idPais = c.idPais
     WHERE u.idUsuari = {0} AND g.actiu=1"
-    Public Const INSERT_GUARDERIA = "INSERT INTO guarderia (cif, nom, descripcio, correu, telefon, idCP, carrer, Porta, actiu, avgRating)
+    Public Const INSERT_GUARDERIA = "INSERT INTO guarderia (cif, nom, descripcio, correu, telefon, idCP, carrer, Porta, actiu, avRating)
     VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', {5}, '{6}', '{7}', 1, 0)"
     Public Const MODIFY_GUARDERIA = "UPDATE guarderia SET cif = '{0}', nom = '{1}',descripcio = '{2}', correu = '{3}', telefon = '{4}', idCP = {5}, carrer = '{6}', porta = '{7}'
     WHERE idGuarderia = {8}"
