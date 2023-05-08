@@ -5,6 +5,7 @@ Public Class MenuGestioGuarderies
     Private FILTER = "Nom LIKE '*{0}*' OR CIF LIKE '*{0}*'"
     Private Sub MenuGestioGuarderies_Closing(sender As Object, e As CancelEventArgs) Handles MyBase.Closing
         MenuPrincipal.Show()
+
     End Sub
 
     Private Sub btnGestioGuarderiesEnrere_Click(sender As Object, e As EventArgs) Handles btnGestioGuarderiesEnrere.Click
@@ -14,6 +15,9 @@ Public Class MenuGestioGuarderies
     Private Sub MenuGestioGuarderies_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         cargar()
         dgvMenuGuarderiesLlistat.DataSource = bdgGestioGuarderiesVista
+        If MenuPrincipal.user.Rows(0).Item(11) = 2 Then
+            btnMenuGestGuarderiesAfegGuarderia.Enabled = False
+        End If
     End Sub
 
     Public Sub cargar()
