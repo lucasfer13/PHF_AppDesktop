@@ -22,136 +22,140 @@ Partial Class GestioGuarderia
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(GestioGuarderia))
-        Me.lblGestGuarderiaTitol = New System.Windows.Forms.Label()
-        Me.lblGestGuarderiaNomGuarderia = New System.Windows.Forms.Label()
-        Me.btnGestGuarderiaAfegCameres = New System.Windows.Forms.Button()
-        Me.btnGestGuarderiaAfegirHabitacio = New System.Windows.Forms.Button()
-        Me.btnGestGuarderiaModificar = New System.Windows.Forms.Button()
-        Me.btnGestGuarderiaAfegirTipusHabitacio = New System.Windows.Forms.Button()
-        Me.btnGestioGuarderiaEnrere = New System.Windows.Forms.Button()
-        Me.btnGestioGuarderiaValoracions = New System.Windows.Forms.Button()
-        Me.SuspendLayout()
-        '
-        'lblGestGuarderiaTitol
-        '
-        Me.lblGestGuarderiaTitol.AutoSize = True
-        Me.lblGestGuarderiaTitol.Font = New System.Drawing.Font("Sitka Small", 16.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.lblGestGuarderiaTitol.Location = New System.Drawing.Point(10, 28)
-        Me.lblGestGuarderiaTitol.Name = "lblGestGuarderiaTitol"
-        Me.lblGestGuarderiaTitol.Size = New System.Drawing.Size(147, 33)
-        Me.lblGestGuarderiaTitol.TabIndex = 1
-        Me.lblGestGuarderiaTitol.Text = "Guarderia:"
-        '
-        'lblGestGuarderiaNomGuarderia
-        '
-        Me.lblGestGuarderiaNomGuarderia.AutoSize = True
-        Me.lblGestGuarderiaNomGuarderia.Font = New System.Drawing.Font("Sitka Small", 16.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.lblGestGuarderiaNomGuarderia.Location = New System.Drawing.Point(162, 28)
-        Me.lblGestGuarderiaNomGuarderia.Name = "lblGestGuarderiaNomGuarderia"
-        Me.lblGestGuarderiaNomGuarderia.Size = New System.Drawing.Size(78, 33)
-        Me.lblGestGuarderiaNomGuarderia.TabIndex = 2
-        Me.lblGestGuarderiaNomGuarderia.Text = "         "
-        '
-        'btnGestGuarderiaAfegCameres
-        '
-        Me.btnGestGuarderiaAfegCameres.BackColor = System.Drawing.Color.Aquamarine
-        Me.btnGestGuarderiaAfegCameres.FlatAppearance.BorderColor = System.Drawing.Color.Aquamarine
-        Me.btnGestGuarderiaAfegCameres.Location = New System.Drawing.Point(66, 86)
-        Me.btnGestGuarderiaAfegCameres.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.btnGestGuarderiaAfegCameres.Name = "btnGestGuarderiaAfegCameres"
-        Me.btnGestGuarderiaAfegCameres.Size = New System.Drawing.Size(119, 55)
-        Me.btnGestGuarderiaAfegCameres.TabIndex = 5
-        Me.btnGestGuarderiaAfegCameres.Text = "Afegir Cámeres"
-        Me.btnGestGuarderiaAfegCameres.UseVisualStyleBackColor = False
-        '
-        'btnGestGuarderiaAfegirHabitacio
-        '
-        Me.btnGestGuarderiaAfegirHabitacio.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnGestGuarderiaAfegirHabitacio.BackColor = System.Drawing.Color.Aquamarine
-        Me.btnGestGuarderiaAfegirHabitacio.FlatAppearance.BorderColor = System.Drawing.Color.Aquamarine
-        Me.btnGestGuarderiaAfegirHabitacio.Location = New System.Drawing.Point(252, 86)
-        Me.btnGestGuarderiaAfegirHabitacio.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.btnGestGuarderiaAfegirHabitacio.Name = "btnGestGuarderiaAfegirHabitacio"
-        Me.btnGestGuarderiaAfegirHabitacio.Size = New System.Drawing.Size(126, 55)
-        Me.btnGestGuarderiaAfegirHabitacio.TabIndex = 6
-        Me.btnGestGuarderiaAfegirHabitacio.Text = "Afegir Habitació"
-        Me.btnGestGuarderiaAfegirHabitacio.UseVisualStyleBackColor = False
-        '
-        'btnGestGuarderiaModificar
-        '
-        Me.btnGestGuarderiaModificar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnGestGuarderiaModificar.BackColor = System.Drawing.Color.Aquamarine
-        Me.btnGestGuarderiaModificar.FlatAppearance.BorderColor = System.Drawing.Color.Aquamarine
-        Me.btnGestGuarderiaModificar.Location = New System.Drawing.Point(252, 182)
-        Me.btnGestGuarderiaModificar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.btnGestGuarderiaModificar.Name = "btnGestGuarderiaModificar"
-        Me.btnGestGuarderiaModificar.Size = New System.Drawing.Size(126, 50)
-        Me.btnGestGuarderiaModificar.TabIndex = 8
-        Me.btnGestGuarderiaModificar.Text = "Modificar Guarderia"
-        Me.btnGestGuarderiaModificar.UseVisualStyleBackColor = False
-        '
-        'btnGestGuarderiaAfegirTipusHabitacio
-        '
-        Me.btnGestGuarderiaAfegirTipusHabitacio.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnGestGuarderiaAfegirTipusHabitacio.BackColor = System.Drawing.Color.Aquamarine
-        Me.btnGestGuarderiaAfegirTipusHabitacio.FlatAppearance.BorderColor = System.Drawing.Color.Aquamarine
-        Me.btnGestGuarderiaAfegirTipusHabitacio.Location = New System.Drawing.Point(66, 182)
-        Me.btnGestGuarderiaAfegirTipusHabitacio.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.btnGestGuarderiaAfegirTipusHabitacio.Name = "btnGestGuarderiaAfegirTipusHabitacio"
-        Me.btnGestGuarderiaAfegirTipusHabitacio.Size = New System.Drawing.Size(119, 50)
-        Me.btnGestGuarderiaAfegirTipusHabitacio.TabIndex = 9
-        Me.btnGestGuarderiaAfegirTipusHabitacio.Text = "Afegir Tipus Habitació"
-        Me.btnGestGuarderiaAfegirTipusHabitacio.UseVisualStyleBackColor = False
-        '
-        'btnGestioGuarderiaEnrere
-        '
-        Me.btnGestioGuarderiaEnrere.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.btnGestioGuarderiaEnrere.BackColor = System.Drawing.Color.Aquamarine
-        Me.btnGestioGuarderiaEnrere.FlatAppearance.BorderColor = System.Drawing.Color.Aquamarine
-        Me.btnGestioGuarderiaEnrere.Location = New System.Drawing.Point(9, 317)
-        Me.btnGestioGuarderiaEnrere.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.btnGestioGuarderiaEnrere.Name = "btnGestioGuarderiaEnrere"
-        Me.btnGestioGuarderiaEnrere.Size = New System.Drawing.Size(108, 38)
-        Me.btnGestioGuarderiaEnrere.TabIndex = 10
-        Me.btnGestioGuarderiaEnrere.Text = "Enrere"
-        Me.btnGestioGuarderiaEnrere.UseVisualStyleBackColor = False
-        '
-        'btnGestioGuarderiaValoracions
-        '
-        Me.btnGestioGuarderiaValoracions.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnGestioGuarderiaValoracions.BackColor = System.Drawing.Color.Aquamarine
-        Me.btnGestioGuarderiaValoracions.FlatAppearance.BorderColor = System.Drawing.Color.Aquamarine
-        Me.btnGestioGuarderiaValoracions.Location = New System.Drawing.Point(162, 259)
-        Me.btnGestioGuarderiaValoracions.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.btnGestioGuarderiaValoracions.Name = "btnGestioGuarderiaValoracions"
-        Me.btnGestioGuarderiaValoracions.Size = New System.Drawing.Size(119, 50)
-        Me.btnGestioGuarderiaValoracions.TabIndex = 11
-        Me.btnGestioGuarderiaValoracions.Text = "Mostrar valoracions"
-        Me.btnGestioGuarderiaValoracions.UseVisualStyleBackColor = False
-        '
-        'GestioGuarderia
-        '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.LightSteelBlue
-        Me.ClientSize = New System.Drawing.Size(444, 364)
-        Me.Controls.Add(Me.btnGestioGuarderiaValoracions)
-        Me.Controls.Add(Me.btnGestioGuarderiaEnrere)
-        Me.Controls.Add(Me.btnGestGuarderiaAfegirTipusHabitacio)
-        Me.Controls.Add(Me.btnGestGuarderiaModificar)
-        Me.Controls.Add(Me.btnGestGuarderiaAfegirHabitacio)
-        Me.Controls.Add(Me.btnGestGuarderiaAfegCameres)
-        Me.Controls.Add(Me.lblGestGuarderiaNomGuarderia)
-        Me.Controls.Add(Me.lblGestGuarderiaTitol)
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Name = "GestioGuarderia"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Pet Hotel Finder"
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
-
+        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(GestioGuarderia))
+        lblGestGuarderiaTitol = New Label()
+        lblGestGuarderiaNomGuarderia = New Label()
+        btnGestGuarderiaAfegCameres = New Button()
+        btnGestGuarderiaAfegirHabitacio = New Button()
+        btnGestGuarderiaModificar = New Button()
+        btnGestGuarderiaAfegirTipusHabitacio = New Button()
+        btnGestioGuarderiaEnrere = New Button()
+        btnGestioGuarderiaValoracions = New Button()
+        Button1 = New Button()
+        SuspendLayout()
+        ' 
+        ' lblGestGuarderiaTitol
+        ' 
+        lblGestGuarderiaTitol.AutoSize = True
+        lblGestGuarderiaTitol.Font = New Font("Sitka Small", 16.8F, FontStyle.Bold, GraphicsUnit.Point)
+        lblGestGuarderiaTitol.Location = New Point(11, 37)
+        lblGestGuarderiaTitol.Name = "lblGestGuarderiaTitol"
+        lblGestGuarderiaTitol.Size = New Size(180, 40)
+        lblGestGuarderiaTitol.TabIndex = 1
+        lblGestGuarderiaTitol.Text = "Guarderia:"' 
+        ' lblGestGuarderiaNomGuarderia
+        ' 
+        lblGestGuarderiaNomGuarderia.AutoSize = True
+        lblGestGuarderiaNomGuarderia.Font = New Font("Sitka Small", 16.8F, FontStyle.Bold, GraphicsUnit.Point)
+        lblGestGuarderiaNomGuarderia.Location = New Point(185, 37)
+        lblGestGuarderiaNomGuarderia.Name = "lblGestGuarderiaNomGuarderia"
+        lblGestGuarderiaNomGuarderia.Size = New Size(98, 40)
+        lblGestGuarderiaNomGuarderia.TabIndex = 2
+        lblGestGuarderiaNomGuarderia.Text = "         "' 
+        ' btnGestGuarderiaAfegCameres
+        ' 
+        btnGestGuarderiaAfegCameres.BackColor = Color.Aquamarine
+        btnGestGuarderiaAfegCameres.FlatAppearance.BorderColor = Color.Aquamarine
+        btnGestGuarderiaAfegCameres.Location = New Point(75, 115)
+        btnGestGuarderiaAfegCameres.Name = "btnGestGuarderiaAfegCameres"
+        btnGestGuarderiaAfegCameres.Size = New Size(136, 73)
+        btnGestGuarderiaAfegCameres.TabIndex = 5
+        btnGestGuarderiaAfegCameres.Text = "Afegir Cámeres"
+        btnGestGuarderiaAfegCameres.UseVisualStyleBackColor = False
+        ' 
+        ' btnGestGuarderiaAfegirHabitacio
+        ' 
+        btnGestGuarderiaAfegirHabitacio.Anchor = AnchorStyles.Top Or AnchorStyles.Right
+        btnGestGuarderiaAfegirHabitacio.BackColor = Color.Aquamarine
+        btnGestGuarderiaAfegirHabitacio.FlatAppearance.BorderColor = Color.Aquamarine
+        btnGestGuarderiaAfegirHabitacio.Location = New Point(288, 115)
+        btnGestGuarderiaAfegirHabitacio.Name = "btnGestGuarderiaAfegirHabitacio"
+        btnGestGuarderiaAfegirHabitacio.Size = New Size(144, 73)
+        btnGestGuarderiaAfegirHabitacio.TabIndex = 6
+        btnGestGuarderiaAfegirHabitacio.Text = "Afegir Habitació"
+        btnGestGuarderiaAfegirHabitacio.UseVisualStyleBackColor = False
+        ' 
+        ' btnGestGuarderiaModificar
+        ' 
+        btnGestGuarderiaModificar.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
+        btnGestGuarderiaModificar.BackColor = Color.Aquamarine
+        btnGestGuarderiaModificar.FlatAppearance.BorderColor = Color.Aquamarine
+        btnGestGuarderiaModificar.Location = New Point(288, 225)
+        btnGestGuarderiaModificar.Name = "btnGestGuarderiaModificar"
+        btnGestGuarderiaModificar.Size = New Size(144, 67)
+        btnGestGuarderiaModificar.TabIndex = 8
+        btnGestGuarderiaModificar.Text = "Modificar Guarderia"
+        btnGestGuarderiaModificar.UseVisualStyleBackColor = False
+        ' 
+        ' btnGestGuarderiaAfegirTipusHabitacio
+        ' 
+        btnGestGuarderiaAfegirTipusHabitacio.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
+        btnGestGuarderiaAfegirTipusHabitacio.BackColor = Color.Aquamarine
+        btnGestGuarderiaAfegirTipusHabitacio.FlatAppearance.BorderColor = Color.Aquamarine
+        btnGestGuarderiaAfegirTipusHabitacio.Location = New Point(75, 225)
+        btnGestGuarderiaAfegirTipusHabitacio.Name = "btnGestGuarderiaAfegirTipusHabitacio"
+        btnGestGuarderiaAfegirTipusHabitacio.Size = New Size(136, 67)
+        btnGestGuarderiaAfegirTipusHabitacio.TabIndex = 9
+        btnGestGuarderiaAfegirTipusHabitacio.Text = "Afegir Tipus Habitació"
+        btnGestGuarderiaAfegirTipusHabitacio.UseVisualStyleBackColor = False
+        ' 
+        ' btnGestioGuarderiaEnrere
+        ' 
+        btnGestioGuarderiaEnrere.Anchor = AnchorStyles.Bottom
+        btnGestioGuarderiaEnrere.BackColor = Color.Aquamarine
+        btnGestioGuarderiaEnrere.FlatAppearance.BorderColor = Color.Aquamarine
+        btnGestioGuarderiaEnrere.Location = New Point(10, 423)
+        btnGestioGuarderiaEnrere.Name = "btnGestioGuarderiaEnrere"
+        btnGestioGuarderiaEnrere.Size = New Size(123, 51)
+        btnGestioGuarderiaEnrere.TabIndex = 10
+        btnGestioGuarderiaEnrere.Text = "Enrere"
+        btnGestioGuarderiaEnrere.UseVisualStyleBackColor = False
+        ' 
+        ' btnGestioGuarderiaValoracions
+        ' 
+        btnGestioGuarderiaValoracions.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
+        btnGestioGuarderiaValoracions.BackColor = Color.Aquamarine
+        btnGestioGuarderiaValoracions.FlatAppearance.BorderColor = Color.Aquamarine
+        btnGestioGuarderiaValoracions.Location = New Point(75, 329)
+        btnGestioGuarderiaValoracions.Name = "btnGestioGuarderiaValoracions"
+        btnGestioGuarderiaValoracions.Size = New Size(136, 67)
+        btnGestioGuarderiaValoracions.TabIndex = 11
+        btnGestioGuarderiaValoracions.Text = "Mostrar valoracions"
+        btnGestioGuarderiaValoracions.UseVisualStyleBackColor = False
+        ' 
+        ' Button1
+        ' 
+        Button1.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
+        Button1.BackColor = Color.Aquamarine
+        Button1.FlatAppearance.BorderColor = Color.Aquamarine
+        Button1.Location = New Point(288, 329)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(144, 67)
+        Button1.TabIndex = 12
+        Button1.Text = "Reserves"
+        Button1.UseVisualStyleBackColor = False
+        ' 
+        ' GestioGuarderia
+        ' 
+        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleMode = AutoScaleMode.Font
+        BackColor = Color.LightSteelBlue
+        ClientSize = New Size(507, 485)
+        Controls.Add(Button1)
+        Controls.Add(btnGestioGuarderiaValoracions)
+        Controls.Add(btnGestioGuarderiaEnrere)
+        Controls.Add(btnGestGuarderiaAfegirTipusHabitacio)
+        Controls.Add(btnGestGuarderiaModificar)
+        Controls.Add(btnGestGuarderiaAfegirHabitacio)
+        Controls.Add(btnGestGuarderiaAfegCameres)
+        Controls.Add(lblGestGuarderiaNomGuarderia)
+        Controls.Add(lblGestGuarderiaTitol)
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
+        Name = "GestioGuarderia"
+        StartPosition = FormStartPosition.CenterScreen
+        Text = "Pet Hotel Finder"
+        ResumeLayout(False)
+        PerformLayout()
     End Sub
 
     Friend WithEvents lblGestGuarderiaTitol As Label
@@ -162,4 +166,5 @@ Partial Class GestioGuarderia
     Friend WithEvents btnGestGuarderiaAfegirTipusHabitacio As Button
     Friend WithEvents btnGestioGuarderiaEnrere As Button
     Friend WithEvents btnGestioGuarderiaValoracions As Button
+    Friend WithEvents Button1 As Button
 End Class

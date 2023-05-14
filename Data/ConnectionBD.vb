@@ -8,7 +8,7 @@ Public Class ConnectionBD
         connexio = New MySqlConnection
         connexio.ConnectionString = Constantes.CONNECTION_STRING_REMOTO_INS
         Try
-            ' connexio.ConnectionString = Constantes.CONNECTION_STRING_REMOTO
+            connexio.ConnectionString = Constantes.CONNECTION_STRING_REMOTO
             connexio.Open()
         Catch ex As Exception
             Try
@@ -275,5 +275,9 @@ Public Class ConnectionBD
 
     Public Function getUserById(id As Integer) As DataTable
         Return query(String.Format(Constantes.QUERY_USER_BY_ID, id))
+    End Function
+
+    Public Function getReservesGuarderia(id As Integer) As DataTable
+        Return query(String.Format(Constantes.QUERY_RESERVES, id))
     End Function
 End Class

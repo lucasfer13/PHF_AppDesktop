@@ -48,7 +48,12 @@
         lblGestGuarderiaNomGuarderia.Text = guarderia.Item(2)
     End Sub
 
-    Private Sub GestioGuarderia_Load(sender As Object, e As EventArgs) Handles Me.Load
+    Private Sub GestioGuarderia_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         loadName()
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim reserves As New GestioReservas(guarderia)
+        reserves.ShowDialog()
     End Sub
 End Class

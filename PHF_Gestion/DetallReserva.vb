@@ -6,6 +6,6 @@ Public Class DetallReserva
     End Sub
 
     Private Sub DetallReserva_Closing(sender As Object, e As CancelEventArgs) Handles MyBase.Closing
-        GestioReservas.Show()
+
     End Sub
 End Class

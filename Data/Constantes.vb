@@ -123,6 +123,14 @@ Public Class Constantes
     Public Const MODIFY_IMG = "UPDATE imatges SET url = '{0}' WHERE idImatge = {1}"
     Public Const DELETE_IMG = "DELETE FROM imatges WHERE idImatge = {0}"
 
+    ' Query Reserva
+    Public Const QUERY_RESERVES = "SELECT u.nomusuari AS Usuari, r.preutotal AS Total, a.nom AS Animal, dr.dataInici AS DataInici, dr.dataFi AS DataFi, h.numHabitacio AS Habitacio FROM reserves r
+        JOIN usuaris u ON u.idUsuari = r.idUsuari
+        JOIN detallreserva dr ON dr.idReserva = r.idReserva
+        JOIN animal a ON dr.idAnimal = a.idAnimal
+        JOIN habitacions h ON h.idHabitacio = dr.idHabitacio
+        WHERE r.idGuarderia = {0}"
+
     ' Directoris
     Public Const RESOURCES = "Resources"
     Public Const PICTURES = "Resources/Pictures"
